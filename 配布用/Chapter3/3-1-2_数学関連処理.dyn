@@ -1,0 +1,2828 @@
+{
+  "Uuid": "5e0a06b6-86f7-488d-9338-d9e8a326d2e6",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "3-1-2_数学関連処理",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Math.PI": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Abs@double",
+      "Id": "5e9dccd68d0445f69599e5a1fb936f30",
+      "Inputs": [
+        {
+          "Id": "82b1702064c546dbab623c6157d9e5cc",
+          "Name": "number",
+          "Description": "絶対値にする数値\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bb153a42d2ce4e70b94ddcadacdff643",
+          "Name": "number",
+          "Description": "数値の絶対値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "数値の絶対値を検出します。\n\nMath.Abs (number: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Average@double[]",
+      "Id": "4645ddbfc7424d5192f1199131629feb",
+      "Inputs": [
+        {
+          "Id": "4f5c44bf10324a70bf1065974a88a01a",
+          "Name": "numbers",
+          "Description": "平均化する数値のリスト。\n\ndouble[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3df29216edb24b178606b7f74bf0c7dd",
+          "Name": "double",
+          "Description": "数値のリストの平均。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "数値のリストを平均化します。\n\nMath.Average (numbers: double[]): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Ceiling@double",
+      "Id": "e0d625baa1db44f0b40b50ed45c86541",
+      "Inputs": [
+        {
+          "Id": "7fce055b48284a1a8edeb422a65fbd8c",
+          "Name": "number",
+          "Description": "切り上げる数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8cb5706d57d74919b492fe162b44f1d0",
+          "Name": "int",
+          "Description": "数値よりも大きい最初の整数",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "数値よりも大きい最初の整数を返します\n\nMath.Ceiling (number: double): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Cos@double",
+      "Id": "3a1571db78f0400393927878b4509639",
+      "Inputs": [
+        {
+          "Id": "c4d7ce1b62374bfd9860542b38e31869",
+          "Name": "angle",
+          "Description": "余弦を取得する角度(度単位)。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "41f8e7c39e334cf09f8f7caad58f1948",
+          "Name": "double",
+          "Description": "角度の余弦",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "角度の余弦を求めます。\n\nMath.Cos (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Floor@double",
+      "Id": "587d22afaabb45ffb7e91bd6fa18b12f",
+      "Inputs": [
+        {
+          "Id": "7c67587eb3fd4fb68531d44d220bf634",
+          "Name": "number",
+          "Description": "切り捨てる数値\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1ce45f9f6a6c4d8393bd07b46b95c3a6",
+          "Name": "int",
+          "Description": "数値よりも小さい最初の整数",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "数値よりも小さい最初の整数を返します。\n\nMath.Floor (number: double): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Pow@double,double",
+      "Id": "6e1ef30f32b445ab9062570a306411d9",
+      "Inputs": [
+        {
+          "Id": "b9012cb3bc614bc5a88744981f27dcc5",
+          "Name": "number",
+          "Description": "累乗する数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "86dfd28c229040049c4b4566ab23abe0",
+          "Name": "power",
+          "Description": "数値の累乗。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3ada64147d454ff7a0adad7a19871558",
+          "Name": "result",
+          "Description": "累乗した数値。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定された指数に対して値を累乗します。\n\nMath.Pow (number: double, power: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Max@int,int",
+      "Id": "39d1fc1057284fdaaf504727b94392e1",
+      "Inputs": [
+        {
+          "Id": "57d59cd7a62d42d080d225d09b3a5640",
+          "Name": "int1",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9635ffbb56dd4206a1be28bf6a187ea2",
+          "Name": "int2",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "aafae24807ab44f982d8089dea9e2eab",
+          "Name": "max",
+          "Description": "2 つの数値のうち大きなもの。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "2 つの数値の大きい方の値を返します。\n\nMath.Max (int1: int, int2: int): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Min@int,int",
+      "Id": "13b1e3fd1ba14057a46c0b58b1b199f6",
+      "Inputs": [
+        {
+          "Id": "7e23c08480a14526a4995d04b7b88cf2",
+          "Name": "int1",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3eeb8103cfb041329f8ee712daee3f8c",
+          "Name": "int2",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1b928e94581946208c51438723e0b566",
+          "Name": "min",
+          "Description": "2 つの数値のうち小さなもの。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "2 つの数字のうち小さい方を返します。\n\nMath.Min (int1: int, int2: int): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Min@double,double",
+      "Id": "43802ad1502446a38fff692b6d17af42",
+      "Inputs": [
+        {
+          "Id": "ef64e06c62a14219ad290ba9df046224",
+          "Name": "value1",
+          "Description": "比較する数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "82cb432f62d046e19e853226ec924438",
+          "Name": "value2",
+          "Description": "比較する数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "16f21eae209c410c9a3490fb68d634ce",
+          "Name": "min",
+          "Description": "2 つの数値のうち小さなもの。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "2 つの数字のうち小さい方を返します。\n\nMath.Min (value1: double, value2: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Round@double,int",
+      "Id": "7fb6e4ef1fe640edb6c3b112aa804b63",
+      "Inputs": [
+        {
+          "Id": "e6932b8c8df9437b90ccb766686ea16a",
+          "Name": "number",
+          "Description": "四捨五入する数値\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "87f49fbbb1204ffcbd985a2cdae86474",
+          "Name": "digits",
+          "Description": "戻り値の小数点以下の桁数\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e9a4eeb56c25473fa804097fac98193a",
+          "Name": "number",
+          "Description": "指定された数に等しい小数点以下の桁数を含む値に最も近い数値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "数値を四捨五入して小数点以下の指定された桁数にします。\n\nMath.Round (number: double, digits: int): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Round@double",
+      "Id": "15f1ff1cc3c5432983663c326a84c018",
+      "Inputs": [
+        {
+          "Id": "3acd430ebf394157980b26d140d3782a",
+          "Name": "number",
+          "Description": "四捨五入する数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "87f4a57839034623ac16a0b1af31ba48",
+          "Name": "number",
+          "Description": "数値に最も近似している整数値。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "数値を四捨五入して最も近い整数値にします。 このメソッドは、整数型の代わりに倍精度浮動小数点数を返します。\n\nMath.Round (number: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "e532099086b344f8b3f185d0ef659060",
+      "Inputs": [
+        {
+          "Id": "ee43c548d7f349bb888aa500e9867e92",
+          "Name": "angle",
+          "Description": "正弦を取得する角度(度単位)。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1202cc607f6c4a49b8446ec3b4cbaa6e",
+          "Name": "double",
+          "Description": "角度の正弦。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "角度の正弦を求めます。\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sum@double[]",
+      "Id": "05276d68826941b08984f989bbd7ec33",
+      "Inputs": [
+        {
+          "Id": "0e7ab71763854a7ea9253ef21b64b3ca",
+          "Name": "values",
+          "Description": "追加して合計する数値\n\ndouble[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "78a5552d2f414210b24b92bd44a1c9c8",
+          "Name": "double",
+          "Description": "値の合計",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "一連の数値の合計を検索\n\nMath.Sum (values: double[]): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sqrt@double",
+      "Id": "f104f21f83d7458eba9d43209a37d6d6",
+      "Inputs": [
+        {
+          "Id": "193b7b132084489586cc56997e6f6432",
+          "Name": "number",
+          "Description": "[0, ∞)の範囲の数。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ea0d5da12f1e48939bb00be7b4fcf5ce",
+          "Name": "double",
+          "Description": "数値の正の平方根。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "範囲[0, ∞)の数値の正の平方根を求めます。\n\nMath.Sqrt (number: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Tan@double",
+      "Id": "6d54343ef532485892efb1fded5bb755",
+      "Inputs": [
+        {
+          "Id": "67e97ed1deee43bc94e7e0ac8fbf2cb8",
+          "Name": "angle",
+          "Description": "角度(ラジアン単位)\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "672447a43be24c26ad7a9e4470b1359e",
+          "Name": "double",
+          "Description": "角度の正接",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "角度の正接を検索します。\n\nMath.Tan (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.PI",
+      "Id": "facccdb6d5f5448c9e1d8a026e2c829c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7a59bb0077d4485da4ec1275276c0e96",
+          "Name": "double",
+          "Description": "定数 Pi",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "数学上の定数 Pi, 3.14159...\n\nMath.PI: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.PiTimes2",
+      "Id": "bcfe4312240f429e89ce6568c27f8956",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "69d0f15128c541429f2750d7583e0c32",
+          "Name": "double",
+          "Description": "2 倍の PI です。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "2 倍した Pi 定数\n\nMath.PiTimes2: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..10;",
+      "Id": "3dfe63e56611493aaa879c79ab4fc395",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f9a4b362ba1d4a9ab1709378f5e57a5e",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..10;",
+      "Id": "c945f9faafd9428197b1943c1c839b01",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "549621a876cb49229b236d2a2bd43f11",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "77e1dce98caf4bc58c7aa29c82262b23",
+      "Inputs": [
+        {
+          "Id": "81d8462a7b704544880433dcf0ed089b",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c362e13b1b604f82b846a460457ad855",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "323e7d732fb641a69a66464dcab84285",
+      "Inputs": [
+        {
+          "Id": "79adb5cf71d84cf39b77c096cccbf340",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "21aece49ab01472ebd60f39e0a74d025",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.001,
+      "InputValue": 3.8930000000000002,
+      "Id": "47be5fdf10594b0abbcc949083e9f81b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a6f5c05e63bb45fb8ef1da398afa79be",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.001,
+      "InputValue": 3.893,
+      "Id": "3a8ec4276d654e2197994b8d9897e9c7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "162feb9d6c464105b4e2492dd655e879",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.001,
+      "InputValue": 3.893,
+      "Id": "4e88a33bc0964982af89e222d485161f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4e23e6304399442da63c7241d9f94d99",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.001,
+      "InputValue": 3.893,
+      "Id": "e993cfcb177e4a02af101d19d60887c6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "924c37b9896e44f7a4f0bd290f5565db",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "3f9adbdc7ce64e36a1286da5d7493adb",
+      "Inputs": [
+        {
+          "Id": "b1c6238aa37e445e96eefe90be8ecff7",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1136a647acfa427c9b0b5b362f2a413b",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1;",
+      "Id": "9d0d87c234454030ba98090a4b990a7f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1daa546954744ed0a89e3abcfb173e7e",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "3eaf94a2771d450d9f3d1dd904a5fb1f",
+      "Inputs": [
+        {
+          "Id": "146ff5d62a364e4ea3f0be029efa11ed",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "82cacbaf243d454dbb458de2ff986f47",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Round@double,int",
+      "Id": "13a9d82ae59f4450ac1c27199a064f18",
+      "Inputs": [
+        {
+          "Id": "a75799e098074d879882d36aff5241a7",
+          "Name": "number",
+          "Description": "四捨五入する数値\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d6047906cd4844a79d24e84114d57d77",
+          "Name": "digits",
+          "Description": "戻り値の小数点以下の桁数\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6a820fb5dafd4443a9835da96cc1a462",
+          "Name": "number",
+          "Description": "指定された数に等しい小数点以下の桁数を含む値に最も近い数値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "数値を四捨五入して小数点以下の指定された桁数にします。\n\nMath.Round (number: double, digits: int): double"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "f31551622f7e4e0691af4bf7811677f2",
+      "Inputs": [
+        {
+          "Id": "b84f8291f30540329d63beeacaa6d8b7",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8a42262e979f4ea19e4ae79338ffded0",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "2;",
+      "Id": "d1340fdb1e41411183aafc4b80e674e9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "52fc2cbbee1743ac8540d296d8f94c83",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.001,
+      "InputValue": 3.893,
+      "Id": "47dae5be9b5549358cf4b0e7a8062772",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e8ae8218594247ba9292138af9099f9f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "-2;",
+      "Id": "9425b598f6784f2ea43528d864e4b42c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ef0bc40300ee4d46a0776586d409c841",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "45;",
+      "Id": "c6c25ca6c45545b88d4f3eb413594249",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5fdb7cd19bc646ad9580bbcaf69503fd",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "808fc453b92b4f18a224b42d95d3fd42",
+      "Inputs": [
+        {
+          "Id": "bb1e21c218c4463485e57a89dd7a745a",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "efd3c6b3dfff4572975e4d421099247a",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "45;",
+      "Id": "664e4eedc2814f58bfe836cb35d83bd2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6c4c47e64c4840d5943337bcfdf6e567",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "90;",
+      "Id": "33291601a4a74797acbd2fba64814f37",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7037241232374249aa576a61c39359d2",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "de5e6f5d19b643179e55279f1dcb8b45",
+      "Inputs": [
+        {
+          "Id": "78ebbb836fc347fe9aa8fff724f94dd7",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e9f5231717854057b32496441fa00731",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "5e57e34467c34b07ab63fb8ef7562330",
+      "Inputs": [
+        {
+          "Id": "48c8684bd9114f5a9193cd8fe4b59a95",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6769d9ff817a4ffea1f7e5ee506ef9a2",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "c06c97b80e7c41a7b4a3625fc9a9fb74",
+      "Inputs": [
+        {
+          "Id": "eee3db7292494c92a14fe696a3b807fc",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f1369705376443a09e39c83a154fde2c",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100;\n80;",
+      "Id": "1a3a6ca28de04192847ca25df9b4c03a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "049a6af68ec149919db26ce9d412f35e",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "70f18fcd8a5b4a0d8c57690e841759f5",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100;\n80;",
+      "Id": "9df68e90f2244d52bef1b038310c21a4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0f9d136e896f4a33a66c2cfaea92d32a",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2f2252895c034c8f8b26daa36074d15f",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "b76db5b7f692402387d9f361a2f0f196",
+      "Inputs": [
+        {
+          "Id": "578f6bada3da442992113dd3b6bb44b4",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3ba62132ca604509ab73942a954e85b4",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "22768edff64d4537b211a5bea9e68744",
+      "Inputs": [
+        {
+          "Id": "17d4999c2c31496084c379fb9fe7412b",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4d8e694d1f0b4861a1b68b5e30101102",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Max@double,double",
+      "Id": "e2cf5ade0ca04624bd3f0e02fdad869a",
+      "Inputs": [
+        {
+          "Id": "77ec1dcce08f435da559f687616ffbc8",
+          "Name": "value1",
+          "Description": "比較する数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8dc27422471d4b588e28c725dd8b4d72",
+          "Name": "value2",
+          "Description": "比較する数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "72b28ec7d767440cae4610b01455f5cc",
+          "Name": "max",
+          "Description": "2 つの数値のうち大きなもの。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "2 つの数値の大きい方の値を返します。\n\nMath.Max (value1: double, value2: double): double"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "b768f0e331234e39a4e46c864dbd0761",
+      "Inputs": [
+        {
+          "Id": "3a1be8455d1646a59f380a888c5737f6",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1ccdbf966bbb4cfeb078f27cc5e1b6c0",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5;",
+      "Id": "f29b118352d34b108f12f6e9f9174f03",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "502b9fbd88ae4c6996e8c8dce47adb88",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "80.12;\n80.28;",
+      "Id": "1e7235c4bf944bb3b837ffcb0523edd6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6a9b11594e9a4453be4ae30539f804e7",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c93a3f9fdde74d7aa4611330a81422a8",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..10;",
+      "Id": "15f36fa469b349e3aeb6a11b16f2b4a5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e885295a2af043c28faf2dd8f6e3e098",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5;",
+      "Id": "1c330b0b2a9249df95fdb8783c6cefc9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c6504e1f3e0a4738a2c5bef12f334923",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..10;",
+      "Id": "c79b7965beed4ef4b5efcb5a0e468c86",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3150e8430ba249ff8e8f824ae02cd47e",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.MaximumItem@var[]",
+      "Id": "eb47ad092f7244149c494ae20ce5bff8",
+      "Inputs": [
+        {
+          "Id": "1cc0c63f26724387968debb39ae1852e",
+          "Name": "list",
+          "Description": "最大値の取得元となる、比較可能な項目のリスト\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fd3e949943c647d7b55de5bd0f0a520f",
+          "Name": "item",
+          "Description": "リストの最大項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "リストの最大値を返します。\n\nList.MaximumItem (list: var[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.MinimumItem@var[]",
+      "Id": "b62b42377aa142cbb449b976a82200ee",
+      "Inputs": [
+        {
+          "Id": "3a41d351990b4e399e20ed28ee7ae359",
+          "Name": "list",
+          "Description": "最小値の取得元となる、比較可能な項目のリスト\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cce88c99568e40a9b68d2924708472b5",
+          "Name": "item",
+          "Description": "リストの最小項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "リストの最小値を返します。\n\nList.MinimumItem (list: var[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..10;",
+      "Id": "d96f6751519e4cd69fbc1faf78464732",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "eb9b8204fc564732b1506a5ae3483e12",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..10;",
+      "Id": "c921dab690364a8ba7d1a9a4346a4986",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2eaf24fc3adb410aa1d6cb19e7a48353",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Math.PI;",
+      "Id": "4e255436b8674810a692e32a638fd625",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3b51dc33112f4945ab4437536cb378a4",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "1c602456b5c6443396840c52673f00df",
+      "Inputs": [
+        {
+          "Id": "bc2680fdba634bd1ae271a2987b9fc16",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4e79196bcebd4402b00fba7e17adc91c",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "2d71ebf8a5aa4825b920cbff020319bf",
+      "Inputs": [
+        {
+          "Id": "affda8bd9ceb456395e8f55b5b2e0e69",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0573fd94e4c3442592a4767f62e15457",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "c8aa322e4b294eb6bd476a265b28fb91",
+      "Inputs": [
+        {
+          "Id": "c7c13583ced94841a5117896dd916797",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b88a367d0b8740babf76328d7bb113cb",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "7d7473e120e1438bb3104bb7c4cf92af",
+      "Inputs": [
+        {
+          "Id": "a7e7453f5222455195d0dc98875f92bc",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8ef6d5be096a45c29ac8561f4ea0a694",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "2;",
+      "Id": "f16a1065df6642d3939f36afa7a38c71",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f139b61f2b464ca392cae91a9b9d213f",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "2;\n3;",
+      "Id": "70c32f37e3c64e719e5ca4d99be7cc89",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5152c2f5b13e45bbb61f5cecac042a9c",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "315bf52f73054172a8aa5c941b548713",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "8cfebe614e1c4dd3b083ec1ed87db788",
+      "Inputs": [
+        {
+          "Id": "b189f4256570434585631a216afd7b0e",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b1a118bfec974f128c8ed22f813f9c81",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.MapTo@double,double,double,double,double",
+      "Id": "61563d99e2274da6ba69c4b6548f72e8",
+      "Inputs": [
+        {
+          "Id": "ad3ddf20d692465fadea6845dc7b3bce",
+          "Name": "rangeMin",
+          "Description": "入力範囲の最小値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0f8a691b1bf949058e91f18e1cb52195",
+          "Name": "rangeMax",
+          "Description": "入力範囲の最大値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eea9166bd856461ba81cb07d587909e0",
+          "Name": "inputValue",
+          "Description": "マッピングされる数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e6a9c56ed1a428fb01dc3320e1f2066",
+          "Name": "targetRangeMin",
+          "Description": "新しい範囲の最小値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d57fb6fca8e94dcca2a307a643cc7f94",
+          "Name": "targetRangeMax",
+          "Description": "新しい範囲の最大値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9775e4744a29419291ac0a1f53499953",
+          "Name": "double",
+          "Description": "マッピング後の値。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "入力値を targetRangeMin から targetRangeMax までの範囲内の値にマッピングします。\n\nMath.MapTo (rangeMin: double, rangeMax: double, inputValue: double, targetRangeMin: double, targetRangeMax: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Map@double,double,double",
+      "Id": "767da977da60402c85dc1b674a38a1f0",
+      "Inputs": [
+        {
+          "Id": "ed91df44e614473aa1b169e7f599d752",
+          "Name": "rangeMin",
+          "Description": "入力範囲の最小値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9b2cf9f9d5d4f13922c107646c57389",
+          "Name": "rangeMax",
+          "Description": "入力範囲の最大値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cdbe6742a676474c8d9f7f069e2c82d0",
+          "Name": "inputValue",
+          "Description": "マッピングされる数値。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "feb4960e4b0d4fbd93e58bf532bba434",
+          "Name": "double",
+          "Description": "マッピング後の値。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "入力範囲に基づき、入力値を 0 から 1 までの範囲内の数値にマッピングします。\n\nMath.Map (rangeMin: double, rangeMax: double, inputValue: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.RemapRange@double[],double,double",
+      "Id": "0d83bce006434b2f870a2e784b8032ad",
+      "Inputs": [
+        {
+          "Id": "653ea2bfbd0e48d39c5ccaf0d291739b",
+          "Name": "numbers",
+          "Description": "範囲を調整するための数値のリスト。\n\ndouble[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7c618e35516144cdbac38c3e68b3c53b",
+          "Name": "newMin",
+          "Description": "範囲の新しい最小値。\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2cc48d46be14bc3a6beca9ee37a4f40",
+          "Name": "newMax",
+          "Description": "範囲の新しい最大値\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "997abd9bd05d47ca957f5f16026b7f2b",
+          "Name": "list",
+          "Description": "新しい範囲に再マッピングされるリスト。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "分配比率を保持しながら数値のリストの範囲を 調整します。\n\nMath.RemapRange (numbers: double[], newMin: double = 0, newMax: double = 1): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "8cb5706d57d74919b492fe162b44f1d0",
+      "End": "81d8462a7b704544880433dcf0ed089b",
+      "Id": "22fcd84b5a434cc0934df3db24d11f0f"
+    },
+    {
+      "Start": "41f8e7c39e334cf09f8f7caad58f1948",
+      "End": "bb1e21c218c4463485e57a89dd7a745a",
+      "Id": "23fae95fc28a49668cc26d61266626a8"
+    },
+    {
+      "Start": "1ce45f9f6a6c4d8393bd07b46b95c3a6",
+      "End": "79adb5cf71d84cf39b77c096cccbf340",
+      "Id": "721cb61dfdd84cfa956e12e83c153824"
+    },
+    {
+      "Start": "3ada64147d454ff7a0adad7a19871558",
+      "End": "b189f4256570434585631a216afd7b0e",
+      "Id": "af7bc6db607040e3ba213d77e5b54f73"
+    },
+    {
+      "Start": "aafae24807ab44f982d8089dea9e2eab",
+      "End": "578f6bada3da442992113dd3b6bb44b4",
+      "Id": "cb61dc696c954800abc225c6b2c9081c"
+    },
+    {
+      "Start": "1b928e94581946208c51438723e0b566",
+      "End": "eee3db7292494c92a14fe696a3b807fc",
+      "Id": "8b3e616d8cb74df08532b47bf10c3615"
+    },
+    {
+      "Start": "16f21eae209c410c9a3490fb68d634ce",
+      "End": "17d4999c2c31496084c379fb9fe7412b",
+      "Id": "4e4646a62c2b44adbdfb2cc215d56256"
+    },
+    {
+      "Start": "e9a4eeb56c25473fa804097fac98193a",
+      "End": "b1c6238aa37e445e96eefe90be8ecff7",
+      "Id": "15f8e7826912456482b8786b73fdff84"
+    },
+    {
+      "Start": "87f4a57839034623ac16a0b1af31ba48",
+      "End": "146ff5d62a364e4ea3f0be029efa11ed",
+      "Id": "d495e505ce7143ffae81104931179116"
+    },
+    {
+      "Start": "1202cc607f6c4a49b8446ec3b4cbaa6e",
+      "End": "78ebbb836fc347fe9aa8fff724f94dd7",
+      "Id": "04cec2838cb2491db38fc03a3913abd4"
+    },
+    {
+      "Start": "ea0d5da12f1e48939bb00be7b4fcf5ce",
+      "End": "a7e7453f5222455195d0dc98875f92bc",
+      "Id": "5d74ce319c014f1c8d909c8402269766"
+    },
+    {
+      "Start": "672447a43be24c26ad7a9e4470b1359e",
+      "End": "48c8684bd9114f5a9193cd8fe4b59a95",
+      "Id": "a3473c76c59b4e76b5e122c3ecd98bb0"
+    },
+    {
+      "Start": "7a59bb0077d4485da4ec1275276c0e96",
+      "End": "affda8bd9ceb456395e8f55b5b2e0e69",
+      "Id": "61fa667ab40e445896a82e357fbb2c45"
+    },
+    {
+      "Start": "69d0f15128c541429f2750d7583e0c32",
+      "End": "c7c13583ced94841a5117896dd916797",
+      "Id": "da570c8dc83347f2a9e046152b0af0ea"
+    },
+    {
+      "Start": "f9a4b362ba1d4a9ab1709378f5e57a5e",
+      "End": "0e7ab71763854a7ea9253ef21b64b3ca",
+      "Id": "32bce22d7cd640589afaef05a65a6368"
+    },
+    {
+      "Start": "549621a876cb49229b236d2a2bd43f11",
+      "End": "4f5c44bf10324a70bf1065974a88a01a",
+      "Id": "11438feb84d145ab88ca697a389ec65e"
+    },
+    {
+      "Start": "a6f5c05e63bb45fb8ef1da398afa79be",
+      "End": "7fce055b48284a1a8edeb422a65fbd8c",
+      "Id": "8f41c5d0009843d0b6a9a1adab9988f3"
+    },
+    {
+      "Start": "162feb9d6c464105b4e2492dd655e879",
+      "End": "7c67587eb3fd4fb68531d44d220bf634",
+      "Id": "4d1446c887da41b2a979a0edceae01ea"
+    },
+    {
+      "Start": "4e23e6304399442da63c7241d9f94d99",
+      "End": "e6932b8c8df9437b90ccb766686ea16a",
+      "Id": "187b3459acdb411e8982e3e11c76c6d3"
+    },
+    {
+      "Start": "924c37b9896e44f7a4f0bd290f5565db",
+      "End": "3acd430ebf394157980b26d140d3782a",
+      "Id": "d237962361b947a8886e72168a4c2011"
+    },
+    {
+      "Start": "1daa546954744ed0a89e3abcfb173e7e",
+      "End": "87f49fbbb1204ffcbd985a2cdae86474",
+      "Id": "8f589593c3664e209442afd47b6bcb6c"
+    },
+    {
+      "Start": "6a820fb5dafd4443a9835da96cc1a462",
+      "End": "b84f8291f30540329d63beeacaa6d8b7",
+      "Id": "022e503632aa4a208b15dd4ac3103241"
+    },
+    {
+      "Start": "52fc2cbbee1743ac8540d296d8f94c83",
+      "End": "d6047906cd4844a79d24e84114d57d77",
+      "Id": "aa89b4e4355247679522929c59464574"
+    },
+    {
+      "Start": "e8ae8218594247ba9292138af9099f9f",
+      "End": "a75799e098074d879882d36aff5241a7",
+      "Id": "0ec9377da8dd4f178f53b87facb09f37"
+    },
+    {
+      "Start": "ef0bc40300ee4d46a0776586d409c841",
+      "End": "82b1702064c546dbab623c6157d9e5cc",
+      "Id": "49ceb13437e340ca9cbfab2bd1d4a79a"
+    },
+    {
+      "Start": "5fdb7cd19bc646ad9580bbcaf69503fd",
+      "End": "c4d7ce1b62374bfd9860542b38e31869",
+      "Id": "7e60618801994d34a0714222a01e7b06"
+    },
+    {
+      "Start": "6c4c47e64c4840d5943337bcfdf6e567",
+      "End": "67e97ed1deee43bc94e7e0ac8fbf2cb8",
+      "Id": "dd4090b844414157b7bcd10fd32435a8"
+    },
+    {
+      "Start": "7037241232374249aa576a61c39359d2",
+      "End": "ee43c548d7f349bb888aa500e9867e92",
+      "Id": "9740919175e04a7a8fdbd3a9b1af8e2d"
+    },
+    {
+      "Start": "0f9d136e896f4a33a66c2cfaea92d32a",
+      "End": "57d59cd7a62d42d080d225d09b3a5640",
+      "Id": "1621969037c64990a006e9e816be2223"
+    },
+    {
+      "Start": "72b28ec7d767440cae4610b01455f5cc",
+      "End": "3a1be8455d1646a59f380a888c5737f6",
+      "Id": "3686b63952ad40f8a2ad35deed1ac481"
+    },
+    {
+      "Start": "502b9fbd88ae4c6996e8c8dce47adb88",
+      "End": "82cb432f62d046e19e853226ec924438",
+      "Id": "fa58591bf9c94883b12b17510bc8782c"
+    },
+    {
+      "Start": "6a9b11594e9a4453be4ae30539f804e7",
+      "End": "7e23c08480a14526a4995d04b7b88cf2",
+      "Id": "ad2bd91008584f898515968d8329ba44"
+    },
+    {
+      "Start": "c93a3f9fdde74d7aa4611330a81422a8",
+      "End": "3eeb8103cfb041329f8ee712daee3f8c",
+      "Id": "3936f34e2c8e4b6fb839ec754ca24f4a"
+    },
+    {
+      "Start": "e885295a2af043c28faf2dd8f6e3e098",
+      "End": "77ec1dcce08f435da559f687616ffbc8",
+      "Id": "52fed1b17a8b4cabb65727724eb87673"
+    },
+    {
+      "Start": "c6504e1f3e0a4738a2c5bef12f334923",
+      "End": "8dc27422471d4b588e28c725dd8b4d72",
+      "Id": "0dd663620ab946579c4f9166a6e06a0f"
+    },
+    {
+      "Start": "3150e8430ba249ff8e8f824ae02cd47e",
+      "End": "1cc0c63f26724387968debb39ae1852e",
+      "Id": "3a2935266aa540f5b94a3cbe25148f21"
+    },
+    {
+      "Start": "eb9b8204fc564732b1506a5ae3483e12",
+      "End": "3a41d351990b4e399e20ed28ee7ae359",
+      "Id": "f1ac6b3711bc46c8b4add866fb472a07"
+    },
+    {
+      "Start": "2eaf24fc3adb410aa1d6cb19e7a48353",
+      "End": "ef64e06c62a14219ad290ba9df046224",
+      "Id": "438cedd8cf724152bc0f9540ddb75389"
+    },
+    {
+      "Start": "3b51dc33112f4945ab4437536cb378a4",
+      "End": "bc2680fdba634bd1ae271a2987b9fc16",
+      "Id": "f58f9b3dda2a42a0b18122bb06c5e49f"
+    },
+    {
+      "Start": "f139b61f2b464ca392cae91a9b9d213f",
+      "End": "193b7b132084489586cc56997e6f6432",
+      "Id": "9f9d7563666e48ce942fed3b95dd8364"
+    },
+    {
+      "Start": "5152c2f5b13e45bbb61f5cecac042a9c",
+      "End": "b9012cb3bc614bc5a88744981f27dcc5",
+      "Id": "4617ecb420714c0d92220f2f700beb91"
+    },
+    {
+      "Start": "315bf52f73054172a8aa5c941b548713",
+      "End": "86dfd28c229040049c4b4566ab23abe0",
+      "Id": "5b828e0e21e940d68f6cbe3a4f2b97f3"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -13.783977508544922,
+      "EyeY": 11.504856109619141,
+      "EyeZ": 54.021884918212891,
+      "LookX": 11.940143585205078,
+      "LookY": 14.279697418212891,
+      "LookZ": -57.710693359375,
+      "UpX": -0.088816463947296143,
+      "UpY": 0.89879405498504639,
+      "UpZ": 0.42927947640419006
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Abs",
+        "Id": "5e9dccd68d0445f69599e5a1fb936f30",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 418.03372872983084,
+        "Y": -654.88238308783355
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Average",
+        "Id": "4645ddbfc7424d5192f1199131629feb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -160.76734220081579,
+        "Y": -997.98131784136513
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Ceiling",
+        "Id": "e0d625baa1db44f0b40b50ed45c86541",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 487.13416753353772,
+        "Y": -1373.6839276726
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Cos",
+        "Id": "3a1571db78f0400393927878b4509639",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1079.1205986999328,
+        "Y": -1267.715601381484
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Floor",
+        "Id": "587d22afaabb45ffb7e91bd6fa18b12f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 487.13416753353772,
+        "Y": -1265.4962237868763
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Pow",
+        "Id": "6e1ef30f32b445ab9062570a306411d9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2577.3208383019337,
+        "Y": -1235.7157760417385
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Max",
+        "Id": "39d1fc1057284fdaaf504727b94392e1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1834.327720687194,
+        "Y": -1007.5077784541859
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Min",
+        "Id": "13b1e3fd1ba14057a46c0b58b1b199f6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1893.2215049717049,
+        "Y": -59.272598772916126
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Min",
+        "Id": "43802ad1502446a38fff692b6d17af42",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1899.3322267361989,
+        "Y": -473.34942856296357
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Round",
+        "Id": "7fb6e4ef1fe640edb6c3b112aa804b63",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 487.13416753353772,
+        "Y": -1160.7767458856606
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Round",
+        "Id": "15f1ff1cc3c5432983663c326a84c018",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 488.7463718388633,
+        "Y": -992.13354330974482
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sin",
+        "Id": "e532099086b344f8b3f185d0ef659060",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1080.725027610483,
+        "Y": -1385.8960701399753
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sum",
+        "Id": "05276d68826941b08984f989bbd7ec33",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -165.10017603137749,
+        "Y": -1373.350919141988
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sqrt",
+        "Id": "f104f21f83d7458eba9d43209a37d6d6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2575.3107607200282,
+        "Y": -1359.1984017295722
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Tan",
+        "Id": "6d54343ef532485892efb1fded5bb755",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1081.5631761300854,
+        "Y": -1146.4136433921078
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.PI",
+        "Id": "facccdb6d5f5448c9e1d8a026e2c829c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2433.5104270443508,
+        "Y": -1014.0764696378524
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.PiTimes2",
+        "Id": "bcfe4312240f429e89ce6568c27f8956",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2432.6153307994432,
+        "Y": -911.42372571478688
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "3dfe63e56611493aaa879c79ab4fc395",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -297.21370086954448,
+        "Y": -1368.6949401890106
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c945f9faafd9428197b1943c1c839b01",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -294.0311013572969,
+        "Y": -994.002834964086
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "77e1dce98caf4bc58c7aa29c82262b23",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 724.16342094928132,
+        "Y": -1374.063240018598
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "323e7d732fb641a69a66464dcab84285",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 724.16342094928132,
+        "Y": -1265.3456854285018
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "47be5fdf10594b0abbcc949083e9f81b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 157.52501496926425,
+        "Y": -1374.0412382616259
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "3a8ec4276d654e2197994b8d9897e9c7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 157.52501496926425,
+        "Y": -1266.0318616917752
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "4e88a33bc0964982af89e222d485161f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 157.52501496926425,
+        "Y": -1161.44538839229
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "e993cfcb177e4a02af101d19d60887c6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 157.52501496926425,
+        "Y": -992.94974048617939
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "3f9adbdc7ce64e36a1286da5d7493adb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 724.16342094928132,
+        "Y": -1160.693444082676
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "9d0d87c234454030ba98090a4b990a7f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 370.04698099883922,
+        "Y": -1103.0837584799071
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "3eaf94a2771d450d9f3d1dd904a5fb1f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 724.16342094928132,
+        "Y": -993.40561248721031
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Round",
+        "Id": "13a9d82ae59f4450ac1c27199a064f18",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 485.90494393712197,
+        "Y": -866.62579305717441
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "f31551622f7e4e0691af4bf7811677f2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 722.93419735286489,
+        "Y": -866.54249125419437
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "d1340fdb1e41411183aafc4b80e674e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 368.8177574024229,
+        "Y": -808.93280565142459
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "47dae5be9b5549358cf4b0e7a8062772",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 156.29579137284793,
+        "Y": -867.29443556380443
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "9425b598f6784f2ea43528d864e4b42c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 317.05062818463716,
+        "Y": -650.33263775744012
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c6c25ca6c45545b88d4f3eb413594249",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 970.84189750971939,
+        "Y": -1262.8301037102049
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "808fc453b92b4f18a224b42d95d3fd42",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1291.5242894292569,
+        "Y": -1268.2168453184795
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "664e4eedc2814f58bfe836cb35d83bd2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 972.58227706263824,
+        "Y": -1142.5365174287876
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "33291601a4a74797acbd2fba64814f37",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 971.26033738948149,
+        "Y": -1381.0307011781936
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "de5e6f5d19b643179e55279f1dcb8b45",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1293.9185917586283,
+        "Y": -1386.7707527759837
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "5e57e34467c34b07ab63fb8ef7562330",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1294.6813870976703,
+        "Y": -1146.5894438483751
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "c06c97b80e7c41a7b4a3625fc9a9fb74",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2074.020008818793,
+        "Y": -60.507912555111034
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1a3a6ca28de04192847ca25df9b4c03a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1792.2137543612562,
+        "Y": 43.492667946037272
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "9df68e90f2244d52bef1b038310c21a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1732.6814541202125,
+        "Y": -998.660864645231
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "b76db5b7f692402387d9f361a2f0f196",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2014.4755964274887,
+        "Y": -1007.8504086246398
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "22768edff64d4537b211a5bea9e68744",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2102.4796436395509,
+        "Y": -473.84146532068644
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Max",
+        "Id": "e2cf5ade0ca04624bd3f0e02fdad869a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1888.7468034746246,
+        "Y": -809.07671546936081
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "b768f0e331234e39a4e46c864dbd0761",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2095.8430443981379,
+        "Y": -809.31590185619962
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f29b118352d34b108f12f6e9f9174f03",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1783.5335837908265,
+        "Y": -415.54833702728274
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1e7235c4bf944bb3b837ffcb0523edd6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1753.3287525417707,
+        "Y": -56.154420370048229
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "15f36fa469b349e3aeb6a11b16f2b4a5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1662.2904505275355,
+        "Y": -802.89262175510112
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1c330b0b2a9249df95fdb8783c6cefc9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1787.0902035080526,
+        "Y": -755.76228524054659
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c79b7965beed4ef4b5efcb5a0e468c86",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1613.6745992665114,
+        "Y": -1381.8738443783209
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.MaximumItem",
+        "Id": "eb47ad092f7244149c494ae20ce5bff8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1742.5340497350621,
+        "Y": -1386.9603898684609
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.MinimumItem",
+        "Id": "b62b42377aa142cbb449b976a82200ee",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2143.869802193648,
+        "Y": -1387.3621653096729
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "d96f6751519e4cd69fbc1faf78464732",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2012.916488265229,
+        "Y": -1382.9646214930276
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c921dab690364a8ba7d1a9a4346a4986",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1664.7254996499089,
+        "Y": -470.42317510479188
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4e255436b8674810a692e32a638fd625",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2440.0,
+        "Y": -802.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "1c602456b5c6443396840c52673f00df",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2569.4974697383568,
+        "Y": -805.84540726425212
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "2d71ebf8a5aa4825b920cbff020319bf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2568.8683573868366,
+        "Y": -1014.9781971624864
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "c8aa322e4b294eb6bd476a265b28fb91",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2568.7484720868119,
+        "Y": -911.59259932715042
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "7d7473e120e1438bb3104bb7c4cf92af",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2800.5952897580969,
+        "Y": -1359.5223940924764
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f16a1065df6642d3939f36afa7a38c71",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2472.6162077533104,
+        "Y": -1355.1180797113782
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "70c32f37e3c64e719e5ca4d99be7cc89",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2471.5221316497059,
+        "Y": -1227.6697644736391
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "8cfebe614e1c4dd3b083ec1ed87db788",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2800.2521496335262,
+        "Y": -1235.1238916589307
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.MapTo",
+        "Id": "61563d99e2274da6ba69c4b6548f72e8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3284.0628764923658,
+        "Y": -1091.059802924894
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Map",
+        "Id": "767da977da60402c85dc1b674a38a1f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3282.0318920877062,
+        "Y": -1374.838713847621
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.RemapRange",
+        "Id": "0d83bce006434b2f870a2e784b8032ad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3282.0318920877062,
+        "Y": -1233.530433964414
+      }
+    ],
+    "Annotations": [],
+    "X": 240.26706415358183,
+    "Y": 888.48310616882861,
+    "Zoom": 0.598661077484873
+  }
+}

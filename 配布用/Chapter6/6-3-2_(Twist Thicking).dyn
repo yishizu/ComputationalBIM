@@ -1,0 +1,755 @@
+{
+  "Uuid": "a876baf2-1c68-4411-ac3c-3900fb536d4a",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "6-3-2_(Twist Thicking)",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[50,50,150,50,50];",
+      "Id": "a93a1b13ccd646aabe97695a4becd123",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2182d38b2caf468c80b5a663c57bec98",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "24cd34f2094741e0823d6ba067c05ecd",
+      "Inputs": [
+        {
+          "Id": "b23baca3489846d6a4768b5fecdb1915",
+          "Name": "centerPoint",
+          "Description": "Center point of circle\n\nPoint\n既定値 : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3d99b5292924406387e9131c7ed49896",
+          "Name": "radius",
+          "Description": "Radius\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "79310a1806c04f26b5611719c6b0689a",
+          "Name": "Circle",
+          "Description": "Circle created with center point and radius",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "入力された中心点と半径をワールド座標系の XY 平面に持ち、ワールド座標系の Z 軸を法線とする円を作成します。\n\nCircle.ByCenterPointRadius (centerPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), radius: double = 1): Circle"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "1ef37875c8b64321818ed6ca724e7863",
+      "Inputs": [
+        {
+          "Id": "92eb08956230492f896f5b95438b2cbc",
+          "Name": "x",
+          "Description": "X coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "26c0f867a25e43658d4f9d60d4995b9d",
+          "Name": "y",
+          "Description": "Y coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "70aaef1ebad94b6fae5b01b0a57cdef3",
+          "Name": "z",
+          "Description": "Z coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b1ba926b18944da5b0252ecadeb7b8e5",
+          "Name": "Point",
+          "Description": "Point created by coordinates",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定された 3 つのデカルト座標を使用して、点を作成します。\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[0,50,250,400,450];",
+      "Id": "f82edb1d7e1a48f2ae13207e14202bd8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5e9d0e2bec474a23a7b534e2d7cf5c71",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.PointsAtEqualSegmentLength@int",
+      "Id": "4eb57de02fae4f9697f1c0efccf58fba",
+      "Inputs": [
+        {
+          "Id": "52f938e43b51432aafe8fbd272887253",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2d8755e58fa447ea9ff46524c11959ba",
+          "Name": "divisions",
+          "Description": "分割数\n\nint\n既定値 : 10",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9cdd7c6a8c7e46d1a72191f1da5e5dc3",
+          "Name": "Point[]",
+          "Description": "曲線の長さに沿って等間隔に配置された点",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "分割の入力数値に基づいて曲線の長さに沿って等間隔に配置された点を返します\n\nCurve.PointsAtEqualSegmentLength (divisions: int = 10): Point[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.AddItemToFront@var[]..[],var[]..[]",
+      "Id": "6033b6831152404fbfe12d7aa6670ed6",
+      "Inputs": [
+        {
+          "Id": "c9b60ccbc6354c08985ce95b05a34010",
+          "Name": "item",
+          "Description": "追加する項目。 項目にはオブジェクトまたはリストを指定できます。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0d8ebee78a024463ac0c040cf6e361e5",
+          "Name": "list",
+          "Description": "項目を追加するリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": true,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7c58fed0edd84ad0b6e6ae9c817e0960",
+          "Name": "list",
+          "Description": "項目を追加したリスト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "リストの先頭に項目を追加します。\n\nList.AddItemToFront (item: var[]..[], list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.StartPoint",
+      "Id": "2fa24465e3bc4d5b83b69a80b4b1ebc5",
+      "Inputs": [
+        {
+          "Id": "0520de5a402e4596a33c20eccdb4f9f3",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9ed547c1c2b543e88d0c99e40eaa00c7",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "曲線上の始点を取得します\n\nCurve.StartPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.ParameterAtPoint@Autodesk.DesignScript.Geometry.Point",
+      "Id": "2bceb150b0834551865b2f6eeb91e197",
+      "Inputs": [
+        {
+          "Id": "f733b2c1ad2e4d33a9c956988bf82324",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "edb68990cb7f4e8fb246f5d7692eb670",
+          "Name": "point",
+          "Description": "曲線に沿っているか近くにある点\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "38653b942f4c4264b7185985c820d66b",
+          "Name": "double",
+          "Description": "PolyCurve の曲線上のパラメータ、または、その他の曲線タイプの曲線に沿った最も近いパラメータです。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "曲線に沿った指定された点でパラメータを取得します。点が曲線上にない場合は、最も近いパラメータを取得します。入力曲線が PolyCurve の場合、この関数は、点が PolyCurve の上にある場合にのみ有効なパラメータを返します。他の曲線タイプの場合、この関数は、入力点に最も近い点にある曲線に沿ってパラメータを返します。\n\nCurve.ParameterAtPoint (point: Point): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "20;",
+      "Id": "65bd3992d97e4d0e9d39f33c7e711b29",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ed1767bb65424a48b489f3fa2caa843c",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Line.ByStartPointDirectionLength@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Vector,double",
+      "Id": "23b159fa36eb451487b94a38ca61511a",
+      "Inputs": [
+        {
+          "Id": "920644140e584e9cafa190c07d099048",
+          "Name": "startPoint",
+          "Description": "Line start point\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ff58eca6bf27462f9ef50bda1a844f90",
+          "Name": "direction",
+          "Description": "Direction vector\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4461f8044c1a4432b9de53c17e268a10",
+          "Name": "length",
+          "Description": "Length of line\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6b0526e55a1b413d97f929f34c1025bc",
+          "Name": "Line",
+          "Description": "Line from start direction and length",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "開始点から始まり、ベクトルの向きに指定された長さだけ延長する線分を作成します。\n\nLine.ByStartPointDirectionLength (startPoint: Point, direction: Vector, length: double = 1): Line"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByLoft@Autodesk.DesignScript.Geometry.Curve[]",
+      "Id": "428791904bdb44c98222c283e1986b38",
+      "Inputs": [
+        {
+          "Id": "dbb8f3c4a429419e880e6de1c1842933",
+          "Name": "crossSections",
+          "Description": "Curves to loft through\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c841cdabc8444dbf88a098ffea356fcd",
+          "Name": "Surface",
+          "Description": "Surface created by loft",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "入力された断面曲線間をロフトしてサーフェスを作成します。\n\nSurface.ByLoft (crossSections: Curve[]): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Transpose@var[]..[]",
+      "Id": "0af7c6e63270414f9292e6113db2c283",
+      "Inputs": [
+        {
+          "Id": "4d06519a3d504623a03021d05ce81a5a",
+          "Name": "lists",
+          "Description": "転置するリストのリスト\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "63e000b274af4e87afaf39bf6374686d",
+          "Name": "lists",
+          "Description": "転置されたリストのリスト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "リストのリストの行と列を入れ替えます。 他の行よりも短い行がある場合は、作成される配列が 常に長方形になるように、プレースホルダーとして NULL 値が挿入されます。\n\nList.Transpose (lists: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.TangentAtParameter@double",
+      "Id": "cfd4d0ce82254ebab0790e3329865d79",
+      "Inputs": [
+        {
+          "Id": "85a4b6eb43a642e4840babf6a42431f5",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5b56d939e2e64da5892204455e16a9f5",
+          "Name": "param",
+          "Description": "評価するパラメータ\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "198c2ff9aaff4ce49725b9142fb2fbf6",
+          "Name": "Vector",
+          "Description": "パラメータ上で曲線に平行するベクトル",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "StartParameter() から EndParameter() までの範囲内の指定されたパラメータで曲線に接するベクトルを取得します。\n\nCurve.TangentAtParameter (param: double = 0): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "50;",
+      "Id": "453384edaadd43e5b7f19091f86e6709",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0ed9a0d59aa9494289745c112f39c71b",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2182d38b2caf468c80b5a663c57bec98",
+      "End": "3d99b5292924406387e9131c7ed49896",
+      "Id": "408efa6b43814693a35870bbc7e92407"
+    },
+    {
+      "Start": "79310a1806c04f26b5611719c6b0689a",
+      "End": "0520de5a402e4596a33c20eccdb4f9f3",
+      "Id": "983b1f6715794d678813b72e2d1d32d6"
+    },
+    {
+      "Start": "79310a1806c04f26b5611719c6b0689a",
+      "End": "f733b2c1ad2e4d33a9c956988bf82324",
+      "Id": "df98701cdd314dd79ff37a87f76d0a64"
+    },
+    {
+      "Start": "79310a1806c04f26b5611719c6b0689a",
+      "End": "52f938e43b51432aafe8fbd272887253",
+      "Id": "34ff06d4f2fe41539aba964c064e2c81"
+    },
+    {
+      "Start": "79310a1806c04f26b5611719c6b0689a",
+      "End": "85a4b6eb43a642e4840babf6a42431f5",
+      "Id": "0ecc6f1681b24ca59494b261ddb4b875"
+    },
+    {
+      "Start": "b1ba926b18944da5b0252ecadeb7b8e5",
+      "End": "b23baca3489846d6a4768b5fecdb1915",
+      "Id": "e6d385bfb7044223bb72c5e5a01578d5"
+    },
+    {
+      "Start": "5e9d0e2bec474a23a7b534e2d7cf5c71",
+      "End": "70aaef1ebad94b6fae5b01b0a57cdef3",
+      "Id": "7d0b15a70d5644e38ccc1da3738e0ac0"
+    },
+    {
+      "Start": "9cdd7c6a8c7e46d1a72191f1da5e5dc3",
+      "End": "0d8ebee78a024463ac0c040cf6e361e5",
+      "Id": "b769117395a34e17af52e1735653ac2b"
+    },
+    {
+      "Start": "7c58fed0edd84ad0b6e6ae9c817e0960",
+      "End": "edb68990cb7f4e8fb246f5d7692eb670",
+      "Id": "27933aeb0a1247f9a0a981673dba0fd1"
+    },
+    {
+      "Start": "7c58fed0edd84ad0b6e6ae9c817e0960",
+      "End": "920644140e584e9cafa190c07d099048",
+      "Id": "3bba38af35014dfd95f9f718939de80d"
+    },
+    {
+      "Start": "9ed547c1c2b543e88d0c99e40eaa00c7",
+      "End": "c9b60ccbc6354c08985ce95b05a34010",
+      "Id": "1020a53356c94f19b4fab1088516da99"
+    },
+    {
+      "Start": "38653b942f4c4264b7185985c820d66b",
+      "End": "5b56d939e2e64da5892204455e16a9f5",
+      "Id": "1618835e1fef41a0856599beaa78d1e1"
+    },
+    {
+      "Start": "ed1767bb65424a48b489f3fa2caa843c",
+      "End": "2d8755e58fa447ea9ff46524c11959ba",
+      "Id": "03e16d1ed4ab4397a2ecd2cc61f86a19"
+    },
+    {
+      "Start": "6b0526e55a1b413d97f929f34c1025bc",
+      "End": "4d06519a3d504623a03021d05ce81a5a",
+      "Id": "7c65ca7933e943e588852a64d53b669e"
+    },
+    {
+      "Start": "63e000b274af4e87afaf39bf6374686d",
+      "End": "dbb8f3c4a429419e880e6de1c1842933",
+      "Id": "d7523ea5eeb142eebbe1be53b7eb6f99"
+    },
+    {
+      "Start": "198c2ff9aaff4ce49725b9142fb2fbf6",
+      "End": "ff58eca6bf27462f9ef50bda1a844f90",
+      "Id": "3a6f7d67c3b14024b103b9078d59e54f"
+    },
+    {
+      "Start": "0ed9a0d59aa9494289745c112f39c71b",
+      "End": "4461f8044c1a4432b9de53c17e268a10",
+      "Id": "3cac33ba10734538883669ab87ecd231"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 664.88776696173284,
+      "EyeY": 709.73303764912453,
+      "EyeZ": 422.76249805139491,
+      "LookX": -766.281132355464,
+      "LookY": -415.76362747936059,
+      "LookZ": -375.22096890665244,
+      "UpX": -0.21118329223675641,
+      "UpY": 0.97196100057854606,
+      "UpZ": -0.10340904425820435
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "a93a1b13ccd646aabe97695a4becd123",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 210.62122564034007,
+        "Y": 465.463707339807
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Circle.ByCenterPointRadius",
+        "Id": "24cd34f2094741e0823d6ba067c05ecd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 469.26446871866096,
+        "Y": 383.57682165497727
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Point.ByCoordinates",
+        "Id": "1ef37875c8b64321818ed6ca724e7863",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 255.24734793436721,
+        "Y": 326.47251616938456
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f82edb1d7e1a48f2ae13207e14202bd8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 22.862602792947428,
+        "Y": 374.83510289326216
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Curve.PointsAtEqualSegmentLength",
+        "Id": "4eb57de02fae4f9697f1c0efccf58fba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 840.8633111689993,
+        "Y": 437.23768577212149
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.AddItemToFront",
+        "Id": "6033b6831152404fbfe12d7aa6670ed6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1121.4143070151454,
+        "Y": 394.43294246220785
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Curve.StartPoint",
+        "Id": "2fa24465e3bc4d5b83b69a80b4b1ebc5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 891.9082905467593,
+        "Y": 281.01738187643195
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Curve.ParameterAtPoint",
+        "Id": "2bceb150b0834551865b2f6eeb91e197",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1300.8054555165327,
+        "Y": 329.67837385284912
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "65bd3992d97e4d0e9d39f33c7e711b29",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 707.56327382181723,
+        "Y": 462.22243468297142
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Line.ByStartPointDirectionLength",
+        "Id": "23b159fa36eb451487b94a38ca61511a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1793.3374692530756,
+        "Y": 382.36629367302106
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Surface.ByLoft",
+        "Id": "428791904bdb44c98222c283e1986b38",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2236.4789845692853,
+        "Y": 380.27900683793905
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Transpose",
+        "Id": "0af7c6e63270414f9292e6113db2c283",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2048.3272519697252,
+        "Y": 378.64156268665204
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.TangentAtParameter",
+        "Id": "cfd4d0ce82254ebab0790e3329865d79",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1563.2096517931357,
+        "Y": 286.75970607480122
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "453384edaadd43e5b7f19091f86e6709",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1647.3049111877558,
+        "Y": 448.67023597134607
+      }
+    ],
+    "Annotations": [],
+    "X": -4.8121068546016659,
+    "Y": 204.49041950267252,
+    "Zoom": 0.26299986099856831
+  }
+}

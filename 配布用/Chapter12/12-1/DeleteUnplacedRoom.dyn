@@ -1,0 +1,243 @@
+{
+  "Uuid": "2b1fc61c-6de7-4bcd-88fd-6bf2f9dda046",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DeleteUnplacedRoom",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.RoomsByStatus, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "861e07cc9fee40b1bf647b5bb8fa104a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b2cf0742cb544c029fb96e1ddedcf64c",
+          "Name": "PlacedRooms",
+          "Description": "ドキュメント内の配置されている部屋",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a9856b2056d34aae85c646578a2fac76",
+          "Name": "UnplacedRooms",
+          "Description": "ドキュメント内の配置されていない部屋",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "174f2513174a4b8f9c27a469eaa4cd31",
+          "Name": "NotEnclosedRooms",
+          "Description": "ドキュメント内の含まれていない部屋",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2b46aa82b0d5475e8c0009f588bd287c",
+          "Name": "RedundantRooms",
+          "Description": "特定のレベルの要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ステータス別にグループ化されたドキュメント内のすべての部屋を返します"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Delete@Revit.Elements.Element",
+      "Id": "c8d865980da34c8f84fea7c88afc1e48",
+      "Inputs": [
+        {
+          "Id": "d7f63d7ba6d54c88bdbdf0b4cb43791e",
+          "Name": "element",
+          "Description": "削除する要素です。\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3e40db6b0b9b407e830715c5f201e33a",
+          "Name": "int[]",
+          "Description": "従属要素を含む、削除された要素 ID のリストです。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "要素およびその要素に完全に従属している要素を削除します。\n\nElement.Delete (element: Element): int[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "258963ea7fc94636be7c0e87779990d8",
+      "Inputs": [
+        {
+          "Id": "d02ad19078104cf69bae46bea5796b4a",
+          "Name": "item0",
+          "Description": "項目インデックス番号 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9a0f31b8912349fbbd68d72fe0572a9a",
+          "Name": "item1",
+          "Description": "項目インデックス番号 #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6a62dc5dd5184bef82d3a56d6c8a0f16",
+          "Name": "item2",
+          "Description": "項目インデックス番号 #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "037815173c30481f914793fee40faef3",
+          "Name": "list",
+          "Description": "リスト(タイプ: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "与えられた入力に基づいて新しいリストを作成します"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "a9856b2056d34aae85c646578a2fac76",
+      "End": "d02ad19078104cf69bae46bea5796b4a",
+      "Id": "ab8bf7f2c4ed4cb8b5a3d329c40b6f5a"
+    },
+    {
+      "Start": "174f2513174a4b8f9c27a469eaa4cd31",
+      "End": "9a0f31b8912349fbbd68d72fe0572a9a",
+      "Id": "ed4b9412cb434894a84c4c408053b419"
+    },
+    {
+      "Start": "2b46aa82b0d5475e8c0009f588bd287c",
+      "End": "6a62dc5dd5184bef82d3a56d6c8a0f16",
+      "Id": "c51e236fe4fa40c4ae3a8fbe77e3a57d"
+    },
+    {
+      "Start": "037815173c30481f914793fee40faef3",
+      "End": "d7f63d7ba6d54c88bdbdf0b4cb43791e",
+      "Id": "3922e03dfa6f4f06b078ccdb84af2709"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -139.33012390136719,
+      "EyeY": 83.158367156982422,
+      "EyeZ": 138.40203857421875,
+      "LookX": 36.033737182617188,
+      "LookY": -39.036552429199219,
+      "LookZ": -174.16307067871094,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Rooms By Status",
+        "Id": "861e07cc9fee40b1bf647b5bb8fa104a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 90.799999999999955,
+        "Y": 85.600000000000037
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.Delete",
+        "Id": "c8d865980da34c8f84fea7c88afc1e48",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 437.30948634883794,
+        "Y": 112.00761894345418
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List Create",
+        "Id": "258963ea7fc94636be7c0e87779990d8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 292.61023042353133,
+        "Y": 111.0192908637236
+      }
+    ],
+    "Annotations": [],
+    "X": -28.114739216544976,
+    "Y": -13.40760571768503,
+    "Zoom": 0.84094026865566884
+  }
+}

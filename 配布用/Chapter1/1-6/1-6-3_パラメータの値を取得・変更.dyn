@@ -1,0 +1,381 @@
+{
+  "Uuid": "192a404a-b52c-4ece-b52a-2260228bd656",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "1-6-3_パラメータの値を取得・変更",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "590abaf1fe3847648cca8b2c8a9f1f00",
+      "Inputs": [
+        {
+          "Id": "5b7325ebb38842659f51e9d9f23ab73b",
+          "Name": "Category",
+          "Description": "カテゴリ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "78ec87827bbe4b94922b1c56d0fd0bff",
+          "Name": "Elements",
+          "Description": "要素タイプ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "モデルから指定したカテゴリのすべての要素を取得します。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 226,
+      "SelectedString": "OST_Walls",
+      "NodeType": "ExtensionNode",
+      "Id": "3d803eb04c3946b88a32ab5c1852e75e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2536a05a5d5b49789bdb7a524ee13e62",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Id": "caadd889988c41eba647de640d615757",
+      "Inputs": [
+        {
+          "Id": "40b94a8cda404a44b9b284e4ff41f6b2",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0e948ec45044447b9ba2828b6af25a64",
+          "Name": "parameterName",
+          "Description": "設定するパラメータの名前。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "087982badf88429e8ca31e2232c4f659",
+          "Name": "value",
+          "Description": "値。\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cce6339c45b042ee817b0a774a0d0622",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "いずれかの要素のパラメータを設定します。\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetParameterValueByName@string",
+      "Id": "4f42d0feb6f34745b647f1b32d668589",
+      "Inputs": [
+        {
+          "Id": "3fe66a2692e744759bdf2d416e00d413",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a758936383cd46f0b489df5b199becfd",
+          "Name": "parameterName",
+          "Description": "取得する値を持つパラメータの名前。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a301d54fcc804c839c7bd1ad993c2c22",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "要素のパラメータのいずれかの値を取得します。\n\nElement.GetParameterValueByName (parameterName: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"標準-200mm\";",
+      "Id": "aadfd8b9218d494c8e370681cfcf2a2f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "838a203e0a7a46b59c5f815c2b9288f7",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"タイプ\";",
+      "Id": "bfadfb15ec5b45639aa5f081631d7621",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b2ea6d0819f8423f866d1615fb01722a",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.WallType.ByName@string",
+      "Id": "5e1f9e3dad654d53b45b6a7d7387cc3e",
+      "Inputs": [
+        {
+          "Id": "7e588821b27e4856a7b502630e4287ab",
+          "Name": "name",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9cdd55890cd944a8996aec9e5506c0aa",
+          "Name": "WallType",
+          "Description": "WallType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "現在のドキュメントから walltype を名前で選択\n\nWallType.ByName (name: string): WallType"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "78ec87827bbe4b94922b1c56d0fd0bff",
+      "End": "40b94a8cda404a44b9b284e4ff41f6b2",
+      "Id": "de270743cb5d4c30a47a56af48ea2450"
+    },
+    {
+      "Start": "78ec87827bbe4b94922b1c56d0fd0bff",
+      "End": "3fe66a2692e744759bdf2d416e00d413",
+      "Id": "8dab0b27528b4efe9ddeda999f1a75f3"
+    },
+    {
+      "Start": "2536a05a5d5b49789bdb7a524ee13e62",
+      "End": "5b7325ebb38842659f51e9d9f23ab73b",
+      "Id": "315f8338b247426cbd9888b77382e9c2"
+    },
+    {
+      "Start": "838a203e0a7a46b59c5f815c2b9288f7",
+      "End": "7e588821b27e4856a7b502630e4287ab",
+      "Id": "43ad05b82ab24c00b469f3e6f9cfe74a"
+    },
+    {
+      "Start": "b2ea6d0819f8423f866d1615fb01722a",
+      "End": "0e948ec45044447b9ba2828b6af25a64",
+      "Id": "945f557c9295496e9c3d9b648ccafb27"
+    },
+    {
+      "Start": "b2ea6d0819f8423f866d1615fb01722a",
+      "End": "a758936383cd46f0b489df5b199becfd",
+      "Id": "d80f668dca1b4f30b56620130559d7be"
+    },
+    {
+      "Start": "9cdd55890cd944a8996aec9e5506c0aa",
+      "End": "087982badf88429e8ca31e2232c4f659",
+      "Id": "cbbd536b030a427aa984b22857a61371"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -6347.09228515625,
+      "EyeY": 13247.9462890625,
+      "EyeZ": 8560.0458984375,
+      "LookX": 142.333984375,
+      "LookY": -10997.9462890625,
+      "LookZ": -9168.703125,
+      "UpX": 0.0095133855938911438,
+      "UpY": 0.79015487432479858,
+      "UpZ": -0.61283344030380249
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "590abaf1fe3847648cca8b2c8a9f1f00",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 175.60000000000002,
+        "Y": 209.60000000000002
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "3d803eb04c3946b88a32ab5c1852e75e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1.8818186263459893,
+        "Y": 210.70501571996684
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.SetParameterByName",
+        "Id": "caadd889988c41eba647de640d615757",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 647.35744422736434,
+        "Y": 211.58498253745591
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.GetParameterValueByName",
+        "Id": "4f42d0feb6f34745b647f1b32d668589",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 655.34987584533678,
+        "Y": 444.61650344679975
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "aadfd8b9218d494c8e370681cfcf2a2f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 197.70720058322451,
+        "Y": 308.14688035479492
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "bfadfb15ec5b45639aa5f081631d7621",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 467.01279698667338,
+        "Y": 426.62112110326643
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "WallType.ByName",
+        "Id": "5e1f9e3dad654d53b45b6a7d7387cc3e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 371.39014859095244,
+        "Y": 305.68135307846245
+      }
+    ],
+    "Annotations": [],
+    "X": 130.75732197193446,
+    "Y": -26.783241295644075,
+    "Zoom": 0.67515289977012338
+  }
+}

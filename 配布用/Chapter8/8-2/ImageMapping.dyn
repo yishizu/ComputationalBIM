@@ -1,0 +1,1598 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ImageMapping",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.AdaptiveComponent.ByPoints@Autodesk.DesignScript.Geometry.Point[][],Revit.Elements.FamilyType",
+      "Id": "817a6b065cd24e7d9b4ae90bee3590e9",
+      "Inputs": [
+        {
+          "Id": "6eca07e4d7914278be5e240a044d6bb8",
+          "Name": "points",
+          "Description": "点の 2 次元配列\n\nPoint[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f35fc4ca68c240ca8ff7dc1188aabeab",
+          "Name": "familyType",
+          "Description": "アダプティブ コンポーネントの作成に使用するファミリ タイプ\n\nFamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2ac45472c0b24f18bff8074c5ca5d594",
+          "Name": "AdaptiveComponent[]..[]",
+          "Description": "AdaptiveComponent[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "点の 2 次元配列からアダプティブ コンポーネントのリストを作成します\n\nAdaptiveComponent.ByPoints (points: Point[][], familyType: FamilyType): AdaptiveComponent[]..[]"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 147,
+      "SelectedString": "Simple_Panel_ac:Simple_Panel_ac",
+      "NodeType": "ExtensionNode",
+      "Id": "b8a7377ab1434d009aada301d9be4408",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d568e4c7e42d4f50a155596d33eb6622",
+          "Name": "Family Type",
+          "Description": "選択した Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ドキュメントで使用可能なすべてのファミリ タイプ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "32907e62-3986-4bcf-be20-ddc644ab6b4d-00033007"
+      ],
+      "Id": "90550ad3b8ea43e8ae96596acaaea585",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7e14bf2976d243519c1cd3f5e5600150",
+          "Name": "Element",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "32907e62-3986-4bcf-be20-ddc644ab6b4d-00033064"
+      ],
+      "Id": "b935956b94e14f2d903526387ba73004",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f7a9440964fa4012a515f3e29c254cc0",
+          "Name": "Element",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "fb9731ccb5b84f04b79ce234d690ca1b",
+      "Inputs": [
+        {
+          "Id": "faddc310a6704cd9bd0c87df16b643ad",
+          "Name": "item0",
+          "Description": "項目インデックス番号 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1bf4ef7fac1347aca61f0b85dbb34042",
+          "Name": "item1",
+          "Description": "項目インデックス番号 #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ab63537b9b3f47fb9ae7f3390c112026",
+          "Name": "list",
+          "Description": "リスト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "与えられた入力に基づいて新しいリストを作成します"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Curves",
+      "Id": "b5d9c62a2f554ddc8b56ed344a843298",
+      "Inputs": [
+        {
+          "Id": "4982380ec8784775becacd029f1e47c7",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6456f5ad1dbd489bb4968c0a5c4085a0",
+          "Name": "Curve[]",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この要素の曲線\n\nElement.Curves: Curve[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "829b214998d24e6281dba7c9f58c96e2",
+      "Inputs": [
+        {
+          "Id": "ba865775c46944d0a6bd595a8ee0bac1",
+          "Name": "list",
+          "Description": "フラットにするリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4be6ea61082e4921bc9421a1034fc54f",
+          "Name": "amt",
+          "Description": "削除するネストのレイヤ。\n\nint\n既定値 : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "aae543db8c9a49919aca89910cd9f39e",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ネストされたリストのリストを、指定された量だけフラットにします。\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByLoft@Autodesk.DesignScript.Geometry.Curve[]",
+      "Id": "cf9aec5de8f24fefaafee0a258e56c56",
+      "Inputs": [
+        {
+          "Id": "bbbf949ea0f94d199b024eb48735db4a",
+          "Name": "crossSections",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "69826eafb7b041b0aeabe07b0faf03ed",
+          "Name": "Surface",
+          "Description": "Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "入力された断面曲線間をロフトしてサーフェスを作成します。\n\nSurface.ByLoft (crossSections: Curve[]): Surface"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\Shared drives\\DesignTech\\200_Training\\0003_BN_DynamoBook\\応用レシピ\\10_AdaptiveComponent\\gradient5.jpg",
+      "InputValue": ".\\gradient5.jpg",
+      "NodeType": "ExtensionNode",
+      "Id": "82f6bebd82924bfb91a3246b4aa42f6a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4acc3151a357440a9fe9f583d5a776f5",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル名を取得することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "e7aa3a9137b2475bba6df1ad6a46bfd6",
+      "Inputs": [
+        {
+          "Id": "533c211a41b543ba8188080134bd23e1",
+          "Name": "path",
+          "Description": "ファイルへのパス。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "86311385ddf442d9953f4ade0b78c7da",
+          "Name": "file",
+          "Description": "ファイル オブジェクト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パスからファイル オブジェクトを作成します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.ReadFromFile@var",
+      "Id": "30d9088a46984e769e32cb6a7c883dbd",
+      "Inputs": [
+        {
+          "Id": "390a314e0e0d404f9ee2a41620036ce5",
+          "Name": "file",
+          "Description": "イメージのロード元のファイル オブジェクト。\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "51e68b0d79c54f829a41a27038ed7608",
+          "Name": "image",
+          "Description": "イメージ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ファイルをビットマップとしてロードします。\n\nImage.ReadFromFile (file: var): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.Pixels@var,int,int",
+      "Id": "9d32742b6fa6444882b969a1f1c2d092",
+      "Inputs": [
+        {
+          "Id": "84b69d0fbf2d44e3bb16a302967f86f1",
+          "Name": "image",
+          "Description": "読み込むイメージ。\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0f22c5e65280433cb9248b9205ee102a",
+          "Name": "xSamples",
+          "Description": "X 方向のサンプルの通芯の点の数。\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b97c5e10ff4d44a69163864a47875fb9",
+          "Name": "ySamples",
+          "Description": "Y 方向のサンプルの通芯の点の数。\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b210c7b8cc1c45caa0f984d6ada3a1ee",
+          "Name": "colors",
+          "Description": "指定した通芯の点の色。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "イメージ ファイルを読み込み、指定の通芯位置の色の値を返します。\n\nImage.Pixels (image: var, xSamples: int, ySamples: int): Color[][]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "4516d7ddc91a4563928d9258ba98c8db",
+      "Inputs": [
+        {
+          "Id": "7f595efce3014187a13fa5338a059668",
+          "Name": "image",
+          "Description": "イメージ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c27e2c53010a44a785f978d6266e101e",
+          "Name": "image",
+          "Description": "イメージ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "イメージをプレビューします"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.OverrideColorInView@DSCore.Color",
+      "Id": "1f5e1cdc82b146f6a4cf96b968594892",
+      "Inputs": [
+        {
+          "Id": "1e03eab5723d4d198a8da6d4772c5c83",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "05a89154dd1f490dae9e2a2e39867af6",
+          "Name": "color",
+          "Description": "要素のソリッドの塗り潰しに適用する色。\n\nColor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e94046d91025482b8a3085020b5b1c22",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "アクティブ ビューで要素の色を変更します。\n\nElement.OverrideColorInView (color: Color): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Reverse@var[]..[]",
+      "Id": "16ef83eda3704272a1838e7b10647721",
+      "Inputs": [
+        {
+          "Id": "5e13ace545de40918538d26bf51922f3",
+          "Name": "list",
+          "Description": "反転するリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f4f6637e92ca41529dcaac589f62c62e",
+          "Name": "list",
+          "Description": "新しいリスト。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定されたリスト内の項目を逆順で含む新しいリストを作成します。\n\nList.Reverse (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "6d28847aaf464c0599b3c14e30c242a4",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "216d979d10c74ea79e4c6d8becd61c5e",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "4830889d54a845198910cd4f46dc2f6f",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "c71e4c9cc3744632a14972e0babe18bc",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "4c4520b4c1f945cf90c6e53bc71b7b73",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "695c50ef-e5b3-46f8-93c3-bca2274bdfa5",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "6b7c6442366e4f788ca0706681513327",
+      "Inputs": [
+        {
+          "Id": "2330ee7e354c400ea1761d39635d55ea",
+          "Name": "pointGrid",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "20969a1601724a2e86d01116ca6e059b",
+          "Name": "wrap",
+          "Description": "bool\n既定値 : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "34569746701a445c8c12b3e7029dc976",
+          "Name": "pointSets",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create groups of 4 items describing the \"cells\" of a rectangular grid of data.  In the case of a grid of points, the output will be the set of points describing the corners of 4-pointed panels."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.GetIsoline@int,double",
+      "Id": "7b6832e4d85c48e7af12fdf2562aeffa",
+      "Inputs": [
+        {
+          "Id": "85df922b114a40f5aaadc5fce124bd70",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "524c7cd6f33f4873a4ab0d301b939717",
+          "Name": "isoDirection",
+          "Description": "direction == 0 の場合は U パラメータ線分が作成され、direction == 1 の場合は V パラメータ線分が作成されます。\n\nint\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e3513ac69e3e4a80b9d327617b439b64",
+          "Name": "parameter",
+          "Description": "double\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c4d94fe8480d42a2bf22997845d4230f",
+          "Name": "Curve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定したサーフェスにパラメータ線分の曲線を作成します。サーフェスに U および V パラメータ線分を表す曲線を作成します。パラメータ線分は U または V パラメータが増加する方向に向き、U または V パラメータと逆の割合で増加していきます。作成される曲線は、サーフェスのパラメータ設定に一致し、その範囲はサーフェス パラメータの範囲に限定されます。返される曲線のタイプはサーフェスのタイプによって異なります。\n\nSurface.GetIsoline (isoDirection: int = 0, parameter: double = 0): Curve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1..#u;",
+      "Id": "db44f88122ff415296ebb4ece3a4f2de",
+      "Inputs": [
+        {
+          "Id": "700d51c61cbb4f4388032a3203280ed2",
+          "Name": "u",
+          "Description": "u",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "696e1ecd970540a3b2248018b4362150",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.PointAtParameter@double",
+      "Id": "7d420f6577994e4487ddf633b74e06c1",
+      "Inputs": [
+        {
+          "Id": "c066713b0e934111ab1f592d5b9abbc1",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3ea0d9202ad94f4988e64ff357f529bf",
+          "Name": "param",
+          "Description": "評価するパラメータ\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cc0b43866e20446586160e2555d18436",
+          "Name": "Point",
+          "Description": "点",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "StartParameter() から EndParameter() までの範囲内の指定されたパラメータで曲線上の点を取得します。\n\nCurve.PointAtParameter (param: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1..#v;",
+      "Id": "3a07395c8ba74d9a8ee8318cb14fedaa",
+      "Inputs": [
+        {
+          "Id": "f91dc44fa095413d88a57a217177e3c5",
+          "Name": "v",
+          "Description": "v",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cbaae86c10f64e758694a9d1eba892c5",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 30,
+      "MaximumValue": 30,
+      "MinimumValue": 10,
+      "StepValue": 1,
+      "Id": "5ab90dae3d4d4d8996a7a51497637618",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "aa00af03f82e4c61a9de9949ec9d45e1",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "整数値を生成するスライダです。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 10,
+      "MaximumValue": 20,
+      "MinimumValue": 10,
+      "StepValue": 1,
+      "Id": "7b49b85dbe7b436aa43d22f674b1fb53",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5e3d30cd8eeb46909ae9bbfa4a46a1e4",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "整数値を生成するスライダです。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "u-1;\nv-1;",
+      "Id": "52a220ffe94640e680d0c5b1e03ac425",
+      "Inputs": [
+        {
+          "Id": "29cd15e0b5044fa6a442a1a1e3e527e3",
+          "Name": "u",
+          "Description": "u",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "13425ffec5d647e38af63d84ba28ba78",
+          "Name": "v",
+          "Description": "v",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9161cc1041d6415ba3d49f8a08c653a4",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ab9c0a37dd642709f1cf0f6f20361cc",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Reverse@var[]..[]",
+      "Id": "430809e6c7634100b3552961db612b42",
+      "Inputs": [
+        {
+          "Id": "b2b4e29bcb1c4f8ab33150cd92d82413",
+          "Name": "list",
+          "Description": "反転するリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": true,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "97c3eb2030814a7bb71009c93e87654e",
+          "Name": "list",
+          "Description": "新しいリスト。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定されたリスト内の項目を逆順で含む新しいリストを作成します。\n\nList.Reverse (list: var[]..[]): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2ac45472c0b24f18bff8074c5ca5d594",
+      "End": "1e03eab5723d4d198a8da6d4772c5c83",
+      "Id": "e052b7965cef4972826af97126fbc56d"
+    },
+    {
+      "Start": "d568e4c7e42d4f50a155596d33eb6622",
+      "End": "f35fc4ca68c240ca8ff7dc1188aabeab",
+      "Id": "5ae350c97a724922ba751421a21b39b8"
+    },
+    {
+      "Start": "7e14bf2976d243519c1cd3f5e5600150",
+      "End": "faddc310a6704cd9bd0c87df16b643ad",
+      "Id": "e823a0c0f6054f6282afd8a4c4895312"
+    },
+    {
+      "Start": "f7a9440964fa4012a515f3e29c254cc0",
+      "End": "1bf4ef7fac1347aca61f0b85dbb34042",
+      "Id": "1c5b7edbbc424a19b46256b0cd3328ac"
+    },
+    {
+      "Start": "ab63537b9b3f47fb9ae7f3390c112026",
+      "End": "4982380ec8784775becacd029f1e47c7",
+      "Id": "8c1f3ba3caba4198b8fef7568c41802d"
+    },
+    {
+      "Start": "6456f5ad1dbd489bb4968c0a5c4085a0",
+      "End": "ba865775c46944d0a6bd595a8ee0bac1",
+      "Id": "93dc4a36e5034cd5961bd1da8761491d"
+    },
+    {
+      "Start": "aae543db8c9a49919aca89910cd9f39e",
+      "End": "bbbf949ea0f94d199b024eb48735db4a",
+      "Id": "0c5d4a27906f4dcabbe524299570c7ba"
+    },
+    {
+      "Start": "69826eafb7b041b0aeabe07b0faf03ed",
+      "End": "85df922b114a40f5aaadc5fce124bd70",
+      "Id": "f21efa23792b43af90ba9f08270cb999"
+    },
+    {
+      "Start": "4acc3151a357440a9fe9f583d5a776f5",
+      "End": "533c211a41b543ba8188080134bd23e1",
+      "Id": "7353adef24f2481b98a0a6428564382c"
+    },
+    {
+      "Start": "86311385ddf442d9953f4ade0b78c7da",
+      "End": "390a314e0e0d404f9ee2a41620036ce5",
+      "Id": "b58836c50b6d473ead5ccfa7c038a080"
+    },
+    {
+      "Start": "51e68b0d79c54f829a41a27038ed7608",
+      "End": "7f595efce3014187a13fa5338a059668",
+      "Id": "f356b44b96f54bfe91bd5e3d0bf9cd5c"
+    },
+    {
+      "Start": "b210c7b8cc1c45caa0f984d6ada3a1ee",
+      "End": "5e13ace545de40918538d26bf51922f3",
+      "Id": "510d36d94a774e1fbee40a950481b2fc"
+    },
+    {
+      "Start": "c27e2c53010a44a785f978d6266e101e",
+      "End": "84b69d0fbf2d44e3bb16a302967f86f1",
+      "Id": "3bdf24c1db594caf8e8797de9bf1d5b8"
+    },
+    {
+      "Start": "f4f6637e92ca41529dcaac589f62c62e",
+      "End": "b2b4e29bcb1c4f8ab33150cd92d82413",
+      "Id": "063a3120042d4c48af9437297b6e3733"
+    },
+    {
+      "Start": "34569746701a445c8c12b3e7029dc976",
+      "End": "6eca07e4d7914278be5e240a044d6bb8",
+      "Id": "e2addf443b004848bb8a0bee6582039f"
+    },
+    {
+      "Start": "c4d94fe8480d42a2bf22997845d4230f",
+      "End": "c066713b0e934111ab1f592d5b9abbc1",
+      "Id": "87a6c85586024347801e919c65d47447"
+    },
+    {
+      "Start": "696e1ecd970540a3b2248018b4362150",
+      "End": "e3513ac69e3e4a80b9d327617b439b64",
+      "Id": "2246e10a621b486092b36a995e0b7802"
+    },
+    {
+      "Start": "cc0b43866e20446586160e2555d18436",
+      "End": "2330ee7e354c400ea1761d39635d55ea",
+      "Id": "faf982a785f8446c8fa722659228fb8a"
+    },
+    {
+      "Start": "cbaae86c10f64e758694a9d1eba892c5",
+      "End": "3ea0d9202ad94f4988e64ff357f529bf",
+      "Id": "da71e923c609474199372d6acd234a77"
+    },
+    {
+      "Start": "aa00af03f82e4c61a9de9949ec9d45e1",
+      "End": "f91dc44fa095413d88a57a217177e3c5",
+      "Id": "9a08db609bab4dfe85a1856a22344f2d"
+    },
+    {
+      "Start": "aa00af03f82e4c61a9de9949ec9d45e1",
+      "End": "13425ffec5d647e38af63d84ba28ba78",
+      "Id": "9df26002780947f9945eb29aa2629788"
+    },
+    {
+      "Start": "5e3d30cd8eeb46909ae9bbfa4a46a1e4",
+      "End": "700d51c61cbb4f4388032a3203280ed2",
+      "Id": "ff930553b9ca4ed29c115761e56f9946"
+    },
+    {
+      "Start": "5e3d30cd8eeb46909ae9bbfa4a46a1e4",
+      "End": "29cd15e0b5044fa6a442a1a1e3e527e3",
+      "Id": "d3117cb64f624d21839701df1109db78"
+    },
+    {
+      "Start": "9161cc1041d6415ba3d49f8a08c653a4",
+      "End": "b97c5e10ff4d44a69163864a47875fb9",
+      "Id": "5cfb0e9555114b66b8e43b5e2db5eb4c"
+    },
+    {
+      "Start": "9ab9c0a37dd642709f1cf0f6f20361cc",
+      "End": "0f22c5e65280433cb9248b9205ee102a",
+      "Id": "17704c27505147cfb51480ae53d8c85d"
+    },
+    {
+      "Start": "97c3eb2030814a7bb71009c93e87654e",
+      "End": "05a89154dd1f490dae9e2a2e39867af6",
+      "Id": "372b355813884164a04bdccc1c70605d"
+    }
+  ],
+  "Dependencies": [
+    "695c50ef-e5b3-46f8-93c3-bca2274bdfa5"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Ampersand",
+      "Version": "2019.12.31",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "6b7c6442366e4f788ca0706681513327"
+      ]
+    }
+  ],
+  "Bindings": [
+    {
+      "NodeId": "817a6b06-5cd2-4e7d-9b4a-e90bee3590e9",
+      "Binding": {
+        "ByPoints_InClassDecl-1_InFunctionScope-1_Instance0_817a6b06-5cd2-4e7d-9b4a-e90bee3590e9": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTAuMS4zOTc2JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT5mYWxzZTwvQmFzZS0wX0hhc0RhdGE+DQo8QmFzZS0wX0hhc05lc3RlZERhdGE+dHJ1ZTwvQmFzZS0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wX05lc3RlZERhdGFDb3VudD45PC9CYXNlLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTBfSGFzRGF0YT4NCjxCYXNlLTAtMF9EYXRhIGlkPSJyZWYtMyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTmRXeDBhWEJzWlZObGNtbGhiR2w2WVdKc1pVbGtJR2xrUFNKeVpXWXRNU0lnZUcxc2JuTTZZVEU5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdlkyeHlMMjV6WVhOelpXMHZVbVYyYVhSVFpYSjJhV05sY3k1UVpYSnphWE4wWlc1alpTOVNaWFpwZEZObGNuWnBZMlZ6SlRKREpUSXdWbVZ5YzJsdmJpVXpSREl1TVRBdU1TNDBNREF5SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEc1MWJXSmxjazltUld4bGJXVnVkSE0rTWprOEwyNTFiV0psY2s5bVJXeGxiV1Z1ZEhNK0RRbzhjM1J5YVc1blNVUXRNQ0JwWkQwaWNtVm1MVE1pUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVEkzTkR3dmMzUnlhVzVuU1VRdE1ENE5DanhwYm5SSlJDMHdQakl4TnpjeE5qd3ZhVzUwU1VRdE1ENE5Danh6ZEhKcGJtZEpSQzB4SUdsa1BTSnlaV1l0TkNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTWpkaVBDOXpkSEpwYm1kSlJDMHhQZzBLUEdsdWRFbEVMVEUrTWpFM056SXpQQzlwYm5SSlJDMHhQZzBLUEhOMGNtbHVaMGxFTFRJZ2FXUTlJbkpsWmkwMUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVeU9ERThMM04wY21sdVowbEVMVEkrRFFvOGFXNTBTVVF0TWo0eU1UYzNNams4TDJsdWRFbEVMVEkrRFFvOGMzUnlhVzVuU1VRdE15QnBaRDBpY21WbUxUWWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5USTROend2YzNSeWFXNW5TVVF0TXo0TkNqeHBiblJKUkMwelBqSXhOemN6TlR3dmFXNTBTVVF0TXo0TkNqeHpkSEpwYm1kSlJDMDBJR2xrUFNKeVpXWXROeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFNamhrUEM5emRISnBibWRKUkMwMFBnMEtQR2x1ZEVsRUxUUStNakUzTnpReFBDOXBiblJKUkMwMFBnMEtQSE4wY21sdVowbEVMVFVnYVdROUluSmxaaTA0SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelV5T1RNOEwzTjBjbWx1WjBsRUxUVStEUW84YVc1MFNVUXROVDR5TVRjM05EYzhMMmx1ZEVsRUxUVStEUW84YzNSeWFXNW5TVVF0TmlCcFpEMGljbVZtTFRraVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRJNU9Ud3ZjM1J5YVc1blNVUXROajROQ2p4cGJuUkpSQzAyUGpJeE56YzFNend2YVc1MFNVUXROajROQ2p4emRISnBibWRKUkMwM0lHbGtQU0p5WldZdE1UQWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5USTVaand2YzNSeWFXNW5TVVF0Tno0TkNqeHBiblJKUkMwM1BqSXhOemMxT1R3dmFXNTBTVVF0Tno0TkNqeHpkSEpwYm1kSlJDMDRJR2xrUFNKeVpXWXRNVEVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVEpoTlR3dmMzUnlhVzVuU1VRdE9ENE5DanhwYm5SSlJDMDRQakl4TnpjMk5Ud3ZhVzUwU1VRdE9ENE5Danh6ZEhKcGJtZEpSQzA1SUdsa1BTSnlaV1l0TVRJaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRKaFlqd3ZjM1J5YVc1blNVUXRPVDROQ2p4cGJuUkpSQzA1UGpJeE56YzNNVHd2YVc1MFNVUXRPVDROQ2p4emRISnBibWRKUkMweE1DQnBaRDBpY21WbUxURXpJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VXlZakU4TDNOMGNtbHVaMGxFTFRFd1BnMEtQR2x1ZEVsRUxURXdQakl4TnpjM056d3ZhVzUwU1VRdE1UQStEUW84YzNSeWFXNW5TVVF0TVRFZ2FXUTlJbkpsWmkweE5DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU1tSTNQQzl6ZEhKcGJtZEpSQzB4TVQ0TkNqeHBiblJKUkMweE1UNHlNVGMzT0RNOEwybHVkRWxFTFRFeFBnMEtQSE4wY21sdVowbEVMVEV5SUdsa1BTSnlaV1l0TVRVaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRKaVpEd3ZjM1J5YVc1blNVUXRNVEkrRFFvOGFXNTBTVVF0TVRJK01qRTNOemc1UEM5cGJuUkpSQzB4TWo0TkNqeHpkSEpwYm1kSlJDMHhNeUJwWkQwaWNtVm1MVEUySWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelV5WXpNOEwzTjBjbWx1WjBsRUxURXpQZzBLUEdsdWRFbEVMVEV6UGpJeE56YzVOVHd2YVc1MFNVUXRNVE0rRFFvOGMzUnlhVzVuU1VRdE1UUWdhV1E5SW5KbFppMHhOeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFNbU01UEM5emRISnBibWRKUkMweE5ENE5DanhwYm5SSlJDMHhORDR5TVRjNE1ERThMMmx1ZEVsRUxURTBQZzBLUEhOMGNtbHVaMGxFTFRFMUlHbGtQU0p5WldZdE1UZ2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5USmpaand2YzNSeWFXNW5TVVF0TVRVK0RRbzhhVzUwU1VRdE1UVStNakUzT0RBM1BDOXBiblJKUkMweE5UNE5Danh6ZEhKcGJtZEpSQzB4TmlCcFpEMGljbVZtTFRFNUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVeVpEVThMM04wY21sdVowbEVMVEUyUGcwS1BHbHVkRWxFTFRFMlBqSXhOemd4TXp3dmFXNTBTVVF0TVRZK0RRbzhjM1J5YVc1blNVUXRNVGNnYVdROUluSmxaaTB5TUNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTW1SaVBDOXpkSEpwYm1kSlJDMHhOejROQ2p4cGJuUkpSQzB4Tno0eU1UYzRNVGs4TDJsdWRFbEVMVEUzUGcwS1BITjBjbWx1WjBsRUxURTRJR2xrUFNKeVpXWXRNakVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVEpsTVR3dmMzUnlhVzVuU1VRdE1UZytEUW84YVc1MFNVUXRNVGcrTWpFM09ESTFQQzlwYm5SSlJDMHhPRDROQ2p4emRISnBibWRKUkMweE9TQnBaRDBpY21WbUxUSXlJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VXlaVGM4TDNOMGNtbHVaMGxFTFRFNVBnMEtQR2x1ZEVsRUxURTVQakl4Tnpnek1Ud3ZhVzUwU1VRdE1UaytEUW84YzNSeWFXNW5TVVF0TWpBZ2FXUTlJbkpsWmkweU15SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU1tVmtQQzl6ZEhKcGJtZEpSQzB5TUQ0TkNqeHBiblJKUkMweU1ENHlNVGM0TXpjOEwybHVkRWxFTFRJd1BnMEtQSE4wY21sdVowbEVMVEl4SUdsa1BTSnlaV1l0TWpRaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRKbU16d3ZjM1J5YVc1blNVUXRNakUrRFFvOGFXNTBTVVF0TWpFK01qRTNPRFF6UEM5cGJuUkpSQzB5TVQ0TkNqeHpkSEpwYm1kSlJDMHlNaUJwWkQwaWNtVm1MVEkxSWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelV5WmprOEwzTjBjbWx1WjBsRUxUSXlQZzBLUEdsdWRFbEVMVEl5UGpJeE56ZzBPVHd2YVc1MFNVUXRNakkrRFFvOGMzUnlhVzVuU1VRdE1qTWdhV1E5SW5KbFppMHlOaUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFNbVptUEM5emRISnBibWRKUkMweU16NE5DanhwYm5SSlJDMHlNejR5TVRjNE5UVThMMmx1ZEVsRUxUSXpQZzBLUEhOMGNtbHVaMGxFTFRJMElHbGtQU0p5WldZdE1qY2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UTXdOVHd2YzNSeWFXNW5TVVF0TWpRK0RRbzhhVzUwU1VRdE1qUStNakUzT0RZeFBDOXBiblJKUkMweU5ENE5Danh6ZEhKcGJtZEpSQzB5TlNCcFpEMGljbVZtTFRJNElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVek1HSThMM04wY21sdVowbEVMVEkxUGcwS1BHbHVkRWxFTFRJMVBqSXhOemcyTnp3dmFXNTBTVVF0TWpVK0RRbzhjM1J5YVc1blNVUXRNallnYVdROUluSmxaaTB5T1NJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTXpFeFBDOXpkSEpwYm1kSlJDMHlOajROQ2p4cGJuUkpSQzB5Tmo0eU1UYzROek04TDJsdWRFbEVMVEkyUGcwS1BITjBjbWx1WjBsRUxUSTNJR2xrUFNKeVpXWXRNekFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVE14Tnp3dmMzUnlhVzVuU1VRdE1qYytEUW84YVc1MFNVUXRNamMrTWpFM09EYzVQQzlwYm5SSlJDMHlOejROQ2p4emRISnBibWRKUkMweU9DQnBaRDBpY21WbUxUTXhJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VXpNV1E4TDNOMGNtbHVaMGxFTFRJNFBnMEtQR2x1ZEVsRUxUSTRQakl4TnpnNE5Ud3ZhVzUwU1VRdE1qZytEUW84TDJFeE9rMTFiSFJwY0d4bFUyVnlhV0ZzYVhwaFlteGxTV1ErRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0wX0RhdGE+DQo8QmFzZS0wLTBfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTBfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtMV9IYXNEYXRhPnRydWU8L0Jhc2UtMC0xX0hhc0RhdGE+DQo8QmFzZS0wLTFfRGF0YSBpZD0icmVmLTQiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE5kV3gwYVhCc1pWTmxjbWxoYkdsNllXSnNaVWxrSUdsa1BTSnlaV1l0TVNJZ2VHMXNibk02WVRFOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZZMnh5TDI1ellYTnpaVzB2VW1WMmFYUlRaWEoyYVdObGN5NVFaWEp6YVhOMFpXNWpaUzlTWlhacGRGTmxjblpwWTJWekpUSkRKVEl3Vm1WeWMybHZiaVV6UkRJdU1UQXVNUzQwTURBeUpUSkRKVEl3UTNWc2RIVnlaU1V6Ukc1bGRYUnlZV3dsTWtNbE1qQlFkV0pzYVdOTFpYbFViMnRsYmlVelJHNTFiR3dpUGcwS1BHNTFiV0psY2s5bVJXeGxiV1Z1ZEhNK01qazhMMjUxYldKbGNrOW1SV3hsYldWdWRITStEUW84YzNSeWFXNW5TVVF0TUNCcFpEMGljbVZtTFRNaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRNeU16d3ZjM1J5YVc1blNVUXRNRDROQ2p4cGJuUkpSQzB3UGpJeE56ZzVNVHd2YVc1MFNVUXRNRDROQ2p4emRISnBibWRKUkMweElHbGtQU0p5WldZdE5DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU16STVQQzl6ZEhKcGJtZEpSQzB4UGcwS1BHbHVkRWxFTFRFK01qRTNPRGszUEM5cGJuUkpSQzB4UGcwS1BITjBjbWx1WjBsRUxUSWdhV1E5SW5KbFppMDFJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VXpNbVk4TDNOMGNtbHVaMGxFTFRJK0RRbzhhVzUwU1VRdE1qNHlNVGM1TURNOEwybHVkRWxFTFRJK0RRbzhjM1J5YVc1blNVUXRNeUJwWkQwaWNtVm1MVFlpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVE16TlR3dmMzUnlhVzVuU1VRdE16NE5DanhwYm5SSlJDMHpQakl4Tnprd09Ud3ZhVzUwU1VRdE16NE5Danh6ZEhKcGJtZEpSQzAwSUdsa1BTSnlaV1l0TnlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTXpOaVBDOXpkSEpwYm1kSlJDMDBQZzBLUEdsdWRFbEVMVFErTWpFM09URTFQQzlwYm5SSlJDMDBQZzBLUEhOMGNtbHVaMGxFTFRVZ2FXUTlJbkpsWmkwNElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVek5ERThMM04wY21sdVowbEVMVFUrRFFvOGFXNTBTVVF0TlQ0eU1UYzVNakU4TDJsdWRFbEVMVFUrRFFvOGMzUnlhVzVuU1VRdE5pQnBaRDBpY21WbUxUa2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UTTBOend2YzNSeWFXNW5TVVF0Tmo0TkNqeHBiblJKUkMwMlBqSXhOemt5Tnp3dmFXNTBTVVF0Tmo0TkNqeHpkSEpwYm1kSlJDMDNJR2xrUFNKeVpXWXRNVEFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVE0wWkR3dmMzUnlhVzVuU1VRdE56NE5DanhwYm5SSlJDMDNQakl4Tnprek16d3ZhVzUwU1VRdE56NE5Danh6ZEhKcGJtZEpSQzA0SUdsa1BTSnlaV1l0TVRFaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRNMU16d3ZjM1J5YVc1blNVUXRPRDROQ2p4cGJuUkpSQzA0UGpJeE56a3pPVHd2YVc1MFNVUXRPRDROQ2p4emRISnBibWRKUkMwNUlHbGtQU0p5WldZdE1USWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UTTFPVHd2YzNSeWFXNW5TVVF0T1Q0TkNqeHBiblJKUkMwNVBqSXhOemswTlR3dmFXNTBTVVF0T1Q0TkNqeHpkSEpwYm1kSlJDMHhNQ0JwWkQwaWNtVm1MVEV6SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelV6TldZOEwzTjBjbWx1WjBsRUxURXdQZzBLUEdsdWRFbEVMVEV3UGpJeE56azFNVHd2YVc1MFNVUXRNVEErRFFvOGMzUnlhVzVuU1VRdE1URWdhV1E5SW5KbFppMHhOQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFNelkxUEM5emRISnBibWRKUkMweE1UNE5DanhwYm5SSlJDMHhNVDR5TVRjNU5UYzhMMmx1ZEVsRUxURXhQZzBLUEhOMGNtbHVaMGxFTFRFeUlHbGtQU0p5WldZdE1UVWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UTTJZand2YzNSeWFXNW5TVVF0TVRJK0RRbzhhVzUwU1VRdE1USStNakUzT1RZelBDOXBiblJKUkMweE1qNE5Danh6ZEhKcGJtZEpSQzB4TXlCcFpEMGljbVZtTFRFMklqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVek56RThMM04wY21sdVowbEVMVEV6UGcwS1BHbHVkRWxFTFRFelBqSXhOemsyT1R3dmFXNTBTVVF0TVRNK0RRbzhjM1J5YVc1blNVUXRNVFFnYVdROUluSmxaaTB4TnlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTXpjM1BDOXpkSEpwYm1kSlJDMHhORDROQ2p4cGJuUkpSQzB4TkQ0eU1UYzVOelU4TDJsdWRFbEVMVEUwUGcwS1BITjBjbWx1WjBsRUxURTFJR2xrUFNKeVpXWXRNVGdpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVE0zWkR3dmMzUnlhVzVuU1VRdE1UVStEUW84YVc1MFNVUXRNVFUrTWpFM09UZ3hQQzlwYm5SSlJDMHhOVDROQ2p4emRISnBibWRKUkMweE5pQnBaRDBpY21WbUxURTVJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VXpPRE04TDNOMGNtbHVaMGxFTFRFMlBnMEtQR2x1ZEVsRUxURTJQakl4TnprNE56d3ZhVzUwU1VRdE1UWStEUW84YzNSeWFXNW5TVVF0TVRjZ2FXUTlJbkpsWmkweU1DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU16ZzVQQzl6ZEhKcGJtZEpSQzB4Tno0TkNqeHBiblJKUkMweE56NHlNVGM1T1RNOEwybHVkRWxFTFRFM1BnMEtQSE4wY21sdVowbEVMVEU0SUdsa1BTSnlaV1l0TWpFaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRNNFpqd3ZjM1J5YVc1blNVUXRNVGcrRFFvOGFXNTBTVVF0TVRnK01qRTNPVGs1UEM5cGJuUkpSQzB4T0Q0TkNqeHpkSEpwYm1kSlJDMHhPU0JwWkQwaWNtVm1MVEl5SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelV6T1RVOEwzTjBjbWx1WjBsRUxURTVQZzBLUEdsdWRFbEVMVEU1UGpJeE9EQXdOVHd2YVc1MFNVUXRNVGsrRFFvOGMzUnlhVzVuU1VRdE1qQWdhV1E5SW5KbFppMHlNeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFNemxpUEM5emRISnBibWRKUkMweU1ENE5DanhwYm5SSlJDMHlNRDR5TVRnd01URThMMmx1ZEVsRUxUSXdQZzBLUEhOMGNtbHVaMGxFTFRJeElHbGtQU0p5WldZdE1qUWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UTmhNVHd2YzNSeWFXNW5TVVF0TWpFK0RRbzhhVzUwU1VRdE1qRStNakU0TURFM1BDOXBiblJKUkMweU1UNE5Danh6ZEhKcGJtZEpSQzB5TWlCcFpEMGljbVZtTFRJMUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVellUYzhMM04wY21sdVowbEVMVEl5UGcwS1BHbHVkRWxFTFRJeVBqSXhPREF5TXp3dmFXNTBTVVF0TWpJK0RRbzhjM1J5YVc1blNVUXRNak1nYVdROUluSmxaaTB5TmlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTTJGa1BDOXpkSEpwYm1kSlJDMHlNejROQ2p4cGJuUkpSQzB5TXo0eU1UZ3dNams4TDJsdWRFbEVMVEl6UGcwS1BITjBjbWx1WjBsRUxUSTBJR2xrUFNKeVpXWXRNamNpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVE5pTXp3dmMzUnlhVzVuU1VRdE1qUStEUW84YVc1MFNVUXRNalErTWpFNE1ETTFQQzlwYm5SSlJDMHlORDROQ2p4emRISnBibWRKUkMweU5TQnBaRDBpY21WbUxUSTRJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VXpZams4TDNOMGNtbHVaMGxFTFRJMVBnMEtQR2x1ZEVsRUxUSTFQakl4T0RBME1Ud3ZhVzUwU1VRdE1qVStEUW84YzNSeWFXNW5TVVF0TWpZZ2FXUTlJbkpsWmkweU9TSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU0ySm1QQzl6ZEhKcGJtZEpSQzB5Tmo0TkNqeHBiblJKUkMweU5qNHlNVGd3TkRjOEwybHVkRWxFTFRJMlBnMEtQSE4wY21sdVowbEVMVEkzSUdsa1BTSnlaV1l0TXpBaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlROak5Ud3ZjM1J5YVc1blNVUXRNamMrRFFvOGFXNTBTVVF0TWpjK01qRTRNRFV6UEM5cGJuUkpSQzB5Tno0TkNqeHpkSEpwYm1kSlJDMHlPQ0JwWkQwaWNtVm1MVE14SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelV6WTJJOEwzTjBjbWx1WjBsRUxUSTRQZzBLUEdsdWRFbEVMVEk0UGpJeE9EQTFPVHd2YVc1MFNVUXRNamcrRFFvOEwyRXhPazExYkhScGNHeGxVMlZ5YVdGc2FYcGhZbXhsU1dRK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtMV9EYXRhPg0KPEJhc2UtMC0xX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0xX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTJfSGFzRGF0YT50cnVlPC9CYXNlLTAtMl9IYXNEYXRhPg0KPEJhc2UtMC0yX0RhdGEgaWQ9InJlZi01Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBOZFd4MGFYQnNaVk5sY21saGJHbDZZV0pzWlVsa0lHbGtQU0p5WldZdE1TSWdlRzFzYm5NNllURTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2WTJ4eUwyNXpZWE56WlcwdlVtVjJhWFJUWlhKMmFXTmxjeTVRWlhKemFYTjBaVzVqWlM5U1pYWnBkRk5sY25acFkyVnpKVEpESlRJd1ZtVnljMmx2YmlVelJESXVNVEF1TVM0ME1EQXlKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQRzUxYldKbGNrOW1SV3hsYldWdWRITStNams4TDI1MWJXSmxjazltUld4bGJXVnVkSE0rRFFvOGMzUnlhVzVuU1VRdE1DQnBaRDBpY21WbUxUTWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UTmtNVHd2YzNSeWFXNW5TVVF0TUQ0TkNqeHBiblJKUkMwd1BqSXhPREEyTlR3dmFXNTBTVVF0TUQ0TkNqeHpkSEpwYm1kSlJDMHhJR2xrUFNKeVpXWXROQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFNMlEzUEM5emRISnBibWRKUkMweFBnMEtQR2x1ZEVsRUxURStNakU0TURjeFBDOXBiblJKUkMweFBnMEtQSE4wY21sdVowbEVMVElnYVdROUluSmxaaTAxSWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelV6WkdROEwzTjBjbWx1WjBsRUxUSStEUW84YVc1MFNVUXRNajR5TVRnd056YzhMMmx1ZEVsRUxUSStEUW84YzNSeWFXNW5TVVF0TXlCcFpEMGljbVZtTFRZaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRObE16d3ZjM1J5YVc1blNVUXRNejROQ2p4cGJuUkpSQzB6UGpJeE9EQTRNend2YVc1MFNVUXRNejROQ2p4emRISnBibWRKUkMwMElHbGtQU0p5WldZdE55SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU0yVTVQQzl6ZEhKcGJtZEpSQzAwUGcwS1BHbHVkRWxFTFRRK01qRTRNRGc1UEM5cGJuUkpSQzAwUGcwS1BITjBjbWx1WjBsRUxUVWdhV1E5SW5KbFppMDRJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VXpaV1k4TDNOMGNtbHVaMGxFTFRVK0RRbzhhVzUwU1VRdE5UNHlNVGd3T1RVOEwybHVkRWxFTFRVK0RRbzhjM1J5YVc1blNVUXROaUJwWkQwaWNtVm1MVGtpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVE5tTlR3dmMzUnlhVzVuU1VRdE5qNE5DanhwYm5SSlJDMDJQakl4T0RFd01Ud3ZhVzUwU1VRdE5qNE5Danh6ZEhKcGJtZEpSQzAzSUdsa1BTSnlaV1l0TVRBaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRObVlqd3ZjM1J5YVc1blNVUXROejROQ2p4cGJuUkpSQzAzUGpJeE9ERXdOend2YVc1MFNVUXROejROQ2p4emRISnBibWRKUkMwNElHbGtQU0p5WldZdE1URWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UUXdNVHd2YzNSeWFXNW5TVVF0T0Q0TkNqeHBiblJKUkMwNFBqSXhPREV4TXp3dmFXNTBTVVF0T0Q0TkNqeHpkSEpwYm1kSlJDMDVJR2xrUFNKeVpXWXRNVElpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFF3Tnp3dmMzUnlhVzVuU1VRdE9UNE5DanhwYm5SSlJDMDVQakl4T0RFeE9Ud3ZhVzUwU1VRdE9UNE5Danh6ZEhKcGJtZEpSQzB4TUNCcFpEMGljbVZtTFRFeklqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVME1HUThMM04wY21sdVowbEVMVEV3UGcwS1BHbHVkRWxFTFRFd1BqSXhPREV5TlR3dmFXNTBTVVF0TVRBK0RRbzhjM1J5YVc1blNVUXRNVEVnYVdROUluSmxaaTB4TkNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTkRFelBDOXpkSEpwYm1kSlJDMHhNVDROQ2p4cGJuUkpSQzB4TVQ0eU1UZ3hNekU4TDJsdWRFbEVMVEV4UGcwS1BITjBjbWx1WjBsRUxURXlJR2xrUFNKeVpXWXRNVFVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFF4T1R3dmMzUnlhVzVuU1VRdE1USStEUW84YVc1MFNVUXRNVEkrTWpFNE1UTTNQQzlwYm5SSlJDMHhNajROQ2p4emRISnBibWRKUkMweE15QnBaRDBpY21WbUxURTJJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTBNV1k4TDNOMGNtbHVaMGxFTFRFelBnMEtQR2x1ZEVsRUxURXpQakl4T0RFME16d3ZhVzUwU1VRdE1UTStEUW84YzNSeWFXNW5TVVF0TVRRZ2FXUTlJbkpsWmkweE55SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5ESTFQQzl6ZEhKcGJtZEpSQzB4TkQ0TkNqeHBiblJKUkMweE5ENHlNVGd4TkRrOEwybHVkRWxFTFRFMFBnMEtQSE4wY21sdVowbEVMVEUxSUdsa1BTSnlaV1l0TVRnaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRReVlqd3ZjM1J5YVc1blNVUXRNVFUrRFFvOGFXNTBTVVF0TVRVK01qRTRNVFUxUEM5cGJuUkpSQzB4TlQ0TkNqeHpkSEpwYm1kSlJDMHhOaUJwWkQwaWNtVm1MVEU1SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUwTXpFOEwzTjBjbWx1WjBsRUxURTJQZzBLUEdsdWRFbEVMVEUyUGpJeE9ERTJNVHd2YVc1MFNVUXRNVFkrRFFvOGMzUnlhVzVuU1VRdE1UY2dhV1E5SW5KbFppMHlNQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFORE0zUEM5emRISnBibWRKUkMweE56NE5DanhwYm5SSlJDMHhOejR5TVRneE5qYzhMMmx1ZEVsRUxURTNQZzBLUEhOMGNtbHVaMGxFTFRFNElHbGtQU0p5WldZdE1qRWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UUXpaRHd2YzNSeWFXNW5TVVF0TVRnK0RRbzhhVzUwU1VRdE1UZytNakU0TVRjelBDOXBiblJKUkMweE9ENE5Danh6ZEhKcGJtZEpSQzB4T1NCcFpEMGljbVZtTFRJeUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVME5ETThMM04wY21sdVowbEVMVEU1UGcwS1BHbHVkRWxFTFRFNVBqSXhPREUzT1R3dmFXNTBTVVF0TVRrK0RRbzhjM1J5YVc1blNVUXRNakFnYVdROUluSmxaaTB5TXlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTkRRNVBDOXpkSEpwYm1kSlJDMHlNRDROQ2p4cGJuUkpSQzB5TUQ0eU1UZ3hPRFU4TDJsdWRFbEVMVEl3UGcwS1BITjBjbWx1WjBsRUxUSXhJR2xrUFNKeVpXWXRNalFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFEwWmp3dmMzUnlhVzVuU1VRdE1qRStEUW84YVc1MFNVUXRNakUrTWpFNE1Ua3hQQzlwYm5SSlJDMHlNVDROQ2p4emRISnBibWRKUkMweU1pQnBaRDBpY21WbUxUSTFJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTBOVFU4TDNOMGNtbHVaMGxFTFRJeVBnMEtQR2x1ZEVsRUxUSXlQakl4T0RFNU56d3ZhVzUwU1VRdE1qSStEUW84YzNSeWFXNW5TVVF0TWpNZ2FXUTlJbkpsWmkweU5pSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5EVmlQQzl6ZEhKcGJtZEpSQzB5TXo0TkNqeHBiblJKUkMweU16NHlNVGd5TURNOEwybHVkRWxFTFRJelBnMEtQSE4wY21sdVowbEVMVEkwSUdsa1BTSnlaV1l0TWpjaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRRMk1Ud3ZjM1J5YVc1blNVUXRNalErRFFvOGFXNTBTVVF0TWpRK01qRTRNakE1UEM5cGJuUkpSQzB5TkQ0TkNqeHpkSEpwYm1kSlJDMHlOU0JwWkQwaWNtVm1MVEk0SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUwTmpjOEwzTjBjbWx1WjBsRUxUSTFQZzBLUEdsdWRFbEVMVEkxUGpJeE9ESXhOVHd2YVc1MFNVUXRNalUrRFFvOGMzUnlhVzVuU1VRdE1qWWdhV1E5SW5KbFppMHlPU0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFORFprUEM5emRISnBibWRKUkMweU5qNE5DanhwYm5SSlJDMHlOajR5TVRneU1qRThMMmx1ZEVsRUxUSTJQZzBLUEhOMGNtbHVaMGxFTFRJM0lHbGtQU0p5WldZdE16QWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UUTNNend2YzNSeWFXNW5TVVF0TWpjK0RRbzhhVzUwU1VRdE1qYytNakU0TWpJM1BDOXBiblJKUkMweU56NE5Danh6ZEhKcGJtZEpSQzB5T0NCcFpEMGljbVZtTFRNeElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVME56azhMM04wY21sdVowbEVMVEk0UGcwS1BHbHVkRWxFTFRJNFBqSXhPREl6TXp3dmFXNTBTVVF0TWpnK0RRbzhMMkV4T2sxMWJIUnBjR3hsVTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTJfRGF0YT4NCjxCYXNlLTAtMl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0zX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTNfSGFzRGF0YT4NCjxCYXNlLTAtM19EYXRhIGlkPSJyZWYtNiI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTmRXeDBhWEJzWlZObGNtbGhiR2w2WVdKc1pVbGtJR2xrUFNKeVpXWXRNU0lnZUcxc2JuTTZZVEU5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdlkyeHlMMjV6WVhOelpXMHZVbVYyYVhSVFpYSjJhV05sY3k1UVpYSnphWE4wWlc1alpTOVNaWFpwZEZObGNuWnBZMlZ6SlRKREpUSXdWbVZ5YzJsdmJpVXpSREl1TVRBdU1TNDBNREF5SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEc1MWJXSmxjazltUld4bGJXVnVkSE0rTWprOEwyNTFiV0psY2s5bVJXeGxiV1Z1ZEhNK0RRbzhjM1J5YVc1blNVUXRNQ0JwWkQwaWNtVm1MVE1pUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFEzWmp3dmMzUnlhVzVuU1VRdE1ENE5DanhwYm5SSlJDMHdQakl4T0RJek9Ud3ZhVzUwU1VRdE1ENE5Danh6ZEhKcGJtZEpSQzB4SUdsa1BTSnlaV1l0TkNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTkRnMVBDOXpkSEpwYm1kSlJDMHhQZzBLUEdsdWRFbEVMVEUrTWpFNE1qUTFQQzlwYm5SSlJDMHhQZzBLUEhOMGNtbHVaMGxFTFRJZ2FXUTlJbkpsWmkwMUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVME9HSThMM04wY21sdVowbEVMVEkrRFFvOGFXNTBTVVF0TWo0eU1UZ3lOVEU4TDJsdWRFbEVMVEkrRFFvOGMzUnlhVzVuU1VRdE15QnBaRDBpY21WbUxUWWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UUTVNVHd2YzNSeWFXNW5TVVF0TXo0TkNqeHBiblJKUkMwelBqSXhPREkxTnp3dmFXNTBTVVF0TXo0TkNqeHpkSEpwYm1kSlJDMDBJR2xrUFNKeVpXWXROeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFORGszUEM5emRISnBibWRKUkMwMFBnMEtQR2x1ZEVsRUxUUStNakU0TWpZelBDOXBiblJKUkMwMFBnMEtQSE4wY21sdVowbEVMVFVnYVdROUluSmxaaTA0SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUwT1dROEwzTjBjbWx1WjBsRUxUVStEUW84YVc1MFNVUXROVDR5TVRneU5qazhMMmx1ZEVsRUxUVStEUW84YzNSeWFXNW5TVVF0TmlCcFpEMGljbVZtTFRraVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRSaE16d3ZjM1J5YVc1blNVUXROajROQ2p4cGJuUkpSQzAyUGpJeE9ESTNOVHd2YVc1MFNVUXROajROQ2p4emRISnBibWRKUkMwM0lHbGtQU0p5WldZdE1UQWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UUmhPVHd2YzNSeWFXNW5TVVF0Tno0TkNqeHBiblJKUkMwM1BqSXhPREk0TVR3dmFXNTBTVVF0Tno0TkNqeHpkSEpwYm1kSlJDMDRJR2xrUFNKeVpXWXRNVEVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFJoWmp3dmMzUnlhVzVuU1VRdE9ENE5DanhwYm5SSlJDMDRQakl4T0RJNE56d3ZhVzUwU1VRdE9ENE5Danh6ZEhKcGJtZEpSQzA1SUdsa1BTSnlaV1l0TVRJaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRSaU5Ud3ZjM1J5YVc1blNVUXRPVDROQ2p4cGJuUkpSQzA1UGpJeE9ESTVNend2YVc1MFNVUXRPVDROQ2p4emRISnBibWRKUkMweE1DQnBaRDBpY21WbUxURXpJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTBZbUk4TDNOMGNtbHVaMGxFTFRFd1BnMEtQR2x1ZEVsRUxURXdQakl4T0RJNU9Ud3ZhVzUwU1VRdE1UQStEUW84YzNSeWFXNW5TVVF0TVRFZ2FXUTlJbkpsWmkweE5DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5HTXhQQzl6ZEhKcGJtZEpSQzB4TVQ0TkNqeHBiblJKUkMweE1UNHlNVGd6TURVOEwybHVkRWxFTFRFeFBnMEtQSE4wY21sdVowbEVMVEV5SUdsa1BTSnlaV1l0TVRVaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRSak56d3ZjM1J5YVc1blNVUXRNVEkrRFFvOGFXNTBTVVF0TVRJK01qRTRNekV4UEM5cGJuUkpSQzB4TWo0TkNqeHpkSEpwYm1kSlJDMHhNeUJwWkQwaWNtVm1MVEUySWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUwWTJROEwzTjBjbWx1WjBsRUxURXpQZzBLUEdsdWRFbEVMVEV6UGpJeE9ETXhOend2YVc1MFNVUXRNVE0rRFFvOGMzUnlhVzVuU1VRdE1UUWdhV1E5SW5KbFppMHhOeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOR1F6UEM5emRISnBibWRKUkMweE5ENE5DanhwYm5SSlJDMHhORDR5TVRnek1qTThMMmx1ZEVsRUxURTBQZzBLUEhOMGNtbHVaMGxFTFRFMUlHbGtQU0p5WldZdE1UZ2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UUmtPVHd2YzNSeWFXNW5TVVF0TVRVK0RRbzhhVzUwU1VRdE1UVStNakU0TXpJNVBDOXBiblJKUkMweE5UNE5Danh6ZEhKcGJtZEpSQzB4TmlCcFpEMGljbVZtTFRFNUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMFpHWThMM04wY21sdVowbEVMVEUyUGcwS1BHbHVkRWxFTFRFMlBqSXhPRE16TlR3dmFXNTBTVVF0TVRZK0RRbzhjM1J5YVc1blNVUXRNVGNnYVdROUluSmxaaTB5TUNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTkdVMVBDOXpkSEpwYm1kSlJDMHhOejROQ2p4cGJuUkpSQzB4Tno0eU1UZ3pOREU4TDJsdWRFbEVMVEUzUGcwS1BITjBjbWx1WjBsRUxURTRJR2xrUFNKeVpXWXRNakVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFJsWWp3dmMzUnlhVzVuU1VRdE1UZytEUW84YVc1MFNVUXRNVGcrTWpFNE16UTNQQzlwYm5SSlJDMHhPRDROQ2p4emRISnBibWRKUkMweE9TQnBaRDBpY21WbUxUSXlJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTBaakU4TDNOMGNtbHVaMGxFTFRFNVBnMEtQR2x1ZEVsRUxURTVQakl4T0RNMU16d3ZhVzUwU1VRdE1UaytEUW84YzNSeWFXNW5TVVF0TWpBZ2FXUTlJbkpsWmkweU15SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5HWTNQQzl6ZEhKcGJtZEpSQzB5TUQ0TkNqeHBiblJKUkMweU1ENHlNVGd6TlRrOEwybHVkRWxFTFRJd1BnMEtQSE4wY21sdVowbEVMVEl4SUdsa1BTSnlaV1l0TWpRaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRSbVpEd3ZjM1J5YVc1blNVUXRNakUrRFFvOGFXNTBTVVF0TWpFK01qRTRNelkxUEM5cGJuUkpSQzB5TVQ0TkNqeHpkSEpwYm1kSlJDMHlNaUJwWkQwaWNtVm1MVEkxSWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUxTURNOEwzTjBjbWx1WjBsRUxUSXlQZzBLUEdsdWRFbEVMVEl5UGpJeE9ETTNNVHd2YVc1MFNVUXRNakkrRFFvOGMzUnlhVzVuU1VRdE1qTWdhV1E5SW5KbFppMHlOaUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOVEE1UEM5emRISnBibWRKUkMweU16NE5DanhwYm5SSlJDMHlNejR5TVRnek56YzhMMmx1ZEVsRUxUSXpQZzBLUEhOMGNtbHVaMGxFTFRJMElHbGtQU0p5WldZdE1qY2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UVXdaand2YzNSeWFXNW5TVVF0TWpRK0RRbzhhVzUwU1VRdE1qUStNakU0TXpnelBDOXBiblJKUkMweU5ENE5Danh6ZEhKcGJtZEpSQzB5TlNCcFpEMGljbVZtTFRJNElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMU1UVThMM04wY21sdVowbEVMVEkxUGcwS1BHbHVkRWxFTFRJMVBqSXhPRE00T1R3dmFXNTBTVVF0TWpVK0RRbzhjM1J5YVc1blNVUXRNallnYVdROUluSmxaaTB5T1NJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTlRGaVBDOXpkSEpwYm1kSlJDMHlOajROQ2p4cGJuUkpSQzB5Tmo0eU1UZ3pPVFU4TDJsdWRFbEVMVEkyUGcwS1BITjBjbWx1WjBsRUxUSTNJR2xrUFNKeVpXWXRNekFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFV5TVR3dmMzUnlhVzVuU1VRdE1qYytEUW84YVc1MFNVUXRNamMrTWpFNE5EQXhQQzlwYm5SSlJDMHlOejROQ2p4emRISnBibWRKUkMweU9DQnBaRDBpY21WbUxUTXhJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTFNamM4TDNOMGNtbHVaMGxFTFRJNFBnMEtQR2x1ZEVsRUxUSTRQakl4T0RRd056d3ZhVzUwU1VRdE1qZytEUW84TDJFeE9rMTFiSFJwY0d4bFUyVnlhV0ZzYVhwaFlteGxTV1ErRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0zX0RhdGE+DQo8QmFzZS0wLTNfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTNfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtNF9IYXNEYXRhPnRydWU8L0Jhc2UtMC00X0hhc0RhdGE+DQo8QmFzZS0wLTRfRGF0YSBpZD0icmVmLTciPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE5kV3gwYVhCc1pWTmxjbWxoYkdsNllXSnNaVWxrSUdsa1BTSnlaV1l0TVNJZ2VHMXNibk02WVRFOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZZMnh5TDI1ellYTnpaVzB2VW1WMmFYUlRaWEoyYVdObGN5NVFaWEp6YVhOMFpXNWpaUzlTWlhacGRGTmxjblpwWTJWekpUSkRKVEl3Vm1WeWMybHZiaVV6UkRJdU1UQXVNUzQwTURBeUpUSkRKVEl3UTNWc2RIVnlaU1V6Ukc1bGRYUnlZV3dsTWtNbE1qQlFkV0pzYVdOTFpYbFViMnRsYmlVelJHNTFiR3dpUGcwS1BHNTFiV0psY2s5bVJXeGxiV1Z1ZEhNK01qazhMMjUxYldKbGNrOW1SV3hsYldWdWRITStEUW84YzNSeWFXNW5TVVF0TUNCcFpEMGljbVZtTFRNaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRVeVpEd3ZjM1J5YVc1blNVUXRNRDROQ2p4cGJuUkpSQzB3UGpJeE9EUXhNend2YVc1MFNVUXRNRDROQ2p4emRISnBibWRKUkMweElHbGtQU0p5WldZdE5DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5UTXpQQzl6ZEhKcGJtZEpSQzB4UGcwS1BHbHVkRWxFTFRFK01qRTROREU1UEM5cGJuUkpSQzB4UGcwS1BITjBjbWx1WjBsRUxUSWdhV1E5SW5KbFppMDFJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTFNems4TDNOMGNtbHVaMGxFTFRJK0RRbzhhVzUwU1VRdE1qNHlNVGcwTWpVOEwybHVkRWxFTFRJK0RRbzhjM1J5YVc1blNVUXRNeUJwWkQwaWNtVm1MVFlpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFV6Wmp3dmMzUnlhVzVuU1VRdE16NE5DanhwYm5SSlJDMHpQakl4T0RRek1Ud3ZhVzUwU1VRdE16NE5Danh6ZEhKcGJtZEpSQzAwSUdsa1BTSnlaV1l0TnlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTlRRMVBDOXpkSEpwYm1kSlJDMDBQZzBLUEdsdWRFbEVMVFErTWpFNE5ETTNQQzlwYm5SSlJDMDBQZzBLUEhOMGNtbHVaMGxFTFRVZ2FXUTlJbkpsWmkwNElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMU5HSThMM04wY21sdVowbEVMVFUrRFFvOGFXNTBTVVF0TlQ0eU1UZzBORE04TDJsdWRFbEVMVFUrRFFvOGMzUnlhVzVuU1VRdE5pQnBaRDBpY21WbUxUa2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UVTFNVHd2YzNSeWFXNW5TVVF0Tmo0TkNqeHBiblJKUkMwMlBqSXhPRFEwT1R3dmFXNTBTVVF0Tmo0TkNqeHpkSEpwYm1kSlJDMDNJR2xrUFNKeVpXWXRNVEFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFUxTnp3dmMzUnlhVzVuU1VRdE56NE5DanhwYm5SSlJDMDNQakl4T0RRMU5Ud3ZhVzUwU1VRdE56NE5Danh6ZEhKcGJtZEpSQzA0SUdsa1BTSnlaV1l0TVRFaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRVMVpEd3ZjM1J5YVc1blNVUXRPRDROQ2p4cGJuUkpSQzA0UGpJeE9EUTJNVHd2YVc1MFNVUXRPRDROQ2p4emRISnBibWRKUkMwNUlHbGtQU0p5WldZdE1USWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UVTJNend2YzNSeWFXNW5TVVF0T1Q0TkNqeHBiblJKUkMwNVBqSXhPRFEyTnp3dmFXNTBTVVF0T1Q0TkNqeHpkSEpwYm1kSlJDMHhNQ0JwWkQwaWNtVm1MVEV6SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUxTmprOEwzTjBjbWx1WjBsRUxURXdQZzBLUEdsdWRFbEVMVEV3UGpJeE9EUTNNend2YVc1MFNVUXRNVEErRFFvOGMzUnlhVzVuU1VRdE1URWdhV1E5SW5KbFppMHhOQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOVFptUEM5emRISnBibWRKUkMweE1UNE5DanhwYm5SSlJDMHhNVDR5TVRnME56azhMMmx1ZEVsRUxURXhQZzBLUEhOMGNtbHVaMGxFTFRFeUlHbGtQU0p5WldZdE1UVWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UVTNOVHd2YzNSeWFXNW5TVVF0TVRJK0RRbzhhVzUwU1VRdE1USStNakU0TkRnMVBDOXBiblJKUkMweE1qNE5Danh6ZEhKcGJtZEpSQzB4TXlCcFpEMGljbVZtTFRFMklqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMU4ySThMM04wY21sdVowbEVMVEV6UGcwS1BHbHVkRWxFTFRFelBqSXhPRFE1TVR3dmFXNTBTVVF0TVRNK0RRbzhjM1J5YVc1blNVUXRNVFFnYVdROUluSmxaaTB4TnlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTlRneFBDOXpkSEpwYm1kSlJDMHhORDROQ2p4cGJuUkpSQzB4TkQ0eU1UZzBPVGM4TDJsdWRFbEVMVEUwUGcwS1BITjBjbWx1WjBsRUxURTFJR2xrUFNKeVpXWXRNVGdpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFU0Tnp3dmMzUnlhVzVuU1VRdE1UVStEUW84YVc1MFNVUXRNVFUrTWpFNE5UQXpQQzlwYm5SSlJDMHhOVDROQ2p4emRISnBibWRKUkMweE5pQnBaRDBpY21WbUxURTVJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTFPR1E4TDNOMGNtbHVaMGxFTFRFMlBnMEtQR2x1ZEVsRUxURTJQakl4T0RVd09Ud3ZhVzUwU1VRdE1UWStEUW84YzNSeWFXNW5TVVF0TVRjZ2FXUTlJbkpsWmkweU1DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5Ua3pQQzl6ZEhKcGJtZEpSQzB4Tno0TkNqeHBiblJKUkMweE56NHlNVGcxTVRVOEwybHVkRWxFTFRFM1BnMEtQSE4wY21sdVowbEVMVEU0SUdsa1BTSnlaV1l0TWpFaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRVNU9Ud3ZjM1J5YVc1blNVUXRNVGcrRFFvOGFXNTBTVVF0TVRnK01qRTROVEl4UEM5cGJuUkpSQzB4T0Q0TkNqeHpkSEpwYm1kSlJDMHhPU0JwWkQwaWNtVm1MVEl5SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUxT1dZOEwzTjBjbWx1WjBsRUxURTVQZzBLUEdsdWRFbEVMVEU1UGpJeE9EVXlOend2YVc1MFNVUXRNVGsrRFFvOGMzUnlhVzVuU1VRdE1qQWdhV1E5SW5KbFppMHlNeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOV0UxUEM5emRISnBibWRKUkMweU1ENE5DanhwYm5SSlJDMHlNRDR5TVRnMU16TThMMmx1ZEVsRUxUSXdQZzBLUEhOMGNtbHVaMGxFTFRJeElHbGtQU0p5WldZdE1qUWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UVmhZand2YzNSeWFXNW5TVVF0TWpFK0RRbzhhVzUwU1VRdE1qRStNakU0TlRNNVBDOXBiblJKUkMweU1UNE5Danh6ZEhKcGJtZEpSQzB5TWlCcFpEMGljbVZtTFRJMUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMVlqRThMM04wY21sdVowbEVMVEl5UGcwS1BHbHVkRWxFTFRJeVBqSXhPRFUwTlR3dmFXNTBTVVF0TWpJK0RRbzhjM1J5YVc1blNVUXRNak1nYVdROUluSmxaaTB5TmlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTldJM1BDOXpkSEpwYm1kSlJDMHlNejROQ2p4cGJuUkpSQzB5TXo0eU1UZzFOVEU4TDJsdWRFbEVMVEl6UGcwS1BITjBjbWx1WjBsRUxUSTBJR2xrUFNKeVpXWXRNamNpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFZpWkR3dmMzUnlhVzVuU1VRdE1qUStEUW84YVc1MFNVUXRNalErTWpFNE5UVTNQQzlwYm5SSlJDMHlORDROQ2p4emRISnBibWRKUkMweU5TQnBaRDBpY21WbUxUSTRJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTFZek04TDNOMGNtbHVaMGxFTFRJMVBnMEtQR2x1ZEVsRUxUSTFQakl4T0RVMk16d3ZhVzUwU1VRdE1qVStEUW84YzNSeWFXNW5TVVF0TWpZZ2FXUTlJbkpsWmkweU9TSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5XTTVQQzl6ZEhKcGJtZEpSQzB5Tmo0TkNqeHBiblJKUkMweU5qNHlNVGcxTmprOEwybHVkRWxFTFRJMlBnMEtQSE4wY21sdVowbEVMVEkzSUdsa1BTSnlaV1l0TXpBaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRWalpqd3ZjM1J5YVc1blNVUXRNamMrRFFvOGFXNTBTVVF0TWpjK01qRTROVGMxUEM5cGJuUkpSQzB5Tno0TkNqeHpkSEpwYm1kSlJDMHlPQ0JwWkQwaWNtVm1MVE14SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUxWkRVOEwzTjBjbWx1WjBsRUxUSTRQZzBLUEdsdWRFbEVMVEk0UGpJeE9EVTRNVHd2YVc1MFNVUXRNamcrRFFvOEwyRXhPazExYkhScGNHeGxVMlZ5YVdGc2FYcGhZbXhsU1dRK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtNF9EYXRhPg0KPEJhc2UtMC00X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC00X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTVfSGFzRGF0YT50cnVlPC9CYXNlLTAtNV9IYXNEYXRhPg0KPEJhc2UtMC01X0RhdGEgaWQ9InJlZi04Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBOZFd4MGFYQnNaVk5sY21saGJHbDZZV0pzWlVsa0lHbGtQU0p5WldZdE1TSWdlRzFzYm5NNllURTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2WTJ4eUwyNXpZWE56WlcwdlVtVjJhWFJUWlhKMmFXTmxjeTVRWlhKemFYTjBaVzVqWlM5U1pYWnBkRk5sY25acFkyVnpKVEpESlRJd1ZtVnljMmx2YmlVelJESXVNVEF1TVM0ME1EQXlKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQRzUxYldKbGNrOW1SV3hsYldWdWRITStNams4TDI1MWJXSmxjazltUld4bGJXVnVkSE0rRFFvOGMzUnlhVzVuU1VRdE1DQnBaRDBpY21WbUxUTWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UVmtZand2YzNSeWFXNW5TVVF0TUQ0TkNqeHBiblJKUkMwd1BqSXhPRFU0Tnp3dmFXNTBTVVF0TUQ0TkNqeHpkSEpwYm1kSlJDMHhJR2xrUFNKeVpXWXROQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOV1V4UEM5emRISnBibWRKUkMweFBnMEtQR2x1ZEVsRUxURStNakU0TlRrelBDOXBiblJKUkMweFBnMEtQSE4wY21sdVowbEVMVElnYVdROUluSmxaaTAxSWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUxWlRjOEwzTjBjbWx1WjBsRUxUSStEUW84YVc1MFNVUXRNajR5TVRnMU9UazhMMmx1ZEVsRUxUSStEUW84YzNSeWFXNW5TVVF0TXlCcFpEMGljbVZtTFRZaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRWbFpEd3ZjM1J5YVc1blNVUXRNejROQ2p4cGJuUkpSQzB6UGpJeE9EWXdOVHd2YVc1MFNVUXRNejROQ2p4emRISnBibWRKUkMwMElHbGtQU0p5WldZdE55SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5XWXpQQzl6ZEhKcGJtZEpSQzAwUGcwS1BHbHVkRWxFTFRRK01qRTROakV4UEM5cGJuUkpSQzAwUGcwS1BITjBjbWx1WjBsRUxUVWdhV1E5SW5KbFppMDRJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTFaams4TDNOMGNtbHVaMGxFTFRVK0RRbzhhVzUwU1VRdE5UNHlNVGcyTVRjOEwybHVkRWxFTFRVK0RRbzhjM1J5YVc1blNVUXROaUJwWkQwaWNtVm1MVGtpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFZtWmp3dmMzUnlhVzVuU1VRdE5qNE5DanhwYm5SSlJDMDJQakl4T0RZeU16d3ZhVzUwU1VRdE5qNE5Danh6ZEhKcGJtZEpSQzAzSUdsa1BTSnlaV1l0TVRBaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRZd05Ud3ZjM1J5YVc1blNVUXROejROQ2p4cGJuUkpSQzAzUGpJeE9EWXlPVHd2YVc1MFNVUXROejROQ2p4emRISnBibWRKUkMwNElHbGtQU0p5WldZdE1URWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UWXdZand2YzNSeWFXNW5TVVF0T0Q0TkNqeHBiblJKUkMwNFBqSXhPRFl6TlR3dmFXNTBTVVF0T0Q0TkNqeHpkSEpwYm1kSlJDMDVJR2xrUFNKeVpXWXRNVElpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFl4TVR3dmMzUnlhVzVuU1VRdE9UNE5DanhwYm5SSlJDMDVQakl4T0RZME1Ud3ZhVzUwU1VRdE9UNE5Danh6ZEhKcGJtZEpSQzB4TUNCcFpEMGljbVZtTFRFeklqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMk1UYzhMM04wY21sdVowbEVMVEV3UGcwS1BHbHVkRWxFTFRFd1BqSXhPRFkwTnp3dmFXNTBTVVF0TVRBK0RRbzhjM1J5YVc1blNVUXRNVEVnYVdROUluSmxaaTB4TkNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTmpGa1BDOXpkSEpwYm1kSlJDMHhNVDROQ2p4cGJuUkpSQzB4TVQ0eU1UZzJOVE04TDJsdWRFbEVMVEV4UGcwS1BITjBjbWx1WjBsRUxURXlJR2xrUFNKeVpXWXRNVFVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFl5TXp3dmMzUnlhVzVuU1VRdE1USStEUW84YVc1MFNVUXRNVEkrTWpFNE5qVTVQQzlwYm5SSlJDMHhNajROQ2p4emRISnBibWRKUkMweE15QnBaRDBpY21WbUxURTJJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTJNams4TDNOMGNtbHVaMGxFTFRFelBnMEtQR2x1ZEVsRUxURXpQakl4T0RZMk5Ud3ZhVzUwU1VRdE1UTStEUW84YzNSeWFXNW5TVVF0TVRRZ2FXUTlJbkpsWmkweE55SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5qSm1QQzl6ZEhKcGJtZEpSQzB4TkQ0TkNqeHBiblJKUkMweE5ENHlNVGcyTnpFOEwybHVkRWxFTFRFMFBnMEtQSE4wY21sdVowbEVMVEUxSUdsa1BTSnlaV1l0TVRnaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRZek5Ud3ZjM1J5YVc1blNVUXRNVFUrRFFvOGFXNTBTVVF0TVRVK01qRTROamMzUEM5cGJuUkpSQzB4TlQ0TkNqeHpkSEpwYm1kSlJDMHhOaUJwWkQwaWNtVm1MVEU1SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUyTTJJOEwzTjBjbWx1WjBsRUxURTJQZzBLUEdsdWRFbEVMVEUyUGpJeE9EWTRNend2YVc1MFNVUXRNVFkrRFFvOGMzUnlhVzVuU1VRdE1UY2dhV1E5SW5KbFppMHlNQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOalF4UEM5emRISnBibWRKUkMweE56NE5DanhwYm5SSlJDMHhOejR5TVRnMk9EazhMMmx1ZEVsRUxURTNQZzBLUEhOMGNtbHVaMGxFTFRFNElHbGtQU0p5WldZdE1qRWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UWTBOend2YzNSeWFXNW5TVVF0TVRnK0RRbzhhVzUwU1VRdE1UZytNakU0TmprMVBDOXBiblJKUkMweE9ENE5Danh6ZEhKcGJtZEpSQzB4T1NCcFpEMGljbVZtTFRJeUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMk5HUThMM04wY21sdVowbEVMVEU1UGcwS1BHbHVkRWxFTFRFNVBqSXhPRGN3TVR3dmFXNTBTVVF0TVRrK0RRbzhjM1J5YVc1blNVUXRNakFnYVdROUluSmxaaTB5TXlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTmpVelBDOXpkSEpwYm1kSlJDMHlNRDROQ2p4cGJuUkpSQzB5TUQ0eU1UZzNNRGM4TDJsdWRFbEVMVEl3UGcwS1BITjBjbWx1WjBsRUxUSXhJR2xrUFNKeVpXWXRNalFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFkxT1R3dmMzUnlhVzVuU1VRdE1qRStEUW84YVc1MFNVUXRNakUrTWpFNE56RXpQQzlwYm5SSlJDMHlNVDROQ2p4emRISnBibWRKUkMweU1pQnBaRDBpY21WbUxUSTFJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTJOV1k4TDNOMGNtbHVaMGxFTFRJeVBnMEtQR2x1ZEVsRUxUSXlQakl4T0RjeE9Ud3ZhVzUwU1VRdE1qSStEUW84YzNSeWFXNW5TVVF0TWpNZ2FXUTlJbkpsWmkweU5pSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5qWTFQQzl6ZEhKcGJtZEpSQzB5TXo0TkNqeHBiblJKUkMweU16NHlNVGczTWpVOEwybHVkRWxFTFRJelBnMEtQSE4wY21sdVowbEVMVEkwSUdsa1BTSnlaV1l0TWpjaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRZMllqd3ZjM1J5YVc1blNVUXRNalErRFFvOGFXNTBTVVF0TWpRK01qRTROek14UEM5cGJuUkpSQzB5TkQ0TkNqeHpkSEpwYm1kSlJDMHlOU0JwWkQwaWNtVm1MVEk0SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUyTnpFOEwzTjBjbWx1WjBsRUxUSTFQZzBLUEdsdWRFbEVMVEkxUGpJeE9EY3pOend2YVc1MFNVUXRNalUrRFFvOGMzUnlhVzVuU1VRdE1qWWdhV1E5SW5KbFppMHlPU0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOamMzUEM5emRISnBibWRKUkMweU5qNE5DanhwYm5SSlJDMHlOajR5TVRnM05ETThMMmx1ZEVsRUxUSTJQZzBLUEhOMGNtbHVaMGxFTFRJM0lHbGtQU0p5WldZdE16QWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UWTNaRHd2YzNSeWFXNW5TVVF0TWpjK0RRbzhhVzUwU1VRdE1qYytNakU0TnpRNVBDOXBiblJKUkMweU56NE5Danh6ZEhKcGJtZEpSQzB5T0NCcFpEMGljbVZtTFRNeElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMk9ETThMM04wY21sdVowbEVMVEk0UGcwS1BHbHVkRWxFTFRJNFBqSXhPRGMxTlR3dmFXNTBTVVF0TWpnK0RRbzhMMkV4T2sxMWJIUnBjR3hsVTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTVfRGF0YT4NCjxCYXNlLTAtNV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtNV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC02X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTZfSGFzRGF0YT4NCjxCYXNlLTAtNl9EYXRhIGlkPSJyZWYtOSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwTmRXeDBhWEJzWlZObGNtbGhiR2w2WVdKc1pVbGtJR2xrUFNKeVpXWXRNU0lnZUcxc2JuTTZZVEU5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdlkyeHlMMjV6WVhOelpXMHZVbVYyYVhSVFpYSjJhV05sY3k1UVpYSnphWE4wWlc1alpTOVNaWFpwZEZObGNuWnBZMlZ6SlRKREpUSXdWbVZ5YzJsdmJpVXpSREl1TVRBdU1TNDBNREF5SlRKREpUSXdRM1ZzZEhWeVpTVXpSRzVsZFhSeVlXd2xNa01sTWpCUWRXSnNhV05MWlhsVWIydGxiaVV6Ukc1MWJHd2lQZzBLUEc1MWJXSmxjazltUld4bGJXVnVkSE0rTWprOEwyNTFiV0psY2s5bVJXeGxiV1Z1ZEhNK0RRbzhjM1J5YVc1blNVUXRNQ0JwWkQwaWNtVm1MVE1pUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFk0T1R3dmMzUnlhVzVuU1VRdE1ENE5DanhwYm5SSlJDMHdQakl4T0RjMk1Ud3ZhVzUwU1VRdE1ENE5Danh6ZEhKcGJtZEpSQzB4SUdsa1BTSnlaV1l0TkNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTmpobVBDOXpkSEpwYm1kSlJDMHhQZzBLUEdsdWRFbEVMVEUrTWpFNE56WTNQQzlwYm5SSlJDMHhQZzBLUEhOMGNtbHVaMGxFTFRJZ2FXUTlJbkpsWmkwMUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMk9UVThMM04wY21sdVowbEVMVEkrRFFvOGFXNTBTVVF0TWo0eU1UZzNOek04TDJsdWRFbEVMVEkrRFFvOGMzUnlhVzVuU1VRdE15QnBaRDBpY21WbUxUWWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UWTVZand2YzNSeWFXNW5TVVF0TXo0TkNqeHBiblJKUkMwelBqSXhPRGMzT1R3dmFXNTBTVVF0TXo0TkNqeHpkSEpwYm1kSlJDMDBJR2xrUFNKeVpXWXROeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFObUV4UEM5emRISnBibWRKUkMwMFBnMEtQR2x1ZEVsRUxUUStNakU0TnpnMVBDOXBiblJKUkMwMFBnMEtQSE4wY21sdVowbEVMVFVnYVdROUluSmxaaTA0SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUyWVRjOEwzTjBjbWx1WjBsRUxUVStEUW84YVc1MFNVUXROVDR5TVRnM09URThMMmx1ZEVsRUxUVStEUW84YzNSeWFXNW5TVVF0TmlCcFpEMGljbVZtTFRraVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRaaFpEd3ZjM1J5YVc1blNVUXROajROQ2p4cGJuUkpSQzAyUGpJeE9EYzVOend2YVc1MFNVUXROajROQ2p4emRISnBibWRKUkMwM0lHbGtQU0p5WldZdE1UQWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UWmlNend2YzNSeWFXNW5TVVF0Tno0TkNqeHBiblJKUkMwM1BqSXhPRGd3TXp3dmFXNTBTVVF0Tno0TkNqeHpkSEpwYm1kSlJDMDRJR2xrUFNKeVpXWXRNVEVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFppT1R3dmMzUnlhVzVuU1VRdE9ENE5DanhwYm5SSlJDMDRQakl4T0Rnd09Ud3ZhVzUwU1VRdE9ENE5Danh6ZEhKcGJtZEpSQzA1SUdsa1BTSnlaV1l0TVRJaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRaaVpqd3ZjM1J5YVc1blNVUXRPVDROQ2p4cGJuUkpSQzA1UGpJeE9EZ3hOVHd2YVc1MFNVUXRPVDROQ2p4emRISnBibWRKUkMweE1DQnBaRDBpY21WbUxURXpJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTJZelU4TDNOMGNtbHVaMGxFTFRFd1BnMEtQR2x1ZEVsRUxURXdQakl4T0RneU1Ud3ZhVzUwU1VRdE1UQStEUW84YzNSeWFXNW5TVVF0TVRFZ2FXUTlJbkpsWmkweE5DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU5tTmlQQzl6ZEhKcGJtZEpSQzB4TVQ0TkNqeHBiblJKUkMweE1UNHlNVGc0TWpjOEwybHVkRWxFTFRFeFBnMEtQSE4wY21sdVowbEVMVEV5SUdsa1BTSnlaV1l0TVRVaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRaa01Ud3ZjM1J5YVc1blNVUXRNVEkrRFFvOGFXNTBTVVF0TVRJK01qRTRPRE16UEM5cGJuUkpSQzB4TWo0TkNqeHpkSEpwYm1kSlJDMHhNeUJwWkQwaWNtVm1MVEUySWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUyWkRjOEwzTjBjbWx1WjBsRUxURXpQZzBLUEdsdWRFbEVMVEV6UGpJeE9EZ3pPVHd2YVc1MFNVUXRNVE0rRFFvOGMzUnlhVzVuU1VRdE1UUWdhV1E5SW5KbFppMHhOeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFObVJrUEM5emRISnBibWRKUkMweE5ENE5DanhwYm5SSlJDMHhORDR5TVRnNE5EVThMMmx1ZEVsRUxURTBQZzBLUEhOMGNtbHVaMGxFTFRFMUlHbGtQU0p5WldZdE1UZ2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UWmxNend2YzNSeWFXNW5TVVF0TVRVK0RRbzhhVzUwU1VRdE1UVStNakU0T0RVeFBDOXBiblJKUkMweE5UNE5Danh6ZEhKcGJtZEpSQzB4TmlCcFpEMGljbVZtTFRFNUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVMlpUazhMM04wY21sdVowbEVMVEUyUGcwS1BHbHVkRWxFTFRFMlBqSXhPRGcxTnp3dmFXNTBTVVF0TVRZK0RRbzhjM1J5YVc1blNVUXRNVGNnYVdROUluSmxaaTB5TUNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTm1WbVBDOXpkSEpwYm1kSlJDMHhOejROQ2p4cGJuUkpSQzB4Tno0eU1UZzROak04TDJsdWRFbEVMVEUzUGcwS1BITjBjbWx1WjBsRUxURTRJR2xrUFNKeVpXWXRNakVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVFptTlR3dmMzUnlhVzVuU1VRdE1UZytEUW84YVc1MFNVUXRNVGcrTWpFNE9EWTVQQzlwYm5SSlJDMHhPRDROQ2p4emRISnBibWRKUkMweE9TQnBaRDBpY21WbUxUSXlJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTJabUk4TDNOMGNtbHVaMGxFTFRFNVBnMEtQR2x1ZEVsRUxURTVQakl4T0RnM05Ud3ZhVzUwU1VRdE1UaytEUW84YzNSeWFXNW5TVVF0TWpBZ2FXUTlJbkpsWmkweU15SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU56QXhQQzl6ZEhKcGJtZEpSQzB5TUQ0TkNqeHBiblJKUkMweU1ENHlNVGc0T0RFOEwybHVkRWxFTFRJd1BnMEtQSE4wY21sdVowbEVMVEl4SUdsa1BTSnlaV1l0TWpRaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRjd056d3ZjM1J5YVc1blNVUXRNakUrRFFvOGFXNTBTVVF0TWpFK01qRTRPRGczUEM5cGJuUkpSQzB5TVQ0TkNqeHpkSEpwYm1kSlJDMHlNaUJwWkQwaWNtVm1MVEkxSWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUzTUdROEwzTjBjbWx1WjBsRUxUSXlQZzBLUEdsdWRFbEVMVEl5UGpJeE9EZzVNend2YVc1MFNVUXRNakkrRFFvOGMzUnlhVzVuU1VRdE1qTWdhV1E5SW5KbFppMHlOaUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOekV6UEM5emRISnBibWRKUkMweU16NE5DanhwYm5SSlJDMHlNejR5TVRnNE9UazhMMmx1ZEVsRUxUSXpQZzBLUEhOMGNtbHVaMGxFTFRJMElHbGtQU0p5WldZdE1qY2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UY3hPVHd2YzNSeWFXNW5TVVF0TWpRK0RRbzhhVzUwU1VRdE1qUStNakU0T1RBMVBDOXBiblJKUkMweU5ENE5Danh6ZEhKcGJtZEpSQzB5TlNCcFpEMGljbVZtTFRJNElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVM01XWThMM04wY21sdVowbEVMVEkxUGcwS1BHbHVkRWxFTFRJMVBqSXhPRGt4TVR3dmFXNTBTVVF0TWpVK0RRbzhjM1J5YVc1blNVUXRNallnYVdROUluSmxaaTB5T1NJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTnpJMVBDOXpkSEpwYm1kSlJDMHlOajROQ2p4cGJuUkpSQzB5Tmo0eU1UZzVNVGM4TDJsdWRFbEVMVEkyUGcwS1BITjBjbWx1WjBsRUxUSTNJR2xrUFNKeVpXWXRNekFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGN5WWp3dmMzUnlhVzVuU1VRdE1qYytEUW84YVc1MFNVUXRNamMrTWpFNE9USXpQQzlwYm5SSlJDMHlOejROQ2p4emRISnBibWRKUkMweU9DQnBaRDBpY21WbUxUTXhJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTNNekU4TDNOMGNtbHVaMGxFTFRJNFBnMEtQR2x1ZEVsRUxUSTRQakl4T0RreU9Ud3ZhVzUwU1VRdE1qZytEUW84TDJFeE9rMTFiSFJwY0d4bFUyVnlhV0ZzYVhwaFlteGxTV1ErRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC02X0RhdGE+DQo8QmFzZS0wLTZfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTZfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtN19IYXNEYXRhPnRydWU8L0Jhc2UtMC03X0hhc0RhdGE+DQo8QmFzZS0wLTdfRGF0YSBpZD0icmVmLTEwIj5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBOZFd4MGFYQnNaVk5sY21saGJHbDZZV0pzWlVsa0lHbGtQU0p5WldZdE1TSWdlRzFzYm5NNllURTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2WTJ4eUwyNXpZWE56WlcwdlVtVjJhWFJUWlhKMmFXTmxjeTVRWlhKemFYTjBaVzVqWlM5U1pYWnBkRk5sY25acFkyVnpKVEpESlRJd1ZtVnljMmx2YmlVelJESXVNVEF1TVM0ME1EQXlKVEpESlRJd1EzVnNkSFZ5WlNVelJHNWxkWFJ5WVd3bE1rTWxNakJRZFdKc2FXTkxaWGxVYjJ0bGJpVXpSRzUxYkd3aVBnMEtQRzUxYldKbGNrOW1SV3hsYldWdWRITStNams4TDI1MWJXSmxjazltUld4bGJXVnVkSE0rRFFvOGMzUnlhVzVuU1VRdE1DQnBaRDBpY21WbUxUTWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UY3pOend2YzNSeWFXNW5TVVF0TUQ0TkNqeHBiblJKUkMwd1BqSXhPRGt6TlR3dmFXNTBTVVF0TUQ0TkNqeHpkSEpwYm1kSlJDMHhJR2xrUFNKeVpXWXROQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOek5rUEM5emRISnBibWRKUkMweFBnMEtQR2x1ZEVsRUxURStNakU0T1RReFBDOXBiblJKUkMweFBnMEtQSE4wY21sdVowbEVMVElnYVdROUluSmxaaTAxSWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUzTkRNOEwzTjBjbWx1WjBsRUxUSStEUW84YVc1MFNVUXRNajR5TVRnNU5EYzhMMmx1ZEVsRUxUSStEUW84YzNSeWFXNW5TVVF0TXlCcFpEMGljbVZtTFRZaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRjME9Ud3ZjM1J5YVc1blNVUXRNejROQ2p4cGJuUkpSQzB6UGpJeE9EazFNend2YVc1MFNVUXRNejROQ2p4emRISnBibWRKUkMwMElHbGtQU0p5WldZdE55SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU56Um1QQzl6ZEhKcGJtZEpSQzAwUGcwS1BHbHVkRWxFTFRRK01qRTRPVFU1UEM5cGJuUkpSQzAwUGcwS1BITjBjbWx1WjBsRUxUVWdhV1E5SW5KbFppMDRJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTNOVFU4TDNOMGNtbHVaMGxFTFRVK0RRbzhhVzUwU1VRdE5UNHlNVGc1TmpVOEwybHVkRWxFTFRVK0RRbzhjM1J5YVc1blNVUXROaUJwWkQwaWNtVm1MVGtpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGMxWWp3dmMzUnlhVzVuU1VRdE5qNE5DanhwYm5SSlJDMDJQakl4T0RrM01Ud3ZhVzUwU1VRdE5qNE5Danh6ZEhKcGJtZEpSQzAzSUdsa1BTSnlaV1l0TVRBaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRjMk1Ud3ZjM1J5YVc1blNVUXROejROQ2p4cGJuUkpSQzAzUGpJeE9EazNOend2YVc1MFNVUXROejROQ2p4emRISnBibWRKUkMwNElHbGtQU0p5WldZdE1URWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UYzJOend2YzNSeWFXNW5TVVF0T0Q0TkNqeHBiblJKUkMwNFBqSXhPRGs0TXp3dmFXNTBTVVF0T0Q0TkNqeHpkSEpwYm1kSlJDMDVJR2xrUFNKeVpXWXRNVElpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGMyWkR3dmMzUnlhVzVuU1VRdE9UNE5DanhwYm5SSlJDMDVQakl4T0RrNE9Ud3ZhVzUwU1VRdE9UNE5Danh6ZEhKcGJtZEpSQzB4TUNCcFpEMGljbVZtTFRFeklqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVM056TThMM04wY21sdVowbEVMVEV3UGcwS1BHbHVkRWxFTFRFd1BqSXhPRGs1TlR3dmFXNTBTVVF0TVRBK0RRbzhjM1J5YVc1blNVUXRNVEVnYVdROUluSmxaaTB4TkNJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTnpjNVBDOXpkSEpwYm1kSlJDMHhNVDROQ2p4cGJuUkpSQzB4TVQ0eU1Ua3dNREU4TDJsdWRFbEVMVEV4UGcwS1BITjBjbWx1WjBsRUxURXlJR2xrUFNKeVpXWXRNVFVpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGMzWmp3dmMzUnlhVzVuU1VRdE1USStEUW84YVc1MFNVUXRNVEkrTWpFNU1EQTNQQzlwYm5SSlJDMHhNajROQ2p4emRISnBibWRKUkMweE15QnBaRDBpY21WbUxURTJJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTNPRFU4TDNOMGNtbHVaMGxFTFRFelBnMEtQR2x1ZEVsRUxURXpQakl4T1RBeE16d3ZhVzUwU1VRdE1UTStEUW84YzNSeWFXNW5TVVF0TVRRZ2FXUTlJbkpsWmkweE55SStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU56aGlQQzl6ZEhKcGJtZEpSQzB4TkQ0TkNqeHBiblJKUkMweE5ENHlNVGt3TVRrOEwybHVkRWxFTFRFMFBnMEtQSE4wY21sdVowbEVMVEUxSUdsa1BTSnlaV1l0TVRnaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRjNU1Ud3ZjM1J5YVc1blNVUXRNVFUrRFFvOGFXNTBTVVF0TVRVK01qRTVNREkxUEM5cGJuUkpSQzB4TlQ0TkNqeHpkSEpwYm1kSlJDMHhOaUJwWkQwaWNtVm1MVEU1SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUzT1RjOEwzTjBjbWx1WjBsRUxURTJQZzBLUEdsdWRFbEVMVEUyUGpJeE9UQXpNVHd2YVc1MFNVUXRNVFkrRFFvOGMzUnlhVzVuU1VRdE1UY2dhV1E5SW5KbFppMHlNQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOemxrUEM5emRISnBibWRKUkMweE56NE5DanhwYm5SSlJDMHhOejR5TVRrd016YzhMMmx1ZEVsRUxURTNQZzBLUEhOMGNtbHVaMGxFTFRFNElHbGtQU0p5WldZdE1qRWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UZGhNend2YzNSeWFXNW5TVVF0TVRnK0RRbzhhVzUwU1VRdE1UZytNakU1TURRelBDOXBiblJKUkMweE9ENE5Danh6ZEhKcGJtZEpSQzB4T1NCcFpEMGljbVZtTFRJeUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVM1lUazhMM04wY21sdVowbEVMVEU1UGcwS1BHbHVkRWxFTFRFNVBqSXhPVEEwT1R3dmFXNTBTVVF0TVRrK0RRbzhjM1J5YVc1blNVUXRNakFnYVdROUluSmxaaTB5TXlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTjJGbVBDOXpkSEpwYm1kSlJDMHlNRDROQ2p4cGJuUkpSQzB5TUQ0eU1Ua3dOVFU4TDJsdWRFbEVMVEl3UGcwS1BITjBjbWx1WjBsRUxUSXhJR2xrUFNKeVpXWXRNalFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGRpTlR3dmMzUnlhVzVuU1VRdE1qRStEUW84YVc1MFNVUXRNakUrTWpFNU1EWXhQQzlwYm5SSlJDMHlNVDROQ2p4emRISnBibWRKUkMweU1pQnBaRDBpY21WbUxUSTFJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTNZbUk4TDNOMGNtbHVaMGxFTFRJeVBnMEtQR2x1ZEVsRUxUSXlQakl4T1RBMk56d3ZhVzUwU1VRdE1qSStEUW84YzNSeWFXNW5TVVF0TWpNZ2FXUTlJbkpsWmkweU5pSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU4yTXhQQzl6ZEhKcGJtZEpSQzB5TXo0TkNqeHBiblJKUkMweU16NHlNVGt3TnpNOEwybHVkRWxFTFRJelBnMEtQSE4wY21sdVowbEVMVEkwSUdsa1BTSnlaV1l0TWpjaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRkak56d3ZjM1J5YVc1blNVUXRNalErRFFvOGFXNTBTVVF0TWpRK01qRTVNRGM1UEM5cGJuUkpSQzB5TkQ0TkNqeHpkSEpwYm1kSlJDMHlOU0JwWkQwaWNtVm1MVEk0SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelUzWTJROEwzTjBjbWx1WjBsRUxUSTFQZzBLUEdsdWRFbEVMVEkxUGpJeE9UQTROVHd2YVc1MFNVUXRNalUrRFFvOGMzUnlhVzVuU1VRdE1qWWdhV1E5SW5KbFppMHlPU0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFOMlF6UEM5emRISnBibWRKUkMweU5qNE5DanhwYm5SSlJDMHlOajR5TVRrd09URThMMmx1ZEVsRUxUSTJQZzBLUEhOMGNtbHVaMGxFTFRJM0lHbGtQU0p5WldZdE16QWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UZGtPVHd2YzNSeWFXNW5TVVF0TWpjK0RRbzhhVzUwU1VRdE1qYytNakU1TURrM1BDOXBiblJKUkMweU56NE5Danh6ZEhKcGJtZEpSQzB5T0NCcFpEMGljbVZtTFRNeElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVM1pHWThMM04wY21sdVowbEVMVEk0UGcwS1BHbHVkRWxFTFRJNFBqSXhPVEV3TXp3dmFXNTBTVVF0TWpnK0RRbzhMMkV4T2sxMWJIUnBjR3hsVTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTdfRGF0YT4NCjxCYXNlLTAtN19IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtN19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC04X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLThfSGFzRGF0YT4NCjxCYXNlLTAtOF9EYXRhIGlkPSJyZWYtMTEiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcE5kV3gwYVhCc1pWTmxjbWxoYkdsNllXSnNaVWxrSUdsa1BTSnlaV1l0TVNJZ2VHMXNibk02WVRFOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZZMnh5TDI1ellYTnpaVzB2VW1WMmFYUlRaWEoyYVdObGN5NVFaWEp6YVhOMFpXNWpaUzlTWlhacGRGTmxjblpwWTJWekpUSkRKVEl3Vm1WeWMybHZiaVV6UkRJdU1UQXVNUzQwTURBeUpUSkRKVEl3UTNWc2RIVnlaU1V6Ukc1bGRYUnlZV3dsTWtNbE1qQlFkV0pzYVdOTFpYbFViMnRsYmlVelJHNTFiR3dpUGcwS1BHNTFiV0psY2s5bVJXeGxiV1Z1ZEhNK01qazhMMjUxYldKbGNrOW1SV3hsYldWdWRITStEUW84YzNSeWFXNW5TVVF0TUNCcFpEMGljbVZtTFRNaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRkbE5Ud3ZjM1J5YVc1blNVUXRNRDROQ2p4cGJuUkpSQzB3UGpJeE9URXdPVHd2YVc1MFNVUXRNRDROQ2p4emRISnBibWRKUkMweElHbGtQU0p5WldZdE5DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU4yVmlQQzl6ZEhKcGJtZEpSQzB4UGcwS1BHbHVkRWxFTFRFK01qRTVNVEUxUEM5cGJuUkpSQzB4UGcwS1BITjBjbWx1WjBsRUxUSWdhV1E5SW5KbFppMDFJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTNaakU4TDNOMGNtbHVaMGxFTFRJK0RRbzhhVzUwU1VRdE1qNHlNVGt4TWpFOEwybHVkRWxFTFRJK0RRbzhjM1J5YVc1blNVUXRNeUJwWkQwaWNtVm1MVFlpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGRtTnp3dmMzUnlhVzVuU1VRdE16NE5DanhwYm5SSlJDMHpQakl4T1RFeU56d3ZhVzUwU1VRdE16NE5Danh6ZEhKcGJtZEpSQzAwSUdsa1BTSnlaV1l0TnlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xTjJaa1BDOXpkSEpwYm1kSlJDMDBQZzBLUEdsdWRFbEVMVFErTWpFNU1UTXpQQzlwYm5SSlJDMDBQZzBLUEhOMGNtbHVaMGxFTFRVZ2FXUTlJbkpsWmkwNElqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVNE1ETThMM04wY21sdVowbEVMVFUrRFFvOGFXNTBTVVF0TlQ0eU1Ua3hNems4TDJsdWRFbEVMVFUrRFFvOGMzUnlhVzVuU1VRdE5pQnBaRDBpY21WbUxUa2lQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UZ3dPVHd2YzNSeWFXNW5TVVF0Tmo0TkNqeHBiblJKUkMwMlBqSXhPVEUwTlR3dmFXNTBTVVF0Tmo0TkNqeHpkSEpwYm1kSlJDMDNJR2xrUFNKeVpXWXRNVEFpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGd3Wmp3dmMzUnlhVzVuU1VRdE56NE5DanhwYm5SSlJDMDNQakl4T1RFMU1Ud3ZhVzUwU1VRdE56NE5Danh6ZEhKcGJtZEpSQzA0SUdsa1BTSnlaV1l0TVRFaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRneE5Ud3ZjM1J5YVc1blNVUXRPRDROQ2p4cGJuUkpSQzA0UGpJeE9URTFOend2YVc1MFNVUXRPRDROQ2p4emRISnBibWRKUkMwNUlHbGtQU0p5WldZdE1USWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UZ3hZand2YzNSeWFXNW5TVVF0T1Q0TkNqeHBiblJKUkMwNVBqSXhPVEUyTXp3dmFXNTBTVVF0T1Q0TkNqeHpkSEpwYm1kSlJDMHhNQ0JwWkQwaWNtVm1MVEV6SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelU0TWpFOEwzTjBjbWx1WjBsRUxURXdQZzBLUEdsdWRFbEVMVEV3UGpJeE9URTJPVHd2YVc1MFNVUXRNVEErRFFvOGMzUnlhVzVuU1VRdE1URWdhV1E5SW5KbFppMHhOQ0krTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFPREkzUEM5emRISnBibWRKUkMweE1UNE5DanhwYm5SSlJDMHhNVDR5TVRreE56VThMMmx1ZEVsRUxURXhQZzBLUEhOMGNtbHVaMGxFTFRFeUlHbGtQU0p5WldZdE1UVWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UZ3laRHd2YzNSeWFXNW5TVVF0TVRJK0RRbzhhVzUwU1VRdE1USStNakU1TVRneFBDOXBiblJKUkMweE1qNE5Danh6ZEhKcGJtZEpSQzB4TXlCcFpEMGljbVZtTFRFMklqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVNE16TThMM04wY21sdVowbEVMVEV6UGcwS1BHbHVkRWxFTFRFelBqSXhPVEU0Tnp3dmFXNTBTVVF0TVRNK0RRbzhjM1J5YVc1blNVUXRNVFFnYVdROUluSmxaaTB4TnlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xT0RNNVBDOXpkSEpwYm1kSlJDMHhORDROQ2p4cGJuUkpSQzB4TkQ0eU1Ua3hPVE04TDJsdWRFbEVMVEUwUGcwS1BITjBjbWx1WjBsRUxURTFJR2xrUFNKeVpXWXRNVGdpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGd6Wmp3dmMzUnlhVzVuU1VRdE1UVStEUW84YVc1MFNVUXRNVFUrTWpFNU1UazVQQzlwYm5SSlJDMHhOVDROQ2p4emRISnBibWRKUkMweE5pQnBaRDBpY21WbUxURTVJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTRORFU4TDNOMGNtbHVaMGxFTFRFMlBnMEtQR2x1ZEVsRUxURTJQakl4T1RJd05Ud3ZhVzUwU1VRdE1UWStEUW84YzNSeWFXNW5TVVF0TVRjZ2FXUTlJbkpsWmkweU1DSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU9EUmlQQzl6ZEhKcGJtZEpSQzB4Tno0TkNqeHBiblJKUkMweE56NHlNVGt5TVRFOEwybHVkRWxFTFRFM1BnMEtQSE4wY21sdVowbEVMVEU0SUdsa1BTSnlaV1l0TWpFaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRnMU1Ud3ZjM1J5YVc1blNVUXRNVGcrRFFvOGFXNTBTVVF0TVRnK01qRTVNakUzUEM5cGJuUkpSQzB4T0Q0TkNqeHpkSEpwYm1kSlJDMHhPU0JwWkQwaWNtVm1MVEl5SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelU0TlRjOEwzTjBjbWx1WjBsRUxURTVQZzBLUEdsdWRFbEVMVEU1UGpJeE9USXlNend2YVc1MFNVUXRNVGsrRFFvOGMzUnlhVzVuU1VRdE1qQWdhV1E5SW5KbFppMHlNeUkrTTJSaE5qZzFabU10TWpZeU15MDBOR1ZpTFRrMFlqQXRNakJtWVRBeVlqTXhZbU0yTFRBd01ETTFPRFZrUEM5emRISnBibWRKUkMweU1ENE5DanhwYm5SSlJDMHlNRDR5TVRreU1qazhMMmx1ZEVsRUxUSXdQZzBLUEhOMGNtbHVaMGxFTFRJeElHbGtQU0p5WldZdE1qUWlQak5rWVRZNE5XWmpMVEkyTWpNdE5EUmxZaTA1TkdJd0xUSXdabUV3TW1Jek1XSmpOaTB3TURBek5UZzJNend2YzNSeWFXNW5TVVF0TWpFK0RRbzhhVzUwU1VRdE1qRStNakU1TWpNMVBDOXBiblJKUkMweU1UNE5Danh6ZEhKcGJtZEpSQzB5TWlCcFpEMGljbVZtTFRJMUlqNHpaR0UyT0RWbVl5MHlOakl6TFRRMFpXSXRPVFJpTUMweU1HWmhNREppTXpGaVl6WXRNREF3TXpVNE5qazhMM04wY21sdVowbEVMVEl5UGcwS1BHbHVkRWxFTFRJeVBqSXhPVEkwTVR3dmFXNTBTVVF0TWpJK0RRbzhjM1J5YVc1blNVUXRNak1nYVdROUluSmxaaTB5TmlJK00yUmhOamcxWm1NdE1qWXlNeTAwTkdWaUxUazBZakF0TWpCbVlUQXlZak14WW1NMkxUQXdNRE0xT0RabVBDOXpkSEpwYm1kSlJDMHlNejROQ2p4cGJuUkpSQzB5TXo0eU1Ua3lORGM4TDJsdWRFbEVMVEl6UGcwS1BITjBjbWx1WjBsRUxUSTBJR2xrUFNKeVpXWXRNamNpUGpOa1lUWTROV1pqTFRJMk1qTXRORFJsWWkwNU5HSXdMVEl3Wm1Fd01tSXpNV0pqTmkwd01EQXpOVGczTlR3dmMzUnlhVzVuU1VRdE1qUStEUW84YVc1MFNVUXRNalErTWpFNU1qVXpQQzlwYm5SSlJDMHlORDROQ2p4emRISnBibWRKUkMweU5TQnBaRDBpY21WbUxUSTRJajR6WkdFMk9EVm1ZeTB5TmpJekxUUTBaV0l0T1RSaU1DMHlNR1poTURKaU16RmlZell0TURBd016VTROMkk4TDNOMGNtbHVaMGxFTFRJMVBnMEtQR2x1ZEVsRUxUSTFQakl4T1RJMU9Ud3ZhVzUwU1VRdE1qVStEUW84YzNSeWFXNW5TVVF0TWpZZ2FXUTlJbkpsWmkweU9TSStNMlJoTmpnMVptTXRNall5TXkwME5HVmlMVGswWWpBdE1qQm1ZVEF5WWpNeFltTTJMVEF3TURNMU9EZ3hQQzl6ZEhKcGJtZEpSQzB5Tmo0TkNqeHBiblJKUkMweU5qNHlNVGt5TmpVOEwybHVkRWxFTFRJMlBnMEtQSE4wY21sdVowbEVMVEkzSUdsa1BTSnlaV1l0TXpBaVBqTmtZVFk0TldaakxUSTJNak10TkRSbFlpMDVOR0l3TFRJd1ptRXdNbUl6TVdKak5pMHdNREF6TlRnNE56d3ZjM1J5YVc1blNVUXRNamMrRFFvOGFXNTBTVVF0TWpjK01qRTVNamN4UEM5cGJuUkpSQzB5Tno0TkNqeHpkSEpwYm1kSlJDMHlPQ0JwWkQwaWNtVm1MVE14SWo0elpHRTJPRFZtWXkweU5qSXpMVFEwWldJdE9UUmlNQzB5TUdaaE1ESmlNekZpWXpZdE1EQXdNelU0T0dROEwzTjBjbWx1WjBsRUxUSTRQZzBLUEdsdWRFbEVMVEk0UGpJeE9USTNOend2YVc1MFNVUXRNamcrRFFvOEwyRXhPazExYkhScGNHeGxVMlZ5YVdGc2FYcGhZbXhsU1dRK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtOF9EYXRhPg0KPEJhc2UtMC04X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC04X0hhc05lc3RlZERhdGE+DQo8L2ExOkNhbGxTaXRlX3gwMDJCX1RyYWNlU2VyaWFsaXNlckhlbHBlcj4NCjwvU09BUC1FTlY6Qm9keT4NCjwvU09BUC1FTlY6RW52ZWxvcGU+DQo="
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -6726.1650390625,
+      "EyeY": 7764.23876953125,
+      "EyeZ": -12981.9501953125,
+      "LookX": 5081.75390625,
+      "LookY": -1253.61962890625,
+      "LookZ": 18820.00390625,
+      "UpX": -0.039431184530258179,
+      "UpY": 0.98849385976791382,
+      "UpZ": -0.14603103697299957
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "AdaptiveComponent.ByPoints",
+        "Id": "817a6b065cd24e7d9b4ae90bee3590e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": true,
+        "X": 1096.1354650113874,
+        "Y": -75.107499722109708
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Family Types",
+        "Id": "b8a7377ab1434d009aada301d9be4408",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 693.52613539481456,
+        "Y": -93.693884833644972
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Select Model Element",
+        "Id": "90550ad3b8ea43e8ae96596acaaea585",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1148.5472302177,
+        "Y": 84.9847409686258
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Select Model Element",
+        "Id": "b935956b94e14f2d903526387ba73004",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1154.05553178091,
+        "Y": 227.81540583556219
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.Create",
+        "Id": "fb9731ccb5b84f04b79ce234d690ca1b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -949.23370060456989,
+        "Y": 147.14023676631865
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Element.Curves",
+        "Id": "b5d9c62a2f554ddc8b56ed344a843298",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -813.26011775185793,
+        "Y": 146.06051477618388
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Flatten",
+        "Id": "829b214998d24e6281dba7c9f58c96e2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -578.10507845644793,
+        "Y": 144.68661840446254
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Surface.ByLoft",
+        "Id": "cf9aec5de8f24fefaafee0a258e56c56",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -373.72968030650219,
+        "Y": 144.9788966184729
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "File Path",
+        "Id": "82f6bebd82924bfb91a3246b4aa42f6a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -582.5341186918879,
+        "Y": -445.95598693336751
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "File From Path",
+        "Id": "e7aa3a9137b2475bba6df1ad6a46bfd6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -331.70945259747714,
+        "Y": -447.53299597553593
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Image.ReadFromFile",
+        "Id": "30d9088a46984e769e32cb6a7c883dbd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -208.84052457132498,
+        "Y": -448.04490990040335
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.Pixels",
+        "Id": "9d32742b6fa6444882b969a1f1c2d092",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 705.08772094621963,
+        "Y": -303.10980805080379
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Watch Image",
+        "Id": "4516d7ddc91a4563928d9258ba98c8db",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 25.862087373890745,
+        "Y": -444.61175980410491
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.OverrideColorInView",
+        "Id": "1f5e1cdc82b146f6a4cf96b968594892",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1466.5123888909679,
+        "Y": -264.58094944263974
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.Reverse",
+        "Id": "16ef83eda3704272a1838e7b10647721",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 931.20817595392214,
+        "Y": -303.59181112161133
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "6d28847aaf464c0599b3c14e30c242a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -686.23966092840976,
+        "Y": -663.25211680825782
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "216d979d10c74ea79e4c6d8becd61c5e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -503.8780270130078,
+        "Y": -662.24525186438677
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4830889d54a845198910cd4f46dc2f6f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -850.38125848902166,
+        "Y": -662.17553284963765
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c71e4c9cc3744632a14972e0babe18bc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1014.0125940912799,
+        "Y": -662.61759489255769
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4c4520b4c1f945cf90c6e53bc71b7b73",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1159.7016912447677,
+        "Y": -662.12746159022777
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "[&] PointGrid.ToQuadSets",
+        "Id": "6b7c6442366e4f788ca0706681513327",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 835.9590817833805,
+        "Y": 526.611965710674
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Surface.GetIsoline",
+        "Id": "7b6832e4d85c48e7af12fdf2562aeffa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 185.41330179366867,
+        "Y": 373.85491470988291
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "db44f88122ff415296ebb4ece3a4f2de",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 27.880393604448955,
+        "Y": 432.36961815224737
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Curve.PointAtParameter",
+        "Id": "7d420f6577994e4487ddf633b74e06c1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 632.99075059511165,
+        "Y": 525.631496876443
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "3a07395c8ba74d9a8ee8318cb14fedaa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 465.734326499875,
+        "Y": 561.830234246311
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "v",
+        "Id": "5ab90dae3d4d4d8996a7a51497637618",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 118.68394713507644,
+        "Y": 587.85102006299689
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "u",
+        "Id": "7b49b85dbe7b436aa43d22f674b1fb53",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -316.49815097042745,
+        "Y": 452.1570440719039
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "52a220ffe94640e680d0c5b1e03ac425",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 560.09422563332691,
+        "Y": -259.15150716092614
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.Reverse",
+        "Id": "430809e6c7634100b3552961db612b42",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1097.12746302071,
+        "Y": -303.00216220747268
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "c245ab48d8614af08ce703d764c3ccbb",
+        "Title": "画像を指定",
+        "Nodes": [
+          "82f6bebd82924bfb91a3246b4aa42f6a",
+          "e7aa3a9137b2475bba6df1ad6a46bfd6",
+          "30d9088a46984e769e32cb6a7c883dbd"
+        ],
+        "Left": -592.5341186918879,
+        "Top": -501.04490990040335,
+        "Width": 567.69359412056292,
+        "Height": 149.08892296703584,
+        "FontSize": 36.0,
+        "InitialTop": -448.04490990040335,
+        "InitialHeight": 145.77252032814366,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "515f858a97f94f19be11debfbce3030f",
+        "Title": "モデル線",
+        "Nodes": [
+          "90550ad3b8ea43e8ae96596acaaea585",
+          "b935956b94e14f2d903526387ba73004"
+        ],
+        "Left": -1164.05553178091,
+        "Top": 31.9847409686258,
+        "Width": 194.50830156321013,
+        "Height": 314.83066486693633,
+        "FontSize": 36.0,
+        "InitialTop": 84.9847409686258,
+        "InitialHeight": 287.83066486693633,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "5d9cd1094948423baeb04ec9b038056c",
+        "Title": "Parameter",
+        "Nodes": [
+          "6d28847aaf464c0599b3c14e30c242a4"
+        ],
+        "Left": -696.23966092840976,
+        "Top": -716.25211680825782,
+        "Width": 171.45666666666668,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -663.25211680825782,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "71f236020dc04222b8180e5787db77c2",
+        "Title": "Preview",
+        "Nodes": [
+          "216d979d10c74ea79e4c6d8becd61c5e"
+        ],
+        "Left": -513.8780270130078,
+        "Top": -715.24525186438677,
+        "Width": 133.0,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -662.24525186438677,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "c5fe22722f2d4653a6609d1c7641df7f",
+        "Title": "Tranform",
+        "Nodes": [
+          "4830889d54a845198910cd4f46dc2f6f"
+        ],
+        "Left": -860.38125848902166,
+        "Top": -715.17553284963765,
+        "Width": 152.82333333333335,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -662.17553284963765,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFE8F7AD"
+      },
+      {
+        "Id": "2b7075b6901046bca4456cc8634f018b",
+        "Title": "Generate",
+        "Nodes": [
+          "c71e4c9cc3744632a14972e0babe18bc"
+        ],
+        "Left": -1024.0125940912799,
+        "Top": -715.61759489255769,
+        "Width": 154.58333333333334,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -662.61759489255769,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "f50320190fd04377a04ca88be56ca3f8",
+        "Title": "Input",
+        "Nodes": [
+          "4c4520b4c1f945cf90c6e53bc71b7b73"
+        ],
+        "Left": -1169.7016912447677,
+        "Top": -715.12746159022777,
+        "Width": 133.0,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -662.12746159022777,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "bbda839319f344d391b724012b26cb15",
+        "Title": "Image Preview",
+        "Nodes": [
+          "4516d7ddc91a4563928d9258ba98c8db"
+        ],
+        "Left": 15.862087373890745,
+        "Top": -497.61175980410491,
+        "Width": 430.0,
+        "Height": 398.0,
+        "FontSize": 36.0,
+        "InitialTop": -444.61175980410491,
+        "InitialHeight": 333.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "70a3d406e4584cb6869b4aa2b9711564",
+        "Title": "画像のピクセルを並び替え",
+        "Nodes": [
+          "9d32742b6fa6444882b969a1f1c2d092",
+          "16ef83eda3704272a1838e7b10647721",
+          "52a220ffe94640e680d0c5b1e03ac425",
+          "430809e6c7634100b3552961db612b42"
+        ],
+        "Left": 550.09422563332691,
+        "Top": -356.59181112161133,
+        "Width": 710.033237387383,
+        "Height": 200.44030396068518,
+        "FontSize": 36.0,
+        "InitialTop": -303.59181112161133,
+        "InitialHeight": 192.92348946909985,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e41cdbee77e041edbfde64736f80f2ab",
+        "Title": "u",
+        "Nodes": [
+          "7b49b85dbe7b436aa43d22f674b1fb53"
+        ],
+        "Left": -326.49815097042745,
+        "Top": 399.1570440719039,
+        "Width": 319.0,
+        "Height": 121.0,
+        "FontSize": 36.0,
+        "InitialTop": 452.1570440719039,
+        "InitialHeight": 98.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "c37bac094a7b4f6ca27b3f8fc2fdee64",
+        "Title": "v",
+        "Nodes": [
+          "5ab90dae3d4d4d8996a7a51497637618"
+        ],
+        "Left": 108.68394713507644,
+        "Top": 534.85102006299689,
+        "Width": 319.0,
+        "Height": 121.0,
+        "FontSize": 36.0,
+        "InitialTop": 587.85102006299689,
+        "InitialHeight": 98.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "364f674afa904e41bfe2a4bf9fececff",
+        "Title": "アダプティブパネルを生成",
+        "Nodes": [
+          "817a6b065cd24e7d9b4ae90bee3590e9",
+          "b8a7377ab1434d009aada301d9be4408"
+        ],
+        "Left": 683.52613539481456,
+        "Top": -146.69388483364497,
+        "Width": 756.60932961657284,
+        "Height": 190.58638511153526,
+        "FontSize": 36.0,
+        "InitialTop": -93.693884833644972,
+        "InitialHeight": 171.63318697305598,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "fc31dd179a0f41128740bc596d842fee",
+        "Title": "Loftする",
+        "Nodes": [
+          "829b214998d24e6281dba7c9f58c96e2",
+          "cf9aec5de8f24fefaafee0a258e56c56"
+        ],
+        "Left": -588.10507845644793,
+        "Top": 91.686618404462536,
+        "Width": 471.37539814994574,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": 144.68661840446254,
+        "InitialHeight": 149.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "7ae43fbfb88947afa86d67650fd820d3",
+        "Title": "Curve情報を取得",
+        "Nodes": [
+          "fb9731ccb5b84f04b79ce234d690ca1b",
+          "b5d9c62a2f554ddc8b56ed344a843298"
+        ],
+        "Left": -959.23370060456989,
+        "Top": 93.060514776183879,
+        "Width": 368.97358285271196,
+        "Height": 173.07972199013477,
+        "FontSize": 36.0,
+        "InitialTop": 146.06051477618388,
+        "InitialHeight": 150.07972199013477,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "8f89ec134fd244abb81e8ab43a8b3e58",
+        "Title": "Color",
+        "Nodes": [
+          "1f5e1cdc82b146f6a4cf96b968594892"
+        ],
+        "Left": 1456.5123888909679,
+        "Top": -317.58094944263974,
+        "Width": 239.0,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": -264.58094944263974,
+        "InitialHeight": 149.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "32585c53e4654f66802628d71d189c72",
+        "Title": "アイソカーブを取得",
+        "Nodes": [
+          "7b6832e4d85c48e7af12fdf2562aeffa",
+          "db44f88122ff415296ebb4ece3a4f2de"
+        ],
+        "Left": 17.880393604448955,
+        "Top": 320.85491470988291,
+        "Width": 399.53290818921971,
+        "Height": 204.51470344236446,
+        "FontSize": 36.0,
+        "InitialTop": 373.85491470988291,
+        "InitialHeight": 227.64780244764052,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d1bd7aed851143d8ac14234704b12727",
+        "Title": "分割して、点リストをつくる",
+        "Nodes": [
+          "6b7c6442366e4f788ca0706681513327",
+          "7d420f6577994e4487ddf633b74e06c1",
+          "3a07395c8ba74d9a8ee8318cb14fedaa"
+        ],
+        "Left": 455.734326499875,
+        "Top": 472.63149687644295,
+        "Width": 624.22475528350549,
+        "Height": 182.198737369868,
+        "FontSize": 36.0,
+        "InitialTop": 525.631496876443,
+        "InitialHeight": 159.19873736986796,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 53.235652163702412,
+    "Y": -182.10317167788031,
+    "Zoom": 0.7711516834545894
+  }
+}

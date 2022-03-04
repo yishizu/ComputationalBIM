@@ -1,0 +1,506 @@
+{
+  "Uuid": "b3ea7af2-ce9f-4b3f-b833-e0f5c95dbd5b",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "3-2-2_(Sinカーブ)",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Math.PI": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 5.0,
+      "Id": "02527b3786ce455c853d02952783439e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0bc80b72cdb8418ba910c251b5068ac1",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 3000.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 3000.0,
+      "Id": "2ed42912a29a46759eb8cec84b2d2ad3",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "178948e3396c4f6d9506316b79789a7f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..period*Math.PI..#100;",
+      "Id": "239b3b4d682c46098a0e6fdfced9d5c9",
+      "Inputs": [
+        {
+          "Id": "115cbc76586f43bd8a06644e7d9112bd",
+          "Name": "period",
+          "Description": "period",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e28c2e5149ad462a9f0c1a09bf9ad7ed",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.RemapRange@double[],double,double",
+      "Id": "5451abc7f768485ea49f8f491728879c",
+      "Inputs": [
+        {
+          "Id": "e6e6c27ecec74d21b3d347cf5af01e43",
+          "Name": "numbers",
+          "Description": "範囲を調整するための数値のリスト。\n\ndouble[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "002c051252d44d7489adbfe8353e1e5f",
+          "Name": "newMin",
+          "Description": "範囲の新しい最小値。\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "338764d74360443cbe817faf42ca23df",
+          "Name": "newMax",
+          "Description": "範囲の新しい最大値\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "02310498229f45778ae05b09a1fcf310",
+          "Name": "list",
+          "Description": "新しい範囲に再マッピングされるリスト。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "分配比率を保持しながら数値のリストの範囲を 調整します。\n\nMath.RemapRange (numbers: double[], newMin: double = 0, newMax: double = 1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.RadiansToDegrees@double",
+      "Id": "da65af4e494c4e1faaddce8bd68f375e",
+      "Inputs": [
+        {
+          "Id": "bc921655c7f74fadb0442191cb05539a",
+          "Name": "radians",
+          "Description": "角度(ラジアン単位)。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3578901972b64f6db2a1225798bbb102",
+          "Name": "degrees",
+          "Description": "角度(度単位)。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ラジアン単位の角度を度単位の角度に変換します。\n\nMath.RadiansToDegrees (radians: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "a83d0c93e36b479abe8628cfa4e4e78f",
+      "Inputs": [
+        {
+          "Id": "0c827a1e13d5421c9cd238511f55684e",
+          "Name": "angle",
+          "Description": "正弦を取得する角度(度単位)。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2133c06462074e7bab8b8a0424515b61",
+          "Name": "double",
+          "Description": "角度の正弦。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "角度の正弦を求めます。\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "*@var[]..[],var[]..[]",
+      "Id": "da0cc10ded484883a25f06147c2ad74f",
+      "Inputs": [
+        {
+          "Id": "571706cef3e44c43b8d184e49830e1be",
+          "Name": "x",
+          "Description": "整数値または倍精度値\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ecef3891ad444d06bc7b93b9dddf4960",
+          "Name": "y",
+          "Description": "整数値または倍精度値\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "39a1165076cf4807b1f84f83d9dce530",
+          "Name": "number",
+          "Description": "2 つの入力数値の積",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x を y で乗算した値を返します\n\n* (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 300.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 300.0,
+      "Id": "c12654743e2144cca0ef6edca620cd49",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1fd6e892115a46f78e0956f11c83999c",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "91228a097f6b42b1b1698379dc13860f",
+      "Inputs": [
+        {
+          "Id": "af2ea7d193fe48a6b0bc908a65c1cbf3",
+          "Name": "x",
+          "Description": "X coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "73922674277b4a21a588f78b6e562a7e",
+          "Name": "y",
+          "Description": "Y coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1c32069395f34c9cbd686f9293897033",
+          "Name": "z",
+          "Description": "Z coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c494088e9bcf4aca81faf2d76d891a1f",
+          "Name": "Point",
+          "Description": "Point created by coordinates",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定された 3 つのデカルト座標を使用して、点を作成します。\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "0bc80b72cdb8418ba910c251b5068ac1",
+      "End": "115cbc76586f43bd8a06644e7d9112bd",
+      "Id": "2ebdabd13a954646af0c4b21552c8e09"
+    },
+    {
+      "Start": "178948e3396c4f6d9506316b79789a7f",
+      "End": "338764d74360443cbe817faf42ca23df",
+      "Id": "2257cebb509c4342aad30d506bfa8cf4"
+    },
+    {
+      "Start": "e28c2e5149ad462a9f0c1a09bf9ad7ed",
+      "End": "e6e6c27ecec74d21b3d347cf5af01e43",
+      "Id": "770304a5be5f4820a977c11bd8c222ae"
+    },
+    {
+      "Start": "e28c2e5149ad462a9f0c1a09bf9ad7ed",
+      "End": "bc921655c7f74fadb0442191cb05539a",
+      "Id": "cb2fb08942084a31988b5f4f7d01e89c"
+    },
+    {
+      "Start": "02310498229f45778ae05b09a1fcf310",
+      "End": "af2ea7d193fe48a6b0bc908a65c1cbf3",
+      "Id": "4a4da195d4f943f58da574fb8f814906"
+    },
+    {
+      "Start": "3578901972b64f6db2a1225798bbb102",
+      "End": "0c827a1e13d5421c9cd238511f55684e",
+      "Id": "40cda8af165d42c2ba6313a06be9cc53"
+    },
+    {
+      "Start": "2133c06462074e7bab8b8a0424515b61",
+      "End": "571706cef3e44c43b8d184e49830e1be",
+      "Id": "6693fb85fc75434da028f75486bfbc08"
+    },
+    {
+      "Start": "39a1165076cf4807b1f84f83d9dce530",
+      "End": "73922674277b4a21a588f78b6e562a7e",
+      "Id": "0aee56ad74c24f719c0160536604450c"
+    },
+    {
+      "Start": "1fd6e892115a46f78e0956f11c83999c",
+      "End": "ecef3891ad444d06bc7b93b9dddf4960",
+      "Id": "f2f5e191c24445ee9d7a87f2e009e625"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 2101.570556640625,
+      "EyeY": 4457.10986328125,
+      "EyeZ": -206.88211059570313,
+      "LookX": 8.0244140625,
+      "LookY": -4380.19677734375,
+      "LookZ": 567.24212646484375,
+      "UpX": -0.014093419536948204,
+      "UpY": 0.08715531975030899,
+      "UpZ": -0.99609506130218506
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "02527b3786ce455c853d02952783439e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 489.5,
+        "Y": 217.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "2ed42912a29a46759eb8cec84b2d2ad3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 599.5,
+        "Y": 312.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "239b3b4d682c46098a0e6fdfced9d5c9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 885.61318057057679,
+        "Y": 223.02468589050318
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.RemapRange",
+        "Id": "5451abc7f768485ea49f8f491728879c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1382.220078951214,
+        "Y": 219.96297116424535
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.RadiansToDegrees",
+        "Id": "da65af4e494c4e1faaddce8bd68f375e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1225.8991623746747,
+        "Y": 407.48975111806158
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sin",
+        "Id": "a83d0c93e36b479abe8628cfa4e4e78f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1487.5491503463782,
+        "Y": 403.92197563649233
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "*",
+        "Id": "da0cc10ded484883a25f06147c2ad74f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1809.1129591359488,
+        "Y": 399.55962066294433
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "c12654743e2144cca0ef6edca620cd49",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1362.9301350398653,
+        "Y": 519.46177200893874
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "91228a097f6b42b1b1698379dc13860f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2037.5903673087589,
+        "Y": 217.85188465698184
+      }
+    ],
+    "Annotations": [],
+    "X": -329.5207733620577,
+    "Y": -5.9980482228678795,
+    "Zoom": 0.42923471998988111
+  }
+}

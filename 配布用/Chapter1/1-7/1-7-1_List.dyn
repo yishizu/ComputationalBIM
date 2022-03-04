@@ -1,0 +1,211 @@
+{
+  "Uuid": "401ab15e-ad75-4765-b72f-e3cffaed6b9e",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "1-7-1_List",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5;\n0..#15..10;",
+      "Id": "249784364fa248b895d34e7f9cfa2c45",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fc9c5a59bcaf49d0aa09dfbb98aa087d",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cd38f3c0be3c4ea08b2a34165cb20152",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Chop@var[]..[],int[]",
+      "Id": "870b00d77bca4fd08efab3ef491206f4",
+      "Inputs": [
+        {
+          "Id": "4fb14f9ef9c24ec693747a021e3142aa",
+          "Name": "list",
+          "Description": "サブリストに分割するリスト\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "686d55f792ef4f68b5f9d5a3cd6ab077",
+          "Name": "lengths",
+          "Description": "入力リストから作成する連続したサブリストの長さ\n\nint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "02257f0e02b244b386b0eb8615f33893",
+          "Name": "lists",
+          "Description": "リストから作成したサブリスト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定した長さで一連の連続したサブリストにリストを分割します。リストの分割はリストの一番上から開始されます。\n\nList.Chop (list: var[]..[], lengths: int[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "6b67266937d94a6ca1f57fb780531053",
+      "Inputs": [
+        {
+          "Id": "c0646fe315ae455c93f85a9f8e4633ce",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8dacdca3acf74ca1adbe7002cfc6c09d",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "fc9c5a59bcaf49d0aa09dfbb98aa087d",
+      "End": "686d55f792ef4f68b5f9d5a3cd6ab077",
+      "Id": "d641c999910b4d90a55eeb0453fee3cf"
+    },
+    {
+      "Start": "cd38f3c0be3c4ea08b2a34165cb20152",
+      "End": "4fb14f9ef9c24ec693747a021e3142aa",
+      "Id": "416a2b0118524255b1808388248b5449"
+    },
+    {
+      "Start": "02257f0e02b244b386b0eb8615f33893",
+      "End": "c0646fe315ae455c93f85a9f8e4633ce",
+      "Id": "94a915beb8324f5eb1c9b9f51c64abc9"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "249784364fa248b895d34e7f9cfa2c45",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 364.90982903446303,
+        "Y": -63.968427891960687
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Chop",
+        "Id": "870b00d77bca4fd08efab3ef491206f4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 534.62310323471547,
+        "Y": -68.570749309008619
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "6b67266937d94a6ca1f57fb780531053",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 749.39178383379237,
+        "Y": -68.592560890611111
+      }
+    ],
+    "Annotations": [],
+    "X": -373.72320921160014,
+    "Y": 169.800811359178,
+    "Zoom": 1.1118676036580006
+  }
+}

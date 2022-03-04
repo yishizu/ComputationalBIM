@@ -1,0 +1,480 @@
+{
+  "Uuid": "a206ee68-6fc9-422e-8d21-6c714b3535fa",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "4-4-2_(ファミリタイプを変更)",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "6bd4700a55c54858a70da2e4f4882d7d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c218cac578224345a734c55df54581b3",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "f0cb961db2df47f695cd65d0e6e66f8f",
+      "Inputs": [
+        {
+          "Id": "47df2798fa124fa4baaaab54017758a0",
+          "Name": "list",
+          "Description": "項目を取得するリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1aa9d0dde7414e94831572df6df72775",
+          "Name": "index",
+          "Description": "取得する項目のインデックス。\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "607bd766a52f41168fd16e87957a7f3e",
+          "Name": "item",
+          "Description": "リスト内の特定のインデックスの項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "リストの、指定されたインデックスにある項目を取得します。\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyInstance.GetFamily",
+      "Id": "a25ccd23b73046da8936d6fc6951675c",
+      "Inputs": [
+        {
+          "Id": "67404e16f41f417e9c67830fb56f7ff7",
+          "Name": "familyInstance",
+          "Description": "Revit.Elements.FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7f3900f13f034917a1c8d9f00a8da434",
+          "Name": "Family",
+          "Description": "Family",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "このファミリ インスタンスのファミリを取得します\n\nFamilyInstance.GetFamily: Family"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Family.Types",
+      "Id": "b97b7aee216144feb170d3822bcc70dc",
+      "Inputs": [
+        {
+          "Id": "8dfdeb41dd0d4f0ebadd6c04bd3c6a46",
+          "Name": "family",
+          "Description": "Revit.Elements.Family",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "544fd36a609942799d9a566922137e58",
+          "Name": "FamilyType[]",
+          "Description": "FamilyType[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この Family から FamilyTypes を取得\n\nFamily.Types: FamilyType[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"タイプ\";",
+      "Id": "f69ffe72c7a149afaade7fc47fcbad5b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bcc96af6988d4e1da9db6f40fabcf343",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Id": "c874e12541eb467ebe505da4c3eb9242",
+      "Inputs": [
+        {
+          "Id": "f6de7643bd3743429ad971eb6b5431ee",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "813d2564f8024f9cb2720e2aa6e18315",
+          "Name": "parameterName",
+          "Description": "設定するパラメータの名前。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5e921be292fc4736bdde871fda80ceff",
+          "Name": "value",
+          "Description": "値。\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eb40b00d2d144c7991f627aefee1e4ef",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "いずれかの要素のパラメータを設定します。\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 110,
+      "SelectedString": "OST_Doors",
+      "NodeType": "ExtensionNode",
+      "Id": "ea3af1746f844b7eae5a4bc39b992f67",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "59ba57f242154f71873f57cfd0274efe",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "8081f9927497419c8897afb22c18519d",
+      "Inputs": [
+        {
+          "Id": "28cf8cbb652641b1b8b5374d23f90e58",
+          "Name": "Category",
+          "Description": "カテゴリ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cb85ade224934f82be2dd765f8cd7491",
+          "Name": "Elements",
+          "Description": "要素タイプ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "モデルから指定したカテゴリのすべての要素を取得します。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "c218cac578224345a734c55df54581b3",
+      "End": "1aa9d0dde7414e94831572df6df72775",
+      "Id": "6adfc7b8bb3d4cdcbba2c1de16d6cb02"
+    },
+    {
+      "Start": "607bd766a52f41168fd16e87957a7f3e",
+      "End": "5e921be292fc4736bdde871fda80ceff",
+      "Id": "6cf7fe52885742338634c83b14f87f99"
+    },
+    {
+      "Start": "7f3900f13f034917a1c8d9f00a8da434",
+      "End": "8dfdeb41dd0d4f0ebadd6c04bd3c6a46",
+      "Id": "391d17840eb346b4ab181fab740a381e"
+    },
+    {
+      "Start": "544fd36a609942799d9a566922137e58",
+      "End": "47df2798fa124fa4baaaab54017758a0",
+      "Id": "18767cccb7324896a813ccf5f046b443"
+    },
+    {
+      "Start": "bcc96af6988d4e1da9db6f40fabcf343",
+      "End": "813d2564f8024f9cb2720e2aa6e18315",
+      "Id": "422b5281096b4e1aaefcd2de2ba30aab"
+    },
+    {
+      "Start": "59ba57f242154f71873f57cfd0274efe",
+      "End": "28cf8cbb652641b1b8b5374d23f90e58",
+      "Id": "acc154ca309d4f8c828640add09968c4"
+    },
+    {
+      "Start": "cb85ade224934f82be2dd765f8cd7491",
+      "End": "67404e16f41f417e9c67830fb56f7ff7",
+      "Id": "7ea63861f7b441a985c47b11479c3a4a"
+    },
+    {
+      "Start": "cb85ade224934f82be2dd765f8cd7491",
+      "End": "f6de7643bd3743429ad971eb6b5431ee",
+      "Id": "7dd64385189c4faa9fc185091750f76f"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "6bd4700a55c54858a70da2e4f4882d7d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1193.5275796525189,
+        "Y": 561.1668137725901
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.GetItemAtIndex",
+        "Id": "f0cb961db2df47f695cd65d0e6e66f8f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1429.881264924049,
+        "Y": 395.14366085098027
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.GetFamily",
+        "Id": "a25ccd23b73046da8936d6fc6951675c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 647.099142972083,
+        "Y": 395.14366085098027
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Family.Types",
+        "Id": "b97b7aee216144feb170d3822bcc70dc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 978.483960451387,
+        "Y": 395.14366085098027
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f69ffe72c7a149afaade7fc47fcbad5b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1471.9618346520092,
+        "Y": 287.09118251227028
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.SetParameterByName",
+        "Id": "c874e12541eb467ebe505da4c3eb9242",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1917.9071254783089,
+        "Y": 214.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "ea3af1746f844b7eae5a4bc39b992f67",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 164.8,
+        "Y": 214.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "8081f9927497419c8897afb22c18519d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 468.599345492365,
+        "Y": 214.0
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "150e67b1ea4946e0b6502bed20945ae2",
+        "Title": "要素を取得",
+        "Nodes": [
+          "8081f9927497419c8897afb22c18519d",
+          "a25ccd23b73046da8936d6fc6951675c",
+          "b97b7aee216144feb170d3822bcc70dc",
+          "f69ffe72c7a149afaade7fc47fcbad5b",
+          "f0cb961db2df47f695cd65d0e6e66f8f",
+          "6bd4700a55c54858a70da2e4f4882d7d"
+        ],
+        "Left": 458.599345492365,
+        "Top": 160.8,
+        "Width": 1160.481919431684,
+        "Height": 492.96681377259011,
+        "FontSize": 36.0,
+        "InitialTop": 214.0,
+        "InitialHeight": 469.76681377259013,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "7b84b2006e3448e7bb7c8d75d9c67fdd",
+        "Title": "パラメータを変更",
+        "Nodes": [
+          "c874e12541eb467ebe505da4c3eb9242"
+        ],
+        "Left": 1907.9071254783089,
+        "Top": 160.8,
+        "Width": 289.19999999999982,
+        "Height": 197.8,
+        "FontSize": 36.0,
+        "InitialTop": 214.0,
+        "InitialHeight": 174.60000000000002,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ca551d0f6190489b9a840c9a84566d22",
+        "Title": "カテゴリを指定",
+        "Nodes": [
+          "ea3af1746f844b7eae5a4bc39b992f67"
+        ],
+        "Left": 154.8,
+        "Top": 160.8,
+        "Width": 213.32666666666668,
+        "Height": 145.8,
+        "FontSize": 36.0,
+        "InitialTop": 214.0,
+        "InitialHeight": 122.60000000000002,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      }
+    ],
+    "X": 21.108541526369915,
+    "Y": 65.0074697121365,
+    "Zoom": 0.49618648738281262
+  }
+}

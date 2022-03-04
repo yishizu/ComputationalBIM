@@ -1,0 +1,2027 @@
+{
+  "Uuid": "09aef65e-8f41-4868-baa2-afd15a3d1bda",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "StructuralFraming",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "f89b41ba-7949-42ac-bf97-ce54877095ac-0004363e"
+      ],
+      "Id": "d01e61b6c2a748e5849c52c00f166e02",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c75fa10f17e2433d84357816e5a5a915",
+          "Name": "Element",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "2f08dd71a29b441bad0c33ef9e5d786e",
+      "Inputs": [
+        {
+          "Id": "da6037ea28504200bf3644e951bf3e5f",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0ceddca9a0b8438093271cebddb064de",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "このオブジェクトに関連付けられたすべての Geometry を取得\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.FromObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "90f8e2a513364545b1989b2d51caa121",
+      "Inputs": [
+        {
+          "Id": "a6835370c8f74931b4ee35c3bec6320d",
+          "Name": "obj",
+          "Description": "シリアル化するオブジェクト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "43abd9c586f8408eba18e2d7740b8ebb",
+          "Name": "str",
+          "Description": "計算の結果",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "オブジェクトを文字列表現に変換します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "List.Equals@var[]..[],var[]..[]",
+      "Id": "17a5836976c34e7994cf1f9b331cbe1f",
+      "Inputs": [
+        {
+          "Id": "4e7603006e2e43029d9a35d253325dfa",
+          "Name": "objectA",
+          "Description": "最初のオブジェクト\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56f719d45a354309a3b2785deb28793c",
+          "Name": "objectB",
+          "Description": "2 番目のオブジェクト\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2256ac892c84413aa1f01e3a23279b02",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "2 つのオブジェクト インスタンスが等しいかどうかを決定します。\n\nList.Equals (objectA: var[]..[], objectB: var[]..[]): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Surface\";",
+      "Id": "9f38a9b7bdd441fda850f898a2cd2cda",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8f88dbcc2fbc4d0c9426d1f2406441a4",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "c49c61052f494b7cbaecca7b173df512",
+      "Inputs": [
+        {
+          "Id": "cbd59057a2404a209af4008cfc4fb85c",
+          "Name": "list",
+          "Description": "フィルタするリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "21198a0357a14d9a88b3077616a7da0c",
+          "Name": "mask",
+          "Description": "マスクを表すブール値のリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5652754dea384fb18b60ddc93b509a6b",
+          "Name": "in",
+          "Description": "マスク インデックスが true の項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7891f2210051431c8e951819a59b6b04",
+          "Name": "out",
+          "Description": "マスク インデックスが false の項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "別個のブール値を要素に持つリスト内で対応するインデックスを検索して、 シーケンスをフィルタします。\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "surface;",
+      "Id": "86f246ea28104d4b8dd1b244433fdd52",
+      "Inputs": [
+        {
+          "Id": "715e7a2dced543e6a9ada6909873243c",
+          "Name": "surface",
+          "Description": "surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6b2226c3649f4f49b1ce095d8446fd67",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Id": "717f50945a9f40328ee5fc46376d2126",
+      "Inputs": [
+        {
+          "Id": "ed14fd3e2ba14326b06c5a8d82a3f29c",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "899c15a120e346cf826c310eeaa06917",
+          "Name": "parameterName",
+          "Description": "設定するパラメータの名前。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74d3d99d6d6c472d80ea5fac2ba23dc6",
+          "Name": "value",
+          "Description": "値。\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c367a3f25df04411acd06e0c7d8dacac",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "いずれかの要素のパラメータを設定します。\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"回転 角度\";",
+      "Id": "858754b4dd114385baebe804946fb8ac",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "155e1b3706744066b8cc10bbc198188b",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "960f97b5e6f146b19c9d9ac827234938",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e9e495e255dc4a7a9b62cd4740ea57d9",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "1cc0ed823648494bac2ebdc3c447ce3f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "611bfa111a0046b6a1596c80d5ea38c9",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"z 位置合わせ\";",
+      "Id": "dbc50d15554148b7814d19a77acf14d6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ecb4d92a0a334ac1a2f78c0aa45b3f05",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Id": "9fe3e7a5f4cc487fbef8c09ca2b9a7e1",
+      "Inputs": [
+        {
+          "Id": "d95d59809e414f08a974d6a896ef8963",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "18dc54fd3ef44418a553129bf7962f08",
+          "Name": "parameterName",
+          "Description": "設定するパラメータの名前。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ba55cd0d694442eafda0b53312c8cd2",
+          "Name": "value",
+          "Description": "値。\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c68a37ee354a429d970d8078882c8e54",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "いずれかの要素のパラメータを設定します。\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetParameterValueByName@string",
+      "Id": "667b34838cac4501b3a70547ba363c26",
+      "Inputs": [
+        {
+          "Id": "af291b2434ab4c1f897d2ce5709d1441",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "582563a4b41448b68b5bc2e066696f9d",
+          "Name": "parameterName",
+          "Description": "取得する値を持つパラメータの名前。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d6a6d742772b4b93b69460937137e2a7",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "要素のパラメータのいずれかの値を取得します。\n\nElement.GetParameterValueByName (parameterName: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.Simplify@double",
+      "Id": "a6320715d5ea4a79b2dc463fc1c4db3e",
+      "Inputs": [
+        {
+          "Id": "4a788f0522ad4c45b649210dc098eac5",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0fb1b043862249e1be049ba89c8b77a0",
+          "Name": "tolerance",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "be285de5156e48439c5d7f526bb4aba8",
+          "Name": "Curve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定された曲線に指定された許容差で近似している新しい曲線を返します。\n\nCurve.Simplify (tolerance: double): Curve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1000;",
+      "Id": "14b40649f25b4328bf691fe07bfcbfa8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "47bfdd3788974fb384a199078d556ae8",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.StructuralFraming.BeamByCurve@Autodesk.DesignScript.Geometry.Curve,Revit.Elements.Level,Revit.Elements.FamilyType",
+      "Id": "5dd1b9d3b9ed4546b7d923a983090a27",
+      "Inputs": [
+        {
+          "Id": "80d30b5fbb914114a5babc801704e327",
+          "Name": "curve",
+          "Description": "梁の中心線を設定する曲線。\n\nCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8307c2635a214611abb4784d89521740",
+          "Name": "level",
+          "Description": "梁を関連付けるレベル。\n\nLevel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "202a33ac07ef44ab8667e9d62c3d20ee",
+          "Name": "structuralFramingType",
+          "Description": "梁を表す構造フレーム タイプ。\n\nFamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3a227bccaa784283b7c67ed0a1465af3",
+          "Name": "StructuralFraming",
+          "Description": "StructuralFraming",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "梁を作成します。\n\nStructuralFraming.BeamByCurve (curve: Curve, level: Level, structuralFramingType: FamilyType): StructuralFraming"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 1,
+      "SelectedString": "レベル 2",
+      "NodeType": "ExtensionNode",
+      "Id": "63ce2ea84ee24c709a1048ff48eadb48",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9418aa5133cf4211b7f5db917f90d461",
+          "Name": "Levels",
+          "Description": "選択した Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "アクティブなドキュメントでレベルを選択"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.StructuralFramingTypes, DSRevitNodesUI",
+      "SelectedIndex": 2,
+      "SelectedString": "H300x150x6.5x9",
+      "NodeType": "ExtensionNode",
+      "Id": "a52467d6860947f8a90395744de19858",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "37c5b18657784207ad120d53f0d3f75a",
+          "Name": "Framing Types",
+          "Description": "選択した Framing Types",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "アクティブなドキュメントの構造フレーム タイプを選択"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ProjectInputOnto@Autodesk.DesignScript.Geometry.Geometry,Autodesk.DesignScript.Geometry.Vector",
+      "Id": "bac06b4af99e4759a9c57250d18ec6fb",
+      "Inputs": [
+        {
+          "Id": "219c3e11ea9545d3b53879cbd5ed262a",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e08b7d5f106b425887266a82ca4e3bf1",
+          "Name": "geometryToProject",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1a89ce6570304553bf029533377cd308",
+          "Name": "projectionDirection",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "27ad6b6decd4472f839f2d826339e5c0",
+          "Name": "Geometry[]",
+          "Description": "Geometry[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "入力されたベクトルの向きで、入力されたジオメトリをこのサーフェスに投影します\n\nSurface.ProjectInputOnto (geometryToProject: Geometry, projectionDirection: Vector): Geometry[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ZAxis",
+      "Id": "08ae4272b0e543aaa0b3d018403a00b6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c976e09ccd81437da4a87977edfe8fc0",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "基底 Z 軸ベクトル(0,0,1)を取得します\n\nVector.ZAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "List.Equals@var[]..[],var[]..[]",
+      "Id": "474f134925b447b387c142f6031bc841",
+      "Inputs": [
+        {
+          "Id": "85f938d741c6479592b1a26d27e380ca",
+          "Name": "objectA",
+          "Description": "最初のオブジェクト\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dad03a654e714fee941eb96d5cb39cfa",
+          "Name": "objectB",
+          "Description": "2 番目のオブジェクト\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cba0521aad4f493e80aa4eb5fc04434e",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "2 つのオブジェクト インスタンスが等しいかどうかを決定します。\n\nList.Equals (objectA: var[]..[], objectB: var[]..[]): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"線分\";",
+      "Id": "aef477f2869049f294b513746f361903",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5365732d8e244355ab7095ed13ce6915",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetCategory",
+      "Id": "72866ccac0a746ad9973db938c4d72a1",
+      "Inputs": [
+        {
+          "Id": "bcfdf81a4cdb4ec5a04b5dc411e23d4b",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cec556109a0b426c905e280ec839c1bd",
+          "Name": "Category",
+          "Description": "Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "要素のカテゴリを取得します\n\nElement.GetCategory: Category"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.FromObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "10704a532e614fdb87224a6654c5ecb9",
+      "Inputs": [
+        {
+          "Id": "4b77aa69341e4fe092f5bc58d7f4581f",
+          "Name": "object",
+          "Description": "シリアル化するオブジェクト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d031a105219e48fe80293bc2745be9bc",
+          "Name": "string",
+          "Description": "オブジェクトの文字列表現",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "オブジェクトを文字列表現に変換します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "f486890ce8a94210aecb86092bd6da36",
+      "Inputs": [
+        {
+          "Id": "cba05306141b44398350d707274dd1c6",
+          "Name": "list",
+          "Description": "フィルタするリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c0cb89d4080e4a559e12a61c2dbe0f74",
+          "Name": "mask",
+          "Description": "マスクを表すブール値のリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "464d0a955b174c099971cb48335b38d6",
+          "Name": "in",
+          "Description": "マスク インデックスが true の項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3811bbada4a74a55832ed873ad516f5c",
+          "Name": "out",
+          "Description": "マスク インデックスが false の項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "別個のブール値を要素に持つリスト内で対応するインデックスを検索して、 シーケンスをフィルタします。\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "e947c0fb5be248249df7c8e06455dd3b",
+      "Inputs": [
+        {
+          "Id": "c0430cbc737a4605ab00d7fdf1f642cb",
+          "Name": "list",
+          "Description": "フラットにするリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4c960d59d8674f868bd3efc7113e1ff0",
+          "Name": "amt",
+          "Description": "削除するネストのレイヤ。\n\nint\n既定値 : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "36dd74fb72d2456986281458fa86d714",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ネストされたリストのリストを、指定された量だけフラットにします。\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetParameterValueByName@string",
+      "Id": "e1c65e237897468496e03f7b39f91540",
+      "Inputs": [
+        {
+          "Id": "1909ef3972a44a7ea2eadbbd555c8cf4",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d79080efc32846578befdbd334c42b41",
+          "Name": "parameterName",
+          "Description": "取得する値を持つパラメータの名前。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53dfe77760d141d384dc727e60117191",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "要素のパラメータのいずれかの値を取得します。\n\nElement.GetParameterValueByName (parameterName: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Id": "62fae9d8e49d42c6b56bde17096718a7",
+      "Inputs": [
+        {
+          "Id": "71136744ac764a5ca86b363beaafa288",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "755721fc93ab4d0582b0be5c3173bf8d",
+          "Name": "parameterName",
+          "Description": "設定するパラメータの名前。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4a38784f7d704f90b07b5a89c8f0739b",
+          "Name": "value",
+          "Description": "値。\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e557bab48e2d4ab2961d259c186ab7f0",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "いずれかの要素のパラメータを設定します。\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "-100;",
+      "Id": "c321b519cc8045c789a6687352992232",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9569a743d51c42f68d15e761a6ca3f05",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"z オフセット値\";",
+      "Id": "98e1b760562f4f6ab13c89aef70a7fdb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "787a9d7725f3436aa6196a128736d238",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "c639963d0b7541948a2e07639cad4af0",
+      "Inputs": [
+        {
+          "Id": "2432b3f1f26a49d58353d91d25d4172b",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4ac86c494f12414680607f6dcc28c20b",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "このオブジェクトに関連付けられたすべての Geometry を取得\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementsSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00043fbe",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044062",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044065",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044066",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044091",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044092",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044094",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044095",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044097",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044098",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004409a",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004409b",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044185",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-000441ce",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-000441d1",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-000441d2",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044206",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044207",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044209",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004420a",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004420c",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004420d",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004420f",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044210",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044212",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044213",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044215",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044216",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044218",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-00044219",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004421b",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004421c",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004425d",
+        "e18a6b43-722a-427f-aec7-aed6276295b3-0004425e"
+      ],
+      "Id": "3a2073722f6b47059ccb01d8e668756f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "643bb049b3214607be809830c16cdd68",
+          "Name": "Elements",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "1ae8492d205d49e8a4b528b7e102f328",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "2293516bff744c9fb02a9dc5523dd295",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "55270d9590944a0e98a993c5abd5f181",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "0656143e37fd4291afc1c8ce472908fc",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "10f03af5ffc54c528d00ee19602d179e",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "c75fa10f17e2433d84357816e5a5a915",
+      "End": "da6037ea28504200bf3644e951bf3e5f",
+      "Id": "fe34a83c0ba64e039956cdd9a9511fcf"
+    },
+    {
+      "Start": "0ceddca9a0b8438093271cebddb064de",
+      "End": "a6835370c8f74931b4ee35c3bec6320d",
+      "Id": "77005dc1627c4a3fad7cd798be1ea8d6"
+    },
+    {
+      "Start": "0ceddca9a0b8438093271cebddb064de",
+      "End": "cbd59057a2404a209af4008cfc4fb85c",
+      "Id": "8163d81a9a17424bb1eea81a5a473b24"
+    },
+    {
+      "Start": "43abd9c586f8408eba18e2d7740b8ebb",
+      "End": "4e7603006e2e43029d9a35d253325dfa",
+      "Id": "c1f2d98c36264b619f52c0c7c2819f6a"
+    },
+    {
+      "Start": "2256ac892c84413aa1f01e3a23279b02",
+      "End": "21198a0357a14d9a88b3077616a7da0c",
+      "Id": "283acf55879c415aa3686755bf54e3b7"
+    },
+    {
+      "Start": "8f88dbcc2fbc4d0c9426d1f2406441a4",
+      "End": "56f719d45a354309a3b2785deb28793c",
+      "Id": "9b6df31612ab4a9d9045f4072b030186"
+    },
+    {
+      "Start": "5652754dea384fb18b60ddc93b509a6b",
+      "End": "715e7a2dced543e6a9ada6909873243c",
+      "Id": "bb63dad466724aa897c7cfc014d981d3"
+    },
+    {
+      "Start": "6b2226c3649f4f49b1ce095d8446fd67",
+      "End": "219c3e11ea9545d3b53879cbd5ed262a",
+      "Id": "b4336b7fab8a4ab08f8bc380f21669b9"
+    },
+    {
+      "Start": "c367a3f25df04411acd06e0c7d8dacac",
+      "End": "d95d59809e414f08a974d6a896ef8963",
+      "Id": "1f35dae999d34f60a9ea940a884596e3"
+    },
+    {
+      "Start": "c367a3f25df04411acd06e0c7d8dacac",
+      "End": "af291b2434ab4c1f897d2ce5709d1441",
+      "Id": "f6c6de474a844f77a9f47bd2218fc566"
+    },
+    {
+      "Start": "155e1b3706744066b8cc10bbc198188b",
+      "End": "899c15a120e346cf826c310eeaa06917",
+      "Id": "ebdccca691014f4fa1a575ce5cc0706a"
+    },
+    {
+      "Start": "e9e495e255dc4a7a9b62cd4740ea57d9",
+      "End": "74d3d99d6d6c472d80ea5fac2ba23dc6",
+      "Id": "fd5592fb02414af69506185fbfb537b1"
+    },
+    {
+      "Start": "611bfa111a0046b6a1596c80d5ea38c9",
+      "End": "9ba55cd0d694442eafda0b53312c8cd2",
+      "Id": "feabf0559cc64ae6aa727de6abff6f4d"
+    },
+    {
+      "Start": "ecb4d92a0a334ac1a2f78c0aa45b3f05",
+      "End": "18dc54fd3ef44418a553129bf7962f08",
+      "Id": "3974bddc864d45ee8e60d63e0c2b3938"
+    },
+    {
+      "Start": "ecb4d92a0a334ac1a2f78c0aa45b3f05",
+      "End": "582563a4b41448b68b5bc2e066696f9d",
+      "Id": "8a8dcbac8d6745e184a8cee5484b0ce3"
+    },
+    {
+      "Start": "c68a37ee354a429d970d8078882c8e54",
+      "End": "71136744ac764a5ca86b363beaafa288",
+      "Id": "c43769b58d924fb59f693a3262a056d2"
+    },
+    {
+      "Start": "c68a37ee354a429d970d8078882c8e54",
+      "End": "1909ef3972a44a7ea2eadbbd555c8cf4",
+      "Id": "fcbdda634b064565a68ed6d5fe293b73"
+    },
+    {
+      "Start": "be285de5156e48439c5d7f526bb4aba8",
+      "End": "c0430cbc737a4605ab00d7fdf1f642cb",
+      "Id": "c0679f2d5ce149a6b74c2295d0ebdeb8"
+    },
+    {
+      "Start": "47bfdd3788974fb384a199078d556ae8",
+      "End": "0fb1b043862249e1be049ba89c8b77a0",
+      "Id": "489b554ca66549f39fa1b606522e87c8"
+    },
+    {
+      "Start": "3a227bccaa784283b7c67ed0a1465af3",
+      "End": "ed14fd3e2ba14326b06c5a8d82a3f29c",
+      "Id": "a4943fca923d4ad4a5a26750be9eb72e"
+    },
+    {
+      "Start": "9418aa5133cf4211b7f5db917f90d461",
+      "End": "8307c2635a214611abb4784d89521740",
+      "Id": "d01113696c88423e83423427f4bfb757"
+    },
+    {
+      "Start": "37c5b18657784207ad120d53f0d3f75a",
+      "End": "202a33ac07ef44ab8667e9d62c3d20ee",
+      "Id": "ba75c83c195941d5b1e97795f83e129f"
+    },
+    {
+      "Start": "27ad6b6decd4472f839f2d826339e5c0",
+      "End": "4a788f0522ad4c45b649210dc098eac5",
+      "Id": "0022ccf7808a4b5f92c5d5bb56029238"
+    },
+    {
+      "Start": "c976e09ccd81437da4a87977edfe8fc0",
+      "End": "1a89ce6570304553bf029533377cd308",
+      "Id": "5c19ba67be754ed1a13fb00bc08f6bde"
+    },
+    {
+      "Start": "cba0521aad4f493e80aa4eb5fc04434e",
+      "End": "c0cb89d4080e4a559e12a61c2dbe0f74",
+      "Id": "819306a7a979476898e5327e24cf78dc"
+    },
+    {
+      "Start": "5365732d8e244355ab7095ed13ce6915",
+      "End": "dad03a654e714fee941eb96d5cb39cfa",
+      "Id": "7737e9854064428f92f703ec0eeca7c9"
+    },
+    {
+      "Start": "cec556109a0b426c905e280ec839c1bd",
+      "End": "4b77aa69341e4fe092f5bc58d7f4581f",
+      "Id": "1286a1adb7fa41ec85ee0934cb3a00a6"
+    },
+    {
+      "Start": "d031a105219e48fe80293bc2745be9bc",
+      "End": "85f938d741c6479592b1a26d27e380ca",
+      "Id": "3d4a76b509d5459b9ce80c3683962507"
+    },
+    {
+      "Start": "464d0a955b174c099971cb48335b38d6",
+      "End": "2432b3f1f26a49d58353d91d25d4172b",
+      "Id": "90a51684c64a4c6db198f308d2c24a8a"
+    },
+    {
+      "Start": "36dd74fb72d2456986281458fa86d714",
+      "End": "80d30b5fbb914114a5babc801704e327",
+      "Id": "e814d56c54704ec6b33e2ff19f2ce28a"
+    },
+    {
+      "Start": "9569a743d51c42f68d15e761a6ca3f05",
+      "End": "4a38784f7d704f90b07b5a89c8f0739b",
+      "Id": "f62c5973e87946ca8f483e4d6b4e33a7"
+    },
+    {
+      "Start": "787a9d7725f3436aa6196a128736d238",
+      "End": "d79080efc32846578befdbd334c42b41",
+      "Id": "68bbc3418eed495694c68e0a90f0eec4"
+    },
+    {
+      "Start": "787a9d7725f3436aa6196a128736d238",
+      "End": "755721fc93ab4d0582b0be5c3173bf8d",
+      "Id": "cbfd621a648c4cc3a954affd77ad40a5"
+    },
+    {
+      "Start": "4ac86c494f12414680607f6dcc28c20b",
+      "End": "e08b7d5f106b425887266a82ca4e3bf1",
+      "Id": "3d8810ac77324cfeafde90be8fd51910"
+    },
+    {
+      "Start": "643bb049b3214607be809830c16cdd68",
+      "End": "cba05306141b44398350d707274dd1c6",
+      "Id": "373791e80f2242b2804f9f7349dbf10e"
+    },
+    {
+      "Start": "643bb049b3214607be809830c16cdd68",
+      "End": "bcfdf81a4cdb4ec5a04b5dc411e23d4b",
+      "Id": "515c4bed2d6643078ea3587234661208"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [
+    {
+      "NodeId": "5dd1b9d3-b9ed-4546-b7d9-23a983090a27",
+      "Binding": {
+        "BeamByCurve_InClassDecl-1_InFunctionScope-1_Instance0_5dd1b9d3-b9ed-4546-b7d9-23a983090a27": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTAuMS4zOTc2JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT5mYWxzZTwvQmFzZS0wX0hhc0RhdGE+DQo8QmFzZS0wX0hhc05lc3RlZERhdGE+dHJ1ZTwvQmFzZS0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wX05lc3RlZERhdGFDb3VudD4xPC9CYXNlLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wX0hhc0RhdGE+ZmFsc2U8L0Jhc2UtMC0wX0hhc0RhdGE+DQo8QmFzZS0wLTBfSGFzTmVzdGVkRGF0YT50cnVlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wX05lc3RlZERhdGFDb3VudD4xNzwvQmFzZS0wLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wLTBfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC0wX0hhc0RhdGE+DQo8QmFzZS0wLTAtMF9EYXRhIGlkPSJyZWYtMyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBMllUd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RJeVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtMF9EYXRhPg0KPEJhc2UtMC0wLTBfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTFfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC0xX0hhc0RhdGE+DQo8QmFzZS0wLTAtMV9EYXRhIGlkPSJyZWYtNCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBMll6d3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RJMFBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtMV9EYXRhPg0KPEJhc2UtMC0wLTFfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtMV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTJfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC0yX0hhc0RhdGE+DQo8QmFzZS0wLTAtMl9EYXRhIGlkPSJyZWYtNSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBMlpUd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RJMlBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtMl9EYXRhPg0KPEJhc2UtMC0wLTJfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtMl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTNfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC0zX0hhc0RhdGE+DQo8QmFzZS0wLTAtM19EYXRhIGlkPSJyZWYtNiI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBM01Ed3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RJNFBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtM19EYXRhPg0KPEJhc2UtMC0wLTNfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtM19IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTRfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC00X0hhc0RhdGE+DQo8QmFzZS0wLTAtNF9EYXRhIGlkPSJyZWYtNyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBM01qd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RNd1BDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtNF9EYXRhPg0KPEJhc2UtMC0wLTRfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtNF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTVfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC01X0hhc0RhdGE+DQo8QmFzZS0wLTAtNV9EYXRhIGlkPSJyZWYtOCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBM05Ed3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RNeVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtNV9EYXRhPg0KPEJhc2UtMC0wLTVfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtNV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTZfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC02X0hhc0RhdGE+DQo8QmFzZS0wLTAtNl9EYXRhIGlkPSJyZWYtOSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBM05qd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RNMFBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtNl9EYXRhPg0KPEJhc2UtMC0wLTZfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtNl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTdfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC03X0hhc0RhdGE+DQo8QmFzZS0wLTAtN19EYXRhIGlkPSJyZWYtMTAiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBVMlZ5ZG1salpYTXVVR1Z5YzJsemRHVnVZMlV2VW1WMmFYUlRaWEoyYVdObGN5VXlReVV5TUZabGNuTnBiMjRsTTBReUxqRXdMakV1TkRBd01pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQamhqTjJJMk1XTmhMVGM0WlRZdE5EUmxPQzFpWlRFMUxUQmlPVFE0TXpNMk5UWmxNUzB3TURBME56QTNPRHd2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTWprd09UTTJQQzlwYm5SSlJENE5Dand2WVRFNlUyVnlhV0ZzYVhwaFlteGxTV1ErRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0wLTdfRGF0YT4NCjxCYXNlLTAtMC03X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0wLTdfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtMC04X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTAtOF9IYXNEYXRhPg0KPEJhc2UtMC0wLThfRGF0YSBpZD0icmVmLTExIj5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV3TGpFdU5EQXdNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpoak4ySTJNV05oTFRjNFpUWXRORFJsT0MxaVpURTFMVEJpT1RRNE16TTJOVFpsTVMwd01EQTBOekEzWVR3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK01qa3dPVE00UEM5cGJuUkpSRDROQ2p3dllURTZVMlZ5YVdGc2FYcGhZbXhsU1dRK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtMC04X0RhdGE+DQo8QmFzZS0wLTAtOF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMC04X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTAtOV9IYXNEYXRhPnRydWU8L0Jhc2UtMC0wLTlfSGFzRGF0YT4NCjxCYXNlLTAtMC05X0RhdGEgaWQ9InJlZi0xMiI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBM1l6d3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RRd1BDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtOV9EYXRhPg0KPEJhc2UtMC0wLTlfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtOV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTEwX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTAtMTBfSGFzRGF0YT4NCjxCYXNlLTAtMC0xMF9EYXRhIGlkPSJyZWYtMTMiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBVMlZ5ZG1salpYTXVVR1Z5YzJsemRHVnVZMlV2VW1WMmFYUlRaWEoyYVdObGN5VXlReVV5TUZabGNuTnBiMjRsTTBReUxqRXdMakV1TkRBd01pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQamhqTjJJMk1XTmhMVGM0WlRZdE5EUmxPQzFpWlRFMUxUQmlPVFE0TXpNMk5UWmxNUzB3TURBME56QTNaVHd2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTWprd09UUXlQQzlwYm5SSlJENE5Dand2WVRFNlUyVnlhV0ZzYVhwaFlteGxTV1ErRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0wLTEwX0RhdGE+DQo8QmFzZS0wLTAtMTBfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtMTBfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtMC0xMV9IYXNEYXRhPnRydWU8L0Jhc2UtMC0wLTExX0hhc0RhdGE+DQo8QmFzZS0wLTAtMTFfRGF0YSBpZD0icmVmLTE0Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV3TGpFdU5EQXdNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpoak4ySTJNV05oTFRjNFpUWXRORFJsT0MxaVpURTFMVEJpT1RRNE16TTJOVFpsTVMwd01EQTBOekE0TUR3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK01qa3dPVFEwUEM5cGJuUkpSRDROQ2p3dllURTZVMlZ5YVdGc2FYcGhZbXhsU1dRK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtMC0xMV9EYXRhPg0KPEJhc2UtMC0wLTExX0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0wLTExX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTAtMTJfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC0xMl9IYXNEYXRhPg0KPEJhc2UtMC0wLTEyX0RhdGEgaWQ9InJlZi0xNSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBNE1qd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RRMlBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtMTJfRGF0YT4NCjxCYXNlLTAtMC0xMl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMC0xMl9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTEzX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTAtMTNfSGFzRGF0YT4NCjxCYXNlLTAtMC0xM19EYXRhIGlkPSJyZWYtMTYiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBVMlZ5ZG1salpYTXVVR1Z5YzJsemRHVnVZMlV2VW1WMmFYUlRaWEoyYVdObGN5VXlReVV5TUZabGNuTnBiMjRsTTBReUxqRXdMakV1TkRBd01pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQamhqTjJJMk1XTmhMVGM0WlRZdE5EUmxPQzFpWlRFMUxUQmlPVFE0TXpNMk5UWmxNUzB3TURBME56QTRORHd2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTWprd09UUTRQQzlwYm5SSlJENE5Dand2WVRFNlUyVnlhV0ZzYVhwaFlteGxTV1ErRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0wLTEzX0RhdGE+DQo8QmFzZS0wLTAtMTNfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtMTNfSGFzTmVzdGVkRGF0YT4NCjxCYXNlLTAtMC0xNF9IYXNEYXRhPnRydWU8L0Jhc2UtMC0wLTE0X0hhc0RhdGE+DQo8QmFzZS0wLTAtMTRfRGF0YSBpZD0icmVmLTE3Ij5QRk5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1ek9uaHpaRDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRWlJSGh0Ykc1ek9sTlBRVkF0UlU1RFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJZ2VHMXNibk02VTA5QlVDMUZUbFk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbmh0YkhOdllYQXViM0puTDNOdllYQXZaVzUyWld4dmNHVXZJaUI0Yld4dWN6cGpiSEk5SW1oMGRIQTZMeTl6WTJobGJXRnpMbTFwWTNKdmMyOW1kQzVqYjIwdmMyOWhjQzlsYm1OdlpHbHVaeTlqYkhJdk1TNHdJaUJUVDBGUUxVVk9WanBsYm1OdlpHbHVaMU4wZVd4bFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1NGJXeHpiMkZ3TG05eVp5OXpiMkZ3TDJWdVkyOWthVzVuTHlJK0RRbzhVMDlCVUMxRlRsWTZRbTlrZVQ0TkNqeGhNVHBUWlhKcFlXeHBlbUZpYkdWSlpDQnBaRDBpY21WbUxURWlJSGh0Ykc1ek9tRXhQU0pvZEhSd09pOHZjMk5vWlcxaGN5NXRhV055YjNOdlpuUXVZMjl0TDJOc2NpOXVjMkZ6YzJWdEwxSmxkbWwwVTJWeWRtbGpaWE11VUdWeWMybHpkR1Z1WTJVdlVtVjJhWFJUWlhKMmFXTmxjeVV5UXlVeU1GWmxjbk5wYjI0bE0wUXlMakV3TGpFdU5EQXdNaVV5UXlVeU1FTjFiSFIxY21VbE0wUnVaWFYwY21Gc0pUSkRKVEl3VUhWaWJHbGpTMlY1Vkc5clpXNGxNMFJ1ZFd4c0lqNE5Danh6ZEhKcGJtZEpSQ0JwWkQwaWNtVm1MVE1pUGpoak4ySTJNV05oTFRjNFpUWXRORFJsT0MxaVpURTFMVEJpT1RRNE16TTJOVFpsTVMwd01EQTBOekE0Tmp3dmMzUnlhVzVuU1VRK0RRbzhhVzUwU1VRK01qa3dPVFV3UEM5cGJuUkpSRDROQ2p3dllURTZVMlZ5YVdGc2FYcGhZbXhsU1dRK0RRbzhMMU5QUVZBdFJVNVdPa0p2WkhrK0RRbzhMMU5QUVZBdFJVNVdPa1Z1ZG1Wc2IzQmxQZzBLPC9CYXNlLTAtMC0xNF9EYXRhPg0KPEJhc2UtMC0wLTE0X0hhc05lc3RlZERhdGE+ZmFsc2U8L0Jhc2UtMC0wLTE0X0hhc05lc3RlZERhdGE+DQo8QmFzZS0wLTAtMTVfSGFzRGF0YT50cnVlPC9CYXNlLTAtMC0xNV9IYXNEYXRhPg0KPEJhc2UtMC0wLTE1X0RhdGEgaWQ9InJlZi0xOCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFd0xqRXVOREF3TWlVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqaGpOMkkyTVdOaExUYzRaVFl0TkRSbE9DMWlaVEUxTFRCaU9UUTRNek0yTlRabE1TMHdNREEwTnpBNE9Ed3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNamt3T1RVeVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTAtMTVfRGF0YT4NCjxCYXNlLTAtMC0xNV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMC0xNV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0wLTE2X0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTAtMTZfSGFzRGF0YT4NCjxCYXNlLTAtMC0xNl9EYXRhIGlkPSJyZWYtMTkiPlBGTlBRVkF0UlU1V09rVnVkbVZzYjNCbElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6T25oelpEMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFaUlIaHRiRzV6T2xOUFFWQXRSVTVEUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUlnZUcxc2JuTTZVMDlCVUMxRlRsWTlJbWgwZEhBNkx5OXpZMmhsYldGekxuaHRiSE52WVhBdWIzSm5MM052WVhBdlpXNTJaV3h2Y0dVdklpQjRiV3h1Y3pwamJISTlJbWgwZEhBNkx5OXpZMmhsYldGekxtMXBZM0p2YzI5bWRDNWpiMjB2YzI5aGNDOWxibU52WkdsdVp5OWpiSEl2TVM0d0lpQlRUMEZRTFVWT1ZqcGxibU52WkdsdVoxTjBlV3hsUFNKb2RIUndPaTh2YzJOb1pXMWhjeTU0Yld4emIyRndMbTl5Wnk5emIyRndMMlZ1WTI5a2FXNW5MeUkrRFFvOFUwOUJVQzFGVGxZNlFtOWtlVDROQ2p4aE1UcFRaWEpwWVd4cGVtRmliR1ZKWkNCcFpEMGljbVZtTFRFaUlIaHRiRzV6T21FeFBTSm9kSFJ3T2k4dmMyTm9aVzFoY3k1dGFXTnliM052Wm5RdVkyOXRMMk5zY2k5dWMyRnpjMlZ0TDFKbGRtbDBVMlZ5ZG1salpYTXVVR1Z5YzJsemRHVnVZMlV2VW1WMmFYUlRaWEoyYVdObGN5VXlReVV5TUZabGNuTnBiMjRsTTBReUxqRXdMakV1TkRBd01pVXlReVV5TUVOMWJIUjFjbVVsTTBSdVpYVjBjbUZzSlRKREpUSXdVSFZpYkdsalMyVjVWRzlyWlc0bE0wUnVkV3hzSWo0TkNqeHpkSEpwYm1kSlJDQnBaRDBpY21WbUxUTWlQamhqTjJJMk1XTmhMVGM0WlRZdE5EUmxPQzFpWlRFMUxUQmlPVFE0TXpNMk5UWmxNUzB3TURBME56QTRZVHd2YzNSeWFXNW5TVVErRFFvOGFXNTBTVVErTWprd09UVTBQQzlwYm5SSlJENE5Dand2WVRFNlUyVnlhV0ZzYVhwaFlteGxTV1ErRFFvOEwxTlBRVkF0UlU1V09rSnZaSGsrRFFvOEwxTlBRVkF0UlU1V09rVnVkbVZzYjNCbFBnMEs8L0Jhc2UtMC0wLTE2X0RhdGE+DQo8QmFzZS0wLTAtMTZfSGFzTmVzdGVkRGF0YT5mYWxzZTwvQmFzZS0wLTAtMTZfSGFzTmVzdGVkRGF0YT4NCjwvYTE6Q2FsbFNpdGVfeDAwMkJfVHJhY2VTZXJpYWxpc2VySGVscGVyPg0KPC9TT0FQLUVOVjpCb2R5Pg0KPC9TT0FQLUVOVjpFbnZlbG9wZT4NCg=="
+      }
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -16984.3984375,
+      "EyeY": 13433.6845703125,
+      "EyeZ": 14226.806640625,
+      "LookX": 12518.521484375,
+      "LookY": -12409.1611328125,
+      "LookZ": -10809.767578125,
+      "UpX": 0.31387025117874146,
+      "UpY": 0.9099612832069397,
+      "UpZ": -0.27102762460708618
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "Select Model Element",
+        "Id": "d01e61b6c2a748e5849c52c00f166e02",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -26.371279864114797,
+        "Y": 111.12908966721312
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Element.Geometry",
+        "Id": "2f08dd71a29b441bad0c33ef9e5d786e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 207.97500895396252,
+        "Y": 114.60014830352645
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "String from Object",
+        "Id": "90f8e2a513364545b1989b2d51caa121",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 498.43933787461367,
+        "Y": 224.49090538663145
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.Equals",
+        "Id": "17a5836976c34e7994cf1f9b331cbe1f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 691.62922777148742,
+        "Y": 244.63392708204
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "9f38a9b7bdd441fda850f898a2cd2cda",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 503.13581824572907,
+        "Y": 338.16351394525111
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "List.FilterByBoolMask",
+        "Id": "c49c61052f494b7cbaecca7b173df512",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1237.614945201261,
+        "Y": 106.71936216079047
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "86f246ea28104d4b8dd1b244433fdd52",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1448.0886326108898,
+        "Y": 110.37696366847848
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Element.SetParameterByName",
+        "Id": "717f50945a9f40328ee5fc46376d2126",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3544.29077336767,
+        "Y": 140.75480410231154
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "858754b4dd114385baebe804946fb8ac",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3355.5068229779495,
+        "Y": 209.29999833769148
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "960f97b5e6f146b19c9d9ac827234938",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3411.8226503533506,
+        "Y": 293.05949611023851
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "1cc0ed823648494bac2ebdc3c447ce3f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3952.8717951319959,
+        "Y": 193.51785699690447
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "dbc50d15554148b7814d19a77acf14d6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3880.2515380879686,
+        "Y": 279.05766504821634
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Element.SetParameterByName",
+        "Id": "9fe3e7a5f4cc487fbef8c09ca2b9a7e1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4094.5679099665986,
+        "Y": 137.26821907705141
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Element.GetParameterValueByName",
+        "Id": "667b34838cac4501b3a70547ba363c26",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4095.1523637851515,
+        "Y": 316.01364543986381
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Curve.Simplify",
+        "Id": "a6320715d5ea4a79b2dc463fc1c4db3e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2295.6381873438272,
+        "Y": 144.36543078047362
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "14b40649f25b4328bf691fe07bfcbfa8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2185.9936577267431,
+        "Y": 201.81922314384383
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "StructuralFraming.BeamByCurve",
+        "Id": "5dd1b9d3b9ed4546b7d923a983090a27",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2950.9893179880974,
+        "Y": 135.12598559070904
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Levels",
+        "Id": "63ce2ea84ee24c709a1048ff48eadb48",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2756.1939946404277,
+        "Y": 222.339005365047
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Structural Framing Types",
+        "Id": "a52467d6860947f8a90395744de19858",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2731.8119781564151,
+        "Y": 310.27806591181189
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Surface.ProjectInputOnto",
+        "Id": "bac06b4af99e4759a9c57250d18ec6fb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1827.6307268986511,
+        "Y": 104.22019655163967
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Vector.ZAxis",
+        "Id": "08ae4272b0e543aaa0b3d018403a00b6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1677.3764637293452,
+        "Y": 134.86901860219109
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Equals",
+        "Id": "474f134925b447b387c142f6031bc841",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1761.830239500483,
+        "Y": 643.76629555972954
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "aef477f2869049f294b513746f361903",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1573.3368299747253,
+        "Y": 713.39099745419549
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.GetCategory",
+        "Id": "72866ccac0a746ad9973db938c4d72a1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1232.724257331558,
+        "Y": 602.93013376756016
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String from Object",
+        "Id": "10704a532e614fdb87224a6654c5ecb9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1546.1983073759884,
+        "Y": 600.50948473246785
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.FilterByBoolMask",
+        "Id": "f486890ce8a94210aecb86092bd6da36",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2001.4328739293385,
+        "Y": 516.02886398578039
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Flatten",
+        "Id": "e947c0fb5be248249df7c8e06455dd3b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2537.1595263027248,
+        "Y": 144.14552118346211
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Element.GetParameterValueByName",
+        "Id": "e1c65e237897468496e03f7b39f91540",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4631.3494050725631,
+        "Y": 319.57368046841384
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Element.SetParameterByName",
+        "Id": "62fae9d8e49d42c6b56bde17096718a7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4630.7649512540029,
+        "Y": 140.82825410559883
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "c321b519cc8045c789a6687352992232",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4489.0688364194029,
+        "Y": 197.07789202545382
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "98e1b760562f4f6ab13c89aef70a7fdb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4416.4485793753729,
+        "Y": 282.61770007676387
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Element.Geometry",
+        "Id": "c639963d0b7541948a2e07639cad4af0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1491.3347665914337,
+        "Y": 309.27817729788057
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Elements",
+        "Id": "3a2073722f6b47059ccb01d8e668756f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 918.89405560232194,
+        "Y": 507.48630593293075
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1ae8492d205d49e8a4b528b7e102f328",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 446.9257156044107,
+        "Y": -241.219008420387
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2293516bff744c9fb02a9dc5523dd295",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 629.28734951981278,
+        "Y": -240.21214347651556
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "55270d9590944a0e98a993c5abd5f181",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 282.78411804379857,
+        "Y": -240.14242446176706
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "0656143e37fd4291afc1c8ce472908fc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 119.15278244154069,
+        "Y": -240.58448650468711
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "10f03af5ffc54c528d00ee19602d179e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -26.536314711946943,
+        "Y": -240.09435320235718
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "73d4bb3cff4d4168a931561c0902f665",
+        "Title": "ジオメトリの取得",
+        "Nodes": [
+          "d01e61b6c2a748e5849c52c00f166e02",
+          "2f08dd71a29b441bad0c33ef9e5d786e"
+        ],
+        "Left": -36.3712798641148,
+        "Top": 58.129089667213123,
+        "Width": 451.34628881807731,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": 111.12908966721312,
+        "InitialHeight": 148.47105863631333,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "9dae19738bd64995867e1ea54147e9d3",
+        "Title": "サーフェスだけを取り出す判定",
+        "Nodes": [
+          "90f8e2a513364545b1989b2d51caa121",
+          "17a5836976c34e7994cf1f9b331cbe1f",
+          "9f38a9b7bdd441fda850f898a2cd2cda"
+        ],
+        "Left": 488.43933787461367,
+        "Top": 171.49090538663145,
+        "Width": 417.67333333333335,
+        "Height": 259.67260855861969,
+        "FontSize": 36.0,
+        "InitialTop": 224.49090538663145,
+        "InitialHeight": 258.67260855861969,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "9cd91098982f433eb02695c782d0296d",
+        "Title": "Surface",
+        "Nodes": [
+          "c49c61052f494b7cbaecca7b173df512",
+          "86f246ea28104d4b8dd1b244433fdd52"
+        ],
+        "Left": 1227.614945201261,
+        "Top": 53.719362160790467,
+        "Width": 404.47368740962884,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": 106.71936216079047,
+        "InitialHeight": 148.657601507688,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "8b85472fcc35496898f7ee027336ccde",
+        "Title": "Parameter　ｚ位置合わせ　",
+        "Nodes": [
+          "1cc0ed823648494bac2ebdc3c447ce3f",
+          "dbc50d15554148b7814d19a77acf14d6",
+          "9fe3e7a5f4cc487fbef8c09ca2b9a7e1",
+          "667b34838cac4501b3a70547ba363c26"
+        ],
+        "Left": 3870.2515380879686,
+        "Top": 84.268219077051413,
+        "Width": 504.31637187863,
+        "Height": 350.7454263628124,
+        "FontSize": 36.0,
+        "InitialTop": 137.26821907705141,
+        "InitialHeight": 323.7454263628124,
+        "TextblockHeight": 43.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "6a9d6248d5d347fdb6dcfb29169a6b49",
+        "Title": "Parameter 回転角度",
+        "Nodes": [
+          "717f50945a9f40328ee5fc46376d2126",
+          "858754b4dd114385baebe804946fb8ac",
+          "960f97b5e6f146b19c9d9ac827234938"
+        ],
+        "Left": 3345.5068229779495,
+        "Top": 87.754804102311539,
+        "Width": 478.78395038972076,
+        "Height": 298.304692007927,
+        "FontSize": 36.0,
+        "InitialTop": 140.75480410231154,
+        "InitialHeight": 358.505344254539,
+        "TextblockHeight": 43.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "a48d437feaee49df9a7e147283e49d0a",
+        "Title": "構造フレームをつくる",
+        "Nodes": [
+          "5dd1b9d3b9ed4546b7d923a983090a27",
+          "63ce2ea84ee24c709a1048ff48eadb48",
+          "a52467d6860947f8a90395744de19858"
+        ],
+        "Left": 2721.8119781564151,
+        "Top": 82.125985590709035,
+        "Width": 604.17733983168227,
+        "Height": 321.15208032110286,
+        "FontSize": 36.0,
+        "InitialTop": 135.12598559070904,
+        "InitialHeight": 374.49091048522996,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "0ac9391673484643ab1a4269ee4156ab",
+        "Title": "Curve Simplyfy",
+        "Nodes": [
+          "a6320715d5ea4a79b2dc463fc1c4db3e",
+          "14b40649f25b4328bf691fe07bfcbfa8",
+          "e947c0fb5be248249df7c8e06455dd3b"
+        ],
+        "Left": 2175.9936577267431,
+        "Top": 91.145521183462108,
+        "Width": 556.16586857598168,
+        "Height": 203.67370196038172,
+        "FontSize": 36.0,
+        "InitialTop": 144.14552118346211,
+        "InitialHeight": 219.01897636122476,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "c39df8a160dd4d97a62cb6bfe37b48bf",
+        "Title": "CurveをSurfaceにProject",
+        "Nodes": [
+          "bac06b4af99e4759a9c57250d18ec6fb",
+          "08ae4272b0e543aaa0b3d018403a00b6"
+        ],
+        "Left": 1667.3764637293452,
+        "Top": 51.220196551639674,
+        "Width": 475.25426316930589,
+        "Height": 198.0,
+        "FontSize": 36.0,
+        "InitialTop": 104.22019655163967,
+        "InitialHeight": 175.64882205055142,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "46a0955d11ab4de1a164c051e25c0119",
+        "Title": "Curvesだけを取り出す判定",
+        "Nodes": [
+          "474f134925b447b387c142f6031bc841",
+          "aef477f2869049f294b513746f361903",
+          "10704a532e614fdb87224a6654c5ecb9",
+          "72866ccac0a746ad9973db938c4d72a1",
+          "f486890ce8a94210aecb86092bd6da36"
+        ],
+        "Left": 1222.724257331558,
+        "Top": 463.02886398578039,
+        "Width": 959.70861659778075,
+        "Height": 343.3621334684151,
+        "FontSize": 36.0,
+        "InitialTop": 516.02886398578039,
+        "InitialHeight": 321.26527545158137,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "dadaae83e8f744dba26de3d563954dc3",
+        "Title": "Parameter　ｚオフセット値　",
+        "Nodes": [
+          "c321b519cc8045c789a6687352992232",
+          "98e1b760562f4f6ab13c89aef70a7fdb",
+          "62fae9d8e49d42c6b56bde17096718a7",
+          "e1c65e237897468496e03f7b39f91540"
+        ],
+        "Left": 4406.4485793753729,
+        "Top": 87.82825410559883,
+        "Width": 504.31637187863,
+        "Height": 350.745426362815,
+        "FontSize": 36.0,
+        "InitialTop": 140.82825410559883,
+        "InitialHeight": 323.745426362815,
+        "TextblockHeight": 43.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "071d49b99df64a0ab6083c5f0095f316",
+        "Title": "Curve",
+        "Nodes": [
+          "3a2073722f6b47059ccb01d8e668756f"
+        ],
+        "Left": 908.89405560232194,
+        "Top": 454.48630593293075,
+        "Width": 289.0,
+        "Height": 253.99999999999994,
+        "FontSize": 36.0,
+        "InitialTop": 507.48630593293075,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "ea48eefcfad74049af05f6384501c126",
+        "Title": "Curves",
+        "Nodes": [
+          "c639963d0b7541948a2e07639cad4af0"
+        ],
+        "Left": 1481.3347665914337,
+        "Top": 256.27817729788057,
+        "Width": 217.0,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": 309.27817729788057,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "c13de747bae8407c8a33a881b6d8b4b8",
+        "Title": "Parameter",
+        "Nodes": [
+          "1ae8492d205d49e8a4b528b7e102f328"
+        ],
+        "Left": 436.9257156044107,
+        "Top": -294.219008420387,
+        "Width": 171.45666666666668,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -241.219008420387,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "cb34c58b5e6448b8b3abf8012b1b3101",
+        "Title": "Preview",
+        "Nodes": [
+          "2293516bff744c9fb02a9dc5523dd295"
+        ],
+        "Left": 619.28734951981278,
+        "Top": -293.21214347651556,
+        "Width": 133.0,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -240.21214347651556,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "03ffc6283f714405a3c32fe9de7c333a",
+        "Title": "Tranform",
+        "Nodes": [
+          "55270d9590944a0e98a993c5abd5f181"
+        ],
+        "Left": 272.78411804379857,
+        "Top": -293.14242446176706,
+        "Width": 152.82333333333335,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -240.14242446176706,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFE8F7AD"
+      },
+      {
+        "Id": "b81f29d5399a4c4dbcdb7f4cfa871dac",
+        "Title": "Generate",
+        "Nodes": [
+          "0656143e37fd4291afc1c8ce472908fc"
+        ],
+        "Left": 109.15278244154069,
+        "Top": -293.58448650468711,
+        "Width": 154.58333333333334,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -240.58448650468711,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "002fbdc3e8844d5d8d80a6d389704e2e",
+        "Title": "Input",
+        "Nodes": [
+          "10f03af5ffc54c528d00ee19602d179e"
+        ],
+        "Left": -36.536314711946943,
+        "Top": -293.09435320235718,
+        "Width": 133.0,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": -240.09435320235718,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      }
+    ],
+    "X": -366.77300014023035,
+    "Y": 212.28704863517814,
+    "Zoom": 0.31909757738870703
+  }
+}

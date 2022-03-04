@@ -1,0 +1,1659 @@
+{
+  "Uuid": "a876baf2-1c68-4411-ac3c-3900fb536d4a",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "6-3_Topology",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@double,double,double",
+      "Id": "c0b96e3b157b4f1f824ad0785445851b",
+      "Inputs": [
+        {
+          "Id": "de51645db63048de8acaa7fffeedfa3a",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "87d3e77de3ef4970a8e6c05d459c57c1",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fd276972d80a489cb1f83377c3ef6731",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "daa1dc1cdaf14dfabd59b944ee575f62",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ワールド座標系の基準点を中心として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Edges",
+      "Id": "1a0803b67635496199e72a57e3d949a5",
+      "Inputs": [
+        {
+          "Id": "3afb9a7ab98d44ad9c46603fb0c1fb0e",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ab07d4f2cb6d49f388c0c7319fea4f1e",
+          "Name": "Edge[]",
+          "Description": "Edge[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジのエッジ\n\nTopology.Edges: Edge[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Vertices",
+      "Id": "85c817cd0e1d49c3aa2170647966a383",
+      "Inputs": [
+        {
+          "Id": "e4d14e68f7934c8c8e76a5f55b2e8911",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "865847b71df84161b0bfa068b580f51d",
+          "Name": "Vertex[]",
+          "Description": "Vertex[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジの頂点\n\nTopology.Vertices: Vertex[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@double,double,double",
+      "Id": "16b846c54c324fc1b05098428152a2db",
+      "Inputs": [
+        {
+          "Id": "61511d2fa5ad46f9a232ea526a166a0c",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "63ed8e3dd07548dea6505397565dd42b",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5bff35822f24feebc3ed55b84f5cf21",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "38e6328d46084f8eb5b15f32630de0e0",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ワールド座標系の基準点を中心として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Edge.EndVertex",
+      "Id": "7150564f63f3446190e192a91ad14bc1",
+      "Inputs": [
+        {
+          "Id": "01448e295c364b4785be2164e56331d5",
+          "Name": "edge",
+          "Description": "Autodesk.DesignScript.Geometry.Edge",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e2c2a317e6a341debb3ad7aec97def40",
+          "Name": "Vertex",
+          "Description": "Vertex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "このエッジの終端の頂点\n\nEdge.EndVertex: Vertex"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Edge.StartVertex",
+      "Id": "94ff07d2bade4d0ea3bfe2c508245625",
+      "Inputs": [
+        {
+          "Id": "eac33625d57044c5a11b7e631794f176",
+          "Name": "edge",
+          "Description": "Autodesk.DesignScript.Geometry.Edge",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8ef92c30d2f2462d8f208fa72f8ae42e",
+          "Name": "Vertex",
+          "Description": "Vertex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "このエッジの始端の頂点\n\nEdge.StartVertex: Vertex"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Edge.AdjacentFaces",
+      "Id": "0043982bf31543fc95af937222aae881",
+      "Inputs": [
+        {
+          "Id": "a6f77f625ca74bf99453ac9619897f8e",
+          "Name": "edge",
+          "Description": "Autodesk.DesignScript.Geometry.Edge",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a0aaaa25e5be47119fbfce1f041761a7",
+          "Name": "Face[]",
+          "Description": "Face[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "このエッジに接する面\n\nEdge.AdjacentFaces: Face[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Edges",
+      "Id": "271b18fdf4734a548d46c7c86a4c79c0",
+      "Inputs": [
+        {
+          "Id": "44cb5e515de8497ab4638042aa8699ea",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1225605d687a4a7e817e83b9150d651e",
+          "Name": "Edge[]",
+          "Description": "Edge[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジのエッジ\n\nTopology.Edges: Edge[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Edge.CurveGeometry",
+      "Id": "868a2ce43ea041c4bed51ec8db779c1d",
+      "Inputs": [
+        {
+          "Id": "4917c57ec43b4aa9a1603f9fecdcbccb",
+          "Name": "edge",
+          "Description": "Autodesk.DesignScript.Geometry.Edge",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "341a448235084838b5f13e126b2b6bbc",
+          "Name": "Curve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "エッジ作成の基準とする曲線\n\nEdge.CurveGeometry: Curve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@double,double,double",
+      "Id": "9d6bee868f7c4b30977e65dcf906dfe0",
+      "Inputs": [
+        {
+          "Id": "0f18bbd2cf5e467aa5ad5a3ab2594298",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5e20dc62efe4a9d9eed93a791f3b37c",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ee82a5e9f4de4f1fb00f8e200f24c17c",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0157c65544694e98bed813df99874857",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ワールド座標系の基準点を中心として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@double,double,double",
+      "Id": "57dce7459b2d4c8a92cf4c15a47690a5",
+      "Inputs": [
+        {
+          "Id": "74df2d6e52b54df8bc80d7380d42ba24",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c516260871d8489bb0f91bbfe4c7f5b8",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2a4b737efc7461abc7adf95a53baa42",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "41ca118dbffe4d12afd64b0e2adfec30",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ワールド座標系の基準点を中心として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Edges",
+      "Id": "6b379c1bd68642c4ae15778c72cc3dc8",
+      "Inputs": [
+        {
+          "Id": "a891a9dc1b8f4ecd84bfb523e81920c4",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "babddebd9c2e4f42a3e6e992e16054c1",
+          "Name": "Edge[]",
+          "Description": "Edge[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジのエッジ\n\nTopology.Edges: Edge[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Edge.CurveGeometry",
+      "Id": "210087d384e54f668424e66ea541cdd1",
+      "Inputs": [
+        {
+          "Id": "22c6663896de4ef8b5c31658ed71f554",
+          "Name": "edge",
+          "Description": "Autodesk.DesignScript.Geometry.Edge",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "167f704b0b414b2b816347c7e96ff5bf",
+          "Name": "Curve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "エッジ作成の基準とする曲線\n\nEdge.CurveGeometry: Curve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.Fillet@Autodesk.DesignScript.Geometry.Edge[],double",
+      "Id": "6070e4d7b82041b59fda60a906932439",
+      "Inputs": [
+        {
+          "Id": "0babfae890b5449bbbf414cf30c959c3",
+          "Name": "solid",
+          "Description": "Autodesk.DesignScript.Geometry.Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1958924d2b75421bb16f18d129103007",
+          "Name": "edges",
+          "Description": "Edge[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1658b0dcd1884e0b90d7230c2076f303",
+          "Name": "radius",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "206904a40f024b68ab3976ce9c398f8d",
+          "Name": "Solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定された半径で、入力されたエッジに沿ってソリッドをフィレットします。\n\nSolid.Fillet (edges: Edge[], radius: double): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@double,double,double",
+      "Id": "133921443d444dd7be9df4b6a2f0c330",
+      "Inputs": [
+        {
+          "Id": "0701e91871c94499971898e52ba737e2",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1424a06b50bb4a51a5d00b46b3529caa",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "871105549aa140458b2b3270afca3b78",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7e8bc7986b7e4de8910ecd7e8d2b1dc1",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ワールド座標系の基準点を中心として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Edges",
+      "Id": "70484cecf01d42aa94db683ba4c32c32",
+      "Inputs": [
+        {
+          "Id": "bce7e48cb6a84e2e97eeca2a27a798d3",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af60d6bbe0a64cc3a65ce843edc17b84",
+          "Name": "Edge[]",
+          "Description": "Edge[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジのエッジ\n\nTopology.Edges: Edge[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0.3;",
+      "Id": "2e33a11c7f0f4ef6bbd8e9bafaa1f250",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f79ce072c55c4c509902d0d04edf8c03",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Faces",
+      "Id": "6038520057f540fe8eb54d147f1af15a",
+      "Inputs": [
+        {
+          "Id": "cc06371a81aa4a8a8756e2447ee0217c",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f890b1456a2243d494691df10e4e4039",
+          "Name": "Face[]",
+          "Description": "Face[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジの面\n\nTopology.Faces: Face[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Vertices",
+      "Id": "e952efb2b52b4e89a78a9d26ac847b5a",
+      "Inputs": [
+        {
+          "Id": "d35f7d93314b4ce9b4beec1641edb793",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c3b1314edc5c4528b0e432bc8be4d4e3",
+          "Name": "Vertex[]",
+          "Description": "Vertex[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジの頂点\n\nTopology.Vertices: Vertex[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vertex.PointGeometry",
+      "Id": "5752fd75b1f34e138e687f945b8107db",
+      "Inputs": [
+        {
+          "Id": "cc10a33e85a34c4fb1b6f7e25c27d489",
+          "Name": "vertex",
+          "Description": "Autodesk.DesignScript.Geometry.Vertex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5ff5f01cbb44426d801bfb7adfab197f",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この頂点がある点\n\nVertex.PointGeometry: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@double,double,double",
+      "Id": "f27716e2ae554bf6adb8203bbbba9c94",
+      "Inputs": [
+        {
+          "Id": "b2c4d40e962242f78b84433c5cccbb4b",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7892955e81be47c2a63ea2034cadfed1",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "44ae8813e0424c92afe08226bc21b825",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9ab5d13b038f4561a5e3d6638c5b99ef",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ワールド座標系の基準点を中心として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Faces",
+      "Id": "f2128e8602bf4e2fa2486e31e79905f4",
+      "Inputs": [
+        {
+          "Id": "a484fe624ea74e2abd6847c9193b1e7f",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2a5a65fcb75e4990a73d080deb3588fa",
+          "Name": "Face[]",
+          "Description": "Face[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジの面\n\nTopology.Faces: Face[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Face.SurfaceGeometry",
+      "Id": "cbd8c5ce8ab242f38f1b417953e64e57",
+      "Inputs": [
+        {
+          "Id": "3812af35277047caa21b14e759f1757d",
+          "Name": "face",
+          "Description": "Autodesk.DesignScript.Geometry.Face",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a42eb1833bf44eec89913d44cf21e6df",
+          "Name": "Surface",
+          "Description": "Surface representation of face",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "面の作成基準とするサーフェス\n\nFace.SurfaceGeometry ( ): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Face.Edges",
+      "Id": "3ffa77ea17134b9bb6bc048779409cda",
+      "Inputs": [
+        {
+          "Id": "d0193462ddda46c18892b4b323cf9b1e",
+          "Name": "face",
+          "Description": "Autodesk.DesignScript.Geometry.Face",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8ad5b081f4c347ea8389b0d5e27d664e",
+          "Name": "Edge[]",
+          "Description": "Edge[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この面の周囲のすべてのエッジ(反時計回り順)\n\nFace.Edges: Edge[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Face.Vertices",
+      "Id": "7a3e687c1baa48daac68d3b01ce6927e",
+      "Inputs": [
+        {
+          "Id": "729ae9e6f44e4996998ac503a9851ddc",
+          "Name": "face",
+          "Description": "Autodesk.DesignScript.Geometry.Face",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5e6c334943e0487dad1676a985125b40",
+          "Name": "Vertex[]",
+          "Description": "Vertex[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この面の周囲のすべての頂点(反時計回り順)\n\nFace.Vertices: Vertex[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@double,double,double",
+      "Id": "c984b31beced4803b49ae00cb8460d96",
+      "Inputs": [
+        {
+          "Id": "c92273387d754becbb2e610f7575fe96",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0a837051bffc4a0fa157a6a6742ead0a",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "12fc6d0d228e4d2c9682039d21e9d5d8",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1317d68ddc71498cb635c296ce548eaf",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ワールド座標系の基準点を中心として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vertex.PointGeometry",
+      "Id": "b5be5c325e2e437f98dea7658b20679b",
+      "Inputs": [
+        {
+          "Id": "9f23dd843c3c421e80191fd194f91d49",
+          "Name": "vertex",
+          "Description": "Autodesk.DesignScript.Geometry.Vertex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d7352cf464404feb9f75b5707ecafc04",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この頂点がある点\n\nVertex.PointGeometry: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Vertices",
+      "Id": "48b73b11bc764afdac3f83cec47d97e0",
+      "Inputs": [
+        {
+          "Id": "ba95d3e92fee4fa6b3e79ada205d51cc",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "254b47f52e1045faa94d08f4c63738c5",
+          "Name": "Vertex[]",
+          "Description": "Vertex[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "トポロジの頂点\n\nTopology.Vertices: Vertex[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vertex.AdjacentEdges",
+      "Id": "d57dd34548184090b1a02637b6b597b2",
+      "Inputs": [
+        {
+          "Id": "aa8f7bac99e74610bfced6a4be3afd31",
+          "Name": "vertex",
+          "Description": "Autodesk.DesignScript.Geometry.Vertex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "05478f2e30cb4ca1bda6a07e81f84f6b",
+          "Name": "Edge[]",
+          "Description": "Edge[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この頂点から伸びるエッジ\n\nVertex.AdjacentEdges: Edge[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vertex.AdjacentFaces",
+      "Id": "b16e52bafdfb41788bc32c7cd0abfb31",
+      "Inputs": [
+        {
+          "Id": "f9647961a3e04018abfee67b09251ddc",
+          "Name": "vertex",
+          "Description": "Autodesk.DesignScript.Geometry.Vertex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e64f8668564240b19f6632c1ba8a8c0a",
+          "Name": "Face[]",
+          "Description": "Face[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この頂点に接する面\n\nVertex.AdjacentFaces: Face[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "daa1dc1cdaf14dfabd59b944ee575f62",
+      "End": "d35f7d93314b4ce9b4beec1641edb793",
+      "Id": "07d691da99b741a4bc3fe34ac1a7a38e"
+    },
+    {
+      "Start": "38e6328d46084f8eb5b15f32630de0e0",
+      "End": "3afb9a7ab98d44ad9c46603fb0c1fb0e",
+      "Id": "209a28d54d404e41a33fea4916a0474d"
+    },
+    {
+      "Start": "38e6328d46084f8eb5b15f32630de0e0",
+      "End": "e4d14e68f7934c8c8e76a5f55b2e8911",
+      "Id": "325aa7ec7e0649dea8a563045e58dc1e"
+    },
+    {
+      "Start": "38e6328d46084f8eb5b15f32630de0e0",
+      "End": "cc06371a81aa4a8a8756e2447ee0217c",
+      "Id": "ed5c235ccb2647cea7c0196054b50ba4"
+    },
+    {
+      "Start": "1225605d687a4a7e817e83b9150d651e",
+      "End": "01448e295c364b4785be2164e56331d5",
+      "Id": "5b6204895e654b3192d147b2c0d77f1b"
+    },
+    {
+      "Start": "1225605d687a4a7e817e83b9150d651e",
+      "End": "eac33625d57044c5a11b7e631794f176",
+      "Id": "042148102913457293b79e54b2712d95"
+    },
+    {
+      "Start": "1225605d687a4a7e817e83b9150d651e",
+      "End": "a6f77f625ca74bf99453ac9619897f8e",
+      "Id": "409f9f4b0ffb4cc980b6fb7b893413ad"
+    },
+    {
+      "Start": "1225605d687a4a7e817e83b9150d651e",
+      "End": "4917c57ec43b4aa9a1603f9fecdcbccb",
+      "Id": "34e4c7fd7d75472d94526528253de1da"
+    },
+    {
+      "Start": "0157c65544694e98bed813df99874857",
+      "End": "44cb5e515de8497ab4638042aa8699ea",
+      "Id": "d727f4603ac84e2798b5fe82c5f7a1e3"
+    },
+    {
+      "Start": "41ca118dbffe4d12afd64b0e2adfec30",
+      "End": "a891a9dc1b8f4ecd84bfb523e81920c4",
+      "Id": "d165bb1198144624ba0d331861fafed1"
+    },
+    {
+      "Start": "babddebd9c2e4f42a3e6e992e16054c1",
+      "End": "22c6663896de4ef8b5c31658ed71f554",
+      "Id": "9dc0f21910834e5fb1dd478639947ca1"
+    },
+    {
+      "Start": "7e8bc7986b7e4de8910ecd7e8d2b1dc1",
+      "End": "bce7e48cb6a84e2e97eeca2a27a798d3",
+      "Id": "9315429bfa894563b49cde32b468646f"
+    },
+    {
+      "Start": "7e8bc7986b7e4de8910ecd7e8d2b1dc1",
+      "End": "0babfae890b5449bbbf414cf30c959c3",
+      "Id": "ea0b01e4fa0b43c6bb4e91c91b6e3e6e"
+    },
+    {
+      "Start": "af60d6bbe0a64cc3a65ce843edc17b84",
+      "End": "1958924d2b75421bb16f18d129103007",
+      "Id": "a79071042fc64e2e83fe4b609caa5807"
+    },
+    {
+      "Start": "f79ce072c55c4c509902d0d04edf8c03",
+      "End": "1658b0dcd1884e0b90d7230c2076f303",
+      "Id": "90d3588d26914d548f0b4f8661e35cf6"
+    },
+    {
+      "Start": "c3b1314edc5c4528b0e432bc8be4d4e3",
+      "End": "cc10a33e85a34c4fb1b6f7e25c27d489",
+      "Id": "05bc4337249b4e89bdc7dac9722cc7fe"
+    },
+    {
+      "Start": "9ab5d13b038f4561a5e3d6638c5b99ef",
+      "End": "a484fe624ea74e2abd6847c9193b1e7f",
+      "Id": "0dc2e9c37c134efb8d8c5876d6be7bfe"
+    },
+    {
+      "Start": "2a5a65fcb75e4990a73d080deb3588fa",
+      "End": "3812af35277047caa21b14e759f1757d",
+      "Id": "7b8d9261238a4835a15ad01e34181abf"
+    },
+    {
+      "Start": "2a5a65fcb75e4990a73d080deb3588fa",
+      "End": "729ae9e6f44e4996998ac503a9851ddc",
+      "Id": "a5a4efe7751e4d8fb8f034b2d9a937fe"
+    },
+    {
+      "Start": "2a5a65fcb75e4990a73d080deb3588fa",
+      "End": "d0193462ddda46c18892b4b323cf9b1e",
+      "Id": "8e8326f0568a4598be475b813c86949d"
+    },
+    {
+      "Start": "1317d68ddc71498cb635c296ce548eaf",
+      "End": "ba95d3e92fee4fa6b3e79ada205d51cc",
+      "Id": "c8591dcb46a24c0da0dbd0a37fd013fd"
+    },
+    {
+      "Start": "254b47f52e1045faa94d08f4c63738c5",
+      "End": "9f23dd843c3c421e80191fd194f91d49",
+      "Id": "14bbd43e7f444af98b17eae2c4bd163d"
+    },
+    {
+      "Start": "254b47f52e1045faa94d08f4c63738c5",
+      "End": "aa8f7bac99e74610bfced6a4be3afd31",
+      "Id": "d082977995c6491981b3e6238b90a175"
+    },
+    {
+      "Start": "254b47f52e1045faa94d08f4c63738c5",
+      "End": "f9647961a3e04018abfee67b09251ddc",
+      "Id": "068911f40b69476383ed2c33f6ecec3e"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 3.2768504619598389,
+      "EyeY": 2.2075376510620117,
+      "EyeZ": 2.9354803562164307,
+      "LookX": -3.9303977489471436,
+      "LookY": -2.2235696315765381,
+      "LookZ": -3.6255192756652832,
+      "UpX": -0.13016468286514282,
+      "UpY": 0.98419559001922607,
+      "UpZ": -0.12006773799657822
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "Cuboid.ByLengths",
+        "Id": "c0b96e3b157b4f1f824ad0785445851b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -575.50728060342476,
+        "Y": -452.70262320011255
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Topology.Edges",
+        "Id": "1a0803b67635496199e72a57e3d949a5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -328.43523540621118,
+        "Y": -730.138039709259
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Topology.Vertices",
+        "Id": "85c817cd0e1d49c3aa2170647966a383",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -332.53975597180124,
+        "Y": -824.04233707903416
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Cuboid.ByLengths",
+        "Id": "16b846c54c324fc1b05098428152a2db",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -570.10900231277083,
+        "Y": -822.9898918865307
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Edge.EndVertex",
+        "Id": "7150564f63f3446190e192a91ad14bc1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 322.11145273369141,
+        "Y": 511.16419986639858
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Edge.StartVertex",
+        "Id": "94ff07d2bade4d0ea3bfe2c508245625",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 120.88151226609085,
+        "Y": 515.30684444785061
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Edge.AdjacentFaces",
+        "Id": "0043982bf31543fc95af937222aae881",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -88.736303555378925,
+        "Y": 514.89257998970561
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Topology.Edges",
+        "Id": "271b18fdf4734a548d46c7c86a4c79c0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -331.31411532105869,
+        "Y": 440.00500363650929
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Edge.CurveGeometry",
+        "Id": "868a2ce43ea041c4bed51ec8db779c1d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -91.22189030425892,
+        "Y": 426.23998594663294
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Cuboid.ByLengths",
+        "Id": "9d6bee868f7c4b30977e65dcf906dfe0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -564.88375377212867,
+        "Y": 439.854099512678
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Cuboid.ByLengths",
+        "Id": "57dce7459b2d4c8a92cf4c15a47690a5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -578.7952423157318,
+        "Y": 209.4462406602608
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Topology.Edges",
+        "Id": "6b379c1bd68642c4ae15778c72cc3dc8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -345.22560386466182,
+        "Y": 209.59714478409211
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Edge.CurveGeometry",
+        "Id": "210087d384e54f668424e66ea541cdd1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -105.13337884786199,
+        "Y": 208.21553823000352
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Solid.Fillet",
+        "Id": "6070e4d7b82041b59fda60a906932439",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -29.772630588098991,
+        "Y": 1013.0101461198916
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Cuboid.ByLengths",
+        "Id": "133921443d444dd7be9df4b6a2f0c330",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -549.54270326874462,
+        "Y": 1006.0657113552744
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Topology.Edges",
+        "Id": "70484cecf01d42aa94db683ba4c32c32",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -304.41810386437942,
+        "Y": 1071.3541572946856
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2e33a11c7f0f4ef6bbd8e9bafaa1f250",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -190.12484837248644,
+        "Y": 1165.9484018848073
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Topology.Faces",
+        "Id": "6038520057f540fe8eb54d147f1af15a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -329.41378210170376,
+        "Y": -632.38117672397232
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Topology.Vertices",
+        "Id": "e952efb2b52b4e89a78a9d26ac847b5a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -356.33127746514992,
+        "Y": -448.93252928500965
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vertex.PointGeometry",
+        "Id": "5752fd75b1f34e138e687f945b8107db",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -125.28699169548293,
+        "Y": -447.2393588063216
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Cuboid.ByLengths",
+        "Id": "f27716e2ae554bf6adb8203bbbba9c94",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -561.38913332094023,
+        "Y": 787.27122258111035
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Topology.Faces",
+        "Id": "f2128e8602bf4e2fa2486e31e79905f4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -329.6707670489252,
+        "Y": 786.09065942177733
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Face.SurfaceGeometry",
+        "Id": "cbd8c5ce8ab242f38f1b417953e64e57",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -88.1942499010662,
+        "Y": 726.23750559880432
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Face.Edges",
+        "Id": "3ffa77ea17134b9bb6bc048779409cda",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 199.20408354200583,
+        "Y": 817.56516272523731
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Face.Vertices",
+        "Id": "7a3e687c1baa48daac68d3b01ce6927e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -87.6782744370754,
+        "Y": 823.75686829313133
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Cuboid.ByLengths",
+        "Id": "c984b31beced4803b49ae00cb8460d96",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -561.43338607880628,
+        "Y": -209.70917557728927
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vertex.PointGeometry",
+        "Id": "b5be5c325e2e437f98dea7658b20679b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 72.721871643659881,
+        "Y": -203.28791655425596
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Topology.Vertices",
+        "Id": "48b73b11bc764afdac3f83cec47d97e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -342.25738294053127,
+        "Y": -205.93908166218625
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vertex.AdjacentEdges",
+        "Id": "d57dd34548184090b1a02637b6b597b2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -98.490736471665628,
+        "Y": -67.961732021398063
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vertex.AdjacentFaces",
+        "Id": "b16e52bafdfb41788bc32c7cd0abfb31",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -95.6167525839387,
+        "Y": 19.215779239652306
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "6a6391cc930244209013d2740028a368",
+        "Title": "トポロジー",
+        "Nodes": [
+          "1a0803b67635496199e72a57e3d949a5",
+          "85c817cd0e1d49c3aa2170647966a383",
+          "16b846c54c324fc1b05098428152a2db",
+          "6038520057f540fe8eb54d147f1af15a"
+        ],
+        "Left": -580.10900231277083,
+        "Top": -877.2423370790342,
+        "Width": 477.16924634096961,
+        "Height": 337.46116035506191,
+        "FontSize": 36.0,
+        "InitialTop": -824.04233707903416,
+        "InitialHeight": 336.66116035506184,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e857463510a148889a032c223cc2946e",
+        "Title": "Edge.AdjacentFaces / Edge.StartVertices / Edge.EndVertices",
+        "Nodes": [
+          "7150564f63f3446190e192a91ad14bc1",
+          "94ff07d2bade4d0ea3bfe2c508245625",
+          "0043982bf31543fc95af937222aae881",
+          "271b18fdf4734a548d46c7c86a4c79c0",
+          "868a2ce43ea041c4bed51ec8db779c1d",
+          "9d6bee868f7c4b30977e65dcf906dfe0"
+        ],
+        "Left": -574.88375377212867,
+        "Top": 373.03998594663295,
+        "Width": 1094.59520650582,
+        "Height": 234.86685850121768,
+        "FontSize": 36.0,
+        "InitialTop": 426.23998594663294,
+        "InitialHeight": 234.06685850121761,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "39c96c42767c491584818ee750617009",
+        "Title": "Topology.Edges / Edge.CurveGeometry",
+        "Nodes": [
+          "57dce7459b2d4c8a92cf4c15a47690a5",
+          "6b379c1bd68642c4ae15778c72cc3dc8",
+          "210087d384e54f668424e66ea541cdd1"
+        ],
+        "Left": -588.7952423157318,
+        "Top": 155.01553823000353,
+        "Width": 677.26186346786983,
+        "Height": 199.03070243025724,
+        "FontSize": 36.0,
+        "InitialTop": 208.21553823000352,
+        "InitialHeight": 146.38160655408859,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e25466cd463c4f239fdb214192f65616",
+        "Title": "Topology.Vertices / Vertex.PointGeometry",
+        "Nodes": [
+          "c0b96e3b157b4f1f824ad0785445851b",
+          "5752fd75b1f34e138e687f945b8107db",
+          "e952efb2b52b4e89a78a9d26ac847b5a"
+        ],
+        "Left": -585.50728060342476,
+        "Top": -505.90262320011254,
+        "Width": 658.62028890794181,
+        "Height": 197.79999999999995,
+        "FontSize": 36.0,
+        "InitialTop": -452.70262320011255,
+        "InitialHeight": 242.51936269432787,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "fcdf858f8c1b45649a2b01382f7052ce",
+        "Title": "Face.Vertices / Face.Edges",
+        "Nodes": [
+          "f27716e2ae554bf6adb8203bbbba9c94",
+          "f2128e8602bf4e2fa2486e31e79905f4",
+          "cbd8c5ce8ab242f38f1b417953e64e57",
+          "3ffa77ea17134b9bb6bc048779409cda",
+          "7a3e687c1baa48daac68d3b01ce6927e"
+        ],
+        "Left": -571.38913332094023,
+        "Top": 673.03750559880427,
+        "Width": 962.59321686294606,
+        "Height": 258.8337169823061,
+        "FontSize": 36.0,
+        "InitialTop": 726.23750559880432,
+        "InitialHeight": 235.633716982306,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d7706eb4fb9a420abeba33b0c84001c9",
+        "Title": "Vertex.AdjacentEdges / Vertex.AdjacentFaces",
+        "Nodes": [
+          "c984b31beced4803b49ae00cb8460d96",
+          "b5be5c325e2e437f98dea7658b20679b",
+          "48b73b11bc764afdac3f83cec47d97e0",
+          "b16e52bafdfb41788bc32c7cd0abfb31",
+          "d57dd34548184090b1a02637b6b597b2"
+        ],
+        "Left": -571.43338607880628,
+        "Top": -262.90917557728926,
+        "Width": 842.55525772246619,
+        "Height": 374.72495481694159,
+        "FontSize": 36.0,
+        "InitialTop": -209.70917557728927,
+        "InitialHeight": 174.6,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "0e86807e26f54f15a918f5351e8822bd",
+        "Title": "Solid.Fillet",
+        "Nodes": [
+          "6070e4d7b82041b59fda60a906932439",
+          "133921443d444dd7be9df4b6a2f0c330",
+          "70484cecf01d42aa94db683ba4c32c32",
+          "2e33a11c7f0f4ef6bbd8e9bafaa1f250"
+        ],
+        "Left": -559.54270326874462,
+        "Top": 952.86571135527436,
+        "Width": 726.1700726806456,
+        "Height": 305.68269052953281,
+        "FontSize": 36.0,
+        "InitialTop": 1006.0657113552744,
+        "InitialHeight": 282.48269052953287,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 266.5135932165341,
+    "Y": -62.503034655570104,
+    "Zoom": 0.34368011708494073
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "Uuid": "561986d6-0b42-43c8-9aca-62142fc20a5a",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "1-6-1_植栽ファミリの配置",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..360..#10;\n20000;",
+      "Id": "d02951b594fd4bf5af8cbe6569a6c039",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "48b305dfcb7d4f8ea2556a9c8b0768ba",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d0475e2bf59646d8863db4a79a4e9610",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "fc5fc1811817479fa3b77a065c93e0b2",
+      "Inputs": [
+        {
+          "Id": "688c3be037f44e36bd387def5a366d60",
+          "Name": "angle",
+          "Description": "正弦を取得する角度(度単位)。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "de0fbd1a959f426aba11f8e549b40297",
+          "Name": "double",
+          "Description": "角度の正弦。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "角度の正弦を求めます。\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "e6b30b922c564b54a16da9fab411126c",
+      "Inputs": [
+        {
+          "Id": "cccebcf8d2bc4363b4e6a17fd72cdc24",
+          "Name": "x",
+          "Description": "X coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a4620bc3ea96480899b330f77e7e1e60",
+          "Name": "y",
+          "Description": "Y coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f265813384fc4096a1414515c7741cf1",
+          "Name": "z",
+          "Description": "Z coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b6af056c32fc46dea5dfa4801384a6b0",
+          "Name": "Point",
+          "Description": "Point created by coordinates",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定された 3 つのデカルト座標を使用して、点を作成します。\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "a*2000;",
+      "Id": "0b1f530963c94291a93702bd2e6d94db",
+      "Inputs": [
+        {
+          "Id": "90c902394b664e5eb8de8a50e0defaa8",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9890320c1b524bc3bb2a9782043ec8f7",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.RemapRange@double[],double,double",
+      "Id": "fd314027e33449988040310b7d6f03c5",
+      "Inputs": [
+        {
+          "Id": "c8c47bc581b94263a86b470e3c4dce02",
+          "Name": "numbers",
+          "Description": "範囲を調整するための数値のリスト。\n\ndouble[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fda477dba5be4ddda3f158296e4db185",
+          "Name": "newMin",
+          "Description": "範囲の新しい最小値。\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d69c13624f99446f907842f421d5505d",
+          "Name": "newMax",
+          "Description": "範囲の新しい最大値\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b7ed198c046a43e49e636436d9c0e527",
+          "Name": "list",
+          "Description": "新しい範囲に再マッピングされるリスト。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "分配比率を保持しながら数値のリストの範囲を 調整します。\n\nMath.RemapRange (numbers: double[], newMin: double = 0, newMax: double = 1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyInstance.ByPoint@Revit.Elements.FamilyType,Autodesk.DesignScript.Geometry.Point",
+      "Id": "5c1b1fa4e758478884a61e5012cb9f84",
+      "Inputs": [
+        {
+          "Id": "68821a588ad644aaa042648b7309345f",
+          "Name": "familyType",
+          "Description": "ファミリ タイプ。ファミリ記号とも呼ばれます。\n\nFamilyType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5e53d61acdeb45cb9e867efff9ecde48",
+          "Name": "point",
+          "Description": "点(メートル単位)。\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1e1ae8a449f64fd4b40060412e998b4b",
+          "Name": "FamilyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "FamilyType (Revit API では FamilySymbol と呼ばれる)とそのワールド空間での座標を指定して Revit ファミリ インスタンスを配置します\n\nFamilyInstance.ByPoint (familyType: FamilyType, point: Point): FamilyInstance"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 11,
+      "SelectedString": "RPC 木 - 落葉樹:グレー バーチ - 3.1 メートル",
+      "NodeType": "ExtensionNode",
+      "Id": "42b689a8195d40d6acd39946097e8f1e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "472354ed51354969a29200d54049a91b",
+          "Name": "Family Type",
+          "Description": "選択した Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ドキュメントで使用可能なすべてのファミリ タイプ。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "48b305dfcb7d4f8ea2556a9c8b0768ba",
+      "End": "688c3be037f44e36bd387def5a366d60",
+      "Id": "45673394cae54b749b6d83d543d33828"
+    },
+    {
+      "Start": "48b305dfcb7d4f8ea2556a9c8b0768ba",
+      "End": "c8c47bc581b94263a86b470e3c4dce02",
+      "Id": "d2040bae8fdb495eacb4f93e3db17801"
+    },
+    {
+      "Start": "d0475e2bf59646d8863db4a79a4e9610",
+      "End": "d69c13624f99446f907842f421d5505d",
+      "Id": "4fd5590360ba4332b9a34e6d8ec87841"
+    },
+    {
+      "Start": "de0fbd1a959f426aba11f8e549b40297",
+      "End": "90c902394b664e5eb8de8a50e0defaa8",
+      "Id": "e1d6d754ee34430ea199b941f8d1ea90"
+    },
+    {
+      "Start": "b6af056c32fc46dea5dfa4801384a6b0",
+      "End": "5e53d61acdeb45cb9e867efff9ecde48",
+      "Id": "6e37def2453144c3912874c3b9277e7e"
+    },
+    {
+      "Start": "9890320c1b524bc3bb2a9782043ec8f7",
+      "End": "a4620bc3ea96480899b330f77e7e1e60",
+      "Id": "8fc38b2318d843d3864b40bffb1799ca"
+    },
+    {
+      "Start": "b7ed198c046a43e49e636436d9c0e527",
+      "End": "cccebcf8d2bc4363b4e6a17fd72cdc24",
+      "Id": "b2d522249707475d81a3de39771a31a4"
+    },
+    {
+      "Start": "472354ed51354969a29200d54049a91b",
+      "End": "68821a588ad644aaa042648b7309345f",
+      "Id": "139b8d55fb444a65a171ec28ee80d635"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 100.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 10611.357421875,
+      "EyeY": 20307.005859375,
+      "EyeZ": 4466.218994140625,
+      "LookX": -107.330078125,
+      "LookY": -19140.94140625,
+      "LookZ": -7585.59130859375,
+      "UpX": -0.011729075573384762,
+      "UpY": 0.55919277667999268,
+      "UpZ": -0.828954815864563
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "d02951b594fd4bf5af8cbe6569a6c039",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -157.68084055941398,
+        "Y": 393.00836798367652
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sin",
+        "Id": "fc5fc1811817479fa3b77a065c93e0b2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 33.1753939156813,
+        "Y": 486.627862951226
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "e6b30b922c564b54a16da9fab411126c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 431.93091726937485,
+        "Y": 407.00868662398352
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "0b1f530963c94291a93702bd2e6d94db",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 252.247387490728,
+        "Y": 491.27747340424804
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.RemapRange",
+        "Id": "fd314027e33449988040310b7d6f03c5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 187.77545876907078,
+        "Y": 349.36256136176786
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.ByPoint",
+        "Id": "5c1b1fa4e758478884a61e5012cb9f84",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 775.48306449557435,
+        "Y": 259.99830560428154
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Family Types",
+        "Id": "42b689a8195d40d6acd39946097e8f1e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 420.33125832940868,
+        "Y": 199.15977520317782
+      }
+    ],
+    "Annotations": [],
+    "X": 109.81217997343805,
+    "Y": 77.219122194096315,
+    "Zoom": 0.47815488495616837
+  }
+}

@@ -1,0 +1,1868 @@
+{
+  "Uuid": "191367fb-7758-486a-91a3-d904c726db4e",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "5-5_パスの操作",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\",
+      "InputValue": "C:\\",
+      "NodeType": "ExtensionNode",
+      "Id": "6882152b15ed48e898e5b0ed119e7991",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3a05e89ff0cd410faf3462c55fc58079",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のフォルダを選択して、そのパスを取得することができます"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Test\";",
+      "Id": "b8d18c3534c544e9bcd5e1c5bd205f08",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bd1bb75a293d4d72a3359f08972e8415",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction, DynamoCore",
+      "FunctionSignature": "DSCore.IO.FileSystem.CombinePath@string[]",
+      "FunctionType": "VariableArgument",
+      "NodeType": "FunctionNode",
+      "Id": "4c7500466d8946db82172ab6eee11f26",
+      "Inputs": [
+        {
+          "Id": "f594f797c7524d7398d9d2c80275ea81",
+          "Name": "string0",
+          "Description": "組み合わせてパスにする文字列\n\nstring[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "308643e5757945dab6597dee6e5feeed",
+          "Name": "string1",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "04f1e520f6e44d078c6d397081320135",
+          "Name": "string",
+          "Description": "組み合わされたファイル パス",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "複数の文字列を 1 つのファイル パスに組み合わせます。\n\nFileSystem.CombinePath (strings: string[]): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "98276487c7624e74810470c0df670c77",
+      "Inputs": [
+        {
+          "Id": "4f7c97eca47a4a378616ff4677725272",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eae4cdefbe6449e1b0d1c4717a7e1992",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\",
+      "InputValue": "C:\\",
+      "NodeType": "ExtensionNode",
+      "Id": "435cbc6190174d45aa618937e4ceb061",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "470b5b9ed7c94eb3a06f2ed88a332ba2",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のフォルダを選択して、そのパスを取得することができます"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\",
+      "InputValue": "C:\\",
+      "NodeType": "ExtensionNode",
+      "Id": "f7a9ad71ee604c1f89900777a9a1240c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "02b615f4de1b4d80b8a8a152d9e8113d",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のフォルダを選択して、そのパスを取得することができます"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "\\",
+      "Id": "d70d8be76c364afea0fe930ab6181291",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c886a584ba2e4e5b9a6d638af29bc2ca",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "文字列を作成します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction, DynamoCore",
+      "FunctionSignature": "DSCore.String.Split@string,string[]",
+      "FunctionType": "VariableArgument",
+      "NodeType": "FunctionNode",
+      "Id": "17afdcd7bc314be794e6c889fc4f6141",
+      "Inputs": [
+        {
+          "Id": "4a6b550a421d46998445acefadbaa724",
+          "Name": "string",
+          "Description": "分割する文字列\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eb0de06471d04d3db5129110b6ac3d7e",
+          "Name": "separator0",
+          "Description": "分割の終了と開始を指定する文字列。\n\nstring[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "89488686c5544bcdb16627f0e903b268",
+          "Name": "strings",
+          "Description": "入力文字列から作成した文字列のリスト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "1 つの文字列を文字列のリストに分割します。 指定の区切り文字によって分割場所が決定されます。\n\nString.Split (string: string, separators: string[]): string[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\Users\\rhagi\\Desktop\\Subdirectory\\SubSubdirectory",
+      "InputValue": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-5\\SubDirectionary\\SubSubDirectionary",
+      "NodeType": "ExtensionNode",
+      "Id": "ac6a7fad5e0547579e084d892f81813f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8fb41a968d49403aa2fde9510cf3e115",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のフォルダを選択して、そのパスを取得することができます"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "6a619fe223754caca670a2305338872a",
+      "Inputs": [
+        {
+          "Id": "d415a3efbbf144f59ca724edff5588b7",
+          "Name": "path",
+          "Description": "ファイルへのパス(文字列)。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "686053a719ed40dfabf5ecce3483a4ca",
+          "Name": "file",
+          "Description": "ファイル オブジェクト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パスからファイル オブジェクトを作成します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "8d61ab44c75a464a9f316d0bce1ef299",
+      "Inputs": [
+        {
+          "Id": "00bbc085733d488196c664567abd1801",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0fb305f6f5a4411ab6edcfd10df7cea8",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DirectoryObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "150c8d4d0bf44aba96c49edca2f9ccb0",
+      "Inputs": [
+        {
+          "Id": "b34fc3c4eda746c4ab352601b9492c73",
+          "Name": "path",
+          "Description": "フォルダへのパス(タイプ: 文字列)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a3ec20cfa42842e3b63f57925cef77ae",
+          "Name": "directory",
+          "Description": "フォルダ オブジェクト。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パスからフォルダ オブジェクトを作成します"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "5f963d926a5e4174937f941dd04c6590",
+      "Inputs": [
+        {
+          "Id": "0d20fb05a92c4194899d985c8dd56cdf",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7adf4aaa6a5f4bdfa57a22b136b7612d",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.FileExtension@string",
+      "Id": "39cab95c5ecc45f198ff831a3792d719",
+      "Inputs": [
+        {
+          "Id": "a1cba3ee729b4e259b8078a4c52e5335",
+          "Name": "path",
+          "Description": "拡張子を取得するパス\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f3638a19b1f84b67a152d007c7172a3c",
+          "Name": "string",
+          "Description": "ファイルの拡張子",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ファイル パスの拡張子を返します。\n\nFileSystem.FileExtension (path: string): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "InputValue": "5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "e29bf9d3f6f040b3ae511d1907b60e95",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f692e727c6cd46d69f2145a55304886c",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\Users\\rhagi\\Desktop\\Subdirectory\\SubSubdirectory",
+      "InputValue": "C:\\Users\\rhagi\\Desktop\\Subdirectory\\SubSubdirectory",
+      "NodeType": "ExtensionNode",
+      "Id": "b9f83a7bbf05452788765c433171e650",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ff90d8caebb144b7911cd4360c0753fa",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のフォルダを選択して、そのパスを取得することができます"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "InputValue": "5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "3b8adacb8b65472c80b773628598275b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f3ad283ecfef465caa8c9541f4b2e582",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.FileName@string,bool",
+      "Id": "041c4c2175bb4f518d8fecd931f70f1c",
+      "Inputs": [
+        {
+          "Id": "78a185e596c04da79b300a1d140ecf37",
+          "Name": "path",
+          "Description": "ファイル名を取得するパス\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "73e39b473c0647f39e9724b657828fb8",
+          "Name": "withExtension",
+          "Description": "結果に拡張子を含めるかどうかを切り替え\n\nbool\n既定値 : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f8b3d615677b4fbfa5d2d3edc07781d3",
+          "Name": "string",
+          "Description": "ファイル パスから取得されたファイル名",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ファイル パスのファイル名を返します。\n\nFileSystem.FileName (path: string, withExtension: bool = true): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "ca1ae09d1ce54412be80761e39199908",
+      "Inputs": [
+        {
+          "Id": "84534601ad794104a0f2de8d034d2934",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0ef5e136f2634b4eae7d5912205ab520",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.FileName@string,bool",
+      "Id": "7c69fc4a0ea540cdb3eb043a29373a89",
+      "Inputs": [
+        {
+          "Id": "87b917e01bdb4757a2f0b55b6bd77aba",
+          "Name": "path",
+          "Description": "ファイル名を取得するパス\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1e85b781c37e4f5db8f43c0ec018f139",
+          "Name": "withExtension",
+          "Description": "結果に拡張子を含めるかどうかを切り替え\n\nbool\n既定値 : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9c6282fe03a04b11a6a861f5e1aa996a",
+          "Name": "string",
+          "Description": "ファイル パスから取得されたファイル名",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ファイル パスのファイル名を返します。\n\nFileSystem.FileName (path: string, withExtension: bool = true): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "e9c80b9e5cdf4f8bb6dcb52a0ba3cd73",
+      "Inputs": [
+        {
+          "Id": "90c0c4b87bb04a29b0dde8c9ba970df6",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0f410fb310614cae8c02233d00b81039",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "InputValue": "5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "9c0b4b5bbbe44236a0ed2c029a2f9325",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6b35f7f643134ca88aee5b74e197a4db",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "5288990530af46b3ac8c5c92c51f1cbd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "38a89c632d1b43b4931c14a60721a97c",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "True と False のいずれかを選択します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "InputValue": "5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "b740c962a7234facbe35f632ce4b6551",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "54a449ea41ad4651a226f487fe00428d",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.DirectoryName@string",
+      "Id": "7881628357df4352b5025e462a76828b",
+      "Inputs": [
+        {
+          "Id": "398195b85ffb4bd5ba1bcec8a0ccd30a",
+          "Name": "path",
+          "Description": "フォルダ情報を取得するパス\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4b69285444c84588979b4d961d86b700",
+          "Name": "string",
+          "Description": "ファイル パスのフォルダ名",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ファイル パスのフォルダ名を返します。\n\nFileSystem.DirectoryName (path: string): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "38c8d20e434c4603a79d830182f56126",
+      "Inputs": [
+        {
+          "Id": "8315ed0b4d7044e1af78deea3e3f2eeb",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0c0021375a1f4f9e9f4a745539ce3a8e",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "41380b55a0cb42e5b72cf332e650e413",
+      "Inputs": [
+        {
+          "Id": "7daa088257d34e4c88cec97e016aa4e1",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "13409880664c4d169a78c39624fc946b",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "c0f7c55b14f6471f8b7c2b32892fe07b",
+      "Inputs": [
+        {
+          "Id": "b50c039b0a3c4d6d8230d822e88582d6",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4465eccf4f2b4efd9bbb262c3d80900d",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "InputValue": "5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "071bf0c3fc9b4f418ef6554f31c1e472",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7ef282d4794549b19d7436c10f7bbf87",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "InputValue": "5-5\\SubDirectionary\\SubSubDirectionary\\SubSubDirectionary.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "bfb02599350d4eba8962d06167740973",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "01b78069f30944ac895bb5ded02c31e4",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "2a9578ebab674677b7bc5018d1f3c614",
+      "Inputs": [
+        {
+          "Id": "5bbd758d9e064e50b75a0c03753a43cc",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2eb58a17e0c047f88bf283ae42bf686c",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": ".\\Sample.txt",
+      "Id": "b423ba4ffc094771a7ecfdd8f58c8591",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7c55ae8224254c4d8974b7d59489bc26",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "文字列を作成します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "d137b23c1b354a64adbe076d187dbde9",
+      "Inputs": [
+        {
+          "Id": "ff74fb4625c64de79e8e15086d0b1133",
+          "Name": "path",
+          "Description": "ファイルへのパス(文字列)。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53c2c0090d774c7ebd3b29bee17d6ce8",
+          "Name": "file",
+          "Description": "ファイル オブジェクト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パスからファイル オブジェクトを作成します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "1d233d8668f4486192a535af0f322d34",
+      "Inputs": [
+        {
+          "Id": "e345e18737374c898e6f92302c2211ee",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8c232f5747e4412d970351c2955b0c49",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "a6a4920a782748bca56800ffeadc7529",
+      "Inputs": [
+        {
+          "Id": "f25aa51842514151920fbbbeaf741bae",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3027d005ae3d416a999830a228428835",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "a942fb1ea04c4836a48997cc1eb5c26c",
+      "Inputs": [
+        {
+          "Id": "5fa5d06f01124a01ac0ade6bcf51cb10",
+          "Name": "path",
+          "Description": "ファイルへのパス(文字列)。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "68c004bc2f7a495fadfda11dc01754f9",
+          "Name": "file",
+          "Description": "ファイル オブジェクト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パスからファイル オブジェクトを作成します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "..\\Sample2.txt",
+      "Id": "1499e5813ae942c9b189b5251d680fe1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "930e5c2294954fbebbe851a72f4ff244",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "文字列を作成します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-5\\Test\\Test.txt",
+      "InputValue": "5-5\\Test\\Test.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "38e9c1eaf80b43d99bf612cd73faf917",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ba78a6bf9d14465e8d3ca4d413f821a2",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "e215f57a8fd54ee1bdff8b2f99fc5cba",
+      "Inputs": [
+        {
+          "Id": "68564a4204094e779e0b4fed701dab8d",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "661d4f60964d40ab89e5168f96e02e06",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "3a05e89ff0cd410faf3462c55fc58079",
+      "End": "f594f797c7524d7398d9d2c80275ea81",
+      "Id": "6d62cbf707b8406eac1551491824a1ca"
+    },
+    {
+      "Start": "bd1bb75a293d4d72a3359f08972e8415",
+      "End": "308643e5757945dab6597dee6e5feeed",
+      "Id": "ce007441875f42a9adf5eb5dbe60c7a0"
+    },
+    {
+      "Start": "04f1e520f6e44d078c6d397081320135",
+      "End": "4f7c97eca47a4a378616ff4677725272",
+      "Id": "7394bbe621b343f6b51d26aabdff9cf1"
+    },
+    {
+      "Start": "470b5b9ed7c94eb3a06f2ed88a332ba2",
+      "End": "7daa088257d34e4c88cec97e016aa4e1",
+      "Id": "d39e4f975ee9467494e9e35ecb5a4796"
+    },
+    {
+      "Start": "02b615f4de1b4d80b8a8a152d9e8113d",
+      "End": "4a6b550a421d46998445acefadbaa724",
+      "Id": "47d85d48c9394fbd80f45a4067171303"
+    },
+    {
+      "Start": "c886a584ba2e4e5b9a6d638af29bc2ca",
+      "End": "eb0de06471d04d3db5129110b6ac3d7e",
+      "Id": "f9662af27b4244348177036cc7745dea"
+    },
+    {
+      "Start": "8fb41a968d49403aa2fde9510cf3e115",
+      "End": "d415a3efbbf144f59ca724edff5588b7",
+      "Id": "97c8cfd3a8b04b08a0e314a3f251218f"
+    },
+    {
+      "Start": "686053a719ed40dfabf5ecce3483a4ca",
+      "End": "00bbc085733d488196c664567abd1801",
+      "Id": "0a54f1669f1641cab2ae88a9824f5a2f"
+    },
+    {
+      "Start": "a3ec20cfa42842e3b63f57925cef77ae",
+      "End": "0d20fb05a92c4194899d985c8dd56cdf",
+      "Id": "374807f75aa643ba9daee4060dda0e67"
+    },
+    {
+      "Start": "f692e727c6cd46d69f2145a55304886c",
+      "End": "a1cba3ee729b4e259b8078a4c52e5335",
+      "Id": "a007572b6303455487e2c4a920fb0e32"
+    },
+    {
+      "Start": "ff90d8caebb144b7911cd4360c0753fa",
+      "End": "b34fc3c4eda746c4ab352601b9492c73",
+      "Id": "db446a78462f4dc3833d3c2828461192"
+    },
+    {
+      "Start": "f3ad283ecfef465caa8c9541f4b2e582",
+      "End": "78a185e596c04da79b300a1d140ecf37",
+      "Id": "0e802a304ca84d24939e1c6cd8d811c5"
+    },
+    {
+      "Start": "f8b3d615677b4fbfa5d2d3edc07781d3",
+      "End": "84534601ad794104a0f2de8d034d2934",
+      "Id": "b41dfd12b4114d029e61132c075c5106"
+    },
+    {
+      "Start": "9c6282fe03a04b11a6a861f5e1aa996a",
+      "End": "90c0c4b87bb04a29b0dde8c9ba970df6",
+      "Id": "64640222a2f643fcbd08144586d1ea8e"
+    },
+    {
+      "Start": "6b35f7f643134ca88aee5b74e197a4db",
+      "End": "87b917e01bdb4757a2f0b55b6bd77aba",
+      "Id": "b61a1f5f69b24b5fbe6fa40ed43e619a"
+    },
+    {
+      "Start": "38a89c632d1b43b4931c14a60721a97c",
+      "End": "1e85b781c37e4f5db8f43c0ec018f139",
+      "Id": "e9759bc7176c405fbee483b2a33d7159"
+    },
+    {
+      "Start": "54a449ea41ad4651a226f487fe00428d",
+      "End": "398195b85ffb4bd5ba1bcec8a0ccd30a",
+      "Id": "d91fbe9e0d704d49a57cd105fc961fee"
+    },
+    {
+      "Start": "4b69285444c84588979b4d961d86b700",
+      "End": "8315ed0b4d7044e1af78deea3e3f2eeb",
+      "Id": "4e3439e6a3084153a06133a2b2352c16"
+    },
+    {
+      "Start": "7ef282d4794549b19d7436c10f7bbf87",
+      "End": "b50c039b0a3c4d6d8230d822e88582d6",
+      "Id": "9a018a5c24a54645b57e50e7fea79326"
+    },
+    {
+      "Start": "01b78069f30944ac895bb5ded02c31e4",
+      "End": "5bbd758d9e064e50b75a0c03753a43cc",
+      "Id": "84ba41c13bdb473ab53c691a53fd84fb"
+    },
+    {
+      "Start": "7c55ae8224254c4d8974b7d59489bc26",
+      "End": "ff74fb4625c64de79e8e15086d0b1133",
+      "Id": "1c01c52130964ab8a9bad809c1b85c4f"
+    },
+    {
+      "Start": "53c2c0090d774c7ebd3b29bee17d6ce8",
+      "End": "e345e18737374c898e6f92302c2211ee",
+      "Id": "a34bc05c3637444d93c132b49464b67b"
+    },
+    {
+      "Start": "68c004bc2f7a495fadfda11dc01754f9",
+      "End": "f25aa51842514151920fbbbeaf741bae",
+      "Id": "050cc0d6d22748398e562b858929d41e"
+    },
+    {
+      "Start": "930e5c2294954fbebbe851a72f4ff244",
+      "End": "5fa5d06f01124a01ac0ade6bcf51cb10",
+      "Id": "a07bc9809d474f75bb7d238feeaa1cfb"
+    },
+    {
+      "Start": "ba78a6bf9d14465e8d3ca4d413f821a2",
+      "End": "68564a4204094e779e0b4fed701dab8d",
+      "Id": "ef6c3356ecaa4735ba3982a1985475f3"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "6882152b15ed48e898e5b0ed119e7991",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 383.12336835555288,
+        "Y": 184.7403387508736
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b8d18c3534c544e9bcd5e1c5bd205f08",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 384.07524459971489,
+        "Y": 307.73736664507959
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.CombinePath",
+        "Id": "4c7500466d8946db82172ab6eee11f26",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 598.87821670550989,
+        "Y": 230.22172573357761
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "98276487c7624e74810470c0df670c77",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 850.5447431592429,
+        "Y": 228.33835734701063
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "435cbc6190174d45aa618937e4ceb061",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 387.04081255991287,
+        "Y": -175.0414565579934
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "f7a9ad71ee604c1f89900777a9a1240c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 394.18280287704033,
+        "Y": 489.71424726409259
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "d70d8be76c364afea0fe930ab6181291",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 433.91279520953634,
+        "Y": 602.24486494305256
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String.Split",
+        "Id": "17afdcd7bc314be794e6c889fc4f6141",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 636.65975473312437,
+        "Y": 502.89885477649466
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "ac6a7fad5e0547579e084d892f81813f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 384.75147370771651,
+        "Y": 776.46459580103692
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File From Path",
+        "Id": "6a619fe223754caca670a2305338872a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 689.28528009139552,
+        "Y": 783.113372819308
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "8d61ab44c75a464a9f316d0bce1ef299",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 874.63115974197956,
+        "Y": 778.064595801037
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory From Path",
+        "Id": "150c8d4d0bf44aba96c49edca2f9ccb0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 744.03795839308953,
+        "Y": 963.018087255767
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "5f963d926a5e4174937f941dd04c6590",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 954.73335338846357,
+        "Y": 963.818087255767
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.FileExtension",
+        "Id": "39cab95c5ecc45f198ff831a3792d719",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 828.828920760517,
+        "Y": 1164.83701830601
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "e29bf9d3f6f040b3ae511d1907b60e95",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 396.171464853276,
+        "Y": 1161.54610896403
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "b9f83a7bbf05452788765c433171e650",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 393.16928862386754,
+        "Y": 962.21808725576693
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "3b8adacb8b65472c80b773628598275b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 395.22884327680868,
+        "Y": 1380.3245778998919
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.FileName",
+        "Id": "041c4c2175bb4f518d8fecd931f70f1c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 831.66576224321773,
+        "Y": 1355.5245778998919
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "ca1ae09d1ce54412be80761e39199908",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1149.4349897519958,
+        "Y": 1381.9245778998918
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.FileName",
+        "Id": "7c69fc4a0ea540cdb3eb043a29373a89",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 838.26750340641524,
+        "Y": 1559.993477152309
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "e9c80b9e5cdf4f8bb6dcb52a0ba3cd73",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1160.7427724540833,
+        "Y": 1559.993477152309
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "9c0b4b5bbbe44236a0ed2c029a2f9325",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 401.83058444000631,
+        "Y": 1559.993477152309
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "5288990530af46b3ac8c5c92c51f1cbd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 595.7801859618603,
+        "Y": 1710.319369250539
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "b740c962a7234facbe35f632ce4b6551",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 402.34057258232986,
+        "Y": 1873.2966591702382
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.DirectoryName",
+        "Id": "7881628357df4352b5025e462a76828b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 835.22726079631889,
+        "Y": 1873.2966591702382
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "38c8d20e434c4603a79d830182f56126",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1105.2629087005118,
+        "Y": 1873.2966591702382
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "41380b55a0cb42e5b72cf332e650e413",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 644.97160084369489,
+        "Y": -172.76339330144242
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "c0f7c55b14f6471f8b7c2b32892fe07b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 804.98191167039226,
+        "Y": 2076.58444596337
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "071bf0c3fc9b4f418ef6554f31c1e472",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 398.58565116481327,
+        "Y": 2075.76428820311
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "bfb02599350d4eba8962d06167740973",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 397.31833800838325,
+        "Y": 2249.6844160776
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "2a9578ebab674677b7bc5018d1f3c614",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 787.12311623255823,
+        "Y": 2250.4844160776
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "b423ba4ffc094771a7ecfdd8f58c8591",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 403.35015677002525,
+        "Y": 2422.61462699412
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File From Path",
+        "Id": "d137b23c1b354a64adbe076d187dbde9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 551.83002398808321,
+        "Y": 2410.21462699412
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "1d233d8668f4486192a535af0f322d34",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 723.7155845607133,
+        "Y": 2410.61462699412
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "a6a4920a782748bca56800ffeadc7529",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 724.36206216321625,
+        "Y": 2596.24823785228
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File From Path",
+        "Id": "a942fb1ea04c4836a48997cc1eb5c26c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 552.47650159058628,
+        "Y": 2595.84823785228
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "1499e5813ae942c9b189b5251d680fe1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 403.99663437252826,
+        "Y": 2608.24823785228
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "38e9c1eaf80b43d99bf612cd73faf917",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 386.9948486835259,
+        "Y": -4.730425579738295
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "e215f57a8fd54ee1bdff8b2f99fc5cba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 631.02705907883387,
+        "Y": -6.9692531980437877
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "e915f2784e1a44a88037d813be414c69",
+        "Title": "ディレクトリの場所を可視化",
+        "Nodes": [
+          "435cbc6190174d45aa618937e4ceb061",
+          "41380b55a0cb42e5b72cf332e650e413"
+        ],
+        "Left": 377.04081255991287,
+        "Top": -228.24145655799339,
+        "Width": 487.930788283782,
+        "Height": 333.67806325655096,
+        "FontSize": 36.0,
+        "InitialTop": -175.0414565579934,
+        "InitialHeight": 147.27806325655098,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "aa37a462063a4570a7d10fdd6d16c9ef",
+        "Title": "ファイルの場所を可視化",
+        "Nodes": [
+          "38e9c1eaf80b43d99bf612cd73faf917",
+          "e215f57a8fd54ee1bdff8b2f99fc5cba"
+        ],
+        "Left": 376.9948486835259,
+        "Top": -60.169253198043791,
+        "Width": 474.03221039530797,
+        "Height": 331.40000000000003,
+        "FontSize": 36.0,
+        "InitialTop": -6.9692531980437877,
+        "InitialHeight": 147.23882761830549,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "fac57a4ffb6344f8859ea480698840f2",
+        "Title": "複数のPathを組み合わせる",
+        "Nodes": [
+          "6882152b15ed48e898e5b0ed119e7991",
+          "b8d18c3534c544e9bcd5e1c5bd205f08",
+          "4c7500466d8946db82172ab6eee11f26",
+          "98276487c7624e74810470c0df670c77"
+        ],
+        "Left": 373.12336835555288,
+        "Top": 131.54033875087362,
+        "Width": 697.42137480369,
+        "Height": 374.998018596137,
+        "FontSize": 36.0,
+        "InitialTop": 184.7403387508736,
+        "InitialHeight": 267.997027894206,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "0f3f1dc093ed4d7697b162edc6fd0c62",
+        "Title": "Pathをファイル名に分解",
+        "Nodes": [
+          "f7a9ad71ee604c1f89900777a9a1240c",
+          "d70d8be76c364afea0fe930ab6181291",
+          "17afdcd7bc314be794e6c889fc4f6141"
+        ],
+        "Left": 384.18280287704033,
+        "Top": 436.5142472640926,
+        "Width": 492.47695185608404,
+        "Height": 233.53061767895991,
+        "FontSize": 36.0,
+        "InitialTop": 489.71424726409259,
+        "InitialHeight": 257.53061767895997,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "55aaaa08380d4a11a8e55c3f390e516d",
+        "Title": "PathからFileを作成",
+        "Nodes": [
+          "ac6a7fad5e0547579e084d892f81813f",
+          "6a619fe223754caca670a2305338872a",
+          "8d61ab44c75a464a9f316d0bce1ef299"
+        ],
+        "Left": 374.75147370771651,
+        "Top": 723.26459580103688,
+        "Width": 719.87968603426293,
+        "Height": 333.0,
+        "FontSize": 36.0,
+        "InitialTop": 776.46459580103692,
+        "InitialHeight": 146.60000000000002,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "5b89ccadf804423b8a4f75597bb8c579",
+        "Title": "DirectoryからFileを作成",
+        "Nodes": [
+          "150c8d4d0bf44aba96c49edca2f9ccb0",
+          "5f963d926a5e4174937f941dd04c6590",
+          "b9f83a7bbf05452788765c433171e650"
+        ],
+        "Left": 383.16928862386754,
+        "Top": 909.01808725576689,
+        "Width": 791.564064764596,
+        "Height": 333.0,
+        "FontSize": 36.0,
+        "InitialTop": 962.21808725576693,
+        "InitialHeight": 146.59999999999991,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFAA45"
+      },
+      {
+        "Id": "2e16ab91fefd4ab3ba6496fbff71bbd4",
+        "Title": "PathからFileの拡張子を選択",
+        "Nodes": [
+          "39cab95c5ecc45f198ff831a3792d719",
+          "e29bf9d3f6f040b3ae511d1907b60e95"
+        ],
+        "Left": 386.171464853276,
+        "Top": 1108.34610896403,
+        "Width": 633.45745590724107,
+        "Height": 149.0909093419798,
+        "FontSize": 36.0,
+        "InitialTop": 1161.54610896403,
+        "InitialHeight": 148.29090934197984,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "3a8814f768754f0ebda04ef8b4ea74a2",
+        "Title": "PathからFileの名前を返す",
+        "Nodes": [
+          "3b8adacb8b65472c80b773628598275b",
+          "041c4c2175bb4f518d8fecd931f70f1c",
+          "ca1ae09d1ce54412be80761e39199908"
+        ],
+        "Left": 385.22884327680868,
+        "Top": 1302.3245778998919,
+        "Width": 984.2061464751871,
+        "Height": 357.79999999999995,
+        "FontSize": 36.0,
+        "InitialTop": 1355.5245778998919,
+        "InitialHeight": 171.39999999999986,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "45aa61d463d84eef9b2cb4f94c85d81d",
+        "Title": "PathからFileの名前を返す（拡張子なし）",
+        "Nodes": [
+          "7c69fc4a0ea540cdb3eb043a29373a89",
+          "e9c80b9e5cdf4f8bb6dcb52a0ba3cd73",
+          "9c0b4b5bbbe44236a0ed2c029a2f9325",
+          "5288990530af46b3ac8c5c92c51f1cbd"
+        ],
+        "Left": 391.83058444000631,
+        "Top": 1506.7934771523089,
+        "Width": 988.912188014077,
+        "Height": 331.40000000000009,
+        "FontSize": 36.0,
+        "InitialTop": 1559.993477152309,
+        "InitialHeight": 295.32589209823004,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "fdf21d3d30314bfe915d34b731569dbb",
+        "Title": "PathからDirectoryの名前を返す",
+        "Nodes": [
+          "b740c962a7234facbe35f632ce4b6551",
+          "7881628357df4352b5025e462a76828b",
+          "38c8d20e434c4603a79d830182f56126"
+        ],
+        "Left": 392.34057258232986,
+        "Top": 1820.0966591702381,
+        "Width": 932.922336118182,
+        "Height": 331.40000000000009,
+        "FontSize": 36.0,
+        "InitialTop": 1873.2966591702382,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "4c5c8a0c3fc344f0936c65391309fd50",
+        "Title": "絶対パス",
+        "Nodes": [
+          "c0f7c55b14f6471f8b7c2b32892fe07b",
+          "071bf0c3fc9b4f418ef6554f31c1e472"
+        ],
+        "Left": 388.58565116481327,
+        "Top": 2022.56428820311,
+        "Width": 636.396260505579,
+        "Height": 332.22015776025978,
+        "FontSize": 36.0,
+        "InitialTop": 2075.76428820311,
+        "InitialHeight": 145.82015776025992,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "8ba1771874bc42cfa1c97676156f3fe2",
+        "Title": "絶対パス",
+        "Nodes": [
+          "bfb02599350d4eba8962d06167740973",
+          "2a9578ebab674677b7bc5018d1f3c614"
+        ],
+        "Left": 387.31833800838325,
+        "Top": 2196.4844160776,
+        "Width": 619.80477822417492,
+        "Height": 332.19999999999982,
+        "FontSize": 36.0,
+        "InitialTop": 2249.6844160776,
+        "InitialHeight": 145.80000000000018,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "f8853feadde44ffd9a92b7285c7018c5",
+        "Title": "相対パス",
+        "Nodes": [
+          "b423ba4ffc094771a7ecfdd8f58c8591",
+          "d137b23c1b354a64adbe076d187dbde9",
+          "1d233d8668f4486192a535af0f322d34"
+        ],
+        "Left": 393.35015677002525,
+        "Top": 2357.01462699412,
+        "Width": 550.365427790688,
+        "Height": 331.79999999999973,
+        "FontSize": 36.0,
+        "InitialTop": 2410.21462699412,
+        "InitialHeight": 157.40000000000009,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "0e98201b5cd348468ac21718bb4a63cf",
+        "Title": "相対パス",
+        "Nodes": [
+          "a6a4920a782748bca56800ffeadc7529",
+          "a942fb1ea04c4836a48997cc1eb5c26c",
+          "1499e5813ae942c9b189b5251d680fe1"
+        ],
+        "Left": 393.99663437252826,
+        "Top": 2542.64823785228,
+        "Width": 550.365427790688,
+        "Height": 331.79999999999973,
+        "FontSize": 36.0,
+        "InitialTop": 2595.84823785228,
+        "InitialHeight": 157.40000000000009,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": -144.42548382217143,
+    "Y": -1285.4634439375113,
+    "Zoom": 0.63226875055694909
+  }
+}

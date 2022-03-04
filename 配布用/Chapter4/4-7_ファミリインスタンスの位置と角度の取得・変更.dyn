@@ -1,0 +1,1444 @@
+{
+  "Uuid": "4e1eb56f-b9d3-428e-ae1a-5b2c7dfa11cc",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "07ファミリインスタンスの位置と角度の取得・変更",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetLocation",
+      "Id": "e45ad4c8909a4db9b1d9386579df3bc5",
+      "Inputs": [
+        {
+          "Id": "87ab3c19054c44a9bf5b487091596964",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b58cba1e61ed4a59b191e50ca58b11ae",
+          "Name": "Geometry",
+          "Description": "ジオメトリの位置",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "既存の要素の位置を取得します\n\nElement.GetLocation ( ): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "9cfef874-7ca6-4f4e-861f-441aab19bf67-000449ad"
+      ],
+      "Id": "2705f367be2b43d1ad401f78999d2a11",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "21764f217b6f4ccaa789c55460b9ca45",
+          "Name": "Element",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "401b5aec360e4b0988ecf5718ed4d1f8",
+      "Inputs": [
+        {
+          "Id": "1c087c2491c94129a20220aaa8974577",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8d5278c6baed4a748c58c72fa4b7216c",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を視覚化します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetLocation",
+      "Id": "1f4c318e89604ee19c47ce17632a8733",
+      "Inputs": [
+        {
+          "Id": "7a7e60a32ba1407e9674a1b27c169e60",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ac0f467c96dd4f37a29cca9cd01cbd99",
+          "Name": "Geometry",
+          "Description": "ジオメトリの位置",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "既存の要素の位置を取得します\n\nElement.GetLocation ( ): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "9cfef874-7ca6-4f4e-861f-441aab19bf67-000449ad"
+      ],
+      "Id": "b0d56774873c4d09a627df557b1070fd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "41fc61f3aa27465587a557c4fd09cf0f",
+          "Name": "Element",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetLocation@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "bd266935c26848299ddc57ec1a64a792",
+      "Inputs": [
+        {
+          "Id": "e84e9f6e0f874a62a7c5cc0b1714cdf0",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0da8db28972a4c95911923ca4f9bf1cd",
+          "Name": "geometry",
+          "Description": "点または曲線の新しい位置\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "54f9ce8ceee74956afa1ebdb31820760",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "既存の要素の位置を更新します\n\nElement.SetLocation (geometry: Geometry): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100;",
+      "Id": "1835a683e3b1492fa758f00545abdf0d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d31e56e917fa4bc89d42c3b66c3b710f",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector,double",
+      "Id": "1476a233ab8b474691ad770bf2bfc0c9",
+      "Inputs": [
+        {
+          "Id": "de20d9d438884d3ca8564fde113f0298",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "08c0317f39ad4ab2a4a04c037f637e07",
+          "Name": "direction",
+          "Description": "変位の向き。\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "697950e6d9c14897b0ea800674fc264c",
+          "Name": "distance",
+          "Description": "指定した向きに沿った変位距離。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "457f290c08934f72a80c0b09ad0e1a13",
+          "Name": "Geometry",
+          "Description": "変換後の Geometry。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定した方向に距離を指定して、ジオメトリのタイプを変換 します。\n\nGeometry.Translate (direction: Vector, distance: double): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.YAxis",
+      "Id": "1c9bb676ee804cd5877ba42499698633",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "11d821a21ea54ccebb1b0f679976b921",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "基底 Y 軸ベクトル(0,1,0)を取得します\n\nVector.YAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.MoveByVector@Autodesk.DesignScript.Geometry.Vector",
+      "Id": "d0c2253d8f9a4ca8867dabb19e05bb5f",
+      "Inputs": [
+        {
+          "Id": "6f84f850e8204641b4677ca379775833",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "de0c5b51b99b46808346c512ec353708",
+          "Name": "vector",
+          "Description": "平行移動のベクトル\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "12698da68bdb4485bbf20a37a31fb783",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定したベクトルによって Revit の要素を移動します\n\nElement.MoveByVector (vector: Vector): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "9cfef874-7ca6-4f4e-861f-441aab19bf67-000449ad"
+      ],
+      "Id": "e7478033864542d78737fe57c9a2d104",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6a45508117b84fd099206bf317646965",
+          "Name": "Element",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.XAxis",
+      "Id": "f3097b1e0fe54890ad208dc3bb716be0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c26751b02a8148edbabda330f91cd337",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "基底 X 軸ベクトル(1,0,0)を取得します\n\nVector.XAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1000;",
+      "Id": "e6cc1830bf104b168ca3d1b122a569af",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8b75462aa8fa4e05ae8dc20ed9b42cd5",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.Scale@double",
+      "Id": "d7ef61fe90194eb78a1028d67017dead",
+      "Inputs": [
+        {
+          "Id": "0f51a279a41f4c069ca2af5c2e3014c0",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "caf2d0f5dab345b38a4375a668c61e2b",
+          "Name": "scale_factor",
+          "Description": "double\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "96491280f3034f5fbc41d2030dee84ac",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "基準点を中心にベクトルを均等に調整します\n\nVector.Scale (scale_factor: double = 1): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyInstance.FacingOrientation",
+      "Id": "59621a42bd7e42b19e344856bd8e68cb",
+      "Inputs": [
+        {
+          "Id": "fb8616a3e34e416bbd5b3c941eabff1e",
+          "Name": "familyInstance",
+          "Description": "Revit.Elements.FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d10c70cf702742e3b1e40005316330cb",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ファミリ インスタンスの FacingOrientation を取得します\n\nFamilyInstance.FacingOrientation: Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "9cfef874-7ca6-4f4e-861f-441aab19bf67-0004487a"
+      ],
+      "Id": "558a5ce46377425aa6210f4640d9616a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "db991ddb4b10492e919d963d245e9093",
+          "Name": "Element",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.YAxis",
+      "Id": "a7be06b548254d188cead6c2f35864e1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "347a6df5f0324f0d9c1974ffa479cbf2",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "基底 Y 軸ベクトル(0,1,0)を取得します\n\nVector.YAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ZAxis",
+      "Id": "96b4b52016cc4204a140a89130cc637c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1fd97da0360c4b22bd01cb09a82c6f77",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "基底 Z 軸ベクトル(0,0,1)を取得します\n\nVector.ZAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.Reverse",
+      "Id": "bf85e035428b42349b3326ff2c3978a4",
+      "Inputs": [
+        {
+          "Id": "a4e685fd23964488a755da886c753594",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ccf782ac838d4d47898336f01763382a",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ベクトルの反転を取得します。本質的に、これはベクトルの X、Y、Z コンポーネントを反転させたものです。\n\nVector.Reverse ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.AngleAboutAxis@Autodesk.DesignScript.Geometry.Vector,Autodesk.DesignScript.Geometry.Vector",
+      "Id": "87f3b40da420442d8bf029ca6fce077f",
+      "Inputs": [
+        {
+          "Id": "545c86e1853d425ba0ecccd3da4a967d",
+          "Name": "vector",
+          "Description": "Autodesk.DesignScript.Geometry.Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "517f9e73560f48b8a2268238c988bbb5",
+          "Name": "otherVector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8095a20529d5484f8c45d4abf1150955",
+          "Name": "rotationAxis",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53c1274edef844489c81fa940f1d1ba6",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "0 ～ 360 度の範囲で、2 つのベクトル間の角度を返します。角度の方向の決定には回転軸が使用されます。\n\nVector.AngleAboutAxis (otherVector: Vector, rotationAxis: Vector): double"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "7655dedac20945f98688cf8b9b299851",
+      "Inputs": [
+        {
+          "Id": "da9158d576f241bf8aee252da48e822d",
+          "Name": "",
+          "Description": "評価するノード。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5ce51b8db623442b8084ec4f4590cc8c",
+          "Name": "",
+          "Description": "内容を確認します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を視覚化します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "90;",
+      "Id": "4525b945c3b446d1aa6b0c7fa205916d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "693e4145a2a3477882805036439fd185",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "9cfef874-7ca6-4f4e-861f-441aab19bf67-0004487a"
+      ],
+      "Id": "58a43d8c9509485988944779175efabe",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "beec3e7d184049a8975ff16591fb9e07",
+          "Name": "Element",
+          "Description": "選択した要素。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyInstance.SetRotation@double",
+      "Id": "a9c1943838934d15b6d9048dc44be5f1",
+      "Inputs": [
+        {
+          "Id": "fba2e3fe2c6d45ab8fe220d377285344",
+          "Name": "familyInstance",
+          "Description": "Revit.Elements.FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "307cdf81e07243faa6db858a91a2d7ff",
+          "Name": "degree",
+          "Description": "Z を中心としたオイラー角。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0d8b8d2539394ec8a02f8eff52addb94",
+          "Name": "FamilyInstance",
+          "Description": "作成されたファミリ インスタンス。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ローカルの Z 軸を中心として、ファミリ インスタンスのオイラー角を設定します。\n\nFamilyInstance.SetRotation (degree: double): FamilyInstance"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetLocation",
+      "Id": "5d25dfa6a9bc429fbf771c09cfa3ff7f",
+      "Inputs": [
+        {
+          "Id": "977eacb0f9f54d6982c857aaee01974d",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f544d44d8e984241bce4a68c8ba38e12",
+          "Name": "Geometry",
+          "Description": "ジオメトリの位置",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "既存の要素の位置を取得します\n\nElement.GetLocation ( ): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetLocation@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "fe4d68b138704f878f0e85693077041e",
+      "Inputs": [
+        {
+          "Id": "2978a039b3e944f0824dacd1ad09795d",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b0233a2953114eedacb4db9a4a4dae70",
+          "Name": "geometry",
+          "Description": "点または曲線の新しい位置\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8aa8854608044c829a1dea62026dcd27",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "既存の要素の位置を更新します\n\nElement.SetLocation (geometry: Geometry): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "60b60e03ade14accbfe81663a120014d",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "306d9c918255474eb77740875fc2f7c2",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "b58cba1e61ed4a59b191e50ca58b11ae",
+      "End": "1c087c2491c94129a20220aaa8974577",
+      "Id": "7924561710cc4b55a03202fe324f3af9"
+    },
+    {
+      "Start": "21764f217b6f4ccaa789c55460b9ca45",
+      "End": "87ab3c19054c44a9bf5b487091596964",
+      "Id": "c4f5e073d19f4442bb7b934f9a3c1454"
+    },
+    {
+      "Start": "ac0f467c96dd4f37a29cca9cd01cbd99",
+      "End": "de20d9d438884d3ca8564fde113f0298",
+      "Id": "20516fe42ddf4b7fbd49853300de6e5a"
+    },
+    {
+      "Start": "41fc61f3aa27465587a557c4fd09cf0f",
+      "End": "7a7e60a32ba1407e9674a1b27c169e60",
+      "Id": "d4dd8c90f5d94a01ae554effc385a7ef"
+    },
+    {
+      "Start": "41fc61f3aa27465587a557c4fd09cf0f",
+      "End": "e84e9f6e0f874a62a7c5cc0b1714cdf0",
+      "Id": "3e1b078b5f25439a8a5c79b2cdf90303"
+    },
+    {
+      "Start": "d31e56e917fa4bc89d42c3b66c3b710f",
+      "End": "697950e6d9c14897b0ea800674fc264c",
+      "Id": "2f2954e8346c4d0f827cd3efb907698e"
+    },
+    {
+      "Start": "457f290c08934f72a80c0b09ad0e1a13",
+      "End": "0da8db28972a4c95911923ca4f9bf1cd",
+      "Id": "8836386e1cc2425cbf2e2e8275e2fb8a"
+    },
+    {
+      "Start": "11d821a21ea54ccebb1b0f679976b921",
+      "End": "08c0317f39ad4ab2a4a04c037f637e07",
+      "Id": "a4f87883f0da430491c8ae542f074694"
+    },
+    {
+      "Start": "6a45508117b84fd099206bf317646965",
+      "End": "6f84f850e8204641b4677ca379775833",
+      "Id": "3d9e3082a24e415c903af92fb857074b"
+    },
+    {
+      "Start": "c26751b02a8148edbabda330f91cd337",
+      "End": "0f51a279a41f4c069ca2af5c2e3014c0",
+      "Id": "5558acb659a94461b1edd2ba6f8c117b"
+    },
+    {
+      "Start": "8b75462aa8fa4e05ae8dc20ed9b42cd5",
+      "End": "caf2d0f5dab345b38a4375a668c61e2b",
+      "Id": "c28f245ba5074fe5b2fcf854a245d89d"
+    },
+    {
+      "Start": "96491280f3034f5fbc41d2030dee84ac",
+      "End": "de0c5b51b99b46808346c512ec353708",
+      "Id": "5ec92f3ce8754333a63fb94a2e6b45bf"
+    },
+    {
+      "Start": "d10c70cf702742e3b1e40005316330cb",
+      "End": "545c86e1853d425ba0ecccd3da4a967d",
+      "Id": "e191e11ef9bb46b5afb38f07700eb5fa"
+    },
+    {
+      "Start": "db991ddb4b10492e919d963d245e9093",
+      "End": "fb8616a3e34e416bbd5b3c941eabff1e",
+      "Id": "a874909d3a7442bba019bf04bd9c7ca8"
+    },
+    {
+      "Start": "347a6df5f0324f0d9c1974ffa479cbf2",
+      "End": "a4e685fd23964488a755da886c753594",
+      "Id": "1c189b5d33624dae8fb5b4fddbb623dc"
+    },
+    {
+      "Start": "1fd97da0360c4b22bd01cb09a82c6f77",
+      "End": "8095a20529d5484f8c45d4abf1150955",
+      "Id": "8aa8be82213a412eb1dde60a4c5b707b"
+    },
+    {
+      "Start": "ccf782ac838d4d47898336f01763382a",
+      "End": "517f9e73560f48b8a2268238c988bbb5",
+      "Id": "17820e03eb69477f98d8b718ef6437c4"
+    },
+    {
+      "Start": "53c1274edef844489c81fa940f1d1ba6",
+      "End": "da9158d576f241bf8aee252da48e822d",
+      "Id": "0e0221978f3249a68a7d6da34e8cd2bc"
+    },
+    {
+      "Start": "693e4145a2a3477882805036439fd185",
+      "End": "307cdf81e07243faa6db858a91a2d7ff",
+      "Id": "dcaf6e7036374d05a1fa924ec07f1b6f"
+    },
+    {
+      "Start": "beec3e7d184049a8975ff16591fb9e07",
+      "End": "977eacb0f9f54d6982c857aaee01974d",
+      "Id": "83e39a0a4977421abfc526d7181d0d28"
+    },
+    {
+      "Start": "beec3e7d184049a8975ff16591fb9e07",
+      "End": "fba2e3fe2c6d45ab8fe220d377285344",
+      "Id": "605754727bc6498ca140bbfe87164b9d"
+    },
+    {
+      "Start": "0d8b8d2539394ec8a02f8eff52addb94",
+      "End": "2978a039b3e944f0824dacd1ad09795d",
+      "Id": "490be12602bb40758bbd45b006809f4c"
+    },
+    {
+      "Start": "f544d44d8e984241bce4a68c8ba38e12",
+      "End": "b0233a2953114eedacb4db9a4a4dae70",
+      "Id": "fc1d6e90e0c64e4fb38586c4c91270db"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Element.GetLocation",
+        "Id": "e45ad4c8909a4db9b1d9386579df3bc5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 513.6,
+        "Y": 259.20000000000005
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "2705f367be2b43d1ad401f78999d2a11",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 249.59757797606807,
+        "Y": 253.60000000000002
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "401b5aec360e4b0988ecf5718ed4d1f8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 892.04782234812421,
+        "Y": 256.86782578784994
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.GetLocation",
+        "Id": "1f4c318e89604ee19c47ce17632a8733",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 469.69606421111069,
+        "Y": 629.01877068547333
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "b0d56774873c4d09a627df557b1070fd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 249.59757797606807,
+        "Y": 515.40666056581313
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.SetLocation",
+        "Id": "bd266935c26848299ddc57ec1a64a792",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 902.64911407670434,
+        "Y": 520.650325188344
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1835a683e3b1492fa758f00545abdf0d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 568.54539632207275,
+        "Y": 965.56255599914857
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Geometry.Translate",
+        "Id": "1476a233ab8b474691ad770bf2bfc0c9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 878.49605592778585,
+        "Y": 810.58440543950087
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.YAxis",
+        "Id": "1c9bb676ee804cd5877ba42499698633",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 544.20835205237483,
+        "Y": 831.14554375817875
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.MoveByVector",
+        "Id": "d0c2253d8f9a4ca8867dabb19e05bb5f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 951.13760611410987,
+        "Y": 1159.416597309571
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "e7478033864542d78737fe57c9a2d104",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 249.59757797606807,
+        "Y": 1151.0463935248624
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.XAxis",
+        "Id": "f3097b1e0fe54890ad208dc3bb716be0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 402.98889897700985,
+        "Y": 1310.7909364016091
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "e6cc1830bf104b168ca3d1b122a569af",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 398.0,
+        "Y": 1402.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.Scale",
+        "Id": "d7ef61fe90194eb78a1028d67017dead",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 552.092672593836,
+        "Y": 1298.1906175044128
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.FacingOrientation",
+        "Id": "59621a42bd7e42b19e344856bd8e68cb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 604.86190175301863,
+        "Y": 1649.5106545436649
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "558a5ce46377425aa6210f4640d9616a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 249.59757797606807,
+        "Y": 1656.4617180637936
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.YAxis",
+        "Id": "a7be06b548254d188cead6c2f35864e1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 488.84120459031203,
+        "Y": 1749.9424007391844
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.ZAxis",
+        "Id": "96b4b52016cc4204a140a89130cc637c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 709.37722665575347,
+        "Y": 1949.2084511333398
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.Reverse",
+        "Id": "bf85e035428b42349b3326ff2c3978a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 632.13364532318724,
+        "Y": 1754.4202895120866
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.AngleAboutAxis",
+        "Id": "87f3b40da420442d8bf029ca6fce077f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 917.59905459571314,
+        "Y": 1649.5106545436649
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "7655dedac20945f98688cf8b9b299851",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1199.7060472885619,
+        "Y": 1649.5106545436649
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4525b945c3b446d1aa6b0c7fa205916d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 655.845775169835,
+        "Y": 2400.416332257103
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "58a43d8c9509485988944779175efabe",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 249.59757797606807,
+        "Y": 2269.3227829736838
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.SetRotation",
+        "Id": "a9c1943838934d15b6d9048dc44be5f1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 831.8959532291683,
+        "Y": 2268.2102185539661
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.GetLocation",
+        "Id": "5d25dfa6a9bc429fbf771c09cfa3ff7f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 511.84577516983495,
+        "Y": 2500.342998496013
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.SetLocation",
+        "Id": "fe4d68b138704f878f0e85693077041e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1202.9929038079549,
+        "Y": 2474.7429984960131
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "60b60e03ade14accbfe81663a120014d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -47.720627164814687,
+        "Y": -14.083323153819336
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "306d9c918255474eb77740875fc2f7c2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 144.46426390104148,
+        "Y": -14.083323153819336
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "fa803ec3fcbb43ac8a44ff3505cdd55c",
+        "Title": "位置情報の取得",
+        "Nodes": [
+          "e45ad4c8909a4db9b1d9386579df3bc5",
+          "2705f367be2b43d1ad401f78999d2a11"
+        ],
+        "Left": 239.59757797606807,
+        "Top": 200.40000000000003,
+        "Width": 512.802422023932,
+        "Height": 173.0,
+        "FontSize": 36.0,
+        "InitialTop": 253.60000000000002,
+        "InitialHeight": 150.60000000000002,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "aea14d9e84814deebfc77c03e0218293",
+        "Title": "可視化",
+        "Nodes": [
+          "401b5aec360e4b0988ecf5718ed4d1f8"
+        ],
+        "Left": 882.04782234812421,
+        "Top": 203.66782578784995,
+        "Width": 118.0,
+        "Height": 145.0,
+        "FontSize": 36.0,
+        "InitialTop": 256.86782578784994,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "5e93ce4d13054864b1b575a5670772e1",
+        "Title": "位置情報を取得",
+        "Nodes": [
+          "1f4c318e89604ee19c47ce17632a8733",
+          "b0d56774873c4d09a627df557b1070fd",
+          "1835a683e3b1492fa758f00545abdf0d",
+          "1c9bb676ee804cd5877ba42499698633"
+        ],
+        "Left": 239.59757797606807,
+        "Top": 462.20666056581314,
+        "Width": 468.89848623504264,
+        "Height": 595.9558954333354,
+        "FontSize": 36.0,
+        "InitialTop": 515.40666056581313,
+        "InitialHeight": 595.15589543333544,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "2e28cba691a74d7e9ff8589f69c1d207",
+        "Title": "新しい位置の指定",
+        "Nodes": [
+          "bd266935c26848299ddc57ec1a64a792",
+          "1476a233ab8b474691ad770bf2bfc0c9"
+        ],
+        "Left": 868.49605592778585,
+        "Top": 467.45032518834404,
+        "Width": 273.88333333333333,
+        "Height": 486.93408025115679,
+        "FontSize": 36.0,
+        "InitialTop": 520.650325188344,
+        "InitialHeight": 434.93408025115684,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "5966528a26734d799e2b7a592a5b5f85",
+        "Title": "位置情報を取得",
+        "Nodes": [
+          "e7478033864542d78737fe57c9a2d104",
+          "f3097b1e0fe54890ad208dc3bb716be0",
+          "e6cc1830bf104b168ca3d1b122a569af",
+          "d7ef61fe90194eb78a1028d67017dead"
+        ],
+        "Left": 239.59757797606807,
+        "Top": 1097.8463935248624,
+        "Width": 547.295094617768,
+        "Height": 396.75360647513753,
+        "FontSize": 36.0,
+        "InitialTop": 1151.0463935248624,
+        "InitialHeight": 395.95360647513758,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "58f54ee1ec4b470985541b76840be5a7",
+        "Title": "要素を移動",
+        "Nodes": [
+          "d0c2253d8f9a4ca8867dabb19e05bb5f"
+        ],
+        "Left": 941.13760611410987,
+        "Top": 1106.2165973095709,
+        "Width": 213.60000000000002,
+        "Height": 171.40000000000009,
+        "FontSize": 36.0,
+        "InitialTop": 1159.416597309571,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "5026e4d0bf26438ba387c74b9d1b7b79",
+        "Title": "位置情報を取得",
+        "Nodes": [
+          "59621a42bd7e42b19e344856bd8e68cb",
+          "558a5ce46377425aa6210f4640d9616a",
+          "a7be06b548254d188cead6c2f35864e1",
+          "96b4b52016cc4204a140a89130cc637c",
+          "bf85e035428b42349b3326ff2c3978a4"
+        ],
+        "Left": 239.59757797606807,
+        "Top": 1596.3106545436649,
+        "Width": 620.86432377695064,
+        "Height": 445.49779658967486,
+        "FontSize": 36.0,
+        "InitialTop": 1649.5106545436649,
+        "InitialHeight": 444.69779658967468,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a085932a3a41497f8fce53c34272c6ac",
+        "Title": "方向を指定",
+        "Nodes": [
+          "87f3b40da420442d8bf029ca6fce077f"
+        ],
+        "Left": 907.59905459571314,
+        "Top": 1596.3106545436649,
+        "Width": 254.40000000000009,
+        "Height": 197.0,
+        "FontSize": 36.0,
+        "InitialTop": 1649.5106545436649,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "2445d87022824f7eb2c00b8d728e548d",
+        "Title": "可視化",
+        "Nodes": [
+          "7655dedac20945f98688cf8b9b299851"
+        ],
+        "Left": 1189.7060472885619,
+        "Top": 1596.3106545436649,
+        "Width": 118.0,
+        "Height": 145.0,
+        "FontSize": 36.0,
+        "InitialTop": 1649.5106545436649,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "47118dcf8e0a4b9996717fbdbf8dbf82",
+        "Title": "位置情報を取得",
+        "Nodes": [
+          "4525b945c3b446d1aa6b0c7fa205916d",
+          "58a43d8c9509485988944779175efabe",
+          "5d25dfa6a9bc429fbf771c09cfa3ff7f"
+        ],
+        "Left": 239.59757797606807,
+        "Top": 2216.122782973684,
+        "Width": 511.04819719376684,
+        "Height": 376.82021552232891,
+        "FontSize": 36.0,
+        "InitialTop": 2269.3227829736838,
+        "InitialHeight": 376.02021552232918,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3760c9f5783d4b61a0cb926c8e148b3b",
+        "Title": "新しい角度を指定",
+        "Nodes": [
+          "a9c1943838934d15b6d9048dc44be5f1"
+        ],
+        "Left": 821.8959532291683,
+        "Top": 2215.0102185539663,
+        "Width": 316.79999999999995,
+        "Height": 171.39999999999964,
+        "FontSize": 36.0,
+        "InitialTop": 2268.2102185539661,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a2269b9b8eb34dd080ee6fdd2f52136d",
+        "Title": "エレメントを回転",
+        "Nodes": [
+          "fe4d68b138704f878f0e85693077041e"
+        ],
+        "Left": 1192.9929038079549,
+        "Top": 2421.5429984960133,
+        "Width": 238.99,
+        "Height": 171.39999999999964,
+        "FontSize": 36.0,
+        "InitialTop": 2474.7429984960131,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3f5195a8405841d489af59c6e02ddb8c",
+        "Title": "Transform",
+        "Nodes": [
+          "60b60e03ade14accbfe81663a120014d"
+        ],
+        "Left": -57.720627164814687,
+        "Top": -67.283323153819339,
+        "Width": 168.10000000000002,
+        "Height": 145.8,
+        "FontSize": 36.0,
+        "InitialTop": -14.083323153819336,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a09114e809aa487fb5dc91004f80271a",
+        "Title": "Preview",
+        "Nodes": [
+          "306d9c918255474eb77740875fc2f7c2"
+        ],
+        "Left": 134.46426390104148,
+        "Top": -67.283323153819339,
+        "Width": 132.8,
+        "Height": 145.8,
+        "FontSize": 36.0,
+        "InitialTop": -14.083323153819336,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": 327.49272025213929,
+    "Y": -50.989102413202858,
+    "Zoom": 0.29688916772679508
+  }
+}

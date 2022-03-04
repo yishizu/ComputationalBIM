@@ -1,0 +1,284 @@
+{
+  "Uuid": "561986d6-0b42-43c8-9aca-62142fc20a5a",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "1-7-5_Box Grid",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..100..#10;",
+      "Id": "fb2dac25b52b420dbe03f18075f66cd0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0ea179074c7d486db298ae0bace1a903",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "c360ec0d28e545609c1513402e00dbe5",
+      "Inputs": [
+        {
+          "Id": "83f51cd0e12d4f75864a0d00713aa020",
+          "Name": "x",
+          "Description": "X coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "72a6f07b74974c9a88880a14f1d1bd26",
+          "Name": "y",
+          "Description": "Y coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e045c964afcf4c2d8c0f9e16e423240b",
+          "Name": "z",
+          "Description": "Z coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "814220833509402db9b0cf0c9194563e",
+          "Name": "Point",
+          "Description": "Point created by coordinates",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "指定された 3 つのデカルト座標を使用して、点を作成します。\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@Autodesk.DesignScript.Geometry.Point,double,double,double",
+      "Id": "91a3ee5f317642a79a89a181a67362ae",
+      "Inputs": [
+        {
+          "Id": "8c616d370d4e4bc5840ec8c00d782ef1",
+          "Name": "origin",
+          "Description": "Origin point\n\nPoint\n既定値 : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "21ce42157acb49c690623fae1ef90013",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ac4c062ba5aa41729b649404e4919fc4",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f72ae887659247c09aedddcf8534fd35",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "acc48857e2ff41bebe5beff3b22c99b2",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "入力された点を中心点として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (origin: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5;",
+      "Id": "ffbddaed2c04497ba25b94a692139a4b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ab4ec19728dc4b6cad4b1233dd28f0b8",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "0ea179074c7d486db298ae0bace1a903",
+      "End": "83f51cd0e12d4f75864a0d00713aa020",
+      "Id": "98f5f7ed466c4d71ac14c4f9c4993a6b"
+    },
+    {
+      "Start": "0ea179074c7d486db298ae0bace1a903",
+      "End": "72a6f07b74974c9a88880a14f1d1bd26",
+      "Id": "cb5ed9288e4c4358acdc42a0e232b171"
+    },
+    {
+      "Start": "814220833509402db9b0cf0c9194563e",
+      "End": "8c616d370d4e4bc5840ec8c00d782ef1",
+      "Id": "753286777927418faa066c7c862d7d0f"
+    },
+    {
+      "Start": "ab4ec19728dc4b6cad4b1233dd28f0b8",
+      "End": "21ce42157acb49c690623fae1ef90013",
+      "Id": "627343bfb5b84ed4b30c0baa0b9bca51"
+    },
+    {
+      "Start": "ab4ec19728dc4b6cad4b1233dd28f0b8",
+      "End": "ac4c062ba5aa41729b649404e4919fc4",
+      "Id": "f893e53442784c4f91b47df8910e4e2e"
+    },
+    {
+      "Start": "ab4ec19728dc4b6cad4b1233dd28f0b8",
+      "End": "f72ae887659247c09aedddcf8534fd35",
+      "Id": "4ffe63059b4b41c097d4d7310fc7edf5"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 79.623977661132813,
+      "EyeY": 265.79354858398438,
+      "EyeZ": -23.669219017028809,
+      "LookX": -33.772811889648438,
+      "LookY": -237.78559875488281,
+      "LookZ": -80.300605773925781,
+      "UpX": -0.32697167992591858,
+      "UpY": 0.53729927539825439,
+      "UpZ": -0.77743101119995117
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "fb2dac25b52b420dbe03f18075f66cd0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 14375.693732685493,
+        "Y": -3568.1711313194974
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "c360ec0d28e545609c1513402e00dbe5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 14565.455868353385,
+        "Y": -3584.8146061312368
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Cuboid.ByLengths",
+        "Id": "91a3ee5f317642a79a89a181a67362ae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 14913.990653069528,
+        "Y": -3586.0195989177919
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ffbddaed2c04497ba25b94a692139a4b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 14810.943214169683,
+        "Y": -3536.4992845143938
+      }
+    ],
+    "Annotations": [],
+    "X": -6596.8350929966955,
+    "Y": 1849.1075089316826,
+    "Zoom": 0.47031541422586742
+  }
+}

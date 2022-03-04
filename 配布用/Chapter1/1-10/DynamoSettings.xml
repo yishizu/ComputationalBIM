@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<PreferenceSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsFirstRun>false</IsFirstRun>
+  <IsAnalyticsReportingApproved>true</IsAnalyticsReportingApproved>
+  <LibraryWidth>312</LibraryWidth>
+  <ConsoleHeight>76</ConsoleHeight>
+  <ShowPreviewBubbles>true</ShowPreviewBubbles>
+  <ShowCodeBlockLineNumber>true</ShowCodeBlockLineNumber>
+  <ShowConnector>true</ShowConnector>
+  <ConnectorType>BEZIER</ConnectorType>
+  <BackgroundPreviews>
+    <BackgroundPreviewActiveState>
+      <Name>IsBackgroundPreviewActive</Name>
+      <IsActive>true</IsActive>
+    </BackgroundPreviewActiveState>
+    <BackgroundPreviewActiveState>
+      <Name>IsRevitBackgroundPreviewActive</Name>
+      <IsActive>false</IsActive>
+    </BackgroundPreviewActiveState>
+  </BackgroundPreviews>
+  <IsBackgroundGridVisible>false</IsBackgroundGridVisible>
+  <RenderPrecision>128</RenderPrecision>
+  <ShowEdges>false</ShowEdges>
+  <ShowDetailedLayout>true</ShowDetailedLayout>
+  <WindowX>1085.2</WindowX>
+  <WindowY>190.4</WindowY>
+  <WindowW>1386.8</WindowW>
+  <WindowH>755.2</WindowH>
+  <UseHardwareAcceleration>true</UseHardwareAcceleration>
+  <NumberFormat>f3</NumberFormat>
+  <MaxNumRecentFiles>10</MaxNumRecentFiles>
+  <RecentFiles>
+    <string>C:\Users\ykish\Desktop\New folder\RepeatSplitsPython.dyn</string>
+    <string>C:\Users\ykish\Desktop\New folder\RepeatSplits.dyn</string>
+    <string>C:\Users\ykish\Desktop\New folder\DynamoPython.dyn</string>
+    <string>C:\Users\ykish\Desktop\TAEC_DynamoPython\Python02.dyn</string>
+    <string>G:\Shared drives\DesignTech\200_Training\0003_BN_DynamoBook\応用レシピ\11_WavingLight\WavingLight.dyn</string>
+    <string>G:\Shared drives\DesignTech\200_Training\0003_BN_DynamoBook\応用レシピ\10_AdaptiveComponent\ImageMapping.dyn</string>
+    <string>G:\Shared drives\DesignTech\200_Training\0003_BN_DynamoBook\応用レシピ\11_WavingLight\CeilingLight.dyn</string>
+    <string>G:\Shared drives\DesignTech\200_Training\0003_BN_DynamoBook\応用レシピ\9_Random\RandomOpening.dyn</string>
+    <string>G:\Shared drives\DesignTech\200_Training\0003_BN_DynamoBook\Dynamo配布用\09_RandomOpening\RandomOpening.dyn</string>
+    <string>C:\Users\ykish\AppData\Roaming\Dynamo\Dynamo Revit\backup\RandomOpening.dyn</string>
+  </RecentFiles>
+  <BackupFiles>
+    <string>C:\Users\ykish\AppData\Roaming\Dynamo\Dynamo Revit\backup\backup.DYN</string>
+  </BackupFiles>
+  <CustomPackageFolders>
+    <string>G:\Shared drives\Marketing\004_Materials\005_Revit\0004_DynamoPackage</string>
+    <string>C:\Users\ykish\AppData\Roaming\Dynamo\Dynamo Revit\2.10</string>
+    <string>C:\ProgramData\Autodesk\RVT 2022\Dynamo\2.10\packages</string>
+  </CustomPackageFolders>
+  <PackageDirectoriesToUninstall />
+  <PythonTemplateFilePath />
+  <BackupInterval>60000</BackupInterval>
+  <BackupFilesCount>1</BackupFilesCount>
+  <PackageDownloadTouAccepted>true</PackageDownloadTouAccepted>
+  <OpenFileInManualExecutionMode>true</OpenFileInManualExecutionMode>
+  <IsIronPythonDialogDisabled>false</IsIronPythonDialogDisabled>
+  <ShowTabsAndSpacesInScriptEditor>false</ShowTabsAndSpacesInScriptEditor>
+  <EnableNodeAutoComplete>false</EnableNodeAutoComplete>
+  <DefaultPythonEngine>CPython3</DefaultPythonEngine>
+  <NamespacesToExcludeFromLibrary>
+    <string>ProtoGeometry.dll:Autodesk.DesignScript.Geometry.TSpline</string>
+  </NamespacesToExcludeFromLibrary>
+  <ViewExtensionSettings>
+    <ViewExtensionSettings>
+      <Name>Documentation Browser</Name>
+      <UniqueId>68B45FC0-0BD1-435C-BF28-B97CB03C71C8</UniqueId>
+      <DisplayMode>DockRight</DisplayMode>
+    </ViewExtensionSettings>
+    <ViewExtensionSettings>
+      <Name>ワークスペース参照</Name>
+      <UniqueId>A6706BF5-11C2-458F-B7C8-B745A77EF7FD</UniqueId>
+      <DisplayMode>DockRight</DisplayMode>
+    </ViewExtensionSettings>
+  </ViewExtensionSettings>
+</PreferenceSettings>

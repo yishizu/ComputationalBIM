@@ -1,0 +1,189 @@
+{
+  "Uuid": "192a404a-b52c-4ece-b52a-2260228bd656",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "1-6-2_壁カテゴリの要素を取得",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "590abaf1fe3847648cca8b2c8a9f1f00",
+      "Inputs": [
+        {
+          "Id": "5b7325ebb38842659f51e9d9f23ab73b",
+          "Name": "Category",
+          "Description": "カテゴリ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "78ec87827bbe4b94922b1c56d0fd0bff",
+          "Name": "Elements",
+          "Description": "要素タイプ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "モデルから指定したカテゴリのすべての要素を取得します。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 226,
+      "SelectedString": "OST_Walls",
+      "NodeType": "ExtensionNode",
+      "Id": "3d803eb04c3946b88a32ab5c1852e75e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2536a05a5d5b49789bdb7a524ee13e62",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "73683c6af34243f2aa31f639e2d2af53",
+      "Inputs": [
+        {
+          "Id": "da2583d2ca044962920f309bd1ed3a48",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "60ca6a6de17848ef91336126bb2f7a34",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "このオブジェクトに関連付けられたすべての Geometry を取得\n\nElement.Geometry ( ): var[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "78ec87827bbe4b94922b1c56d0fd0bff",
+      "End": "da2583d2ca044962920f309bd1ed3a48",
+      "Id": "720e67ebc7974378a6b1708d51246401"
+    },
+    {
+      "Start": "2536a05a5d5b49789bdb7a524ee13e62",
+      "End": "5b7325ebb38842659f51e9d9f23ab73b",
+      "Id": "315f8338b247426cbd9888b77382e9c2"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -6347.09228515625,
+      "EyeY": 13247.9462890625,
+      "EyeZ": 8560.0458984375,
+      "LookX": 142.333984375,
+      "LookY": -10997.9462890625,
+      "LookZ": -9168.703125,
+      "UpX": 0.0095133855938911438,
+      "UpY": 0.79015487432479858,
+      "UpZ": -0.61283344030380249
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "590abaf1fe3847648cca8b2c8a9f1f00",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 175.60000000000002,
+        "Y": 209.60000000000002
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "3d803eb04c3946b88a32ab5c1852e75e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -14.399999999999977,
+        "Y": 212.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.Geometry",
+        "Id": "73683c6af34243f2aa31f639e2d2af53",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 366.00000000000006,
+        "Y": 210.8
+      }
+    ],
+    "Annotations": [],
+    "X": 26.673466788537382,
+    "Y": -124.81266413326878,
+    "Zoom": 0.852765925581498
+  }
+}

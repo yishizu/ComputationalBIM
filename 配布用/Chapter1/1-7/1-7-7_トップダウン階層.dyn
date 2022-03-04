@@ -1,0 +1,493 @@
+{
+  "Uuid": "561986d6-0b42-43c8-9aca-62142fc20a5a",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "1-7-7_トップダウン階層",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@Autodesk.DesignScript.Geometry.Point,double,double,double",
+      "Id": "82b95ef7d355442daeb141c3c90dc2a1",
+      "Inputs": [
+        {
+          "Id": "cff8088262c04ca59c3a9336c85eb399",
+          "Name": "origin",
+          "Description": "Origin point\n\nPoint\n既定値 : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "63696622a09b428783e9acd955d300d0",
+          "Name": "width",
+          "Description": "Width of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "08733b66aafd49fda208922a76942468",
+          "Name": "length",
+          "Description": "Length of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1279c20e39394492a1849c3d1e32a91a",
+          "Name": "height",
+          "Description": "Height of cuboid\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7dfa2e1d71f14a3c9c29f5abd0ba6c9b",
+          "Name": "Cuboid",
+          "Description": "Cuboid created by lengths",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "入力された点を中心点として、指定された幅、長さ、高さを持つ直方体を作成します。\n\nCuboid.ByLengths (origin: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "66aca2c95b7140c1a1d610271dc0de8b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "70d6356d274b46a5aba8c3b1b1c78916",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5;",
+      "Id": "070392c1f0054102a18e72c4d12adab4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f16da8ac53ce457eaabc5fd659768774",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "2c9df03045b147d3b90ded7ba4a4485e",
+      "Inputs": [
+        {
+          "Id": "0726318ea3bf4e919b1664a34b133482",
+          "Name": "x",
+          "Description": "X coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "69a42ac3becf4b1e95a0590cfd2c9f03",
+          "Name": "y",
+          "Description": "Y coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "53728e2c5b8948158d46553dfbd0c0c1",
+          "Name": "z",
+          "Description": "Z coordinate\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9b162d4d8fec450bac3aa96300fcf6b1",
+          "Name": "Point",
+          "Description": "Point created by coordinates",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "指定された 3 つのデカルト座標を使用して、点を作成します。\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "e778629c689f4604ab94b80c69bc394e",
+      "Inputs": [
+        {
+          "Id": "71f9f0736bcb4bcd9282b5016a5cb51e",
+          "Name": "list",
+          "Description": "項目を取得するリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1cce32a6b6734cf4b2da1ba1b900e0ea",
+          "Name": "index",
+          "Description": "取得する項目のインデックス。\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ca76164ff6644318989a59357f6236bf",
+          "Name": "item",
+          "Description": "リスト内の特定のインデックスの項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "リストの、指定されたインデックスにある項目を取得します。\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..100..#10;",
+      "Id": "cd6bd50424214ae59db3310b2df328bb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9f12eada3a8f423080a53d41c2eb955b",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..100..#5;",
+      "Id": "5ff53703b0704f30b9346070f5f0c3fd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c97ad4fc83e14da2bec6608dd6a96f37",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "list[1];",
+      "Id": "59618352f13449d2b7d57bb325c07382",
+      "Inputs": [
+        {
+          "Id": "1c63be000b0d4e38a12231f2941f9ace",
+          "Name": "list",
+          "Description": "list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8087984677584e3cb4bf944200d240e3",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "list[0][1];",
+      "Id": "803242eb7b6c40e6b163bbe517fb4d4c",
+      "Inputs": [
+        {
+          "Id": "12bbd737bd1047f886350fb51677a7ac",
+          "Name": "list",
+          "Description": "list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "49adeb0391764542849b0018a73987d7",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "7dfa2e1d71f14a3c9c29f5abd0ba6c9b",
+      "End": "71f9f0736bcb4bcd9282b5016a5cb51e",
+      "Id": "9a61b591173c4e0aa8f5c150342f547b"
+    },
+    {
+      "Start": "7dfa2e1d71f14a3c9c29f5abd0ba6c9b",
+      "End": "1c63be000b0d4e38a12231f2941f9ace",
+      "Id": "d39b0ed329974fe491c42078d142ff0e"
+    },
+    {
+      "Start": "7dfa2e1d71f14a3c9c29f5abd0ba6c9b",
+      "End": "12bbd737bd1047f886350fb51677a7ac",
+      "Id": "4aa305606a6d426cae5f086ada109ff1"
+    },
+    {
+      "Start": "70d6356d274b46a5aba8c3b1b1c78916",
+      "End": "1cce32a6b6734cf4b2da1ba1b900e0ea",
+      "Id": "ae3d910bd12b4a5d993dab49e00400fa"
+    },
+    {
+      "Start": "f16da8ac53ce457eaabc5fd659768774",
+      "End": "63696622a09b428783e9acd955d300d0",
+      "Id": "253b60649ee34fa68c503f05b3ff95e2"
+    },
+    {
+      "Start": "f16da8ac53ce457eaabc5fd659768774",
+      "End": "08733b66aafd49fda208922a76942468",
+      "Id": "d34070e6ebfa4ce3afa24686c745b28b"
+    },
+    {
+      "Start": "f16da8ac53ce457eaabc5fd659768774",
+      "End": "1279c20e39394492a1849c3d1e32a91a",
+      "Id": "3e4372a2e1e546ebb02ecfec83988461"
+    },
+    {
+      "Start": "9b162d4d8fec450bac3aa96300fcf6b1",
+      "End": "cff8088262c04ca59c3a9336c85eb399",
+      "Id": "37cd0d08e1c741f89dfc7c71a34f4446"
+    },
+    {
+      "Start": "9f12eada3a8f423080a53d41c2eb955b",
+      "End": "0726318ea3bf4e919b1664a34b133482",
+      "Id": "3ca09559854343c983319268e1826627"
+    },
+    {
+      "Start": "c97ad4fc83e14da2bec6608dd6a96f37",
+      "End": "69a42ac3becf4b1e95a0590cfd2c9f03",
+      "Id": "3665ed6387744755819d39f49ae11c12"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "Cuboid.ByLengths",
+        "Id": "82b95ef7d355442daeb141c3c90dc2a1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1065.9535554439649,
+        "Y": 148.45114923909046
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "66aca2c95b7140c1a1d610271dc0de8b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1292.0963085032658,
+        "Y": 227.25994707691075
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "070392c1f0054102a18e72c4d12adab4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 962.90611654406575,
+        "Y": 197.97146364249079
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "2c9df03045b147d3b90ded7ba4a4485e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 372.58819717716551,
+        "Y": 146.95511925632059
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.GetItemAtIndex",
+        "Id": "e778629c689f4604ab94b80c69bc394e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1397.0917260065658,
+        "Y": 151.52760563747074
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "cd6bd50424214ae59db3310b2df328bb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 182.42052974776425,
+        "Y": 161.96653069367062
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "5ff53703b0704f30b9346070f5f0c3fd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 185.4080846015645,
+        "Y": 253.40886702539069
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "59618352f13449d2b7d57bb325c07382",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1425.4937409029558,
+        "Y": 314.371458698561
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "803242eb7b6c40e6b163bbe517fb4d4c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1422.0980366534425,
+        "Y": 407.68981420984062
+      }
+    ],
+    "Annotations": [],
+    "X": -652.84539411726666,
+    "Y": 23.453976061555409,
+    "Zoom": 0.60122796620338825
+  }
+}

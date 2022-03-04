@@ -1,0 +1,1315 @@
+{
+  "Uuid": "57b00eb6-7e92-4cf9-8495-9afc45100b59",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "5-3_Excelに書き込む",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-3\\Export_Simple.xlsx",
+      "InputValue": ".\\Export_Simple.xlsx",
+      "NodeType": "ExtensionNode",
+      "Id": "10fd6e22a0834f90a508f68955fca779",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e9325214048b4e10ae164e237fe9bb0a",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Sheet1\";",
+      "Id": "a70eaf5c851246d9ba2d3c105793a62a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "313110e9fc8a4563821d2fa28e4f3364",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "2;\n3;",
+      "Id": "44141f7c5dd94dc0aca91e8199941b2f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5f107866497d4a4683da9021dbe52a80",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eed1901db5b945e2aea2676f80eb32e0",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "a= [\"Name\", \"X\", \"Y\"];\nb = [\"1\",\"5000\",\"-12000\"];\nc = [\"2\",\"6000\",\"-7000\"];\nlist = [a,b,c];",
+      "Id": "b7229eb796a54cfd9ed343f73ecf4f6b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "268fe2fc20894210a58b31c09df1d41f",
+          "Name": "",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "732a49728e43469990ae18bda6f37ed7",
+          "Name": "",
+          "Description": "b",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4b95d06d0270414ba46fd33c933b7885",
+          "Name": "",
+          "Description": "c",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cf21fc7b38474fa3957e3a470877a473",
+          "Name": "",
+          "Description": "list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "67f30c740c4a49dd85a788d6c9d79460",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a63e5cf048194115ac0a59316888839e",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "True と False のいずれかを選択します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ExportExcel@string,string,int,int,var[][],bool",
+      "Id": "f763dfc1eb7844cf97f390273d72a280",
+      "Inputs": [
+        {
+          "Id": "0c7e1847804b4263a6e73d73dd380b39",
+          "Name": "filePath",
+          "Description": "Microsoft Excel スプレッドシートへのファイル パス\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "06e58d82125841f688cd54d00615b309",
+          "Name": "sheetName",
+          "Description": "データの書き込み先のワークシートの名前\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "baadf9edc5214607ac0ceeb124b0b8b8",
+          "Name": "startRow",
+          "Description": "データ書き込みの開始行。1 行目の場合は 0、2 行目の場合は 1 のように入力します。\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d8148607e7724984a2043a8da1d9144d",
+          "Name": "startColumn",
+          "Description": "データ書き込みの開始列。A 列の場合は 0、B 列の場合は 1 のように入力します。\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1f995b17dabc40b3b121d7ead9b4af20",
+          "Name": "data",
+          "Description": "スプレッドシートに書き込むデータ\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "31fd5544961d4aefa3c29fcff7561285",
+          "Name": "overWrite",
+          "Description": "ファイルを上書きする場合は true、上書きしない場合は false\n\nbool\n既定値 : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dc0ee5d6fbc34b4297c64d129e9d9e9f",
+          "Name": "data",
+          "Description": "スプレッドシートに書き込まれたデータ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Microsoft Excel スプレッドシートにデータを書き込みます。データは行ごとに書き込まれ、 サブリストは後続の行に書き込まれます。行と列は ゼロから数えます。たとえば、データ リストの[0,0]の値はセル A1 に 書き込まれます。NULL 値と空のリストは空のセルとして Excel に書き込まれ ます。このノードには Microsoft Excel をインストールする必要があります。\n\nData.ExportExcel (filePath: string, sheetName: string, startRow: int, startColumn: int, data: var[][], overWrite: bool = false): var[][]"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 613,
+      "SelectedString": "OST_Grids",
+      "NodeType": "ExtensionNode",
+      "Id": "66ea89cda7f441318c5b81eb219c1dc6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e9e0d46fba1f4c11bf2c8cf409e7d669",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "51bb271cf0604dcc916eeecd102fdcd5",
+      "Inputs": [
+        {
+          "Id": "9ba3e781f91a4e419e980b28648105f3",
+          "Name": "Category",
+          "Description": "カテゴリ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7e0307ad6d0e43969fcc08cb62265418",
+          "Name": "Elements",
+          "Description": "要素タイプ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "モデルから指定したカテゴリのすべての要素を取得します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Name",
+      "Id": "9075d08af89d47cd9ec1a6e0dc51c230",
+      "Inputs": [
+        {
+          "Id": "9bf887ddcde04bcbab67015389b2c8e1",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8ef428e68d264bc9aeece536fc8b7646",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Element の Name を取得\n\nElement.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Grid.Curve",
+      "Id": "950563b6a19c4faf8e241e92c3064eb5",
+      "Inputs": [
+        {
+          "Id": "d21948df4eb244a49f6f7bbdf0385fc0",
+          "Name": "grid",
+          "Description": "Revit.Elements.Grid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4b0ef7bcb95e46a0aa0c307513cf92e7",
+          "Name": "Curve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "この要素の基礎となる曲線ジオメトリを取得します\n\nGrid.Curve: Curve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.StartPoint",
+      "Id": "3a794b59383b4b1ba0824c878346a942",
+      "Inputs": [
+        {
+          "Id": "7008e2274218479e933d4921e0e4f7d6",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eda026d5c2474de28a398242f8644927",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "曲線上の始点を取得します\n\nCurve.StartPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.EndPoint",
+      "Id": "f4545b545508482ab1e18b6928aadb24",
+      "Inputs": [
+        {
+          "Id": "9cd1ee6b7b004e9db4536bb8cf6eb623",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "84d0c84369b246d2b31c1c06fbdd2f8d",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "曲線上の終点を取得します\n\nCurve.EndPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "pt.X;\npt.Y;",
+      "Id": "adc0cd2cbcad43de9b79531b136b4d23",
+      "Inputs": [
+        {
+          "Id": "2f20227f30bc407eab1a2cce5bae4ca4",
+          "Name": "pt",
+          "Description": "pt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c080d0515e644293b55b79feffc33dfc",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "59eda9b86f45465b85d76795f1043eac",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "pt.X;\npt.Y;",
+      "Id": "79b3031ada8846169590de0e9bb7aec9",
+      "Inputs": [
+        {
+          "Id": "a13d5cc780754d83985ea45936d7f172",
+          "Name": "pt",
+          "Description": "pt",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "60dd646adbee47ea810070ee7790a159",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c0665686d41b4ad58f6f70f2c35a7394",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "bcfccbfd4dc94d04bea6367ff6c11688",
+      "Inputs": [
+        {
+          "Id": "d215099c5ca04c52a2a58184cb9c0d30",
+          "Name": "item0",
+          "Description": "項目インデックス番号 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f5d95df0b0c5465591b126c24e102a86",
+          "Name": "item1",
+          "Description": "項目インデックス番号 #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "631edfa544f4404ab0ef448cadd7066a",
+          "Name": "item2",
+          "Description": "項目インデックス番号 #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "86acc75ca42f490593fe30256eeee72d",
+          "Name": "item3",
+          "Description": "項目インデックス番号 #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f41cc5142bae47b6a49a14dadc69b451",
+          "Name": "item4",
+          "Description": "項目インデックス番号 #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c95b4895a8d54cabbf403e8f43314acd",
+          "Name": "list",
+          "Description": "リスト(タイプ: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "与えられた入力に基づいて新しいリストを作成します"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Transpose@var[]..[]",
+      "Id": "93394322a75c479ab80a3941ec664827",
+      "Inputs": [
+        {
+          "Id": "421867cbd479443e9ddc01b5c3f558d1",
+          "Name": "lists",
+          "Description": "転置するリストのリスト\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4621d461074240748bdd4d869fe3473c",
+          "Name": "lists",
+          "Description": "転置されたリストのリスト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "リストのリストの行と列を入れ替えます。 他の行よりも短い行がある場合は、作成される配列が 常に長方形になるように、プレースホルダーとして NULL 値が挿入されます。\n\nList.Transpose (lists: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "G:\\My Drive\\BNN\\RevitDynamoData\\配布用\\Chapter5\\5-3\\Excel_Export_Start.xlsx",
+      "InputValue": ".\\Excel_Export_Start.xlsx",
+      "NodeType": "ExtensionNode",
+      "Id": "02d1129f89b94177b8028fe176474d83",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e50c0d582fcf48388cd40e9e03e36fac",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル パスを取得できます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Sheet1\";",
+      "Id": "4b521091ab884c9e9e8f8a8a4e08e75c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e2e198584f9647b89e6df07e6852a46c",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "3;\n1;",
+      "Id": "4abb9cab09054a83a3cea0dd78378d15",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "81fa641b425c48389752d0cda6e10031",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c7f6a2da18c644b1811520cc981a4244",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "0cd554699b3b4c59a04fdb6805301ca1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "08ac8c7753e64fbd9e1528cf8f230aae",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "True と False のいずれかを選択します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ExportExcel@string,string,int,int,var[][],bool",
+      "Id": "0f30715b9e8049c5a22b935be3d88676",
+      "Inputs": [
+        {
+          "Id": "f20040fce77648efadeceac44b2f370d",
+          "Name": "filePath",
+          "Description": "Microsoft Excel スプレッドシートへのファイル パス\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dff23e5946724227a193877e0d427f16",
+          "Name": "sheetName",
+          "Description": "データの書き込み先のワークシートの名前\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d39c24b34e8048308f638a17c853c20f",
+          "Name": "startRow",
+          "Description": "データ書き込みの開始行。1 行目の場合は 0、2 行目の場合は 1 のように入力します。\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f43d19353bf34c46807ea6d474210d94",
+          "Name": "startColumn",
+          "Description": "データ書き込みの開始列。A 列の場合は 0、B 列の場合は 1 のように入力します。\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b68458dd10504b6cbf2f44a02e4dc507",
+          "Name": "data",
+          "Description": "スプレッドシートに書き込むデータ\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "624e08820bfd4f6ba79bbc6749f16a6e",
+          "Name": "overWrite",
+          "Description": "ファイルを上書きする場合は true、上書きしない場合は false\n\nbool\n既定値 : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "23e20b87d7f4409d940f7f162b88e178",
+          "Name": "data",
+          "Description": "スプレッドシートに書き込まれたデータ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Microsoft Excel スプレッドシートにデータを書き込みます。データは行ごとに書き込まれ、 サブリストは後続の行に書き込まれます。行と列は ゼロから数えます。たとえば、データ リストの[0,0]の値はセル A1 に 書き込まれます。NULL 値と空のリストは空のセルとして Excel に書き込まれ ます。このノードには Microsoft Excel をインストールする必要があります。\n\nData.ExportExcel (filePath: string, sheetName: string, startRow: int, startColumn: int, data: var[][], overWrite: bool = false): var[][]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "ddf17c66822e49efb34a606ce1be36a3",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "659dadaea0334d93a31d937bcde6fc75",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "97e5b2949bd445e39de7e723fd29a544",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e9325214048b4e10ae164e237fe9bb0a",
+      "End": "0c7e1847804b4263a6e73d73dd380b39",
+      "Id": "cf046f876fc04f97b486110c02722c89"
+    },
+    {
+      "Start": "313110e9fc8a4563821d2fa28e4f3364",
+      "End": "06e58d82125841f688cd54d00615b309",
+      "Id": "6ceb4bfe2ceb4045929787ff21b4d442"
+    },
+    {
+      "Start": "5f107866497d4a4683da9021dbe52a80",
+      "End": "baadf9edc5214607ac0ceeb124b0b8b8",
+      "Id": "fbffba1812e5406cb8e42c472c8a6d11"
+    },
+    {
+      "Start": "eed1901db5b945e2aea2676f80eb32e0",
+      "End": "d8148607e7724984a2043a8da1d9144d",
+      "Id": "57f49be4a9634c0d9d69dccdfa4feb6a"
+    },
+    {
+      "Start": "cf21fc7b38474fa3957e3a470877a473",
+      "End": "1f995b17dabc40b3b121d7ead9b4af20",
+      "Id": "15798993ef6849ffa060bba997868b8b"
+    },
+    {
+      "Start": "a63e5cf048194115ac0a59316888839e",
+      "End": "31fd5544961d4aefa3c29fcff7561285",
+      "Id": "51572b6a906845b4af4e352efcc326ac"
+    },
+    {
+      "Start": "e9e0d46fba1f4c11bf2c8cf409e7d669",
+      "End": "9ba3e781f91a4e419e980b28648105f3",
+      "Id": "cf09cb52f07a445fa3fc95fda512d05d"
+    },
+    {
+      "Start": "7e0307ad6d0e43969fcc08cb62265418",
+      "End": "d21948df4eb244a49f6f7bbdf0385fc0",
+      "Id": "5149e335d1004b11842858d4d86ee942"
+    },
+    {
+      "Start": "7e0307ad6d0e43969fcc08cb62265418",
+      "End": "9bf887ddcde04bcbab67015389b2c8e1",
+      "Id": "cbd8cb5f23c34b7fadb31ecf40350616"
+    },
+    {
+      "Start": "8ef428e68d264bc9aeece536fc8b7646",
+      "End": "d215099c5ca04c52a2a58184cb9c0d30",
+      "Id": "de480f529ef746808a9821cbea44e40b"
+    },
+    {
+      "Start": "4b0ef7bcb95e46a0aa0c307513cf92e7",
+      "End": "7008e2274218479e933d4921e0e4f7d6",
+      "Id": "706fbc2a40e84bf1aac3a075b5887a14"
+    },
+    {
+      "Start": "4b0ef7bcb95e46a0aa0c307513cf92e7",
+      "End": "9cd1ee6b7b004e9db4536bb8cf6eb623",
+      "Id": "dd20de3da605485eaab50f8a67a90b5c"
+    },
+    {
+      "Start": "eda026d5c2474de28a398242f8644927",
+      "End": "2f20227f30bc407eab1a2cce5bae4ca4",
+      "Id": "76db691d639c4ccb83630d8cdbc4ef74"
+    },
+    {
+      "Start": "84d0c84369b246d2b31c1c06fbdd2f8d",
+      "End": "a13d5cc780754d83985ea45936d7f172",
+      "Id": "07874d488c674780a9e1da36d7be0833"
+    },
+    {
+      "Start": "c080d0515e644293b55b79feffc33dfc",
+      "End": "f5d95df0b0c5465591b126c24e102a86",
+      "Id": "fa784163bbe744afa400f31e39be3ec5"
+    },
+    {
+      "Start": "59eda9b86f45465b85d76795f1043eac",
+      "End": "631edfa544f4404ab0ef448cadd7066a",
+      "Id": "e2b0ebaef5a04d59a5325849d06bd47e"
+    },
+    {
+      "Start": "60dd646adbee47ea810070ee7790a159",
+      "End": "86acc75ca42f490593fe30256eeee72d",
+      "Id": "2ba2ec27067d4309a479b0d8c066a6c2"
+    },
+    {
+      "Start": "c0665686d41b4ad58f6f70f2c35a7394",
+      "End": "f41cc5142bae47b6a49a14dadc69b451",
+      "Id": "efbf4831b0464649b5ffcf56da79e834"
+    },
+    {
+      "Start": "c95b4895a8d54cabbf403e8f43314acd",
+      "End": "421867cbd479443e9ddc01b5c3f558d1",
+      "Id": "a1ccd53cc0ba43ba92b72d170a47daba"
+    },
+    {
+      "Start": "4621d461074240748bdd4d869fe3473c",
+      "End": "b68458dd10504b6cbf2f44a02e4dc507",
+      "Id": "27e788b3f5a14961ab6f17c05cc082e4"
+    },
+    {
+      "Start": "e50c0d582fcf48388cd40e9e03e36fac",
+      "End": "f20040fce77648efadeceac44b2f370d",
+      "Id": "d0e3c3ad9cd646d68e2da9a800464c95"
+    },
+    {
+      "Start": "e2e198584f9647b89e6df07e6852a46c",
+      "End": "dff23e5946724227a193877e0d427f16",
+      "Id": "03d291920e934c5d888c66555e11c58c"
+    },
+    {
+      "Start": "81fa641b425c48389752d0cda6e10031",
+      "End": "d39c24b34e8048308f638a17c853c20f",
+      "Id": "2edc17cee2454d50acb680d6ec919e50"
+    },
+    {
+      "Start": "c7f6a2da18c644b1811520cc981a4244",
+      "End": "f43d19353bf34c46807ea6d474210d94",
+      "Id": "f7ea8be6a0524f8db14ac425b2b1190d"
+    },
+    {
+      "Start": "08ac8c7753e64fbd9e1528cf8f230aae",
+      "End": "624e08820bfd4f6ba79bbc6749f16a6e",
+      "Id": "a29d438157954526add6022b71583697"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "10fd6e22a0834f90a508f68955fca779",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 251.06935134517414,
+        "Y": -58.097106807486512
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "a70eaf5c851246d9ba2d3c105793a62a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 360.44407276263428,
+        "Y": 186.33221828790079
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "44141f7c5dd94dc0aca91e8199941b2f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 395.84407276263426,
+        "Y": 280.53221828790072
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b7229eb796a54cfd9ed343f73ecf4f6b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 214.40527584625715,
+        "Y": 391.40046042109338
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "67f30c740c4a49dd85a788d6c9d79460",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 373.60871797325797,
+        "Y": 547.66600237699947
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Data.ExportExcel",
+        "Id": "f763dfc1eb7844cf97f390273d72a280",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 764.71818978213571,
+        "Y": 58.692247817228804
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "66ea89cda7f441318c5b81eb219c1dc6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 227.20802325643137,
+        "Y": 1164.1610383127925
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "51bb271cf0604dcc916eeecd102fdcd5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 427.04958884535665,
+        "Y": 1161.4140752119138
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.Name",
+        "Id": "9075d08af89d47cd9ec1a6e0dc51c230",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 639.93922916345593,
+        "Y": 1075.5714783094545
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Grid.Curve",
+        "Id": "950563b6a19c4faf8e241e92c3064eb5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 682.51715722707581,
+        "Y": 1181.3295576932844
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.StartPoint",
+        "Id": "3a794b59383b4b1ba0824c878346a942",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 930.077650629244,
+        "Y": 1130.1471180453216
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.EndPoint",
+        "Id": "f4545b545508482ab1e18b6928aadb24",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 944.87036540456484,
+        "Y": 1251.6420575066886
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "adc0cd2cbcad43de9b79531b136b4d23",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1163.4293966125845,
+        "Y": 1123.1501689154775
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "79b3031ada8846169590de0e9bb7aec9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1161.7849105176258,
+        "Y": 1247.317799734607
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List Create",
+        "Id": "bcfccbfd4dc94d04bea6367ff6c11688",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1372.1702387646674,
+        "Y": 1094.327676269636
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Transpose",
+        "Id": "93394322a75c479ab80a3941ec664827",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1573.0649553444173,
+        "Y": 1083.6983261860514
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "02d1129f89b94177b8028fe176474d83",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1879.7216739029375,
+        "Y": 814.041096079078
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4b521091ab884c9e9e8f8a8a4e08e75c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1873.2206107397099,
+        "Y": 909.981801817961
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4abb9cab09054a83a3cea0dd78378d15",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1875.762512552908,
+        "Y": 992.23518890377329
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "0cd554699b3b4c59a04fdb6805301ca1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2005.3082052642972,
+        "Y": 1150.0532114703046
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Data.ExportExcel",
+        "Id": "0f30715b9e8049c5a22b935be3d88676",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2195.8539187282481,
+        "Y": 880.20215916241875
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ddf17c66822e49efb34a606ce1be36a3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -100.25374110816006,
+        "Y": -292.751939349758
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "659dadaea0334d93a31d937bcde6fc75",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 47.582086297280057,
+        "Y": -292.751939349758
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "97e5b2949bd445e39de7e723fd29a544",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 233.80589854015943,
+        "Y": -292.751939349758
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "905f641c3a5040e08904b1fb628f0fc0",
+        "Title": "Excelに書き出す",
+        "Nodes": [
+          "10fd6e22a0834f90a508f68955fca779",
+          "a70eaf5c851246d9ba2d3c105793a62a",
+          "44141f7c5dd94dc0aca91e8199941b2f",
+          "b7229eb796a54cfd9ed343f73ecf4f6b",
+          "67f30c740c4a49dd85a788d6c9d79460",
+          "f763dfc1eb7844cf97f390273d72a280"
+        ],
+        "Left": 204.40527584625715,
+        "Top": -111.29710680748651,
+        "Width": 791.51291393587849,
+        "Height": 726.763109184486,
+        "FontSize": 36.0,
+        "InitialTop": -58.097106807486512,
+        "InitialHeight": 750.763109184486,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "665e178d02b1450c8b87c12720a7eeab",
+        "Title": "通芯を指定",
+        "Nodes": [
+          "66ea89cda7f441318c5b81eb219c1dc6",
+          "51bb271cf0604dcc916eeecd102fdcd5",
+          "9075d08af89d47cd9ec1a6e0dc51c230",
+          "950563b6a19c4faf8e241e92c3064eb5"
+        ],
+        "Left": 217.20802325643137,
+        "Top": 1022.3714783094545,
+        "Width": 652.90913397064446,
+        "Height": 251.55807938382986,
+        "FontSize": 36.0,
+        "InitialTop": 1075.5714783094545,
+        "InitialHeight": 250.75807938382991,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "f4c9222b5af94b9ab51ef0da42575fee",
+        "Title": "位置データを整理",
+        "Nodes": [
+          "3a794b59383b4b1ba0824c878346a942",
+          "f4545b545508482ab1e18b6928aadb24",
+          "adc0cd2cbcad43de9b79531b136b4d23",
+          "79b3031ada8846169590de0e9bb7aec9",
+          "bcfccbfd4dc94d04bea6367ff6c11688",
+          "93394322a75c479ab80a3941ec664827"
+        ],
+        "Left": 920.077650629244,
+        "Top": 1030.4983261860514,
+        "Width": 828.98730471517331,
+        "Height": 319.01947354855565,
+        "FontSize": 36.0,
+        "InitialTop": 1083.6983261860514,
+        "InitialHeight": 312.9437313206372,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "cc52ebd5b4304438a2bf6539b986f301",
+        "Title": "Excelに書き出す",
+        "Nodes": [
+          "02d1129f89b94177b8028fe176474d83",
+          "4b521091ab884c9e9e8f8a8a4e08e75c",
+          "4abb9cab09054a83a3cea0dd78378d15",
+          "0cd554699b3b4c59a04fdb6805301ca1",
+          "0f30715b9e8049c5a22b935be3d88676"
+        ],
+        "Left": 1863.2206107397099,
+        "Top": 760.84109607907794,
+        "Width": 563.83330798853808,
+        "Height": 457.01211539122664,
+        "FontSize": 36.0,
+        "InitialTop": 814.041096079078,
+        "InitialHeight": 481.01211539122664,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "c3d8517614ef4f508eaad1a33cb6267f",
+        "Title": "Input",
+        "Nodes": [
+          "ddf17c66822e49efb34a606ce1be36a3"
+        ],
+        "Left": -110.25374110816006,
+        "Top": -345.951939349758,
+        "Width": 132.8,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -292.751939349758,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "74b45da36e6441549ecaef96b73130da",
+        "Title": "Transform",
+        "Nodes": [
+          "659dadaea0334d93a31d937bcde6fc75"
+        ],
+        "Left": 37.582086297280057,
+        "Top": -345.951939349758,
+        "Width": 168.10000000000002,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -292.751939349758,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "28d7d0e40d864a54873dd8580e02a8d2",
+        "Title": "Preview",
+        "Nodes": [
+          "97e5b2949bd445e39de7e723fd29a544"
+        ],
+        "Left": 223.80589854015943,
+        "Top": -345.951939349758,
+        "Width": 132.8,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -292.751939349758,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": -1131.8210028255346,
+    "Y": -399.88171447496984,
+    "Zoom": 0.69562790666335339
+  }
+}

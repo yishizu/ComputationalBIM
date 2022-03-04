@@ -1,0 +1,336 @@
+{
+  "Uuid": "b10cbcd0-45ea-41ca-a58c-a6034d41a13a",
+  "IsCustomNode": true,
+  "Category": "GEL",
+  "Description": "",
+  "Name": "sample",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Curve": {
+        "Key": "Autodesk.DesignScript.Geometry.Curve",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Curve": {
+        "Key": "Autodesk.DesignScript.Geometry.Curve",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.StartPoint",
+      "Id": "b977e61b3efb44c48e59daf8b57a29f3",
+      "Inputs": [
+        {
+          "Id": "2fb1e1fe4f1c41bebfc6b51e3bcb1339",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bbbb6d7b26bb41bc83ae97000adc0f49",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "曲線上の始点を取得します\n\nCurve.StartPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.EndPoint",
+      "Id": "15a1ebe8b6224d9583977c9f5fbfe73b",
+      "Inputs": [
+        {
+          "Id": "8e83e46e0b794ef39570c4d4eac72720",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ac2a1434442e4628b09db57eebfee78f",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "曲線上の終点を取得します\n\nCurve.EndPoint: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.Length",
+      "Id": "c540af3ddcba4d60ac66e36ea3e1a260",
+      "Inputs": [
+        {
+          "Id": "1833108209e146958ddb8558c3f32b99",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b65ca7823c4246d6b71200eaa1caddd4",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "曲線の円弧全体の長さを返します\n\nCurve.Length: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "curve",
+        "TypeName": "Autodesk.DesignScript.Geometry.Curve",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "389be9b1e68c4d4db274babdec8927f0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a1cd2096094a45d5bb4009120a18aea5",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Point",
+      "Id": "737a75cb19404648bbb9260d2d08a894",
+      "Inputs": [
+        {
+          "Id": "98802a61b7834915b0e22e2135a219f0",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "関数の出力、カスタム ノードで使用"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Point",
+      "Id": "0fbfb565928a4cf9bacba3da3f379f5d",
+      "Inputs": [
+        {
+          "Id": "8eb5c54a3fde4d06aa13236b3d404952",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "関数の出力、カスタム ノードで使用"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "double",
+      "Id": "c67f9ac861ef4ccb8d7aaddba6785a86",
+      "Inputs": [
+        {
+          "Id": "bd889647c16a4c7c95867e2fc0e13d2d",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "関数の出力、カスタム ノードで使用"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "bbbb6d7b26bb41bc83ae97000adc0f49",
+      "End": "98802a61b7834915b0e22e2135a219f0",
+      "Id": "57ff5dad941e42c1903126f95a1da11c"
+    },
+    {
+      "Start": "ac2a1434442e4628b09db57eebfee78f",
+      "End": "8eb5c54a3fde4d06aa13236b3d404952",
+      "Id": "9093c0a0997a4c52a263ad33bdcdf292"
+    },
+    {
+      "Start": "b65ca7823c4246d6b71200eaa1caddd4",
+      "End": "bd889647c16a4c7c95867e2fc0e13d2d",
+      "Id": "491f0d98f98142e5a7f99b208b3a6d3d"
+    },
+    {
+      "Start": "a1cd2096094a45d5bb4009120a18aea5",
+      "End": "2fb1e1fe4f1c41bebfc6b51e3bcb1339",
+      "Id": "ce818832a1de455b81dbdb0a59490a96"
+    },
+    {
+      "Start": "a1cd2096094a45d5bb4009120a18aea5",
+      "End": "8e83e46e0b794ef39570c4d4eac72720",
+      "Id": "c58a08b465954fa4a0917dc5b4cb7333"
+    },
+    {
+      "Start": "a1cd2096094a45d5bb4009120a18aea5",
+      "End": "1833108209e146958ddb8558c3f32b99",
+      "Id": "09406cd854014800b5c2e9d1b6bea2b5"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Author": "None provided",
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.StartPoint",
+        "Id": "b977e61b3efb44c48e59daf8b57a29f3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 215.99999999999994
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.EndPoint",
+        "Id": "15a1ebe8b6224d9583977c9f5fbfe73b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 107.9999999999999
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.Length",
+        "Id": "c540af3ddcba4d60ac66e36ea3e1a260",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "389be9b1e68c4d4db274babdec8927f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -257.36780636002368,
+        "Y": 47.821720776355733
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "737a75cb19404648bbb9260d2d08a894",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 519.0,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "0fbfb565928a4cf9bacba3da3f379f5d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 519.0,
+        "Y": 150.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "c67f9ac861ef4ccb8d7aaddba6785a86",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 519.0,
+        "Y": 300.0
+      }
+    ],
+    "Annotations": [],
+    "X": 42.668503369716404,
+    "Y": 145.70284010377173,
+    "Zoom": 0.60106441645930819
+  }
+}

@@ -1,0 +1,776 @@
+{
+  "Uuid": "2b1fc61c-6de7-4bcd-88fd-6bf2f9dda046",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "CheckFlippedDoorsAndWindows",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "13d56b38-1333-40e7-a286-f25e1aaeb1d8",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "f8fd0a9381be4b778d6f5b6962bc8144",
+      "Inputs": [
+        {
+          "Id": "ff4a22013dc3464b9c39875b80372c44",
+          "Name": "element",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "551737884a3e42b3b06da3059c56557e",
+          "Name": "Flipped element",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fecc7e07fba1441ab7e57addc74c4e90",
+          "Name": "other element",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "Gets the flipped wall, hand flipped (hinge side) and facing flipped (interior wall side) doors."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "d8c2d6820bb74c91b83c4881c0919823",
+      "Inputs": [
+        {
+          "Id": "ad1d234c15af4c78b60cf86733f86959",
+          "Name": "Category",
+          "Description": "カテゴリ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "99da669d3d2d4b4db99041415d9b0275",
+          "Name": "Elements",
+          "Description": "要素タイプ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "モデルから指定したカテゴリのすべての要素を取得します。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 110,
+      "SelectedString": "OST_Doors",
+      "NodeType": "ExtensionNode",
+      "Id": "db60a1b0b0124ae4bd3adeec742b23bc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e2d70d5ff0b74da78c75050321522f84",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 505,
+      "SelectedString": "OST_Windows",
+      "NodeType": "ExtensionNode",
+      "Id": "98cff6b4c40847458810459bb5e30e8e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4907edb4fdcc4f6f8f13451807a40608",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "cae04a0e9d9d46c19caa4ffd27c1c90c",
+      "Inputs": [
+        {
+          "Id": "90c706d69f8f4239be7b3c0d07451355",
+          "Name": "item0",
+          "Description": "項目インデックス番号 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "097af2c6b2fc49798d53c7cc158d41ac",
+          "Name": "item1",
+          "Description": "項目インデックス番号 #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b46acf0612334a8089abccf5fa90ccf7",
+          "Name": "list",
+          "Description": "リスト(タイプ: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "与えられた入力に基づいて新しいリストを作成します"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Views, DSRevitNodesUI",
+      "SelectedIndex": 2,
+      "SelectedString": "HiddenElements",
+      "NodeType": "ExtensionNode",
+      "Id": "fef26470e1934763b624dc1452732c29",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "60153c72de8e4c2dbc6ae9a2432350f5",
+          "Name": "Views",
+          "Description": "選択した Views",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "現在のドキュメントで使用可能なすべてのビュー。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "ca3f15ad2ec5492abce242d65ed3f026",
+      "Inputs": [
+        {
+          "Id": "ccb28166a1dd4451b3a92e07e3ed314c",
+          "Name": "",
+          "Description": "出力を表示するノード",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a35edfbbb6bc4a479cfc8511b2a27bb0",
+          "Name": "",
+          "Description": "ノードの出力",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "397eaf53319a4dc4966d02e51c4ea62f",
+      "Inputs": [
+        {
+          "Id": "0722aab848fc4013b7a667493c9b9b10",
+          "Name": "",
+          "Description": "出力を表示するノード",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9a4c0d0f51c2473daee4508156a5d8ac",
+          "Name": "",
+          "Description": "ノードの出力",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "ノードの出力を可視化"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "ad13effad6f24196bbe1d84804e89f44",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "ada7a10dcbd84cc5bf608c4acdea0794",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "0b5ce44394504d39a104f82653d76455",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "bd693eb72a3840cfa84b6e4193dab783",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "da21125f84dc41dd8fbc86a96ed352b3",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "960f956fb78b43759b90ed5c6547f48e",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "baefdd88-ea8a-4e2d-875b-1cf338a5ac29",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "752b54c9f399435490504e7dd0f8a794",
+      "Inputs": [
+        {
+          "Id": "a834a5df1d3a4896aa208e5b5c320a83",
+          "Name": "element",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c00d3771a52e45249a7c92e2ea0dcc22",
+          "Name": "view",
+          "Description": "var[]..[]\n既定値 : Revit.Application.Document.Current.ActiveView",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "59f23a7a060b45d0b2d8151b2860d14f",
+          "Name": "Hidden element",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f0b64ce2a80a4e4c96e7f5e889d657d1",
+          "Name": "Not hidden element",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "Reports the hidden elements in the given view."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "551737884a3e42b3b06da3059c56557e",
+      "End": "0722aab848fc4013b7a667493c9b9b10",
+      "Id": "fffff1fb145e41e0b9269412364d91de"
+    },
+    {
+      "Start": "99da669d3d2d4b4db99041415d9b0275",
+      "End": "ff4a22013dc3464b9c39875b80372c44",
+      "Id": "d047249d284a44dd9e9ef89f012bbf4e"
+    },
+    {
+      "Start": "99da669d3d2d4b4db99041415d9b0275",
+      "End": "a834a5df1d3a4896aa208e5b5c320a83",
+      "Id": "5f1b1e68b9f945c194f906016cc888b1"
+    },
+    {
+      "Start": "e2d70d5ff0b74da78c75050321522f84",
+      "End": "90c706d69f8f4239be7b3c0d07451355",
+      "Id": "20646342b51d4d7285326833bb9149fa"
+    },
+    {
+      "Start": "4907edb4fdcc4f6f8f13451807a40608",
+      "End": "097af2c6b2fc49798d53c7cc158d41ac",
+      "Id": "c36db84a135147fdb5c51d5e824317b4"
+    },
+    {
+      "Start": "b46acf0612334a8089abccf5fa90ccf7",
+      "End": "ad1d234c15af4c78b60cf86733f86959",
+      "Id": "a0c374519ec648eeae0a0a9b97c7a2e1"
+    },
+    {
+      "Start": "60153c72de8e4c2dbc6ae9a2432350f5",
+      "End": "c00d3771a52e45249a7c92e2ea0dcc22",
+      "Id": "f32346a9fdbd4e6b8e3fb7f7db4e16a3"
+    },
+    {
+      "Start": "59f23a7a060b45d0b2d8151b2860d14f",
+      "End": "ccb28166a1dd4451b3a92e07e3ed314c",
+      "Id": "31355c37652645e7a131f96bc25b9a13"
+    }
+  ],
+  "Dependencies": [
+    "13d56b38-1333-40e7-a286-f25e1aaeb1d8",
+    "baefdd88-ea8a-4e2d-875b-1cf338a5ac29"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Genius Loci",
+      "Version": "2021.11.10",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "f8fd0a9381be4b778d6f5b6962bc8144",
+        "752b54c9f399435490504e7dd0f8a794"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -384.16098022460938,
+      "EyeY": 122.72697448730469,
+      "EyeZ": 347.30307006835938,
+      "LookX": 86.842376708984375,
+      "LookY": -94.0792465209961,
+      "LookZ": -419.73825073242188,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Get Flipped Element",
+        "Id": "f8fd0a9381be4b778d6f5b6962bc8144",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 241.72544681475676,
+        "Y": 158.89875517961053
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "d8c2d6820bb74c91b83c4881c0919823",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -18.857877106791307,
+        "Y": 161.38202585223814
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "db60a1b0b0124ae4bd3adeec742b23bc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -353.36924136082843,
+        "Y": 135.22796972710603
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "98cff6b4c40847458810459bb5e30e8e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -353.4465798388153,
+        "Y": 234.0889830217186
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List Create",
+        "Id": "cae04a0e9d9d46c19caa4ffd27c1c90c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -156.41434830093283,
+        "Y": 159.15583258027715
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Views",
+        "Id": "fef26470e1934763b624dc1452732c29",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2.5266993706048879,
+        "Y": 430.364265190494
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "ca3f15ad2ec5492abce242d65ed3f026",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 581.39138375160655,
+        "Y": 401.60072964288122
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "397eaf53319a4dc4966d02e51c4ea62f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 577.34988735060892,
+        "Y": 57.825978943585767
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ad13effad6f24196bbe1d84804e89f44",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 368.184994378443,
+        "Y": -127.97163684262279
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ada7a10dcbd84cc5bf608c4acdea0794",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 185.82336046304295,
+        "Y": -128.97850178649281
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "0b5ce44394504d39a104f82653d76455",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 21.681762902432865,
+        "Y": -127.90191782787281
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "bd693eb72a3840cfa84b6e4193dab783",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -141.94957269982706,
+        "Y": -128.34397987079279
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "da21125f84dc41dd8fbc86a96ed352b3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -284.71296942284607,
+        "Y": -128.36031492154279
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "960f956fb78b43759b90ed5c6547f48e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -427.53835395101908,
+        "Y": -129.22094445866281
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Get Hidden Element",
+        "Id": "752b54c9f399435490504e7dd0f8a794",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 233.49836892292774,
+        "Y": 403.41576340152216
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "4bb03dc7b3a549b2acdddde6ed27f286",
+        "Title": "Preview",
+        "Nodes": [
+          "ad13effad6f24196bbe1d84804e89f44"
+        ],
+        "Left": 358.184994378443,
+        "Top": -181.17163684262277,
+        "Width": 132.8,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -127.97163684262279,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "3119e7c1ec51489ab6abf4d5fadacdae",
+        "Title": "Parameter",
+        "Nodes": [
+          "ada7a10dcbd84cc5bf608c4acdea0794"
+        ],
+        "Left": 175.82336046304295,
+        "Top": -182.1785017864928,
+        "Width": 171.45666666666668,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -128.97850178649281,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "2c80efe5935a4a04b8b4cbc43f19c5bf",
+        "Title": "Tranform",
+        "Nodes": [
+          "0b5ce44394504d39a104f82653d76455"
+        ],
+        "Left": 11.681762902432865,
+        "Top": -181.1019178278728,
+        "Width": 152.82333333333335,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -127.90191782787281,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFE8F7AD"
+      },
+      {
+        "Id": "55a8a111a0bd49adb48b43db0bf5922f",
+        "Title": "Generate",
+        "Nodes": [
+          "bd693eb72a3840cfa84b6e4193dab783"
+        ],
+        "Left": -151.94957269982706,
+        "Top": -181.54397987079278,
+        "Width": 154.58333333333334,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -128.34397987079279,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "ca338e13884045dbb6b8d42ea3a9e8b8",
+        "Title": "Process",
+        "Nodes": [
+          "da21125f84dc41dd8fbc86a96ed352b3"
+        ],
+        "Left": -294.71296942284607,
+        "Top": -181.56031492154278,
+        "Width": 132.8,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -128.36031492154279,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d06db884748b4c41a18c67015120cf0a",
+        "Title": "Input",
+        "Nodes": [
+          "960f956fb78b43759b90ed5c6547f48e"
+        ],
+        "Left": -437.53835395101908,
+        "Top": -182.4209444586628,
+        "Width": 132.8,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -129.22094445866281,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "52403f42ae4c46b98dd5d0e66af64c8a",
+        "Title": "ドアと窓の要素",
+        "Nodes": [
+          "d8c2d6820bb74c91b83c4881c0919823",
+          "db60a1b0b0124ae4bd3adeec742b23bc",
+          "98cff6b4c40847458810459bb5e30e8e",
+          "cae04a0e9d9d46c19caa4ffd27c1c90c"
+        ],
+        "Left": -363.4465798388153,
+        "Top": 82.027969727106026,
+        "Width": 528.588702732024,
+        "Height": 244.66101329461259,
+        "FontSize": 36.0,
+        "InitialTop": 135.22796972710603,
+        "InitialHeight": 243.86101329461258,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "775a3ce1433a4c3bb28148fc65cf2b09",
+        "Title": "Views",
+        "Nodes": [
+          "fef26470e1934763b624dc1452732c29"
+        ],
+        "Left": -7.4733006293951121,
+        "Top": 377.164265190494,
+        "Width": 187.2,
+        "Height": 145.79999999999995,
+        "FontSize": 36.0,
+        "InitialTop": 430.364265190494,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "3d62c5f6896b41c38f44456666dab8f5",
+        "Title": "フリップした要素",
+        "Nodes": [
+          "f8fd0a9381be4b778d6f5b6962bc8144",
+          "397eaf53319a4dc4966d02e51c4ea62f"
+        ],
+        "Left": 231.72544681475676,
+        "Top": 4.6259789435857641,
+        "Width": 565.62444053585216,
+        "Height": 331.4,
+        "FontSize": 36.0,
+        "InitialTop": 57.825978943585767,
+        "InitialHeight": 246.07277623602477,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d6e6ff7dc3574e9291a11afe9f2ca7ee",
+        "Title": "非表示の要素",
+        "Nodes": [
+          "ca3f15ad2ec5492abce242d65ed3f026",
+          "752b54c9f399435490504e7dd0f8a794"
+        ],
+        "Left": 223.49836892292774,
+        "Top": 348.40072964288123,
+        "Width": 577.89301482867882,
+        "Height": 331.39999999999992,
+        "FontSize": 36.0,
+        "InitialTop": 401.60072964288122,
+        "InitialHeight": 158.18994661559924,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 77.76755780507176,
+    "Y": 43.189851102069866,
+    "Zoom": 0.60238632687934213
+  }
+}

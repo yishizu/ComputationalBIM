@@ -1,0 +1,2169 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DataVisualization",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 0,
+        "G": 191,
+        "B": 255,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "a6edb1ce544b40e88b3324b8c94018ab",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fc679ee0f8504a9fb7cada8c447be4da",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パレットから色を選択します"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 176,
+        "G": 224,
+        "B": 230,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "cf115fbcc1c84e649084f2efded5f503",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cdcc0cb2c78f41c682c815d129c821b0",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パレットから色を選択します"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 255,
+        "G": 99,
+        "B": 71,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "d6343f5bd74a497a8ea46405e0fbfecd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8ca9c1d03126423fb2a94ba53822c5d7",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パレットから色を選択します"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 255,
+        "G": 192,
+        "B": 203,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "5adc38389832472490497783579a4d73",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fae2b27865ef4c8e89c0d18691953a17",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パレットから色を選択します"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 102,
+        "G": 205,
+        "B": 170,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "a6d773fc512e46b6a91ab71f4deef958",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "73bbf79932504c1c8504bd9e7e7fee02",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パレットから色を選択します"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 30,
+        "G": 144,
+        "B": 255,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "fe6407f4fb404260a9e4c3541787b4a8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4363f2e124cd48b09d2f4e4f65082c2c",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パレットから色を選択します"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "590dd31760aa449690cc0b823b30a463",
+      "Inputs": [
+        {
+          "Id": "a1a53b27f6404559b4dd961083df3e14",
+          "Name": "item0",
+          "Description": "項目インデックス番号 0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "435e70227b35497d8747d770ca45556c",
+          "Name": "item1",
+          "Description": "項目インデックス番号 #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eb3c98f42a304592860c0c5835635d7b",
+          "Name": "item2",
+          "Description": "項目インデックス番号 #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b6e6aceeea3f428aa5b918b3716bbdf3",
+          "Name": "item3",
+          "Description": "項目インデックス番号 #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2f24e2963ba64867adc713fe6da3afe9",
+          "Name": "item4",
+          "Description": "項目インデックス番号 #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b2878bc4a94541e29c43a36931d15ce5",
+          "Name": "item5",
+          "Description": "項目インデックス番号 #5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "702253ff4db243f78fa34f8e1168c7bb",
+          "Name": "list",
+          "Description": "リスト(タイプ: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "与えられた入力に基づいて新しいリストを作成します"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Legends.Legend.Create@var,var",
+      "Id": "267515e776914f84b83954cd51cb8186",
+      "Inputs": [
+        {
+          "Id": "bb807b1b6adc422480ddc3788f5c76bb",
+          "Name": "Data",
+          "Description": "Legend Data\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "94aa4ce7a3904bfeadc075c55b8705a6",
+          "Name": "Style",
+          "Description": "Legend Style\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3b963cc34ff4458390de1c5b31e06246",
+          "Name": "legend",
+          "Description": "Legend object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Legend\n\nLegend.Create (Data: var, Style: var): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Legends.Legend.Data@string[]",
+      "Id": "14b4f425332f43ce8dfa84ed642f413f",
+      "Inputs": [
+        {
+          "Id": "fe8aa2a60f7e4ec3b3e226e26dab802e",
+          "Name": "Names",
+          "Description": "List of strings.\n\nstring[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7ce048e5cc034da6b98f39ba4ff0015a",
+          "Name": "Data",
+          "Description": "Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Data\n\nLegend.Data (Names: string[]): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Legends.Legend.Style@DSCore.Color[],var,int,int,string,int",
+      "Id": "9fc1fdae9e0a4d92905daca46aa7fb90",
+      "Inputs": [
+        {
+          "Id": "4ecb41e946084ddab71ec33cf241c64f",
+          "Name": "Colors",
+          "Description": "List of colors for each rectangle.\n\nColor[]\n既定値 : Charts.MiscNodes.GetNull()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "01a28c3d05e84068a563b4fd89a453e5",
+          "Name": "Address",
+          "Description": "Grid Coordinates.\n\nvar\n既定値 : Charts.MiscNodes.GetNull()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ce640fb8c79040bda24159fe233ef301",
+          "Name": "Width",
+          "Description": "Width in pixels.\n\nint\n既定値 : 200",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bc5b2a6a7f9843bf90cf30ea2c687daf",
+          "Name": "Height",
+          "Description": "Height in pixels.\n\nint\n既定値 : 400",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f3da9c024fa24afabf4135d01cb4a392",
+          "Name": "Title",
+          "Description": "Title below legend.\n\nstring\n既定値 : \"Title\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "018762456e874dc3bf8e29037a6db967",
+          "Name": "RectangleSize",
+          "Description": "Rectangle size in pixels.\n\nint\n既定値 : 20",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "32671add35894e2a9acc9e2ef8679b6a",
+          "Name": "Style",
+          "Description": "Style",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Legend Style\n\nLegend.Style (Colors: Color[] = Charts.MiscNodes.GetNull(), Address: var = Charts.MiscNodes.GetNull(), Width: int = 200, Height: int = 400, Title: string = \"Title\", RectangleSize: int = 20): var"
+    },
+    {
+      "ConcreteType": "Mandrill.ChromeWindow.MandrillReportNode, Mandrill_UI",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "b9d5948aa99248af836db34706a86edf",
+      "Inputs": [
+        {
+          "Id": "9d52b3cbb367426f8b99c2fb3c1c0a6b",
+          "Name": "Chart0",
+          "Description": "MandrillChart0.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f5a12d5a249145afa85f6b49e74f3348",
+          "Name": "Chart1",
+          "Description": "MandrillChart1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fc189935bb2d455f9b9d4d3cbcd7b961",
+          "Name": "Report",
+          "Description": "OutToolTip0.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates Mandrill Report object that can be viewed in a Window or Printed to PDF."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100;",
+      "Id": "eb12c01eb67b4ec78b7983013bd4b08d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b0577c5b4dbb4479b985696837eea5c0",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Room Area\";",
+      "Id": "c8d148b034d345deb5b8255cb6acff52",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "03dac09bb6a343779c8d7f71c989715e",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategoryInView, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "7f658e1ce462471a94b057fb5caa35bf",
+      "Inputs": [
+        {
+          "Id": "52f92f4b94b846f78c473891864dc421",
+          "Name": "Category",
+          "Description": "カテゴリ",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2b5775bce61a437db12839c22f7c9445",
+          "Name": "View",
+          "Description": "ビュー",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1b35f5d4fbbd42f789bd3bccdad9595b",
+          "Name": "Elements",
+          "Description": "要素タイプ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "指定したビューで、指定したカテゴリのすべての要素をモデルから取得します。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 626,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "Id": "e7dd24698dca44e7982a834e48802ed1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fd59e3c1c87b447aa25b678f6c13ca1d",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Views, DSRevitNodesUI",
+      "SelectedIndex": 8,
+      "SelectedString": "レベル 1",
+      "NodeType": "ExtensionNode",
+      "Id": "3bb17da37cff44d3b25f75635fcfd42e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4223a802d05648f9b4b918de709f8ea5",
+          "Name": "Views",
+          "Description": "選択した Views",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "現在のドキュメントで使用可能なすべてのビュー。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.Area",
+      "Id": "1769007a7e00455b9b3100a12c41e96f",
+      "Inputs": [
+        {
+          "Id": "4a60de2b4e30490a9e684c712f719148",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cab9fa2d22954c45bb4e1b696938832d",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "部屋面積を取得します\n\nRoom.Area: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": ">@var[]..[],var[]..[]",
+      "Id": "be13e5d6499e4158b39dbac8b56821e3",
+      "Inputs": [
+        {
+          "Id": "256dc73ea36b4e67978004eb62c516c7",
+          "Name": "x",
+          "Description": "整数値または倍精度値\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a132807132f44a58ac0ca067ea60b58f",
+          "Name": "y",
+          "Description": "整数値または倍精度値\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "595ed9f82f544b9495b1159509586bcc",
+          "Name": "bool",
+          "Description": "x が y より大きい場合は true、違う場合は false",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x が y より大きいかどうか比較します\n\n> (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "bfa99fe43f714e80a00fe5fcefe09d50",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c1f1eee8d023410aa7e02dd6639a56ea",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "07a3b5bbf6294d9b9af750edf7db9f77",
+      "Inputs": [
+        {
+          "Id": "63b75f1e047b4c04a6732993d1d06fb9",
+          "Name": "list",
+          "Description": "フィルタするリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a4bb3df495f84fe7a5d3bd0f6bb4ab46",
+          "Name": "mask",
+          "Description": "マスクを表すブール値のリスト。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c9c2f85d03554f038c4d5ef616cb0906",
+          "Name": "in",
+          "Description": "マスク インデックスが true の項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "38f7d48590154bd8961bf56f3726a167",
+          "Name": "out",
+          "Description": "マスク インデックスが false の項目。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "別個のブール値を要素に持つリスト内で対応するインデックスを検索して、 シーケンスをフィルタします。\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.Area",
+      "Id": "7ba51651292248a6aa78409eaf6f4b5b",
+      "Inputs": [
+        {
+          "Id": "b6d734d4b3a9407fa788c118ebfc3429",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7ef0c8ff084543f1a492e991e839e717",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "部屋面積を取得します\n\nRoom.Area: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.Name",
+      "Id": "8285bdc89c544621b951fb35bd0e1ce5",
+      "Inputs": [
+        {
+          "Id": "aae7a053b1b64586b81500179c3cf2cb",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "47928d1c3d0347d6becbf1661a0963f3",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "部屋名称を取得します\n\nRoom.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Charts.DonutChart.Style@DSCore.Color,DSCore.Color[],var,var,int,bool,string",
+      "Id": "935b35d9b20c41fdb998c4531356b6ce",
+      "Inputs": [
+        {
+          "Id": "71bf8fbb1e6445a0a61718936c0d564c",
+          "Name": "HoverColor",
+          "Description": "Hover over color.\n\nColor\n既定値 : DSCore.Color.ByARGB(1, 255, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7919e808cc2844ff88c7536e41e3d53e",
+          "Name": "Colors",
+          "Description": "List of optional colors for chart values.\n\nColor[]\n既定値 : Charts.MiscNodes.GetNull()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d991695a248f4db493ca85f330cb8df6",
+          "Name": "Address",
+          "Description": "Grid Coordinates.\n\nvar\n既定値 : Charts.MiscNodes.GetNull()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a25db2c6a8224b648e2a55e50602ee85",
+          "Name": "Margins",
+          "Description": "Margins in pixels.\n\nvar\n既定値 : Charts.MiscNodes.Margins()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "927cf3a315d34fbeb01b4feb1229712c",
+          "Name": "Width",
+          "Description": "Width of chart in pixels.\n\nint\n既定値 : 400",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "840f7452332242c88ca2d7b113cfd2f5",
+          "Name": "Labels",
+          "Description": "Boolean value that controls if Labels are displayed.\n\nbool\n既定値 : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7b8751a1568b4c18bd7048ead8e00130",
+          "Name": "TotalLabel",
+          "Description": "Text appearing at center of the Donut chart.\n\nstring\n既定値 : \"TOTAL\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "01322e81c12b42049a784d1f084c55b5",
+          "Name": "Style",
+          "Description": "Donut Chart Object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Donut Chart Style object.\n\nDonutChart.Style (HoverColor: Color = DSCore.Color.ByARGB(1, 255, 0, 0), Colors: Color[] = Charts.MiscNodes.GetNull(), Address: var = Charts.MiscNodes.GetNull(), Margins: var = Charts.MiscNodes.Margins(), Width: int = 400, Labels: bool = true, TotalLabel: string = \"TOTAL\"): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Charts.DonutChart.Data@string[],double[]",
+      "Id": "36e05090480446069e1f05b41b216f39",
+      "Inputs": [
+        {
+          "Id": "625d40a47afc468dbe92af4568b17cfd",
+          "Name": "Names",
+          "Description": "Names of each data points.\n\nstring[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f856b4ed118143cf8364dff5466bed42",
+          "Name": "Values",
+          "Description": "Values of each data point.\n\ndouble[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b3749663584545acb794aa5d3a807b0d",
+          "Name": "Data",
+          "Description": "Donut Chart Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Donut Chart Data object.\n\nDonutChart.Data (Names: string[], Values: double[]): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Charts.DonutChart.Chart@var,var",
+      "Id": "a27f282ffcfe4932ad01848aee558315",
+      "Inputs": [
+        {
+          "Id": "79489ea6eae64de1805e6f95455da6a6",
+          "Name": "Data",
+          "Description": "Donut Chart Data object.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "92880a2581a84ab7beba6a8176ea55c3",
+          "Name": "Style",
+          "Description": "Donut Chart Style object.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f50b7c7cda5b4fd2a3187460429945ae",
+          "Name": "Chart",
+          "Description": "Donut Chart",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Donut Chart object.\n\nDonutChart.Chart (Data: var, Style: var): var"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.ColorRange, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "1acdcbcfb19b4a03b6b7059ffb755664",
+      "Inputs": [
+        {
+          "Id": "5ae5e5514a984f1b828eaac73d723f09",
+          "Name": "colors",
+          "Description": "範囲に含める色のリスト",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b39d4dde1aec41c6913b9e22c50f9160",
+          "Name": "indices",
+          "Description": "0.0 から 1.0 の間の値のリスト。入力色を範囲に沿って配置します",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b2ef1820a7bf417bb081e8502dc12aa7",
+          "Name": "value",
+          "Description": "0.0 から 1.0 の間の値のリスト。これらの値で、色の範囲に沿って選択される色を定義して、色のリストを作成します。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d3a2911b03a442a3b5b94952d6fb396c",
+          "Name": "color",
+          "Description": "選択した色",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "色域を指定して色を取得します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1..#List.Count(list);",
+      "Id": "7407fd1ca2794445a953867752d163a8",
+      "Inputs": [
+        {
+          "Id": "5735d77566424ee6b4760bc96ffd8918",
+          "Name": "list",
+          "Description": "list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ded75ec7ad69421d8f68aff4d892f469",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Math.Round(x);",
+      "Id": "8a6ef6085c2749a092175a815dcf3012",
+      "Inputs": [
+        {
+          "Id": "6ba743c045a344f7b93af9579244e675",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5839cde3c7024b7eb33376e77a1ca58e",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "3cfa2c5014a54143823b0e1358bf7e4c",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "6aade323bfe84bc7af0b59f33aae77bb",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "2dcb2897626f4357890a411c406d82d9",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "848d5a02eacc462183a078060f995917",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "3408aaf37f65478eb07aef7d665dc46b",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "795274e0b11945e2979df7b7c95f7878",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Mandrill.ChromeWindow.MandrillWindowNodeModel, Mandrill_UI",
+      "IsWindowClosed": true,
+      "MyHtml": "<!DOCTYPE html>\r\n<head>\r\n<meta content=\"utf-8\">\r\n<link rel=\"stylesheet\" href=\"file:///C:/Users/ykish/AppData/Roaming/Dynamo/Dynamo Revit/2.12/packages/Archi-lab_Mandrill/extra/gridster/demo.css\">\r\n<link rel=\"stylesheet\" href=\"file:///C:/Users/ykish/AppData/Roaming/Dynamo/Dynamo Revit/2.12/packages/Archi-lab_Mandrill/extra/gridster/jquery.gridster.min.css\">\r\n<script type=\"text/javascript\" src=\"file:///C:/Users/ykish/AppData/Roaming/Dynamo/Dynamo Revit/2.12/packages/Archi-lab_Mandrill/extra/d3/d3.v3.min.js\"></script>\r\n<script type=\"text/javascript\" src=\"file:///C:/Users/ykish/AppData/Roaming/Dynamo/Dynamo Revit/2.12/packages/Archi-lab_Mandrill/extra/gridster/jquery.min.js\"></script>\r\n<script type=\"text/javascript\" src=\"file:///C:/Users/ykish/AppData/Roaming/Dynamo/Dynamo Revit/2.12/packages/Archi-lab_Mandrill/extra/gridster/jquery.gridster.min.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\r\n<style>\r\nbody {\r\n    font: 10px Arial;\r\n}\r\n\r\n.axis,\r\n.frame {\r\n  shape-rendering: crispEdges;\r\n}\r\n\r\n.axis path {\r\n    fill: none;\r\n    stroke: grey;\r\n    shape-rendering: crispEdges;\r\n}\r\n\r\n.axis text {\r\n    font-family: Arial;\r\n    font-size: 10px;\r\n}\r\n\r\n.axis line {\r\n    fill: none;\r\n    stroke: grey;\r\n    stroke-width: 1;\r\n    shape-rendering: crispEdges;\r\n}\r\n\r\nsvg {\r\n    display: block;\r\n    margin: auto;\r\n    font: 10px sans-serif;\r\n    padding: 10px;\r\n}\r\n\r\ncircle.hidden {\r\n  fill: #ccc !important;\r\n}\r\n\r\n.extent {\r\n  fill: #000;\r\n  fill-opacity: .125;\r\n  stroke: #fff;\r\n}\r\n</style>\r\n</head>\r\n<body>\r\n<script type=\"text/javascript\">\r\n        $(window).on('load', function () {\r\n            var gridster = $(\".gridster ul\").gridster({\r\n                widget_base_dimensions: [100, 100],\r\n                autogenerate_stylesheet: true,\r\n                widget_margins: [5, 5],\r\n                autogrow_cols: true,\r\n                helper: 'clone',\r\n                shift_widgets_up: false,\r\n                shift_larger_widgets_down: false,\r\n                collision: {\r\n                    wait_for_mouseup: true\r\n                },\r\n                resize: {\r\n                    enabled: false,\r\n                    stop: function (e, ui, $widget) {\r\n                        var newDimensions = this.serialize($widget)[0];\r\n                    }\r\n                }\r\n            }).data('gridster');\r\n            $('.gridster  ul').css({ 'padding': '0' });\r\n        });\r\n</script>\r\n<div class=\"gridster\">\r\n<ul style = \"height: 1000px; width: 1000px; position: absolute;\">\r\n<li data-row=\"1\" data-col=\"1\" data-sizex=\"1\" data-sizey=\"4\" class=\"gs-w\"><div class=\"gridster-box\" id=\"div0\" align=\"center\"></div></li>\r\n<li data-row=\"1\" data-col=\"1\" data-sizex=\"4\" data-sizey=\"4\" class=\"gs-w\"><div class=\"gridster-box\" id=\"div1\" align=\"center\"></div></li>\r\n</ul>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    function CreateLegend() {\r\n        var data = [\"OfficeA\",\"OfficeB\",\"OfficeC\",\"Meeting\",\"オープンスペース\",\"トイレ\",\"キッチン\",\"廊下\",\"フロント\",\"ラウンジ\"];\r\n\r\n        var width = 100,\r\n            height = 400,\r\n            recSize = 20;\r\n\r\n            var color = d3.scale.ordinal().range([\"#1E90FF\",\"#0DAAFF\",\"#0BC1F6\",\"#44C8C6\",\"#76D1B7\",\"#A0DCD9\",\"#CAD5DD\",\"#F6C4CE\",\"#FF9790\",\"#FF6347\"]);\r\n\r\n        var svg = d3.select(\"#div0\").append(\"svg\")\r\n          .attr(\"width\", width)\r\n          .attr(\"height\", height)\r\n\r\n        var g = svg.selectAll(\"g\")\r\n            .data(data)\r\n            .enter().append(\"g\")\r\n            .attr(\"transform\", function(d, i){\r\n                return \"translate(\" + (0) + \",\" + ((recSize + 2) * i) + \")\";});\r\n\r\n        g.append(\"rect\")\r\n            .attr(\"width\", recSize)\r\n            .attr(\"height\", recSize)\r\n            .style(\"stroke\", \"#fff\")\r\n            .style(\"shape-rendering\", \"crispEdges\")\r\n            .style(\"fill\", function(d,i){ return color(i); });\r\n\r\n        g.append(\"text\")\r\n            .attr(\"dy\", \"1.3em\")\r\n            .style(\"text-anchor\", \"start\")\r\n            .attr(\"dx\", recSize + 5)\r\n            .attr(\"font-size\", recSize/2 + \"px\")\r\n            .text(function(d){return d });\r\n\r\n        var title = svg.append(\"text\")\r\n            .attr(\"dy\", \".35em\")\r\n            .style(\"text-anchor\", \"middle\")\r\n            .attr(\"font-family\", \"Segoe UI\")\r\n            .attr(\"font-size\", (recSize/2) + 5 + \"px\")\r\n            .attr(\"font-weight\", \"Bold\")\r\n            .attr(\"x\", width /2)\r\n            .attr(\"y\", data.length * (recSize + 1) + 25)\r\n            .text(\"Room Area\");\r\n    }\r\n    CreateLegend();\r\n</script>\r\n\r\n<script type=\"text/javascript\">\r\n    function renderDonutChart() {\r\n    \r\n        var data = [{\"name\":\"OfficeA\",\"value\":18,\"color\":0},{\"name\":\"OfficeB\",\"value\":12,\"color\":0},{\"name\":\"OfficeC\",\"value\":12,\"color\":0},{\"name\":\"Meeting\",\"value\":27,\"color\":0},{\"name\":\"オープンスペース\",\"value\":60,\"color\":0},{\"name\":\"トイレ\",\"value\":44,\"color\":0},{\"name\":\"キッチン\",\"value\":27,\"color\":0},{\"name\":\"廊下\",\"value\":23,\"color\":0},{\"name\":\"フロント\",\"value\":7,\"color\":0},{\"name\":\"ラウンジ\",\"value\":35,\"color\":0}];\r\n    \r\n        var margin = {top: 20, right: 20, bottom: 40, left: 40};\r\n    \r\n        var w = 400 - margin.left - margin.right,\r\n            h = 400 - margin.top - margin.bottom,\r\n            r = w / 2,\r\n            labelr = r + 10, // radius for label anchor\r\n            donut = d3.layout.pie().sort(null),\r\n            inner = r * 0.6,\r\n            arc = d3.svg.arc().innerRadius(inner).outerRadius(r),\r\n            arcOver = d3.svg.arc().innerRadius(inner + 5).outerRadius(r + 5);\r\n    \r\n        var color = d3.scale.ordinal().range([\"#1E90FF\",\"#0DAAFF\",\"#0BC1F6\",\"#44C8C6\",\"#76D1B7\",\"#A0DCD9\",\"#CAD5DD\",\"#F6C4CE\",\"#FF9790\",\"#FF6347\"]);\r\n    \r\n        var total = d3.sum(data, function(d) { return d3.sum(d3.values(d));});\r\n    \r\n        var vis = d3.select(\"#div1\")\r\n            .append(\"svg\")\r\n            .data([data])\r\n            .attr(\"width\", w + margin.left + margin.right)\r\n            .attr(\"height\", h + margin.top + margin.bottom);\r\n    \r\n        var textTop = vis.append(\"text\")\r\n            .attr(\"dy\", \".35em\")\r\n            .style(\"text-anchor\", \"middle\")\r\n            .attr(\"font-family\", \"Segoe UI\")\r\n            .attr(\"font-size\", r/7 + \"px\")\r\n            .attr(\"fill\", \"#bbb\")\r\n            .attr(\"x\", (w + margin.left + margin.right) / 2)\r\n            .attr(\"y\", ((h + margin.top + margin.bottom) / 2) - (r/7)/2)\r\n            .text(\"TOTAL\");\r\n    \r\n        var textBottom = vis.append(\"text\")\r\n            .attr(\"dy\", \".35em\")\r\n            .attr(\"font-family\", \"Segoe UI\")\r\n            .style(\"text-anchor\", \"middle\")\r\n            .attr(\"font-weight\", \"bold\")\r\n            .attr(\"font-size\", r/6 + \"px\")\r\n            .text(total)\r\n            .attr(\"x\", (w + margin.left + margin.right) / 2)\r\n            .attr(\"y\", ((h + margin.top + margin.bottom) / 2) + (r/6)/2);\r\n    \r\n        var arcs = vis.selectAll(\"arc\")\r\n            .data(donut.value(function (d) { return d.value; }))\r\n            .enter().append(\"g\")\r\n            .attr(\"class\", \"arc\")\r\n            .attr(\"transform\", \"translate(\" + (w + margin.left + margin.right) / 2 + \",\" + (h + margin.top + margin.bottom) / 2 + \")\");\r\n    \r\n        arcs.append(\"path\")\r\n            .attr(\"fill\", function (d) { return color(d.data.name); })\r\n            .attr(\"d\", arc)\r\n            .style(\"stroke\", \"white\")\r\n            .style(\"stroke-width\", 2);\r\n    \r\n\r\n        function computeTextRotation(d) {\r\n            var rotation = (d.startAngle + d.endAngle)/2 * 180 / Math.PI - 90;\r\n            return {\r\n                global: rotation,\r\n                correction: rotation > 90 ? 180 : 0\r\n            };\r\n        }\r\n    \r\n        arcs.append(\"text\")\r\n            .attr(\"transform\", function(d){\r\n                var rotation = computeTextRotation(d);\r\n                return \"rotate(\" + rotation.global + \")\" + \"translate(\" + (r + 15) + \",0)\" + \"rotate(\" + -rotation.correction + \")\";\r\n            })\r\n            .attr(\"dy\", \".35em\")\r\n            .attr(\"text-anchor\", function(d){\r\n                var rotation = computeTextRotation(d);\r\n                return rotation.correction === 0 ? \"start\" : \"end\";\r\n            })\r\n            .text(function(d) { return d.data.name; });\r\n        \r\n        arcs.selectAll(\"path\")\r\n            .on(\"mouseover\", function (d) {\r\n                d3.select(this).transition()\r\n                    .duration(200)\r\n                    .attr(\"d\", arcOver);\r\n    \r\n                textTop.text(d.data.name);\r\n                textBottom.text(d.data.value);\r\n    \r\n                d3.select(this).style(\"fill\", \"#FF0000\");\r\n            })\r\n            .on(\"mouseout\", function () {\r\n                d3.select(this).transition()\r\n                    .duration(100)\r\n                    .attr(\"d\", arc);\r\n    \r\n                textTop.text(\"TOTAL\");\r\n                textBottom.text(total);\r\n    \r\n                d3.select(this).style(\"fill\", function (d) { return color(d.data.name); });\r\n            });\r\n    }\r\n    renderDonutChart();\r\n</script>\r\n\r\n</body>\r\n</html>\r\n",
+      "Message": " Launch\r\nWindow",
+      "NodeType": "ExtensionNode",
+      "Id": "20d89682490e495e960b15450bd5597a",
+      "Inputs": [
+        {
+          "Id": "93db22b51d2b4c8ba5f607a54626de54",
+          "Name": "Report",
+          "Description": "Html report to render.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "Use this node to launch a new window that charts will be displayed in."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1..#List.Count(list);",
+      "Id": "003607d7e491403295b7df4f1b299291",
+      "Inputs": [
+        {
+          "Id": "4a176b66639e417a91e61b5bab050ad0",
+          "Name": "list",
+          "Description": "list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1d1b7848795b4a369cab2e9ac3d6f3be",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "rooms;",
+      "Id": "2f8a309fbbbf4aad9df1dcfde14182a2",
+      "Inputs": [
+        {
+          "Id": "c9e836cbb83f455daa44e85177a2a12c",
+          "Name": "rooms",
+          "Description": "rooms",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d5719cae8d8043fab318575efbf292bf",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "colors;",
+      "Id": "b5124185551e410fbbc1c868c74d23b9",
+      "Inputs": [
+        {
+          "Id": "af1ac5e9be1f4c858b160d55e71ee7c0",
+          "Name": "colors",
+          "Description": "colors",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "60e333258ca34b978328879f7124780c",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Charts.DonutChart.Style@DSCore.Color,DSCore.Color[],var,var,int,bool,string",
+      "Id": "c2437e5aeda1473e8ce960b00bb1c578",
+      "Inputs": [
+        {
+          "Id": "8eeaa11f4bef4c3abec05bd70bba77ef",
+          "Name": "HoverColor",
+          "Description": "Hover over color.\n\nColor\n既定値 : DSCore.Color.ByARGB(1, 255, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e56a67b7822a443aa12fbb7f107850b5",
+          "Name": "Colors",
+          "Description": "List of optional colors for chart values.\n\nColor[]\n既定値 : Charts.MiscNodes.GetNull()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "97b429608c19400ebe752f8b17b26aab",
+          "Name": "Address",
+          "Description": "Grid Coordinates.\n\nvar\n既定値 : Charts.MiscNodes.GetNull()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1f427ce29e774b71b912c71674b0734a",
+          "Name": "Margins",
+          "Description": "Margins in pixels.\n\nvar\n既定値 : Charts.MiscNodes.Margins()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "31feaa1c5a674bb8bb011646ba1fd940",
+          "Name": "Width",
+          "Description": "Width of chart in pixels.\n\nint\n既定値 : 400",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "10250823d6d4407da15726533e4cb6ee",
+          "Name": "Labels",
+          "Description": "Boolean value that controls if Labels are displayed.\n\nbool\n既定値 : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2bee9fb8920c47aeb87b78390b34ff69",
+          "Name": "TotalLabel",
+          "Description": "Text appearing at center of the Donut chart.\n\nstring\n既定値 : \"TOTAL\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "db8fafd0a76b4a79b154908cc88ae160",
+          "Name": "Style",
+          "Description": "Donut Chart Object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Donut Chart Style object.\n\nDonutChart.Style (HoverColor: Color = DSCore.Color.ByARGB(1, 255, 0, 0), Colors: Color[] = Charts.MiscNodes.GetNull(), Address: var = Charts.MiscNodes.GetNull(), Margins: var = Charts.MiscNodes.Margins(), Width: int = 400, Labels: bool = true, TotalLabel: string = \"TOTAL\"): var"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "fc679ee0f8504a9fb7cada8c447be4da",
+      "End": "435e70227b35497d8747d770ca45556c",
+      "Id": "d8ef1afe67e1493d80f6714d7fb3fef0"
+    },
+    {
+      "Start": "cdcc0cb2c78f41c682c815d129c821b0",
+      "End": "b6e6aceeea3f428aa5b918b3716bbdf3",
+      "Id": "c96d0c6298cc4657b29c1b53d0a09ebd"
+    },
+    {
+      "Start": "8ca9c1d03126423fb2a94ba53822c5d7",
+      "End": "b2878bc4a94541e29c43a36931d15ce5",
+      "Id": "2590b89bb2f943e1930b5b26d8e8cd89"
+    },
+    {
+      "Start": "fae2b27865ef4c8e89c0d18691953a17",
+      "End": "2f24e2963ba64867adc713fe6da3afe9",
+      "Id": "9389b2b0579f413ca86566ed2f97e264"
+    },
+    {
+      "Start": "73bbf79932504c1c8504bd9e7e7fee02",
+      "End": "eb3c98f42a304592860c0c5835635d7b",
+      "Id": "c68339e94e61413baa89d35ec9c8c2ca"
+    },
+    {
+      "Start": "4363f2e124cd48b09d2f4e4f65082c2c",
+      "End": "a1a53b27f6404559b4dd961083df3e14",
+      "Id": "45b6e70f77074e63969838d020d3052b"
+    },
+    {
+      "Start": "702253ff4db243f78fa34f8e1168c7bb",
+      "End": "af1ac5e9be1f4c858b160d55e71ee7c0",
+      "Id": "249baca9226b4ab4b331300c56ee7e0e"
+    },
+    {
+      "Start": "3b963cc34ff4458390de1c5b31e06246",
+      "End": "9d52b3cbb367426f8b99c2fb3c1c0a6b",
+      "Id": "9c1a9c7905044ffc965f0f2335037acf"
+    },
+    {
+      "Start": "7ce048e5cc034da6b98f39ba4ff0015a",
+      "End": "bb807b1b6adc422480ddc3788f5c76bb",
+      "Id": "b41b344b056545f8821f40998d69519f"
+    },
+    {
+      "Start": "32671add35894e2a9acc9e2ef8679b6a",
+      "End": "94aa4ce7a3904bfeadc075c55b8705a6",
+      "Id": "1af0ef16ec0e4d119412b943b1ff7fed"
+    },
+    {
+      "Start": "fc189935bb2d455f9b9d4d3cbcd7b961",
+      "End": "93db22b51d2b4c8ba5f607a54626de54",
+      "Id": "2eab4064c7704b6dac2954052d2ecddc"
+    },
+    {
+      "Start": "b0577c5b4dbb4479b985696837eea5c0",
+      "End": "ce640fb8c79040bda24159fe233ef301",
+      "Id": "b4c90e1251ca42a195741db8d327c233"
+    },
+    {
+      "Start": "03dac09bb6a343779c8d7f71c989715e",
+      "End": "f3da9c024fa24afabf4135d01cb4a392",
+      "Id": "606a1468330249fe94850358c7f5400a"
+    },
+    {
+      "Start": "1b35f5d4fbbd42f789bd3bccdad9595b",
+      "End": "4a60de2b4e30490a9e684c712f719148",
+      "Id": "b82fa9c8334f42bbb3d0f0d9051a9a74"
+    },
+    {
+      "Start": "1b35f5d4fbbd42f789bd3bccdad9595b",
+      "End": "63b75f1e047b4c04a6732993d1d06fb9",
+      "Id": "5389b0ca44884e49b39cbe8ea7b646f4"
+    },
+    {
+      "Start": "fd59e3c1c87b447aa25b678f6c13ca1d",
+      "End": "52f92f4b94b846f78c473891864dc421",
+      "Id": "d74f0bc14afb474eb35940dce9086015"
+    },
+    {
+      "Start": "4223a802d05648f9b4b918de709f8ea5",
+      "End": "2b5775bce61a437db12839c22f7c9445",
+      "Id": "0430f5168d87438d95f99251c9f31fa7"
+    },
+    {
+      "Start": "cab9fa2d22954c45bb4e1b696938832d",
+      "End": "256dc73ea36b4e67978004eb62c516c7",
+      "Id": "f956e34b58b149afbd6329b9ea7ec94e"
+    },
+    {
+      "Start": "595ed9f82f544b9495b1159509586bcc",
+      "End": "a4bb3df495f84fe7a5d3bd0f6bb4ab46",
+      "Id": "bca0bf591a0c48939c5983fc4dd3e499"
+    },
+    {
+      "Start": "c1f1eee8d023410aa7e02dd6639a56ea",
+      "End": "a132807132f44a58ac0ca067ea60b58f",
+      "Id": "535246b02d4747c0841ce61212f1c7cb"
+    },
+    {
+      "Start": "c9c2f85d03554f038c4d5ef616cb0906",
+      "End": "b6d734d4b3a9407fa788c118ebfc3429",
+      "Id": "fd7b6a2c5d5f42d296da1e3be6ec1cb9"
+    },
+    {
+      "Start": "c9c2f85d03554f038c4d5ef616cb0906",
+      "End": "aae7a053b1b64586b81500179c3cf2cb",
+      "Id": "bf0fa07d82ab4e13b1055345aa16e088"
+    },
+    {
+      "Start": "c9c2f85d03554f038c4d5ef616cb0906",
+      "End": "c9e836cbb83f455daa44e85177a2a12c",
+      "Id": "2b7859c3369249bf94e12856c95e152c"
+    },
+    {
+      "Start": "7ef0c8ff084543f1a492e991e839e717",
+      "End": "6ba743c045a344f7b93af9579244e675",
+      "Id": "273cb00410b14e969a9868529a9d43e8"
+    },
+    {
+      "Start": "47928d1c3d0347d6becbf1661a0963f3",
+      "End": "625d40a47afc468dbe92af4568b17cfd",
+      "Id": "fefbd0e67872401ea4f18041eac2c66e"
+    },
+    {
+      "Start": "47928d1c3d0347d6becbf1661a0963f3",
+      "End": "fe8aa2a60f7e4ec3b3e226e26dab802e",
+      "Id": "16d8770a415d4936aa0190fbd1ef591d"
+    },
+    {
+      "Start": "01322e81c12b42049a784d1f084c55b5",
+      "End": "92880a2581a84ab7beba6a8176ea55c3",
+      "Id": "f37f7825d4014e31b8245a5a20b30c7c"
+    },
+    {
+      "Start": "b3749663584545acb794aa5d3a807b0d",
+      "End": "79489ea6eae64de1805e6f95455da6a6",
+      "Id": "f76f4bb15f1f416588cca1a1be178e52"
+    },
+    {
+      "Start": "f50b7c7cda5b4fd2a3187460429945ae",
+      "End": "f5a12d5a249145afa85f6b49e74f3348",
+      "Id": "2f57cbaa1e814bd48339ca9b8604c1ed"
+    },
+    {
+      "Start": "d3a2911b03a442a3b5b94952d6fb396c",
+      "End": "7919e808cc2844ff88c7536e41e3d53e",
+      "Id": "0dae8c36ef24457780f60f4573e55a91"
+    },
+    {
+      "Start": "d3a2911b03a442a3b5b94952d6fb396c",
+      "End": "4ecb41e946084ddab71ec33cf241c64f",
+      "Id": "fcb764b3b246483188eddef7d2a83ae7"
+    },
+    {
+      "Start": "ded75ec7ad69421d8f68aff4d892f469",
+      "End": "b39d4dde1aec41c6913b9e22c50f9160",
+      "Id": "cb24e3234ca942d2bf4a3cbdd3446946"
+    },
+    {
+      "Start": "5839cde3c7024b7eb33376e77a1ca58e",
+      "End": "f856b4ed118143cf8364dff5466bed42",
+      "Id": "0a4ae4754ed9455fb7b19d39563531f1"
+    },
+    {
+      "Start": "1d1b7848795b4a369cab2e9ac3d6f3be",
+      "End": "b2ef1820a7bf417bb081e8502dc12aa7",
+      "Id": "617ca6426d3d40be9e52e131f6fd3755"
+    },
+    {
+      "Start": "d5719cae8d8043fab318575efbf292bf",
+      "End": "4a176b66639e417a91e61b5bab050ad0",
+      "Id": "c721650b554c4b54a1ae763ce055d388"
+    },
+    {
+      "Start": "60e333258ca34b978328879f7124780c",
+      "End": "5735d77566424ee6b4760bc96ffd8918",
+      "Id": "c4d53d6ebc5b4770adf5b3cafdd63d30"
+    },
+    {
+      "Start": "60e333258ca34b978328879f7124780c",
+      "End": "5ae5e5514a984f1b828eaac73d723f09",
+      "Id": "993a8bbe0b39447285689e43fc3cf0c3"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Archi-lab_Mandrill",
+      "Version": "2021.26.1",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "267515e776914f84b83954cd51cb8186",
+        "14b4f425332f43ce8dfa84ed642f413f",
+        "9fc1fdae9e0a4d92905daca46aa7fb90",
+        "b9d5948aa99248af836db34706a86edf",
+        "935b35d9b20c41fdb998c4531356b6ce",
+        "36e05090480446069e1f05b41b216f39",
+        "a27f282ffcfe4932ad01848aee558315",
+        "20d89682490e495e960b15450bd5597a",
+        "c2437e5aeda1473e8ce960b00bb1c578"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -29.417615694799522,
+      "EyeY": 31.869082188856421,
+      "EyeZ": 142.18514548588379,
+      "LookX": 29.417615694799522,
+      "LookY": -31.869082188856421,
+      "LookZ": -142.18514548588379,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "a6edb1ce544b40e88b3324b8c94018ab",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8.6884004444042375,
+        "Y": 253.70493412669555
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "cf115fbcc1c84e649084f2efded5f503",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8.6884004444042375,
+        "Y": 437.37144386976911
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "d6343f5bd74a497a8ea46405e0fbfecd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8.6884004444042375,
+        "Y": 621.03795361284267
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "5adc38389832472490497783579a4d73",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8.6884004444042375,
+        "Y": 529.204698741306
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "a6d773fc512e46b6a91ab71f4deef958",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8.6884004444042375,
+        "Y": 345.53818899823233
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "fe6407f4fb404260a9e4c3541787b4a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 8.6884004444042375,
+        "Y": 161.87167925515882
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List Create",
+        "Id": "590dd31760aa449690cc0b823b30a463",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 244.75710158222262,
+        "Y": 323.48607755079172
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Legend.Create",
+        "Id": "267515e776914f84b83954cd51cb8186",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2516.6313620326659,
+        "Y": 91.093361784787191
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Legend.Data",
+        "Id": "14b4f425332f43ce8dfa84ed642f413f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1570.4902990404889,
+        "Y": 37.097522483842965
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Legend.Style",
+        "Id": "9fc1fdae9e0a4d92905daca46aa7fb90",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2180.8137394891951,
+        "Y": 198.97920423422028
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Create Report",
+        "Id": "b9d5948aa99248af836db34706a86edf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2816.2192749235405,
+        "Y": -119.61397477951451
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "eb12c01eb67b4ec78b7983013bd4b08d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2013.8162181520461,
+        "Y": 243.64511536734568
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c8d148b034d345deb5b8255cb6acff52",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1998.2531311103198,
+        "Y": 342.03385027002793
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category in View",
+        "Id": "7f658e1ce462471a94b057fb5caa35bf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 233.29669144490185,
+        "Y": -126.84251821592829
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "e7dd24698dca44e7982a834e48802ed1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 45.038750738822046,
+        "Y": -144.91167087883662
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Views",
+        "Id": "3bb17da37cff44d3b25f75635fcfd42e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 63.513038797551985,
+        "Y": -66.2665309921448
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Room.Area",
+        "Id": "1769007a7e00455b9b3100a12c41e96f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 495.10682403587123,
+        "Y": -71.040476141764145
+      },
+      {
+        "ShowGeometry": true,
+        "Name": ">",
+        "Id": "be13e5d6499e4158b39dbac8b56821e3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 701.9500738160292,
+        "Y": -56.048533597318624
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "bfa99fe43f714e80a00fe5fcefe09d50",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 602.32196715866633,
+        "Y": 13.515639333397672
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.FilterByBoolMask",
+        "Id": "07a3b5bbf6294d9b9af750edf7db9f77",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 877.32352120570954,
+        "Y": -131.728810825445
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Room.Area",
+        "Id": "7ba51651292248a6aa78409eaf6f4b5b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1149.9344073872905,
+        "Y": -179.29260046678422
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Room.Name",
+        "Id": "8285bdc89c544621b951fb35bd0e1ce5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1152.6955542645451,
+        "Y": -89.814666917093575
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "DonutChart.Style",
+        "Id": "935b35d9b20c41fdb998c4531356b6ce",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2242.4783174218396,
+        "Y": -223.42373465194504
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "DonutChart.Data",
+        "Id": "36e05090480446069e1f05b41b216f39",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1567.0356491724242,
+        "Y": -88.560320157075523
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "DonutChart.Chart",
+        "Id": "a27f282ffcfe4932ad01848aee558315",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2517.2489289565992,
+        "Y": -285.92272021095192
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Range",
+        "Id": "1acdcbcfb19b4a03b6b7059ffb755664",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1638.7484055155776,
+        "Y": 188.07358153719679
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "7407fd1ca2794445a953867752d163a8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1290.9446456286128,
+        "Y": 279.251899809991
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "8a6ef6085c2749a092175a815dcf3012",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1362.8626756961185,
+        "Y": -175.13622668463279
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "3cfa2c5014a54143823b0e1358bf7e4c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1077.8160460127142,
+        "Y": -462.8991713653154
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "6aade323bfe84bc7af0b59f33aae77bb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 895.4544120973145,
+        "Y": -463.90603630918542
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2dcb2897626f4357890a411c406d82d9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 731.31281453670431,
+        "Y": -462.82945235056548
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "848d5a02eacc462183a078060f995917",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 567.68147893444439,
+        "Y": -463.2715143934854
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "3408aaf37f65478eb07aef7d665dc46b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 424.91808221142929,
+        "Y": -463.28784944423546
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "795274e0b11945e2979df7b7c95f7878",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 282.09269768325635,
+        "Y": -465.56293402378373
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Report Window",
+        "Id": "20d89682490e495e960b15450bd5597a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3022.1874378283851,
+        "Y": -119.6216882516477
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "003607d7e491403295b7df4f1b299291",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1293.1490998718725,
+        "Y": 371.1982410909788
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2f8a309fbbbf4aad9df1dcfde14182a2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1091.6422803332257,
+        "Y": 376.18356406576316
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b5124185551e410fbbc1c868c74d23b9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1098.3190257539188,
+        "Y": 216.0080985674212
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "DonutChart.Style",
+        "Id": "c2437e5aeda1473e8ce960b00bb1c578",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 773.79515961914217,
+        "Y": 30.272996862157243
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "121b7a0da8304392bbf28c6b1fff2a66",
+        "Title": "Preview",
+        "Nodes": [
+          "3cfa2c5014a54143823b0e1358bf7e4c"
+        ],
+        "Left": 1067.8160460127142,
+        "Top": -516.09917136531544,
+        "Width": 132.79999999999995,
+        "Height": 145.80000000000007,
+        "FontSize": 36.0,
+        "InitialTop": -462.8991713653154,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "eb5d656898f0419fb4811c55ef0eff92",
+        "Title": "Parameter",
+        "Nodes": [
+          "6aade323bfe84bc7af0b59f33aae77bb"
+        ],
+        "Left": 885.4544120973145,
+        "Top": -517.10603630918547,
+        "Width": 171.45666666666668,
+        "Height": 145.80000000000007,
+        "FontSize": 36.0,
+        "InitialTop": -463.90603630918542,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "48c2d2794c8d4e7bbc1665a6d0b2bcbf",
+        "Title": "Tranform",
+        "Nodes": [
+          "2dcb2897626f4357890a411c406d82d9"
+        ],
+        "Left": 721.31281453670431,
+        "Top": -516.02945235056552,
+        "Width": 152.82333333333335,
+        "Height": 145.80000000000007,
+        "FontSize": 36.0,
+        "InitialTop": -462.82945235056548,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFE8F7AD"
+      },
+      {
+        "Id": "f70fd63f4335410684da3cced6dbf27d",
+        "Title": "Generate",
+        "Nodes": [
+          "848d5a02eacc462183a078060f995917"
+        ],
+        "Left": 557.68147893444439,
+        "Top": -516.47151439348545,
+        "Width": 154.58333333333334,
+        "Height": 145.80000000000007,
+        "FontSize": 36.0,
+        "InitialTop": -463.2715143934854,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "1320f6f9643a47c2a525e689c652499f",
+        "Title": "Process",
+        "Nodes": [
+          "3408aaf37f65478eb07aef7d665dc46b"
+        ],
+        "Left": 414.91808221142929,
+        "Top": -516.48784944423551,
+        "Width": 132.8,
+        "Height": 145.80000000000007,
+        "FontSize": 36.0,
+        "InitialTop": -463.28784944423546,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "5a26c77abe124870b0abcabf1e46a11b",
+        "Title": "Input",
+        "Nodes": [
+          "795274e0b11945e2979df7b7c95f7878"
+        ],
+        "Left": 272.09269768325635,
+        "Top": -518.76293402378371,
+        "Width": 132.8,
+        "Height": 145.79999999999995,
+        "FontSize": 36.0,
+        "InitialTop": -465.56293402378373,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "e24a0bfd0fdb44fe9ae9942d67c64c88",
+        "Title": "Colors",
+        "Nodes": [
+          "a6edb1ce544b40e88b3324b8c94018ab",
+          "cf115fbcc1c84e649084f2efded5f503",
+          "d6343f5bd74a497a8ea46405e0fbfecd",
+          "5adc38389832472490497783579a4d73",
+          "a6d773fc512e46b6a91ab71f4deef958",
+          "fe6407f4fb404260a9e4c3541787b4a8",
+          "590dd31760aa449690cc0b823b30a463"
+        ],
+        "Left": -1.3115995555957625,
+        "Top": 108.67167925515882,
+        "Width": 376.06870113781838,
+        "Height": 604.96627435768391,
+        "FontSize": 36.0,
+        "InitialTop": 161.87167925515882,
+        "InitialHeight": 581.76627435768387,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "0a1ffb078a4a453b897628b5b4eab842",
+        "Title": "レベル1の部屋を取得",
+        "Nodes": [
+          "7f658e1ce462471a94b057fb5caa35bf",
+          "e7dd24698dca44e7982a834e48802ed1",
+          "3bb17da37cff44d3b25f75635fcfd42e"
+        ],
+        "Left": 35.038750738822046,
+        "Top": -198.11167087883661,
+        "Width": 425.4579407060798,
+        "Height": 224.44513988669181,
+        "FontSize": 36.0,
+        "InitialTop": -144.91167087883662,
+        "InitialHeight": 201.24513988669182,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "2cabf23bf2ff4becb9e6da1cf4ee88da",
+        "Title": "部屋の面積でフィルタリング",
+        "Nodes": [
+          "1769007a7e00455b9b3100a12c41e96f",
+          "be13e5d6499e4158b39dbac8b56821e3",
+          "bfa99fe43f714e80a00fe5fcefe09d50",
+          "07a3b5bbf6294d9b9af750edf7db9f77"
+        ],
+        "Left": 485.10682403587123,
+        "Top": -184.928810825445,
+        "Width": 573.81669716983822,
+        "Height": 291.04445015884266,
+        "FontSize": 36.0,
+        "InitialTop": -131.728810825445,
+        "InitialHeight": 258.5311418388012,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "4ddaacad3baa40e3ac348f68a7331c20",
+        "Title": "チャートデータ、レジェンドデータをつくる",
+        "Nodes": [
+          "14b4f425332f43ce8dfa84ed642f413f",
+          "7ba51651292248a6aa78409eaf6f4b5b",
+          "8285bdc89c544621b951fb35bd0e1ce5",
+          "36e05090480446069e1f05b41b216f39",
+          "8a6ef6085c2749a092175a815dcf3012"
+        ],
+        "Left": 1139.9344073872905,
+        "Top": -232.49260046678421,
+        "Width": 630.55589165319839,
+        "Height": 362.19012295062714,
+        "FontSize": 36.0,
+        "InitialTop": -179.29260046678422,
+        "InitialHeight": 331.012718044449,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "dd6decfe247a4bcaa2dab1627b6386d4",
+        "Title": "カラーグラデーションをつくる",
+        "Nodes": [
+          "1acdcbcfb19b4a03b6b7059ffb755664",
+          "7407fd1ca2794445a953867752d163a8",
+          "003607d7e491403295b7df4f1b299291",
+          "2f8a309fbbbf4aad9df1dcfde14182a2",
+          "b5124185551e410fbbc1c868c74d23b9"
+        ],
+        "Left": 1081.6422803332257,
+        "Top": 134.8735815371968,
+        "Width": 863.90612518235184,
+        "Height": 333.90998252856633,
+        "FontSize": 36.0,
+        "InitialTop": 188.07358153719679,
+        "InitialHeight": 305.72465955378203,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "4e2311a15dd542998d582bc6475dbd40",
+        "Title": "チャートをつくる",
+        "Nodes": [
+          "935b35d9b20c41fdb998c4531356b6ce",
+          "a27f282ffcfe4932ad01848aee558315"
+        ],
+        "Left": 2232.4783174218396,
+        "Top": -339.12272021095191,
+        "Width": 475.57061153475979,
+        "Height": 364.29898555900684,
+        "FontSize": 36.0,
+        "InitialTop": -285.92272021095192,
+        "InitialHeight": 348.22470600384747,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "461d7b44b4554d6e9806a8ef87aa1db8",
+        "Title": "レジェンドをつくる",
+        "Nodes": [
+          "267515e776914f84b83954cd51cb8186",
+          "9fc1fdae9e0a4d92905daca46aa7fb90",
+          "eb12c01eb67b4ec78b7983013bd4b08d",
+          "c8d148b034d345deb5b8255cb6acff52"
+        ],
+        "Left": 1988.2531311103198,
+        "Top": 37.893361784787189,
+        "Width": 726.77823092234621,
+        "Height": 396.74048848524069,
+        "FontSize": 36.0,
+        "InitialTop": 91.093361784787191,
+        "InitialHeight": 373.54048848524076,
+        "TextblockHeight": 43.2,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "cda732fbdea542eabadaa7011456ba6d",
+        "Title": "レポートをつくる",
+        "Nodes": [
+          "b9d5948aa99248af836db34706a86edf",
+          "20d89682490e495e960b15450bd5597a"
+        ],
+        "Left": 2806.2192749235405,
+        "Top": -172.82168825164769,
+        "Width": 379.16816290484439,
+        "Height": 180.2,
+        "FontSize": 36.0,
+        "InitialTop": -119.6216882516477,
+        "InitialHeight": 157.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFA4E1FF"
+      }
+    ],
+    "X": -365.60826739185495,
+    "Y": 240.54037921085211,
+    "Zoom": 0.37120008225277279
+  }
+}

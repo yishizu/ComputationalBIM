@@ -1,0 +1,567 @@
+{
+  "Uuid": "e505e3ec-1c34-4e37-b662-7f7f801e9025",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "1-6-1_DirectShapeから床を配置",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 10,
+      "MaximumValue": 10,
+      "MinimumValue": 3,
+      "StepValue": 1,
+      "Id": "61e5aa1885414a0fae0f0e5d3f2384c6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3eaf7f31f1314f8ca72abbd44d49ba5b",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "整数値を生成するスライダです。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Polygon.RegularPolygon@Autodesk.DesignScript.Geometry.Circle,int",
+      "Id": "a0364b20153e4ac193f5f18e7747e0c4",
+      "Inputs": [
+        {
+          "Id": "c4717b4f4c71489e9485236bd49ce625",
+          "Name": "circle",
+          "Description": "Circle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ba92d188db144ad5955a0a5e622efd7f",
+          "Name": "numberSides",
+          "Description": "int\n既定値 : 5",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b8515b74074b4258945309df708eb4c9",
+          "Name": "Polygon",
+          "Description": "Polygon",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "円に内接するポリゴン カーブを作成します。\n\nPolygon.RegularPolygon (circle: Circle, numberSides: int = 5): Polygon"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "c1326831dcaa40a5b0f63c8c49a0c5e8",
+      "Inputs": [
+        {
+          "Id": "a759084c5f4f417cba6eb6c39194470f",
+          "Name": "centerPoint",
+          "Description": "Center point of circle\n\nPoint\n既定値 : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "60a7002fafcb4b128b8883a26eec97ff",
+          "Name": "radius",
+          "Description": "Radius\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "511e315c04554c2a95ab257032dfa420",
+          "Name": "Circle",
+          "Description": "Circle created with center point and radius",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "入力された中心点と半径をワールド座標系の XY 平面に持ち、ワールド座標系の Z 軸を法線とする円を作成します。\n\nCircle.ByCenterPointRadius (centerPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), radius: double = 1): Circle"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.DirectShape.ByGeometry@Autodesk.DesignScript.Geometry.Geometry,Revit.Elements.Category,Revit.Elements.Material,string",
+      "Id": "5321ded6722c458e86d4525e5197978f",
+      "Inputs": [
+        {
+          "Id": "e01d3f1b2968491c99c9a3b536447c1b",
+          "Name": "geometry",
+          "Description": "Revit モデルに DirectShape として面分割および配置されるソリッドまたはサーフェス\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2235368d528241aca8934c80131eb15d",
+          "Name": "category",
+          "Description": "最上位レベルの Built-in Category である必要があります\n\nCategory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d9c59674f1348b4b34f54c534edc49a",
+          "Name": "material",
+          "Description": "DirectShape の面に適用するマテリアル\n\nMaterial\n既定値 : Revit.Elements.DirectShape.DynamoPreviewMaterial",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8aa083e8c1474dbda297d4ad3ec6152c",
+          "Name": "name",
+          "Description": "DirectShape の文字列名\n\nstring\n既定値 : \"DirectShape\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ecc28f1041ae4ca18244eb49c1b4889b",
+          "Name": "DirectShape",
+          "Description": "DirectShape Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ジオメトリ、形状の名前、カテゴリ、マテリアルを指定して Revit DirectShape を作成します。 ジオメトリは、Revit モデル内に配置される前に面分割されます 作成後は DirectShape のカテゴリを変更することはできないため、 カテゴリの入力を変更すると新しい DirectShape が生成されます。\n\nDirectShape.ByGeometry (geometry: Geometry, category: Category, material: Material = Revit.Elements.DirectShape.DynamoPreviewMaterial, name: string = \"DirectShape\"): DirectShape"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Category.ByName@string",
+      "Id": "e7a868bf026344dba8f6ca6195e81104",
+      "Inputs": [
+        {
+          "Id": "70869af221ae434f903a5085d7623524",
+          "Name": "name",
+          "Description": "組み込みカテゴリ名。\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f1b4ba18744d4c1398f38a1a34ad4bd8",
+          "Name": "Category",
+          "Description": "Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "組み込みのカテゴリ名で Revit カテゴリを取得します。\n\nCategory.ByName (name: string): Category"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"床\";",
+      "Id": "16b1d7b3d9f14f3eba61e6a2d3bbeea0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4d8465a556414dca8f0ddca657a854bd",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5000;",
+      "Id": "93f5f979fc3c422ea73a6e09a54d1aec",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "683872fd169d43b9b4e417d624ba9e9a",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double",
+      "Id": "a1b4b085562d4d63b7f096176d831247",
+      "Inputs": [
+        {
+          "Id": "3d9174714b9c48478013ef3a97f8f9c5",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d0d12f5c038445bfb5387aef38716bf8",
+          "Name": "distance",
+          "Description": "押し出す距離\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ec7016cf56bc436a9e6840d1cd7eb2b7",
+          "Name": "Solid",
+          "Description": "押し出されるソリッド",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "距離を指定して法線方向に曲線を押し出します。曲線は閉じられている必要があります。\n\nCurve.ExtrudeAsSolid (distance: double = 1): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Material.ByName@string",
+      "Id": "5a12514261e642109b2c20dab62a9cc8",
+      "Inputs": [
+        {
+          "Id": "915548fd3ac5410e9516e4095a78f2d9",
+          "Name": "name",
+          "Description": "マテリアルの名前\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5154e1b496a34bdf9935bc2d6b6f9dbf",
+          "Name": "Material",
+          "Description": "Material",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "現在のドキュメントからマテリアルを名前で選択\n\nMaterial.ByName (name: string): Material"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"コンクリート - 現場打ちコンクリート\";",
+      "Id": "1cb1cc20f4a447deb29eeb618fe56718",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f77217f2d52546b7be496b7d93f64707",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "200;",
+      "Id": "424bfdbaf9834a7a997568a40d40f33e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f12aefe6740848e1a82636c432fdfa31",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "3eaf7f31f1314f8ca72abbd44d49ba5b",
+      "End": "ba92d188db144ad5955a0a5e622efd7f",
+      "Id": "7c6f9423d53741728a8f835abeedff13"
+    },
+    {
+      "Start": "b8515b74074b4258945309df708eb4c9",
+      "End": "3d9174714b9c48478013ef3a97f8f9c5",
+      "Id": "9218612725654d87ad713486a567d2d4"
+    },
+    {
+      "Start": "511e315c04554c2a95ab257032dfa420",
+      "End": "c4717b4f4c71489e9485236bd49ce625",
+      "Id": "067ea9a967bb4d42bdb004467d588019"
+    },
+    {
+      "Start": "f1b4ba18744d4c1398f38a1a34ad4bd8",
+      "End": "2235368d528241aca8934c80131eb15d",
+      "Id": "625fc925c5734afaa48098033bcfdad6"
+    },
+    {
+      "Start": "4d8465a556414dca8f0ddca657a854bd",
+      "End": "70869af221ae434f903a5085d7623524",
+      "Id": "0346025a6691493f86692ca0ad3fc95a"
+    },
+    {
+      "Start": "683872fd169d43b9b4e417d624ba9e9a",
+      "End": "60a7002fafcb4b128b8883a26eec97ff",
+      "Id": "a9dd94842f494ab8a25929a60e787efb"
+    },
+    {
+      "Start": "ec7016cf56bc436a9e6840d1cd7eb2b7",
+      "End": "e01d3f1b2968491c99c9a3b536447c1b",
+      "Id": "d4ddd53572ca4bc3a4a0209b689090c9"
+    },
+    {
+      "Start": "5154e1b496a34bdf9935bc2d6b6f9dbf",
+      "End": "1d9c59674f1348b4b34f54c534edc49a",
+      "Id": "170ce158b0dc47559fe8c0f7bdc6bbf4"
+    },
+    {
+      "Start": "f77217f2d52546b7be496b7d93f64707",
+      "End": "915548fd3ac5410e9516e4095a78f2d9",
+      "Id": "5eb9fac1c7a046cb918ba4ee52c9450e"
+    },
+    {
+      "Start": "f12aefe6740848e1a82636c432fdfa31",
+      "End": "d0d12f5c038445bfb5387aef38716bf8",
+      "Id": "66e9caf4be91425983f15ba5a27590b1"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 100.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 10240.884521484375,
+      "EyeY": 30165.134765625,
+      "EyeZ": -28002.767578125,
+      "LookX": 3848.805908203125,
+      "LookY": -30897.673828125,
+      "LookZ": 24831.548828125,
+      "UpX": 0.095348238945007324,
+      "UpY": 0.782608687877655,
+      "UpZ": 0.61516863107681274
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "Integer Slider",
+        "Id": "61e5aa1885414a0fae0f0e5d3f2384c6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 635.198069366336,
+        "Y": 362.23669590962072
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Polygon.RegularPolygon",
+        "Id": "a0364b20153e4ac193f5f18e7747e0c4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 972.87681283919,
+        "Y": 232.0
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Circle.ByCenterPointRadius",
+        "Id": "c1326831dcaa40a5b0f63c8c49a0c5e8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 717.04312256082608,
+        "Y": 232.72305140541084
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "DirectShape.ByGeometry",
+        "Id": "5321ded6722c458e86d4525e5197978f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1527.6398223254391,
+        "Y": 378.72540322789126
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Category.ByName",
+        "Id": "e7a868bf026344dba8f6ca6195e81104",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1244.6515548539032,
+        "Y": 420.3933314261194
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "16b1d7b3d9f14f3eba61e6a2d3bbeea0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1125.7980926091182,
+        "Y": 425.87019196416975
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "93f5f979fc3c422ea73a6e09a54d1aec",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 611.80540347111923,
+        "Y": 262.56197699020413
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.ExtrudeAsSolid",
+        "Id": "a1b4b085562d4d63b7f096176d831247",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1263.8017707443269,
+        "Y": 232.65833427177961
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Material.ByName",
+        "Id": "5a12514261e642109b2c20dab62a9cc8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1271.4055371642094,
+        "Y": 526.29217746249037
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1cb1cc20f4a447deb29eeb618fe56718",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 973.72328984074375,
+        "Y": 529.13615322912767
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "424bfdbaf9834a7a997568a40d40f33e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1133.4187550118133,
+        "Y": 340.30091779099052
+      }
+    ],
+    "Annotations": [],
+    "X": -247.90986657910946,
+    "Y": 128.50147180194284,
+    "Zoom": 0.47871654027289795
+  }
+}

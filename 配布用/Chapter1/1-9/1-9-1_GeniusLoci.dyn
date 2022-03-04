@@ -1,0 +1,201 @@
+{
+  "Uuid": "25d6b724-7da7-44d1-9a57-b34ffdd01394",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "1-9-1_GeniusLoci",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"ダイニングテーブル\";",
+      "Id": "68a759b1bd464b938a06f12d8cb81a9d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "01d32596b4b8498080b12269999ba385",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Family.ByName@string",
+      "Id": "b9cb8dda49c54bfb96b3f3bf3b4d5546",
+      "Inputs": [
+        {
+          "Id": "ae44f8a42a3444549dc8a55b695a16a8",
+          "Name": "name",
+          "Description": "現在のドキュメントのファミリの名前\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9c7f603977b747f59ba69b279cbb9025",
+          "Name": "Family",
+          "Description": "Family",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "名前を指定して、現在のドキュメントから Family を取得\n\nFamily.ByName (name: string): Family"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "fd943c39-2c51-45b6-b7e6-8a35d39a7859",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "5bd04fcb32444ffda376d2904a9b1b32",
+      "Inputs": [
+        {
+          "Id": "739955c9144b4c35a32fdf0a34194e96",
+          "Name": "family",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8466fa37a31a497b88d7eec5623df94e",
+          "Name": "Elements",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the family instances of the given loadable family."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "01d32596b4b8498080b12269999ba385",
+      "End": "ae44f8a42a3444549dc8a55b695a16a8",
+      "Id": "c705d37f82d2406c9b400beb6c3cd0e6"
+    },
+    {
+      "Start": "9c7f603977b747f59ba69b279cbb9025",
+      "End": "739955c9144b4c35a32fdf0a34194e96",
+      "Id": "fb84f03ee7d54a86a47d1b644402c5a3"
+    }
+  ],
+  "Dependencies": [
+    "fd943c39-2c51-45b6-b7e6-8a35d39a7859"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Genius Loci",
+      "Version": "2022.1.5",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "5bd04fcb32444ffda376d2904a9b1b32"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "なし",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "68a759b1bd464b938a06f12d8cb81a9d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 65.592322185702528,
+        "Y": -941.10560808389016
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Family.ByName",
+        "Id": "b9cb8dda49c54bfb96b3f3bf3b4d5546",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.46108667448669,
+        "Y": -943.251363902566
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Family",
+        "Id": "5bd04fcb32444ffda376d2904a9b1b32",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 458.40273214202415,
+        "Y": -939.22044775829079
+      }
+    ],
+    "Annotations": [],
+    "X": -75.014368597225,
+    "Y": 704.17405055258234,
+    "Zoom": 0.47823583200475916
+  }
+}

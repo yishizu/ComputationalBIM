@@ -1,0 +1,1274 @@
+{
+  "Uuid": "f00a7d4f-203f-49ea-a57f-0b7ad28da586",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "10共有パラメータ プロジェクトパラメータの追加",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"GEL-ALLCat\";\n\"Sample\";",
+      "Id": "2ce89666909d4b668da19460332681fa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a6bf3e8d6eb44588865c9af250ddc068",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2666437aff0546aba935e40b294e0049",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ParameterType, DSRevitNodesUI",
+      "SelectedIndex": 127,
+      "SelectedString": "Text",
+      "NodeType": "ExtensionNode",
+      "Id": "e26132f4e3d045caaef83aedf056ce89",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "880cd3c6a3f14a469482ce76f7ada60f",
+          "Name": "Parameter Type",
+          "Description": "選択した Parameter Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パラメータ タイプを選択します。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.BuiltInParameterGroup, DSRevitNodesUI",
+      "SelectedIndex": 26,
+      "SelectedString": "PG_DATA",
+      "NodeType": "ExtensionNode",
+      "Id": "8c6415483f3a4f279b3e97363fe856ac",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5d7f905ee7af4b099a9e84c62ebd3546",
+          "Name": "BuiltIn Parameter Group",
+          "Description": "選択した BuiltIn Parameter Group",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "組み込みパラメータ グループを選択します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "de2fe1254ba6429c8fc588ca172f075e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7c725e4e947340bb92820e975f051afe",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "True と False のいずれかを選択します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Parameter.CreateProjectParameterForAllCategories@string,string,string,string,bool",
+      "Id": "d1115da2bbe64920aeac3e3ae804b081",
+      "Inputs": [
+        {
+          "Id": "93e053e941194c1581457100e07540a2",
+          "Name": "parameterName",
+          "Description": "名前\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a7282391c7cc4e07b3598eb05c19dc46",
+          "Name": "groupName",
+          "Description": "共有パラメータのためのパラメータ グループ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d66135ea575478bb6b64e48006dd35f",
+          "Name": "type",
+          "Description": "パラメータ タイプ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8aeb255b869740919de0ef77dc841b8a",
+          "Name": "group",
+          "Description": "パラメータ グループ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f998d87240dc4d97a1de9cf0c6355c26",
+          "Name": "instance",
+          "Description": "インスタンス パラメータかタイプ パラメータ\n\nbool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "24ead8441ae34a50b276d6b1da7b64ef",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "すべての適用可能なカテゴリのために、現在の Revit の設計図書内に新しいプロジェクト パラメータを作成します\n\nParameter.CreateProjectParameterForAllCategories (parameterName: string, groupName: string, type: string, group: string, instance: bool): void"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.BuiltInParameterGroup, DSRevitNodesUI",
+      "SelectedIndex": 26,
+      "SelectedString": "PG_DATA",
+      "NodeType": "ExtensionNode",
+      "Id": "c17994273eac4956aac007159f9f95b1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cfd42f5ba8f44e3da6059514b0aff051",
+          "Name": "BuiltIn Parameter Group",
+          "Description": "選択した BuiltIn Parameter Group",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "組み込みパラメータ グループを選択します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "a4e58475424b41b29a19a6a275acdf7a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1b13b0ddccf346c9abeb3352322dab07",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "True と False のいずれかを選択します。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ParameterType, DSRevitNodesUI",
+      "SelectedIndex": 127,
+      "SelectedString": "Text",
+      "NodeType": "ExtensionNode",
+      "Id": "9b9143299ca4480ca906ac100f7c6470",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6a5b5b837d414596959ba31068848d9c",
+          "Name": "Parameter Type",
+          "Description": "選択した Parameter Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パラメータ タイプを選択します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"GEL-DoorCat\";\n\"Sample\";",
+      "Id": "5ccf54f313434b50b726e6f74099a4ba",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "35264ecdbad04632aa4c3a5b9dc3386e",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4e10da2649f346c8bbe3331e33160758",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 110,
+      "SelectedString": "OST_Doors",
+      "NodeType": "ExtensionNode",
+      "Id": "e4dbcba5cc414a3e83baccb6bb030a5a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5f5bf6273f8144709365a3d6806d85d2",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Parameter.CreateProjectParameter@string,string,string,string,bool,Revit.Elements.Category[]",
+      "Id": "d8287368c4e646c3a07003d3fe4fa439",
+      "Inputs": [
+        {
+          "Id": "3ebd8e5943ee4a56a1b35caf01eb833f",
+          "Name": "parameterName",
+          "Description": "名前\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74e77cdb53844c2b8f7fed48b6f546ea",
+          "Name": "groupName",
+          "Description": "共有パラメータのためのパラメータ グループ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "22b66c95a5c34d2ebd480cb33b4dd89e",
+          "Name": "type",
+          "Description": "パラメータ タイプ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8232c73c169b46499fa10760f358ac59",
+          "Name": "group",
+          "Description": "パラメータ グループ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "28cd68261a344431b843b3eb43cdaa96",
+          "Name": "instance",
+          "Description": "インスタンス パラメータかタイプ パラメータ\n\nbool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea8cee7536384a13b12f4b5dbe912a12",
+          "Name": "categoryList",
+          "Description": "Category[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "542d661c526f48ad83aa9152138ebafc",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "すべての適用可能なカテゴリのために、現在の Revit の設計図書内に新しいプロジェクト パラメータを作成します\n\nParameter.CreateProjectParameter (parameterName: string, groupName: string, type: string, group: string, instance: bool, categoryList: Category[]): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Parameter.SharedParameterFile",
+      "Id": "5fb909d5de3345efbb0dcf941515e553",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "06546aa00ae84bcab615725d79c3824c",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "このドキュメントの共有パラメータ ファイルへのパスを取得します\n\nParameter.SharedParameterFile ( ): string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"GEL-AllCatType\";\n\"SampleGroup\";",
+      "Id": "4245611b077e45769a6f0a33e9daeeb4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "50bdbf591596414eb56651eb4abc7434",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea0692ff93844997b9d6f41a3e584fda",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ParameterType, DSRevitNodesUI",
+      "SelectedIndex": 127,
+      "SelectedString": "Text",
+      "NodeType": "ExtensionNode",
+      "Id": "2bd215f077f24a068d87cc3a5af4bf71",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c11a6cd943bc4720ab9c1931870b93af",
+          "Name": "Parameter Type",
+          "Description": "選択した Parameter Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パラメータ タイプを選択します。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.BuiltInParameterGroup, DSRevitNodesUI",
+      "SelectedIndex": 26,
+      "SelectedString": "PG_DATA",
+      "NodeType": "ExtensionNode",
+      "Id": "41203183fdfa4f63aefcdb2eda41864c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7ee3926bfb23463ea2c1c3a4398fb5af",
+          "Name": "BuiltIn Parameter Group",
+          "Description": "選択した BuiltIn Parameter Group",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "組み込みパラメータ グループを選択します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "65d2dc0c12d142aa94bd87bf42d944e7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "36ed7d38222c48388bb2ec68d2654663",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "True と False のいずれかを選択します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Parameter.CreateSharedParameterForAllCategories@string,string,string,string,bool",
+      "Id": "da8dc85d31854e45a852cad0733843d9",
+      "Inputs": [
+        {
+          "Id": "afd4d97dd19049349045c907240741a6",
+          "Name": "parameterName",
+          "Description": "名前\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ba5073fbea254d9c81ad420b1c97ba6e",
+          "Name": "groupName",
+          "Description": "共有パラメータのためのパラメータ グループ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "143de57cf0ad427ea2df647c87e161f5",
+          "Name": "type",
+          "Description": "パラメータ タイプ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e4d6996b145543209a9e49f4723f20d4",
+          "Name": "group",
+          "Description": "パラメータ グループ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a1ad3788e5f04001b41ccf6f928c80a5",
+          "Name": "instance",
+          "Description": "インスタンス パラメータかタイプ パラメータ\n\nbool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "70e8472b522a4030bf23f23ffd7a4f5c",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "すべての適用可能なカテゴリのために、現在の Revit の設計図書内に新しい共有パラメータを作成します\n\nParameter.CreateSharedParameterForAllCategories (parameterName: string, groupName: string, type: string, group: string, instance: bool): void"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.BuiltInParameterGroup, DSRevitNodesUI",
+      "SelectedIndex": 26,
+      "SelectedString": "PG_DATA",
+      "NodeType": "ExtensionNode",
+      "Id": "3c8ba41abd134a5fb0cb0597568b1598",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "405fe21e71554d95a4ceb5421ab0ef41",
+          "Name": "BuiltIn Parameter Group",
+          "Description": "選択した BuiltIn Parameter Group",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "組み込みパラメータ グループを選択します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "c06bb56b766641ba98a74e27c02afce0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9bb47e93c5c34ca19e3205990a448fbd",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "True と False のいずれかを選択します。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ParameterType, DSRevitNodesUI",
+      "SelectedIndex": 127,
+      "SelectedString": "Text",
+      "NodeType": "ExtensionNode",
+      "Id": "ccacafe3877b489eacde82e45046845a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "36a39ca1ee6b4f49b4065e60dca4bb51",
+          "Name": "Parameter Type",
+          "Description": "選択した Parameter Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "パラメータ タイプを選択します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"GEL-DoorType\";\n\"SampleGroup\";",
+      "Id": "bdbfd1cb213f4248b0b38b5e215bfbba",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4d969b6b37d14517a5b00fb048c00e10",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f9c32d60f8464d4eacb0824fc03ccab6",
+          "Name": "",
+          "Description": "行 2 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 110,
+      "SelectedString": "OST_Doors",
+      "NodeType": "ExtensionNode",
+      "Id": "31373f6f519a43b6a0d5ee70d177b9af",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "684c612258824eaeab4f8eb1497152b4",
+          "Name": "Category",
+          "Description": "選択した カテゴリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "すべての組み込みカテゴリ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Parameter.CreateSharedParameter@string,string,string,string,bool,Revit.Elements.Category[]",
+      "Id": "cdd759d625ef41ccbb8cf1c9182395ad",
+      "Inputs": [
+        {
+          "Id": "bf7df32b95624597a15eff978909b887",
+          "Name": "parameterName",
+          "Description": "名前\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "02acb435456a4654a111b15debe0bbd0",
+          "Name": "groupName",
+          "Description": "共有パラメータのためのパラメータ グループ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1beae7142bd84cad8d8fad4b89f5c72d",
+          "Name": "type",
+          "Description": "パラメータ タイプ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d9b119b598634813ab7c299b7a1ae73f",
+          "Name": "group",
+          "Description": "パラメータ グループ\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cdfa9a397086490ca93ccf7027684040",
+          "Name": "instance",
+          "Description": "インスタンス パラメータかタイプ パラメータ\n\nbool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "137c9941c92e4a968a60f054bb3c6921",
+          "Name": "categoryList",
+          "Description": "Category[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "79d41601ce0b47708a6fd9a5679d4656",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "すべての適用可能なカテゴリのために、現在の Revit の設計図書内に新しい共有パラメータを作成します\n\nParameter.CreateSharedParameter (parameterName: string, groupName: string, type: string, group: string, instance: bool, categoryList: Category[]): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "",
+      "Id": "a2b2b353a64a4a13b2bb0536222d7def",
+      "Inputs": [],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "a6bf3e8d6eb44588865c9af250ddc068",
+      "End": "93e053e941194c1581457100e07540a2",
+      "Id": "5e3b848c39214ac188a331655aebf93f"
+    },
+    {
+      "Start": "2666437aff0546aba935e40b294e0049",
+      "End": "a7282391c7cc4e07b3598eb05c19dc46",
+      "Id": "e31dec4406414802bcf6dbf6aaf21ce4"
+    },
+    {
+      "Start": "880cd3c6a3f14a469482ce76f7ada60f",
+      "End": "1d66135ea575478bb6b64e48006dd35f",
+      "Id": "b496741523274ec88177fe1b20350af5"
+    },
+    {
+      "Start": "5d7f905ee7af4b099a9e84c62ebd3546",
+      "End": "8aeb255b869740919de0ef77dc841b8a",
+      "Id": "c337169f3bb34e8db4152a6754a37f14"
+    },
+    {
+      "Start": "7c725e4e947340bb92820e975f051afe",
+      "End": "f998d87240dc4d97a1de9cf0c6355c26",
+      "Id": "c4b2d7741f914a2495e83b331a413e80"
+    },
+    {
+      "Start": "cfd42f5ba8f44e3da6059514b0aff051",
+      "End": "8232c73c169b46499fa10760f358ac59",
+      "Id": "c9ba10acfd3a43a89ad3dba535b87afe"
+    },
+    {
+      "Start": "1b13b0ddccf346c9abeb3352322dab07",
+      "End": "28cd68261a344431b843b3eb43cdaa96",
+      "Id": "cfa4181212fc4aa88ec13248c525e04f"
+    },
+    {
+      "Start": "6a5b5b837d414596959ba31068848d9c",
+      "End": "22b66c95a5c34d2ebd480cb33b4dd89e",
+      "Id": "7087bb97fe824bacb3672777eaa32a3f"
+    },
+    {
+      "Start": "35264ecdbad04632aa4c3a5b9dc3386e",
+      "End": "3ebd8e5943ee4a56a1b35caf01eb833f",
+      "Id": "daedec2f14094968a143c777b74f770c"
+    },
+    {
+      "Start": "4e10da2649f346c8bbe3331e33160758",
+      "End": "74e77cdb53844c2b8f7fed48b6f546ea",
+      "Id": "7133acbd543544fe90d9ecd5721ba356"
+    },
+    {
+      "Start": "5f5bf6273f8144709365a3d6806d85d2",
+      "End": "ea8cee7536384a13b12f4b5dbe912a12",
+      "Id": "8804201f9742402e8bb22390dce8c367"
+    },
+    {
+      "Start": "50bdbf591596414eb56651eb4abc7434",
+      "End": "afd4d97dd19049349045c907240741a6",
+      "Id": "3abe01bf7ef0432dae123774630df868"
+    },
+    {
+      "Start": "ea0692ff93844997b9d6f41a3e584fda",
+      "End": "ba5073fbea254d9c81ad420b1c97ba6e",
+      "Id": "c10b82ed157d48279817f129f7c30f07"
+    },
+    {
+      "Start": "c11a6cd943bc4720ab9c1931870b93af",
+      "End": "143de57cf0ad427ea2df647c87e161f5",
+      "Id": "4eeaae9e03414d6d9c689cf1f05802a1"
+    },
+    {
+      "Start": "7ee3926bfb23463ea2c1c3a4398fb5af",
+      "End": "e4d6996b145543209a9e49f4723f20d4",
+      "Id": "f0064a0ae68b4df996aeb34846b7b256"
+    },
+    {
+      "Start": "36ed7d38222c48388bb2ec68d2654663",
+      "End": "a1ad3788e5f04001b41ccf6f928c80a5",
+      "Id": "ee779f5385364c2486c4fbac7fabc5b3"
+    },
+    {
+      "Start": "405fe21e71554d95a4ceb5421ab0ef41",
+      "End": "d9b119b598634813ab7c299b7a1ae73f",
+      "Id": "3ed9a80c53014d6a9dce07ac1aba15f1"
+    },
+    {
+      "Start": "9bb47e93c5c34ca19e3205990a448fbd",
+      "End": "cdfa9a397086490ca93ccf7027684040",
+      "Id": "a598ef1973e14cc797602d5c41dbac6d"
+    },
+    {
+      "Start": "36a39ca1ee6b4f49b4065e60dca4bb51",
+      "End": "1beae7142bd84cad8d8fad4b89f5c72d",
+      "Id": "23817cbc24f14b339074232ab7448b3f"
+    },
+    {
+      "Start": "4d969b6b37d14517a5b00fb048c00e10",
+      "End": "bf7df32b95624597a15eff978909b887",
+      "Id": "5ab76c4d020b4a30ba5bb571cb32204d"
+    },
+    {
+      "Start": "f9c32d60f8464d4eacb0824fc03ccab6",
+      "End": "02acb435456a4654a111b15debe0bbd0",
+      "Id": "7d5de906ef474b1eaa6377274c7abfe8"
+    },
+    {
+      "Start": "684c612258824eaeab4f8eb1497152b4",
+      "End": "137c9941c92e4a968a60f054bb3c6921",
+      "Id": "801f37e9a80343a8b1cc9c5f607adf8f"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2ce89666909d4b668da19460332681fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 147.24471823461278
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Parameter Type",
+        "Id": "e26132f4e3d045caaef83aedf056ce89",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 254.84471823461286
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select BuiltIn Parameter Group",
+        "Id": "8c6415483f3a4f279b3e97363fe856ac",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 371.64471823461275
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "de2fe1254ba6429c8fc588ca172f075e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 475.70611455607997
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Parameter.CreateProjectParameterForAllCategories",
+        "Id": "d1115da2bbe64920aeac3e3ae804b081",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": true,
+        "X": 523.90367389868788,
+        "Y": 225.49235131668996
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select BuiltIn Parameter Group",
+        "Id": "c17994273eac4956aac007159f9f95b1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 972.65669025272643
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "a4e58475424b41b29a19a6a275acdf7a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 1076.7180865741934
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Parameter Type",
+        "Id": "9b9143299ca4480ca906ac100f7c6470",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 855.85669025272659
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "5ccf54f313434b50b726e6f74099a4ba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 748.25669025272657
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "e4dbcba5cc414a3e83baccb6bb030a5a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 1170.2312357833757
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Parameter.CreateProjectParameter",
+        "Id": "d8287368c4e646c3a07003d3fe4fa439",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": true,
+        "X": 523.90367389868788,
+        "Y": 837.91531905162879
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Parameter.SharedParameterFile",
+        "Id": "5fb909d5de3345efbb0dcf941515e553",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 1391.0011995595046
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4245611b077e45769a6f0a33e9daeeb4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 1649.4980038813603
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Parameter Type",
+        "Id": "2bd215f077f24a068d87cc3a5af4bf71",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 1786.0225721325937
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select BuiltIn Parameter Group",
+        "Id": "41203183fdfa4f63aefcdb2eda41864c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 1904.9498481731032
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "65d2dc0c12d142aa94bd87bf42d944e7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 2023.345993502438
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Parameter.CreateSharedParameterForAllCategories",
+        "Id": "da8dc85d31854e45a852cad0733843d9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": true,
+        "X": 523.90367389868788,
+        "Y": 1731.2165941717064
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select BuiltIn Parameter Group",
+        "Id": "3c8ba41abd134a5fb0cb0597568b1598",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 2499.2746016105939
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "c06bb56b766641ba98a74e27c02afce0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 2616.0137395120455
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Parameter Type",
+        "Id": "ccacafe3877b489eacde82e45046845a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 2381.9167680731862
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "bdbfd1cb213f4248b0b38b5e215bfbba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 2234.9062375462358
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "31373f6f519a43b6a0d5ee70d177b9af",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 44.870056038763096,
+        "Y": 2725.213941211669
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Parameter.CreateSharedParameter",
+        "Id": "cdd759d625ef41ccbb8cf1c9182395ad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 523.90367389868788,
+        "Y": 2405.0625181678779
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "a2b2b353a64a4a13b2bb0536222d7def",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -89.9316115474794,
+        "Y": -85.0129932343176
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "d6e6140ed15c4a6f9a9322587231c563",
+        "Title": "全てのカテゴリにプロジェクトパラメータを追加",
+        "Nodes": [
+          "2ce89666909d4b668da19460332681fa",
+          "e26132f4e3d045caaef83aedf056ce89",
+          "8c6415483f3a4f279b3e97363fe856ac",
+          "de2fe1254ba6429c8fc588ca172f075e",
+          "d1115da2bbe64920aeac3e3ae804b081"
+        ],
+        "Left": 34.870056038763096,
+        "Top": 94.044718234612773,
+        "Width": 841.43361785992477,
+        "Height": 449.46139632146719,
+        "FontSize": 36.0,
+        "InitialTop": 147.24471823461278,
+        "InitialHeight": 473.46139632146713,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e74d7da9940a421b910e42e7b7fec388",
+        "Title": "指定のカテゴリにプロジェクトパラメータを追加",
+        "Nodes": [
+          "c17994273eac4956aac007159f9f95b1",
+          "a4e58475424b41b29a19a6a275acdf7a",
+          "9b9143299ca4480ca906ac100f7c6470",
+          "5ccf54f313434b50b726e6f74099a4ba",
+          "e4dbcba5cc414a3e83baccb6bb030a5a",
+          "d8287368c4e646c3a07003d3fe4fa439",
+          "ead675edacf148b99f7ec43b9d4f0dbc"
+        ],
+        "Left": 34.870056038763096,
+        "Top": 695.05669025272653,
+        "Width": 886.02334642592314,
+        "Height": 567.77454553064911,
+        "FontSize": 36.0,
+        "InitialTop": 748.25669025272657,
+        "InitialHeight": 566.97454553064915,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "2219be9fdf9442588508d15ba6f8e29f",
+        "Title": "共有パラメータの情報取得",
+        "Nodes": [
+          "5fb909d5de3345efbb0dcf941515e553"
+        ],
+        "Left": 34.870056038763096,
+        "Top": 1337.8011995595045,
+        "Width": 384.87333333333333,
+        "Height": 145.79999999999995,
+        "FontSize": 36.0,
+        "InitialTop": 1391.0011995595046,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "335e7a88e2e0448c81ad0f7a4c4d4cb5",
+        "Title": "共有パラメータを更新\r\n全てのカテゴリにプロジェクトパラメータを追加",
+        "Nodes": [
+          "4245611b077e45769a6f0a33e9daeeb4",
+          "2bd215f077f24a068d87cc3a5af4bf71",
+          "41203183fdfa4f63aefcdb2eda41864c",
+          "65d2dc0c12d142aa94bd87bf42d944e7",
+          "da8dc85d31854e45a852cad0733843d9",
+          "56bee9fddd0e45d291a7bda4f80697c7"
+        ],
+        "Left": 34.870056038763096,
+        "Top": 1553.0980038813602,
+        "Width": 913.80422817295516,
+        "Height": 538.04798962107793,
+        "FontSize": 36.0,
+        "InitialTop": 1649.4980038813603,
+        "InitialHeight": 518.84798962107766,
+        "TextblockHeight": 86.4,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "114211a002ef4df0b2e9083549f98eea",
+        "Title": "共有パラメータ更新\r\n指定のカテゴリにプロジェクトパラメータを追加",
+        "Nodes": [
+          "3c8ba41abd134a5fb0cb0597568b1598",
+          "c06bb56b766641ba98a74e27c02afce0",
+          "ccacafe3877b489eacde82e45046845a",
+          "bdbfd1cb213f4248b0b38b5e215bfbba",
+          "31373f6f519a43b6a0d5ee70d177b9af",
+          "cdd759d625ef41ccbb8cf1c9182395ad",
+          "d175f71cb357490cad6d276afeee0adb"
+        ],
+        "Left": 34.870056038763096,
+        "Top": 2138.5062375462358,
+        "Width": 743.83361785992474,
+        "Height": 679.30770366543311,
+        "FontSize": 36.0,
+        "InitialTop": 2234.9062375462358,
+        "InitialHeight": 635.30770366543311,
+        "TextblockHeight": 86.4,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "94194ec4c3ee498aac240b6207e4a8a5",
+        "Title": "Transform",
+        "Nodes": [
+          "a2b2b353a64a4a13b2bb0536222d7def"
+        ],
+        "Left": -99.9316115474794,
+        "Top": -138.21299323431759,
+        "Width": 168.10000000000002,
+        "Height": 145.79999999999998,
+        "FontSize": 36.0,
+        "InitialTop": -85.0129932343176,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ead675edacf148b99f7ec43b9d4f0dbc",
+        "Title": "他のコンポーネントをフリーズさせてから実行する",
+        "Nodes": [],
+        "Left": 675.6934024646863,
+        "Top": 1075.9528920278549,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "56bee9fddd0e45d291a7bda4f80697c7",
+        "Title": "他のコンポーネントをフリーズさせてから実行する",
+        "Nodes": [],
+        "Left": 703.47428421171833,
+        "Top": 1961.2300137191148,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d175f71cb357490cad6d276afeee0adb",
+        "Title": "他のコンポーネントをフリーズさせてから実行する",
+        "Nodes": [],
+        "Left": 523.90367389868788,
+        "Top": 2654.5216275962603,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 426.19992188589504,
+    "Y": 11.348825149408412,
+    "Zoom": 0.22350080437919409
+  }
+}
